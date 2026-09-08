@@ -5,10 +5,12 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Navette autonome EasyMile EZ10 utilisée lors des expérimentations.}}{7}{figure.2.1}%
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Schéma de l’architecture optique et des capteurs embarqués.}}{7}{figure.2.2}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Schéma récapitulatif du pipeline de sélection d'images appliqué avant l'alimentation de VGGT.}}{12}{figure.2.3}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Plateforme d'expérienmentation PAVIN situé à Aubière}}{13}{figure.2.4}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Exemples d'images acquises par les caméras embarquées}}{14}{figure.2.5}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Reconstruction de l'environnement à partir des données LiDAR}}{21}{figure.2.6}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Visualisation de la sortie VGGT et de la localisation des caméras}}{28}{figure.2.7}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Schéma récapitulatif du pipeline de sélection d'images appliqué avant l'alimentation de VGGT.}}{14}{figure.3.1}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Plateforme d'expérienmentation PAVIN situé à Aubière}}{15}{figure.4.1}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Exemples d'images acquises par les caméras embarquées}}{17}{figure.4.2}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Reconstruction de l'environnement à partir des données LiDAR}}{23}{figure.4.3}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Visualisation de la sortie VGGT et de la localisation des caméras}}{30}{figure.4.4}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

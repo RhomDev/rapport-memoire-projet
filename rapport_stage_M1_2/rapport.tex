@@ -17,6 +17,7 @@
 \geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
 
 \newcommand{\textsb}[1]{{\fontseries{sb}\selectfont #1}}
+\newcommand{\bulle}{\textbullet}
 
 \usepackage{tikz}
 \usetikzlibrary{shapes,arrows,positioning,calc}
@@ -122,34 +123,77 @@
 \addcontentsline{toc}{chapter}{Remerciements}
 \thispagestyle{empty} % Supprime le numéro "i" en bas des remerciements
 
-Avant d'entamer la présentation de ce mémoire, je tiens à exprimer ma profonde gratitude envers toutes les personnes qui ont contribué au bon déroulement de mon stage et à la réussite de ce travail de recherche.
+En préembule de la présentation de mon rapport de stage, je tiens à exprimer tous mes remerciements au prés de tout les personnes qui ont permis le bon déroulement de celui-ci et de l'expérience que j'ai pu en retirer. \\
 
-Je tiens à exprimer ma plus vive gratitude à mes maîtres de stage, M. \textbf{Thierry CHATEAU} et M. \textbf{François MARMOITON}, pour leur disponibilité constante, leur patience et la grande qualité de leur encadrement. Leurs conseils avisés, leurs compétences techniques en robotique et leur vision scientifique m'ont grandement guidé tout au long du développement de ma méthode de calibration.
+- M. Thierry CHATEAU et M. François MARMOITON, mes maitres de stage, pour leur disponibilité constante, leur patience et la pertinence de leur encadrement \\
+Leurs conseils avisés, leurs connaissances techniques en robotique ainsi que leur vision scientifique qui m'ont aider tout au long de la structuration de ma méthode de calibration.\\ 
 
-Mes remerciements s'adressent également aux partenaires du projet \textbf{PAVIN} pour leur collaboration et l'intérêt porté à mes travaux.
+Mes remerciements s'adressent également aux partenaires du projet \textbf{PAVIN} pour leur collaboration et le grand intérêt porté à mes travaux.\\
 
-Je salue chaleureusement l'ensemble des ingénieurs, chercheurs et doctorants de l'équipe pour leur accueil, leur aide précieuse au quotidien — notamment lors de la prise en main de ROS 2 et des phases d'expérimentation sur les plateformes du laboratoire — ainsi que pour la très bonne ambiance de travail.
+Je salue chaleureusement l'ensemble des ingénieurs, chercheurs et doctorants de l'équipe pour leur accueil, leur aide précieuse au quotidien — notamment lors de la prise en main de ROS 2 et des phases d'expérimentation sur les plateformes du laboratoire — ainsi que pour la très bonne ambiance de travail.\\
 
-Enfin, je remercie l'équipe pédagogique de l'\textbf{École Universitaire de Physique et d'Ingénierie (EUPI)} et de l'Université Clermont Auvergne, tout particulièrement les enseignants de la spécialité \textit{Automatique et Robotique}, pour les connaissances théoriques et pratiques qu'ils m'ont transmises et qui m'ont permis de mener à bien ce projet d'intelligence artificielle appliquée à la vision et aux LiDAR.
+Enfin, je remercie l'équipe pédagogique de l'\textbf{École Universitaire de Physique et d'Ingénierie (EUPI)} et de l'Université Clermont Auvergne, tout particulièrement les enseignants de la spécialité \textit{Automatique et Robotique}, pour les connaissances théoriques et pratiques qu'ils m'ont transmises et qui m'ont permis de mener à bien ce projet d'intelligence artificielle appliquée à la vision et aux LiDAR.\\
 
-Pour finir, je remercie ma famille et mes amis pour leur soutien inconditionnel et leurs encouragements tout au long de mon parcours universitaire.
+Je n'oublie pas ma famille et mes amis pour leur soutien inconditionnel et leurs encouragements tout au long de mon parcours universitaire.\\
 
 \newpage
 
 % ==============================================================================
 % RÉSUMÉ
 % ==============================================================================
-\chapter*{Résumé du sujet de stage}
+\begin{center}
+    \vspace*{0.5cm}
+    {\Huge\bfseries Objectif du stage}\par
+    \vspace{0.5cm}
+    {\Large\bfseries Auto-calibration d'un système avec ses différents périphériques hétérogènes}
+\end{center}
 \addcontentsline{toc}{chapter}{Résumé}
 \thispagestyle{empty} % Supprime le numéro en bas du résumé
 
-Ce stage de Master 1 a été consacré à l'étude de la calibration extrinsèque hétérogène entre capteurs LiDAR et caméras sur une plateforme autonome. Le travail s'inscrit dans le cadre de la perception multi-capteurs et vise à améliorer la robustesse des systèmes de navigation intelligent en environnement réel, notamment pour les véhicules autonomes et les robots mobiles. Le contexte scientifique du projet repose sur le constat que les données issues de capteurs variés sont souvent acquises dans des référentiels différents, avec des cadences, des résolutions et des erreurs de synchronisation distinctes. Cette hétérogénéité complique fortement l'estimation précise des poses relatives, alors même que cette étape est déterminante pour la reconstruction 3D, la perception environnementale et la navigation autonome.
+\bigskip
+\bigskip
 
-Dans ce cadre, j'ai étudié le comportement du modèle d'intelligence artificielle \textbf{VGGT} (\textit{Visual Geometry Grounded Transformer}) appliqué à des séquences d'images issues de véhicules autonomes. Le principal verrou identifié concernait la qualité et la cohérence géométrique des données alimentant le réseau : les séquences brutes contenaient des vues redondantes, des phases stationnaires, des artefacts de synchronisation et des informations peu utiles pour la calibration. Pour répondre à cette problématique, j'ai développé et mis en œuvre un pipeline de prétraitement structuré, basé sur le filtrage cinématique, la sélection visuelle intelligente et la génération d'une vérité terrain à partir de données LiDAR et SLAM.
+\hspace*{1cm}Mon stage de Master 1 a été consacré à l'étude de la calibration extrinsèque hétérogène entre capteurs LiDAR et caméras sur une plateforme autonome.\\
 
-Le travail a ainsi porté sur trois axes complémentaires : la synchronisation temporelle des flux hétérogènes, le filtrage des images non pertinentes et la mise en place d'une stratégie de comparaison avec une référence géométrique. J'ai notamment exploité les données odométriques du véhicule, les informations GPS, les nuages de points LiDAR et les appariements visuels par \textbf{LoFTR} afin de sélectionner des vues à forte valeur géométrique. Cette approche permet de diminuer la charge de calcul du modèle, de limiter les redondances et d'améliorer la stabilité des estimations de poses et d'auto-calibration.
+\hspace*{1cm}Mon travail s'inscrivait dans le cadre de la perception multi-capteurs et visait à améliorer la robustesse des systèmes de navigation intelligent en environnement réel, notamment pour les véhicules autonomes et les robots mobiles. \\
+\hspace*{1cm}Le contexte scientifique du projet reposait à partir du constat que les données issues de capteurs variés sont souvent acquises dans des référentiels différents, basé sur des cadences, des résolutions et des erreurs de synchronisation distinctes. \\
 
-À l'issue de ce stage, le système développé a permis d'évaluer la capacité du modèle à estimer des trajectoires et des relations extrinsèques dans un environnement complexe, en particulier autour d'un rond-point. Les résultats démontrent que la qualité du prétraitement est un élément central du succès d'un réseau de vision géométrique. Le mémoire montre que les performances dépendent autant du modèle que de la manière dont les données sont filtrées, synchronisées et comparées à une référence de terrain. Cette conclusion ouvre des perspectives importantes pour la suite du projet, notamment l'intégration d'une calibration plus robuste, la génération d'images de synthèse à partir du LiDAR et l'optimisation plus fine de l'alimentation des réseaux d'apprentissage profond.
+Cette hétérogénéité compliquait fortement l'estimation précise des poses relatives, alors même que cette étape était déterminante pour la reconstruction 3D, la perception environnementale et la navigation autonome.
+
+\bigskip
+
+Dans ce cadre, j'ai pu étudier le comportement du modèle d'intelligence artificielle \textbf{VGGT} (\textit{Visual Geometry Grounded Transformer}) appliqué à des séquences d'images issues de véhicules autonomes. \\
+\hspace*{.3cm}Le principal verrou que j'ai identifié concernait la qualité et la cohérence géométrique des données alimentant le réseau : 
+\begin{itemize}[label=\textbullet]
+    \item \textbf{les séquences brutes contenaient des vues redondantes}
+    \item \textbf{des phases stationnaires}
+    \item \textbf{des artefacts de synchronisation}
+    \item \textbf{des informations peu utiles pour la calibration}
+\end{itemize}
+
+\bigskip
+
+Enfin d'essayer de répondre à cette problématique, j'ai mis en œuvre et développé un pipeline de prétraitement structuré : 
+\begin{itemize}[label=\textbullet]
+    \item \textbf{le filtrage cinématique}
+    \item \textbf{la sélection visuelle intelligente}
+    \item \textbf{la génération d'une vérité terrain à partir de données LiDAR et SLAM}
+\end{itemize}
+
+\bigskip
+
+Mon travail a aussi porté sur trois axes complémentaires :
+    \begin{itemize}[label=\textbullet]
+    \item \textbf{la synchronisation temporelle des flux hétérogènes}
+    \item \textbf{le filtrage des images non pertinentes}
+    \item \textbf{la mise en place d'une stratégie de comparaison avec une référence géométrique}
+\end{itemize}
+
+\hspace*{1cm} J'ai pu notamment exploité les données odométriques du véhicule, les informations GPS, les nuages de points LiDAR et les appariements visuels par \textbf{LoFTR} sélectionnant ainsi des vues à forte valeur géométrique.\\
+Cette approche a permis d'attenuer la charge de calcul du modèle limitant les redondances et améliorant la stabilité des estimations de poses.
+
+% Pour la Présentation
+%À l'issue de ce stage, le système développé a permis d'évaluer la capacité du modèle à estimer des trajectoires et des relations extrinsèques dans un environnement complexe, en particulier autour d'un rond-point. Les résultats démontrent que la qualité du prétraitement est un élément central du succès d'un réseau de vision géométrique. Le mémoire montre que les performances dépendent autant du modèle que de la manière dont les données sont filtrées, synchronisées et comparées à une référence de terrain. Cette conclusion ouvre des perspectives importantes pour la suite du projet, notamment l'intégration d'une calibration plus robuste, la génération d'images de synthèse à partir du LiDAR et l'optimisation plus fine de l'alimentation des réseaux d'apprentissage profond.
 
 \newpage
 
@@ -172,7 +216,8 @@ Le travail a ainsi porté sur trois axes complémentaires : la synchronisation t
 \chapter{Présentation de l'entreprise et du service}
 
 \section{Présentation de l'entreprise}
-L'accueil d'un stagiaire au sein d'une structure de recherche ou d'une entreprise nécessite une compréhension globale de son environnement macroéconomique, institutionnel et structurel. C'est dans ce cadre que cette section présente l'Institut Pascal, l'unité mixte de recherche au sein de laquelle s'est déroulé ce stage de Master 1 en Automatique et Robotique.
+Mon stage Master 1 en Automatique et Robotique s'est déroulé à l'\textbf{Institut Pascal} au sein de l'unité mixte de recherche au Campus des Cézeaux à Aubière.
+%L'accueil d'un stagiaire au sein d'une structure de recherche ou d'une entreprise nécessite une compréhension globale de son environnement macroéconomique, institutionnel et structurel. C'est dans ce cadre que cette section présente l'Institut Pascal, l'unité mixte de recherche au sein de laquelle s'est déroulé ce stage de Master 1 en Automatique et Robotique.
 
 \subsection{Carte d'identité et caractéristiques}
 L'Institut Pascal est une Unité Mixte de Recherche (UMR 6602) caractérisée par une forte interdisciplinarité, combinant recherche fondamentale et technologique ainsi que formation de haut niveau. Ses principales caractéristiques administratives et institutionnelles sont synthétisées dans le tableau~\ref{tab:carte_identite}.
@@ -248,7 +293,7 @@ Chaque axe regroupe un ensemble de personnels de recherche et d'appui dont la r�
 % ==============================================================================
 \section{Présentation du service d'accueil}
 
-L'intégration dans une structure de recherche d'envergure implique de comprendre le fonctionnement quotidien de l'équipe restreinte et des infrastructures techniques qui encadrent le stagiaire.
+Mon intégration dans une structure de recherches d'envergures impliquer de comprendre le fonctionnement quotidien de l'équipe et des infrastructures techniques qui m'encadrent.
 
 \subsection{Gouvernance globale et environnement humain}
 L'unité rassemble une communauté scientifique de près de 400 personnes caractérisée par une grande diversité de statuts. La répartition des effectifs met en évidence une forte composante académique et une dynamique d'encadrement importante :
@@ -294,37 +339,44 @@ L'accueil et l'encadrement quotidien sont structurés pour simuler l'activité d
 % ==============================================================================
 % DEUXIÈME PARTIE : LE POSTE OCCUPÉ ET L'ÉTUDE CONFIÉE
 % ==============================================================================
-\chapter{Le poste occupé et l'étude confiée}
+\chapter{Mon poste occupé et l'étude confiée}
 
 \section{Présentation du poste}
 
-\hspace*{0.3cm}Dans le cadre de ce stage de Master~1 au sein de l'équipe \textbf{ComSee} de l'Institut Pascal, mon rôle s'est structuré autour d'un profil de stagiaire ingénieur spécialisé dans le traitement de données et la vision par ordinateur.\\
-\hspace*{.3cm}Sous l'encadrement de M. \textbf{Thierry CHATEAU} et de M. \textbf{François MARMOITON}, mes missions quotidiennes ont principalement consisté à manipuler, extraire et traiter les données complexes issues des différents capteurs embarqués sur les plateformes expérimentales du laboratoire.\\
+Dans le cadre de ce stage de Master~1 au sein de l'équipe \textbf{ComSee} de l'Institut Pascal, mon rôle s'est organisé autour d'un profil de stagiaire ingénieur spécialisé dans le traitement de données et la vision par ordinateur.\\
+\hspace*{.5cm}Il s'insérait dans une recherche mener par l'Institut Pascal sur auto-calibration d'un système avec ses différents périphériques hétérogènes.\\
 
-\hspace*{.3cm}Mon positionnement au sein de ce projet m'a conduit à établir un lien entre la recherche algorithmique, notamment l'exploitation de modèles d'intelligence artificielle, et l'ingénierie des données nécessaires à leur utilisation dans des conditions expérimentales réelles.\\
-J'ai ainsi été amené à concevoir, développer et tester différents pipelines de traitement de données en m'appuyant sur l'environnement Linux, notamment Ubuntu, ainsi que sur le middleware de robotique \textbf{ROS~2}.\\
+Sous l'encadrement de M. \textbf{Thierry CHATEAU} et de M. \textbf{François MARMOITON}, mes missions quotidiennes ont été construct autour de la manipuler, l'extraction et le traitement des données complexes. \\
+\hspace*{.5cm}Provener des différents capteurs embarqués sur les plateformes expérimentales du laboratoire.\\
 
-\hspace*{.3cm}J'ai également travaillé en étroite collaboration avec un autre stagiaire de Master~2 en Automatique et Robotique, \textbf{Amadou BARRY}. Notre complémentarité a permis de répartir efficacement les tâches du projet : je me suis principalement occupé du traitement des données afin d'améliorer les performances du modèle d'intelligence artificielle, tandis qu'il s'est consacré au développement et à l'optimisation du modèle IA lui-même.
+Mon intégration au sein de ce projet m'a conduit à pouvoir établir un lien entre la recherche algorithmique, donc l'exploitation de modèles d'intelligence artificielle, l'ingénierie des données nécessaires à leur utilisation dans des conditions expérimentales réelles.\\
+\hspace*{.5cm}Cela m'a permis de pouvoir concevoir, développer et tester différents pipelines de traitement de données en m'appuyant sur l'environnement Linux, notamment Ubuntu, ainsi que sur le middleware de robotique \textbf{ROS~2}.\\
+
+Ce travail a été effectué en étroite collaboration avec un autre stagiaire de Master~2 en Automatique et Robotique, \textbf{Amadou BARRY}. \\
+\hspace*{.5cm}Notre complémentarité a permis de répartir efficacement les tâches du projet : \\
+\hspace*{1cm}Personnellement, je me suis principalement occupé du traitement des données en amont pour améliorer les performances du modèle d'intelligence artificielle\\
+\hspace*{1cm}"Mon Binôme" s'est inversti sur le développement et l'optimisation du modèle IA lui-même.
 
 \newpage
 
 \section{Présentation de l'étude}
 
-\hspace*{0.3cm}Les travaux menés au cours de ce projet s'inscrivent dans le cadre des problématiques de perception multi-capteurs et de navigation des véhicules autonomes. \\
+\hspace*{0.3cm}Les travaux menés au cours de ce projet s'inscrivaient dans le cadre des problématiques par la perception multi-capteurs et la navigation des véhicules autonomes. \\
 
-\hspace*{0.3cm}L'objectif principal de cette étude était \textbf{d'évaluer la faisabilité, la robustesse et la pertinence} du déploiement d'un modèle d'apprentissage profond de l'état de l'art, nommé \textbf{VGGT} (\textit{Visual Geometry Grounded Transformer}), pour l'étude de l'\textbf{auto-calibration extrinsèque} du système de vision d'un véhicule autonome.\\
+\hspace*{.3cm}Enfin d'étudier les possibilités de l'auto-calibration extrinsèque du système de vision d'un véhicule autonome, j'ai étudier le déploiement du modèle d'apprentissage \textbf{VGGT}\footnote{Visual Geometry Grounded Transformer} en évaluant sa faisabilité, sa robustesse et sa pertinence.\\
 
-\hspace*{.3cm}En robotique mobile, l'auto-calibration extrinsèque constitue une problématique importante pour garantir la cohérence géométrique entre les différents capteurs embarqués. Contrairement aux méthodes de calibration classiques, généralement réalisées hors ligne à l'aide de mires géométriques fixes et dans des conditions contrôlées, l'auto-calibration vise à estimer de manière autonome la pose relative entre les différents capteurs et le référentiel du véhicule.\\
+En robotique mobile, l'auto-calibration extrinsèque est fondamental pour garantir la cohérence géométrique entre les différents capteurs embarqués.\\
+Généralement, les méthodes classiques sont réalisées hors ligne à l'aide de mires géométriques fixes et dans des environnements contrôlés.\\
+\hspace*{.5cm}L'auto-calibration vise à estimer de manière autonome la pose relative entre les différents capteurs et le référentiel du véhicule.\\
 
-\bigskip
+La plateforme mobile imposé pour les expérimentations était une navette autonome de type EasyMile EZ10.\\
+\hspace*{.3cm} Cette dernière était équipée d’une caméra arrière monochrome ainsi qu’une autre caméra identique à l'avant, associées à deux caméras couleur disposées à l'avant, orientées respectivement vers la droite et vers la gauche.\\
 
-\hspace*{.3cm} La plateforme mobile utilisée pour les expérimentations correspondait à une navette autonome de type EasyMile EZ10.\\
-Cette dernière était équipée d’une caméra arrière monochrome ainsi qu’une autre caméra identique à l'avant, complétées par deux caméras couleur disposées à l’avant, orientées respectivement vers la droite et vers la gauche.\\
-\hspace*{.5cm}L’architecture optique du véhicule présentait toutefois une limitation importante pour le projet :\\
-\hspace*{.2cm}\textbf{Aucune de ces caméras ne partageait de zone de recouvrement visuel avec une autre caméra}.\\
+Cette architecture présentait une limitation importante pour la réalisation du projet :\\
+\hspace*{1.5cm}\textbf{Les caméras ne partageaient aucune zone de recouvrement visuel commune}.\\
+
 \hspace*{.5cm}En complément, le véhicule embarquait deux LiDAR 3D à 360°, installés sur le toit, l’un à l’avant et l’autre à l’arrière, afin de fournir une perception géométrique 3D de l’environnement.\\
 
-\bigskip
 
 \begin{figure}[htbp]
     \centering
@@ -343,108 +395,158 @@ Cette dernière était équipée d’une caméra arrière monochrome ainsi qu’
 
 \newpage
 
-\hspace*{.3cm} Cette configuration multi-capteurs hétérogène, bien que réaliste et représentative d’un véhicule autonome, constituait l’un des principaux défis du projet, car elle limitait la redondance visuelle nécessaire à l’estimation robuste des poses et de la calibration extrinsèque.
+\hspace*{.3cm}La configuration imposé multi-capteurs hétérogènes, bien que réaliste et représentative d’un véhicule autonome, constituait l’un des principaux défis du projet.\\
+Elle limitait la redondance visuelle nécessaire à l’estimation robuste des poses et de la calibration extrinsèque.
 
 \bigskip
 
-\hspace*{.3cm}Dans ce contexte, ma mission s'est principalement articulée autour de l'\textbf{ingénierie et de la création d'un pipeline de traitement de données}. \\
-À partir d'enregistrements bruts issus des différents capteurs physiques réels et stockés sous forme de fichiers \texttt{.rosbag}, il était nécessaire de mettre en place une chaîne de traitement capable d'alimenter efficacement un modèle d'IA spécialisé dans l'analyse géométrique.\\
-\hspace*{.3cm}Mon travail a donc consisté dans un premier temps à concevoir l'infrastructure nécessaire à l'extraction et à l'exploitation de ces différents flux de données. J'ai ensuite proposé, implémenté et évalué plusieurs stratégies de pré-traitement numérique visant à améliorer la qualité des données transmises au modèle \textbf{VGGT}.\\
+Dans ce contexte, j'ai donc articulé ma réfléssion autour de:
+\begin{itemize}[label=\textbullet]
+    \item \textbf{L'ingénierie}
+    \item \textbf{La création d'un pipeline de traitement de données} 
+\end{itemize}
+\bigskip
+
+\hspace*{.5cm}Les enregistrements \textbf{bruts} issus des différents capteurs physiques réels et stockés sous forme de fichiers \texttt{.rosbag}, nécessitait la mise en place d'une chaîne de traitement capable d'alimenter efficacement un modèle d'IA spécialisé dans l'analyse géométrique.\\
+
+\hspace*{.3cm}Ma première réfléxion a été de concevoir une infrastructure nécessaire à l'extraction et à l'exploitation de ces différents flux de données.\\
+J'ai ensuite proposé à l'ensemble de l'équipe, d'implémenté et d'évalué plusieurs stratégies de pré-traitement numérique visant à améliorer la qualité des données transmises au modèle \textbf{VGGT}.\\
 
 \bigskip
 
-\hspace*{.3cm}Ces stratégies reposaient notamment sur le filtrage des données selon des critères \textbf{cinématiques}, \textbf{temporels} et \textbf{visuels}, ainsi que sur l'exploitation des informations tridimensionnelles fournies par le LiDAR.\\
-L'objectif premier était de \textbf{limiter la redondance des données}, \textbf{d'améliorer leur cohérence géométrique} et de respecter les contraintes de calcul imposées par l'architecture du modèle.\\
+\hspace*{.3cm}Les stratégies reposaient notamment sur le filtrage des données selon des critères \textbf{cinématiques}, \textbf{temporels} et \textbf{visuels}, et sur l'exploitation des informations tridimensionnelles fournies par le LiDAR.\\
+Les objectifs premiers étaient :
+\begin{itemize}[label=\textbullet]
+    \item \textbf{limiter la redondance des données}
+    \item \textbf{améliorer leur cohérence géométrique}
+    \item \textbf{respecter les contraintes de calcul imposées par l'architecture du modèle}
+\end{itemize}
 
-\hspace*{.3cm}Cette démarche a ainsi permis de construire progressivement un pipeline complet allant de l'extraction des données brutes issues de la plateforme expérimentale jusqu'à leur conditionnement pour l'analyse par le réseau \textbf{VGGT}, tout en conservant les informations nécessaires à l'évaluation et à la validation des résultats obtenus.
+\hspace*{.3cm}Cette démarche m'a ainsi permis de construire progressivement un pipeline complet allant de l'extraction des données brutes issues de la plateforme expérimentale jusqu'à leur conditionnement pour l'analyse par le réseau \textbf{VGGT}, et de conservant les informations nécessaires à l'évaluation ainsi que la validation des résultats obtenus.
 
 \newpage
 
-\subsection{Analyse et Critique de l'existant avant le démarrage de l'étude}
+\chapter{Le Démarrage de mon étude}
+
+\section{Analyse et Critique de l'existant avant le démarrage de l'étude}
 
 \paragraph{\large\fontseries{bx}\selectfont L'analyse :}
-Avant le début de ces travaux, le laboratoire disposait de jeux de données massifs enregistrés lors des circulations des véhicules autonomes sur la plateforme PAVIN. Ces données brutes, stockées sous forme de \texttt{.rosbag}, contiennent l'intégralité des flux non-synchronisés provenant des caméras, des LiDARs 3D et des centrales inertielles. L'accès au modèle d'IA VGGT constituait le point de départ algorithmique, mais aucun pipeline structuré n'était en place pour alimenter efficacement ce réseau avec des données pré-traitées, filtrées ou adaptées aux contraintes géométriques du modèle.
+
+Avant le début de ces travaux, le laboratoire disposait de jeux de données massifs enregistrés lors des circulations des véhicules autonomes sur la plateforme PAVIN. Ces données brutes, stockées sous forme de \texttt{.rosbag}, contiennent l'intégralité des flux non-synchronisés alimenté : 
+\begin{itemize}[label=\textbullet]
+    \item les images issues des caméras embarquées (avant, arrière, gauche, droite)
+    \item les nuages de points 3D générés par les LiDARs
+    \item les informations de position et d'orientation du véhicule (odometry, GNSS, GPS)
+    \item les données issues des centrales inertielles (IMU)
+\end{itemize}
+\bigskip
+Le point de départ algorithmique du modèle d'IA VGGT n'avait aucun pipeline structuré pour alimenter efficacement ce réseau avec des données pré-traitées, filtrées ou adaptées aux contraintes géométriques au modèle imposées.
 
 \paragraph{\large\fontseries{bx}\selectfont La critique :}
 \label{subsec:critique_vggt}
 
-L'analyse approfondie du modèle \textbf{VGGT} (\textit{Visual Geometry Grounded Transformer}) et des données brutes issues des véhicules autonomes de la plateforme PAVIN met en évidence un décalage majeur entre la théorie algorithmique et son application sur des données réelles du monde physique~:\par\bigskip
+L'analyse approfondie du modèle \textbf{VGGT} et des données brutes issues des véhicules autonomes de la plateforme PAVIN mettait en évidence un décalage majeur entre la théorie algorithmique et son application sur des données réelles du monde physique~:\par\bigskip
 
 \begin{itemize}
     \setlength{\itemsep}{1em}
     \renewcommand{\labelitemi}{{\large\bfseries\textbullet}}
-    \item {\large\bfseries Gourmandise computationnelle et contraintes de passage à l'échelle~:} VGGT repose sur un mécanisme d'attention alternée (\textit{Frame-wise} et \textit{Global Attention}) appliqué à des \textit{tokens} visuels. Si cette architecture offre d'excellentes capacités de prédiction géométrique directe (poses caméras, cartes de profondeur, \textit{point maps}), sa complexité mémoire (VRAM GPU) et en temps de calcul croît de manière drastique avec le nombre d'images. L'application directe de VGGT sur des séquences vidéo longues ou continues est impraticable sans un découpage strict en blocs (\textit{chunks}), ce qui introduit inévitablement des dérives d'échelle et d'orientation cumulatives lors de la concaténation.
+    \item {\large\bfseries Gourmandise computationnelle et contraintes de passage à l'échelle~:} \\
+    \hspace*{1em}Le modèle VGGT repose sur un mécanisme d'attention alternée (\textit{Frame-wise} et \textit{Global Attention}) appliqué à des \textit{tokens} visuels.\\
+    Si cette architecture offre d'excellentes capacités de prédiction géométrique directe (poses caméras, cartes de profondeur, \textit{point maps}), sa complexité mémoire (VRAM GPU) et en temps de calcul croît de manière exponentielle avec le nombre d'images. \\
+    \hspace*{1em}L'application directe de VGGT sur des séquences vidéo longues ou continues est donc impraticable sans un découpage strict en blocs (\textit{chunks}), ce qui introduit inévitablement des dérives d'échelle et d'orientation cumulatives lors de la concaténation.
     
-    \item {\large\bfseries Inadéquation des flux rosbags bruts et redondance sémantique~:} Les enregistrements issus des véhicules autonomes (\texttt{.rosbag}) contiennent des données acquises à haute fréquence. Dans des conditions réelles de circulation, le véhicule traverse régulièrement des phases d'arrêt (feux rouges, intersections) ou de circulation très lente. Injecter ces images répétitives dans un réseau lourd comme VGGT provoque un gaspillage massif de ressources de calcul sans aucun gain géométrique, et peut induire le modèle en erreur sur des scènes statiques.
+    \item {\large\bfseries Inadéquation des flux rosbags bruts et redondance sémantique~:}\\ 
+    \hspace*{1em}Les enregistrements issus des véhicules autonomes (\texttt{.rosbag}) contiennent des données acquises à haute fréquence. \\
+    Dans des conditions réelles de circulation, le véhicule traverse régulièrement des phases d'arrêt (feux rouges, intersections) et de circulation très lente.\\
+    \hspace*{1em}Injecter ces images répétitives dans un réseau lourd comme VGGT provoque un gaspillage massif de ressources de calcul sans aucun gain géométrique, et peut induire le modèle en erreur sur des scènes statiques.
     
-    \item {\large\bfseries Absence d'une Vérité Terrain (\textit{Ground Truth}) métrique directe~:} VGGT produit des prédictions de poses relatives ou non métriques. Pour évaluer la pertinence de l'auto-calibration extrinsèque et mesurer précisément l'erreur d'estimation du modèle, il est impossible de se contenter des données GPS brutes du véhicule (soumises aux masquages urbains, au bruit et aux décalages de synchronisation). Une référence géométrique continue et ultra-précise s'avère donc indispensable.
+    \item {\large\bfseries Absence d'une Vérité Terrain (\textit{Ground Truth}) métrique directe~:}\\
+    \hspace*{1em}le modèleVGGT produit des prédictions de poses relatives et non métriques. \\
+    Pour évaluer la pertinence de l'auto-calibration extrinsèque et mesurer précisément l'erreur d'estimation du modèle, il est impossible de se contenter des données GPS brutes du véhicule (soumises aux masquages urbains, au bruit et aux décalages de synchronisation).\\
+    \hspace*{1em}Une référence géométrique continue et ultra-précise s'avère donc indispensable.
     
-    \item {\large\bfseries Hétérogénéité des modalités (2D visuel vs 3D LiDAR)~:} Alors que VGGT travaille exclusivement sur l'information chromatique (RGB 2D), les véhicules autonomes disposent de LiDARs 3D fournissant une géométrie métrique absolue. L'absence d'une passerelle logicielle permettant de projeter ces nuages de points 3D sous forme de représentations denses 2D limite l'exploitation conjointe des capteurs.
+    \item {\large\bfseries Hétérogénéité des modalités (2D visuel vs 3D LiDAR)~:} \\
+    \hspace*{1em}Alors que le modèle VGGT travaille exclusivement sur l'information chromatique (RGB 2D), les véhicules autonomes disposent de LiDARs 3D qui fournissent une géométrie métrique absolue. \\
+    \hspace*{1em}L'absence de passerelle(s) logicielle(s) permettant de projeter ces nuages de points 3D sous forme de représentations denses 2D limite l'exploitation conjointe des capteurs.
+
 \end{itemize}
 
-\begingroup
-\subsection{Proposition de solutions : Pipeline de pré-traitement amont et sélection intelligente}
+\newpage
+
+\section{Proposition de solutions}
 \label{subsec:solutions_pipeline}
+
 
 \setlength{\parskip}{0.7em}
 \setlength{\parindent}{0pt}
 \linespread{1.08}\selectfont
 
 \paragraph{}
-Face aux contraintes computationnelles du modèle VGGT et à la nature brute des enregistrements \texttt{.rosbag}, l'objectif du projet s'est réorienté vers une approche stratégique~:
+Face aux contraintes computationnelles du modèle VGGT et à la nature brute des enregistrements, l'\texttt{objectif du projet s'est réorienté vers une approche stratégique~:}
 
-\textbf{Plutôt que d'appliquer l'IA de manière brute sur l'ensemble des données, il s'agit d'optimiser l'alimentation du réseau par un pré-traitement intelligent}.
+\textbf{Plutôt que d'appliquer l'IA de manière brute sur l'ensemble des données, il s'agissait d'optimiser l'alimentation du réseau avec un pré-traitement intelligent}.
 
+\subsection{Pipeline de pré-traitement amont}
 \paragraph{}
-\hspace*{0.5cm} Dans les premières orientaitons qui m'ont été donnée par mes maîtres de stage (M. Thierry CHATEAU et M. François MARMOITON), suite a nos premiers contact :
+\hspace*{0.5cm} Dans les premières orientaitons qui m'avait été donnée par mes maîtres de stage, suite au contact préliminaire :
 \begin{itemize}[label=\textbf{\textendash}]
 	\item \textbf{Comprendre le fonctionnement du pipeline de traitement de données déjà existant}
-	\item \textbf{Identifier les principaux points de blocage liés à l'utilisation de VGGT}
+	\item \textbf{Identification des principaux points de blocage liés à l'utilisation du modèle VGGT}
 \end{itemize}
 
 \paragraph{} \vspace{-\baselineskip}
- Cette première mission a permis de mettre en évidence un problème majeur :\\
+ Cette première mission m'a permis de mettre en évidence un problème majeur :\\
 Le modèle était alimenté par un grand nombre d'images issues des séquences capturées par les caméras, sans aucune stratégie de sélection préalable.\\
-\hspace*{.5cm}Dans un contexte réel de véhicule autonome, cette approche est rapidement limitante, car elle crée une forte redondance d'information, augmente la charge de calcul et peut nuire à la qualité des prédictions géométriques.
+\hspace*{.5cm}Dans un contexte réel de véhicule autonome, cette approche c'est rapidement limitante, car elle créait une forte redondance d'informations, augmentés par la charge de calcul et pouvant nuire à la qualité des prédictions géométriques.
 \paragraph{} 
-À partir de ce constat, j'ai proposé d'explorer une solution permettant de réduire le nombre d'images injectées dans le modèle sans perdre en information utile.\\
-\hspace*{.3cm} Ma perception, ainsi que les directives données par mes encadrants, m'a conduit à conserver uniquement les vues qui présentaient un niveau de \textbf{saturation}, de \textbf{contraste} et de \textbf{flou} acceptable pour le modèle, tout en éliminant les images trop dégradées ou peu exploitables d'un point de vue géométrique.\\
-\hspace*{.3cm} J'ai donc orienté mon travail vers une optimisation du filtrage visuel, avec pour objectif principal de conserver les vues les plus exploitables, puis de sélectionner celles où le véhicule était effectivement immobile. 
+Ce constat m'a permis de proposé une solution permettant l'exploration de la réduction du nombre d'images injectées dans le modèle sans perdre d'informations utiles.\\
+\hspace*{.3cm} Ma perception visuelle personnelle lié au contraintes par mes encadrants, m'a conduit à conserver uniquement les vues qui présentaient un niveau de \textbf{saturation}, de \textbf{contraste} et de \textbf{flou} acceptable pour le modèle, tout en éliminant les images trop dégradées ou peu exploitables d'un point de vue géométrique.\\
+\hspace*{.3cm} J'ai donc orienté mon travail vers une optimisation du filtrage visuel, avec pour finalité principal de conserver les vues les plus exploitables, et de sélectionner celles où le véhicule était effectivement immobile. 
 \begin{itemize}[label=\textsb{\textendash}]
 	\item \textsb{Images présentant un niveau de saturation, de contraste et de flou compatible avec l'estimation géométrique}
 	\item \textsb{Vues acquises lorsque le véhicule était à l'arrêt, afin d'éviter les artefacts liés au mouvement}
 \end{itemize}
 \hspace*{.5cm} Les taux de saturation, de contraste et de flou ont été choisis en fonction des seuils de tolérance du modèle VGGT, afin de maximiser la qualité des entrées tout en minimisant le nombre d'images à traiter.\\
 
-\hspace*{.5cm} Cette approche visait à réduire la redondance des données, à améliorer la cohérence géométrique des séquences et à optimiser l'utilisation des ressources de calcul du modèle VGGT.
+\hspace*{.5cm} Cette approche visait à limité la redondance des données, à améliorer la cohérence géométrique des séquences et à optimiser l'utilisation des ressources de calcul du modèle VGGT.
 
-\bigskip
+\hspace*{.5cm} Après plusieurs tests et analyses, il m'est apparu que le modèle ne pouvait pas fonctionner comme un simple système d'analyse d'images isolées et uniques.\\
 
-\hspace*{.5cm} Après plusieurs tests et analyses, il est apparu clairement que le modèle ne fonctionnait pas comme un simple système d'analyse d'images isolées et unique.\\
+\newpage
 
-\bigskip
+\subsection{Exploitation des données LiDAR}
 
-\paragraph{} Une autre piste importante de mon travail consistait à exploiter les données LiDAR. \\
-On m'a ainsi diriger à chercher un moyen de projeter les nuages de points 3D sur les images 2D, permettant de générer des cartes de profondeur et d'intensité.\\
-Ces cartes pouvaient ensuite être utilisées pour enrichir l'information visuelle et fournir au modèle des repères géométriques supplémentaires, facilitant ainsi l'estimation des poses et de la calibration extrinsèque.\\
+\paragraph{} \hspace*{.8cm} Une autre piste importante de mon travail a consisté et a exploité les données LiDAR. \\
+\hspace*{1cm} Une des directive qui m'a été données consistait à chercher(ou trouver) un moyen de projeter les nuages de points 3D sur les images 2D, pour permettre la génération de cartes de profondeur et d'intensité, similaires aux images camera, exploitables.\\
+\hspace*{.5cm} Ces cartes pouvaient ensuite être utilisées pour enrichir l'information visuelle et fournir au modèle des repères géométriques supplémentaires, facilitant ainsi l'estimation des poses et de la calibration extrinsèque.\\
+
 \hspace*{.5cm} Ensuite, toujour dans l'objectif d'obtenir des images 2D avec les données LIDAR, j'ai proposé d'utiliser une méthode mesh avec le nuage de points 3D. \\
-L'idée était de reconstruire une surface 3D à partir des points LiDAR, puis de projeter cette surface sur les images 2D pour générer des cartes de profondeur plus denses et continues.\\
-\hspace*{.5cm} Enfin pendant mes recherches de développement de ces pistes, j'ai été amené à réfléchir à la manière de comparer les prédictions du modèle avec une vérité terrain fiable.\\
-Pour cela, j'ai proposé d'utiliser les données LiDAR et les algorithmes de SLAM pour générer une référence métrique continue, permettant d'évaluer la précision des poses estimées par VGGT et de mesurer l'erreur de calibration extrinsèque.\\
+Mon objectif était de pouvoir reconstruire une surface 3D en partant des points LiDAR, puis de projeter cette surface sur les images 2D pour générer des cartes de profondeur plus denses et continues.\\
 
-\bigskip
+\hspace*{.5cm} Mes réflection sur ces pistes, leur développement m'ont amené à envisager de comparer les prédictions du modèle avec une réalité terrain exploitable (en tout sécurité).\\
+J'ai donc proposé utilisation des données LiDAR et les algorithmes de SLAM afin de générer des références métriques continue, permettant : 
+\begin{itemize}[label=\textbullet]
+    \item d'obtenir une réalité terrain exploitable
+    \item d'évaluer la précision des estimées par VGGT
+    \item d'évaluer l'erreur de calibration extrinsèque
+\end{itemize}
 
-\hspace*{.5cm} Mais nous avons rapidement constaté que le modèle VGGT ne se contentait pas d'analyser des images isolées, mais qu'il évaluait également la cohérence géométrique entre plusieurs vues successives.\\
+\newpage
+
+\subsection{Sélection d'images et recouvrement visuel}
+
+\hspace*{.5cm} Mais Amadou et Moi avont rapidement constaté que le modèle VGGT ne se contentait pas d'analyser des images isolées, mais qu'il évaluait aussi la cohérence géométrique entre plusieurs vues successives.\\
 En effet, le modèle s'appuyait sur des appariements visuels (\textit{feature matching}) entre les images pour estimer les poses relatives.\\
 \hspace*{1cm}En fait, il évaluait largement le \textbf{recouvrement visuel} entre plusieurs vues temporèllement décalés, et la quantité d'informations communes partagées.\\
-Si ce recouvrement était trop important, les images étaient redondantes et le modèle consommait inutilement des ressources sans gain géométrique. \\
-\hspace*{.3cm} À l'inverse, si le recouvrement était trop faible, le lien géométrique entre les vues était insuffisant et la calibration devenait instable.
 
-\paragraph{} Cette compréhension a conduit à la proposition d'un module de sélection d'images adapté au besoin du modèle.\\
+Si le recouvrement était trop important, les images devenaient redondantes et le modèle consommait inutilement des ressources sans gain géométrique. \\
+\hspace*{.3cm} À l'inverse, si le recouvrement était trop faible, le lien géométrique entre les vues était insuffisant et la calibration devenait instable.
+\paragraph{} Cette compréhension nous a conduit à proposer un module de sélection d'images adapté au besoin du modèle.\\
  L'objectif de ce module était de récupérer une séquence d'images dont le taux de recouvrement était contrôlable et modulable selon une consigne définie. \\
 \hspace*{.3cm} Ainsi, au lieu d'envoyer l'ensemble des images d'une séquence, il devenait possible d'extraire un sous-ensemble d'images géométriquement cohérente, optimisant ainsi l'alimentation du réseau, permettant une meilleure convergence du modèle.\\
  Ce module constituait donc une étape clé dans la chaîne de pré-traitement, permettant de réduire le nombre d'entrées tout en conservant l'information essentielle pour l'estimation de la calibration intrinsèque.
 
+\bigskip
 \bigskip
 \bigskip
 
@@ -482,7 +584,7 @@ Si ce recouvrement était trop important, les images étaient redondantes et le 
 
 \newpage
 
-\subsection{Étude : Cadre expérimental et architecture multi-capteurs}
+\chapter{Étude : Mise en place et suivi des solutions proposées}
 
 Le cadre expérimental de cette étude visait à éprouver la robustesse du modèle d'IA \textbf{VGGT} face aux contraintes géométriques réelles d'un véhicule autonome en mouvement.\\
 \hspace*{.3cm} Deux validations numériques et algorithmiques ont été conduites à partir de d'enregistrements de données standardisés (\texttt{rosbag}) capturés sur la plateforme d'expérimentation PAVIN.\\
