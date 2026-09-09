@@ -30,30 +30,63 @@
 \contentsline {subsection}{\numberline {3.2.3}Sélection d'images et recouvrement visuel}{14}{subsection.3.2.3}%
 \contentsline {paragraph}{}{14}{paragraph*.12}%
 \contentsline {chapter}{\numberline {4}Étude : Mise en place et suivi des solutions proposées}{15}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Cadre expérimental}{15}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Scénario expérimental retenu}{16}{subsection.4.1.1}%
 \contentsline {paragraph}{}{16}{paragraph*.13}%
-\contentsline {paragraph}{\large \fontseries {bx}\selectfont {Logistique utilisée}}{16}{paragraph*.14}%
-\contentsline {subsubsection}{Filtrage cinématique (Arrêt du véhicule)}{17}{subsubsection*.15}%
-\contentsline {subsubsection}{Génération d'images à partir du LiDAR 3D}{20}{subsubsection*.16}%
-\contentsline {subsubsection}{Filtrage visuel intelligent par LoFTR et optimisation du recouvrement}{23}{subsubsection*.17}%
-\contentsline {subsection}{\numberline {4.0.1}Mise en place et suivi des solutions}{27}{subsection.4.0.1}%
-\contentsline {subsubsection}{Filtrage cinématique (Arrêt du véhicule)}{27}{subsubsection*.18}%
-\contentsline {subsection}{\numberline {4.0.2}Bilan}{31}{subsection.4.0.2}%
-\contentsline {chapter}{Conclusion}{34}{chapter*.19}%
-\contentsline {chapter}{Bibliographie}{37}{chapter*.20}%
-\contentsline {chapter}{\numberline {A}Compléments techniques sur VGGT}{39}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Objectif et principe général}{39}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Représentation des images et des tokens}{39}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Mécanisme d'attention alternée}{40}{section.A.3}%
-\contentsline {subsection}{\numberline {A.3.1}Attention au sein d'une image}{40}{subsection.A.3.1}%
-\contentsline {subsection}{\numberline {A.3.2}Attention globale entre les vues}{40}{subsection.A.3.2}%
-\contentsline {section}{\numberline {A.4}Têtes de prédiction et sorties géométriques}{40}{section.A.4}%
-\contentsline {subsection}{\numberline {A.4.1}Paramètres et poses des caméras}{41}{subsection.A.4.1}%
-\contentsline {subsection}{\numberline {A.4.2}Cartes de profondeur}{41}{subsection.A.4.2}%
-\contentsline {subsection}{\numberline {A.4.3}Point maps}{41}{subsection.A.4.3}%
-\contentsline {subsection}{\numberline {A.4.4}Suivi de points entre les images}{41}{subsection.A.4.4}%
-\contentsline {section}{\numberline {A.5}Déroulement d'une inférence}{42}{section.A.5}%
-\contentsline {section}{\numberline {A.6}Intérêt du pré-traitement pour VGGT}{42}{section.A.6}%
-\contentsline {section}{\numberline {A.7}Limites dans le contexte de l'étude}{43}{section.A.7}%
-\contentsline {chapter}{\numberline {B}Principes de fonctionnement et modélisation des capteurs embarqués}{44}{appendix.B}%
-\contentsline {section}{\numberline {B.1}Modèle cinématique à quatre roues directrices (Four-Wheel Steering -- 4WS)}{44}{section.B.1}%
-\contentsline {section}{\numberline {B.2}Positionnement et vérité terrain par GNSS / GPS}{45}{section.B.2}%
+\contentsline {paragraph}{}{16}{paragraph*.14}%
+\contentsline {subsection}{\numberline {4.1.2}Logistique utilisée}{17}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Filtrage cinématique (A l'Arrêt du véhicule)}{19}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Synchronisation temporelle stricte et gestion des flux intermittents}{19}{subsection.4.2.1}%
+\contentsline {paragraph}{}{19}{paragraph*.15}%
+\contentsline {subsection}{\numberline {4.2.2}Extraction et tri odométrique }{21}{subsection.4.2.2}%
+\contentsline {paragraph}{}{21}{paragraph*.16}%
+\contentsline {section}{\numberline {4.3}Traitement pour l'amélioration de Qualité des images}{23}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Traitement de la distorsion optique}{23}{subsection.4.3.1}%
+\contentsline {paragraph}{}{23}{paragraph*.17}%
+\contentsline {paragraph}{}{23}{paragraph*.18}%
+\contentsline {subsection}{\numberline {4.3.2}Traitement de la saturation}{25}{subsection.4.3.2}%
+\contentsline {paragraph}{}{25}{paragraph*.19}%
+\contentsline {subsection}{\numberline {4.3.3}Traitement de la contraste}{26}{subsection.4.3.3}%
+\contentsline {paragraph}{}{26}{paragraph*.20}%
+\contentsline {paragraph}{}{26}{paragraph*.21}%
+\contentsline {paragraph}{Calcul de l'écart-type du contraste :}{26}{paragraph*.22}%
+\contentsline {subsection}{\numberline {4.3.4}Traitement de la flou}{27}{subsection.4.3.4}%
+\contentsline {paragraph}{}{27}{paragraph*.23}%
+\contentsline {paragraph}{}{27}{paragraph*.24}%
+\contentsline {paragraph}{Calcul de la variance du Laplacien :}{27}{paragraph*.25}%
+\contentsline {section}{\numberline {4.4}Génération d'images à partir du LiDAR 3D}{28}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Développement d'un algorithme de SLAM personnalisé}{28}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Déploiement d'une architecture SLAM de l'état de l'art}{30}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Conditionnement et filtrage du nuage de points}{31}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}Intérêt de la reconstruction LiDAR pour la référence géométrique}{32}{subsection.4.4.4}%
+\contentsline {section}{\numberline {4.5}Filtrage visuel intelligent par LoFTR et optimisation du recouvrement}{33}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Développement d'un module de sélection visuelle}{34}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Conditionnement et normalisation qualitative des images}{34}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}Algorithme de concaténation et reconstruction de trajectoire}{35}{subsection.4.5.3}%
+\contentsline {subsection}{\numberline {4.5.4}Utilisation des données LiDAR pour l'alimentation du modèle d'IA}{35}{subsection.4.5.4}%
+\contentsline {subsection}{\numberline {4.5.5}Piste de développement : SLAM / Mapping pour comparaison géométrique}{36}{subsection.4.5.5}%
+\contentsline {subsection}{\numberline {4.5.6}Appariement dense par Transformer (LoFTR) et estimation du recouvrement}{36}{subsection.4.5.6}%
+\contentsline {subsection}{\numberline {4.5.7}Développement des algorithmes de sélection sous consigne}{37}{subsection.4.5.7}%
+\contentsline {subsection}{\numberline {4.5.8}Intérêt du contrôle du recouvrement pour le modèle VGGT}{37}{subsection.4.5.8}%
+\contentsline {section}{\numberline {4.6}Mise en place et suivi des solutions}{38}{section.4.6}%
+\contentsline {subsubsection}{Filtrage cinématique (Arrêt du véhicule)}{38}{subsubsection*.26}%
+\contentsline {section}{\numberline {4.7}Bilan}{42}{section.4.7}%
+\contentsline {chapter}{Conclusion}{45}{chapter*.27}%
+\contentsline {chapter}{Bibliographie}{48}{chapter*.28}%
+\contentsline {chapter}{\numberline {A}Compléments techniques sur VGGT}{50}{chapter.A}%
+\contentsline {section}{\numberline {A.1}Objectif et principe général}{50}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Représentation des images et des tokens}{50}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Mécanisme d'attention alternée}{51}{section.A.3}%
+\contentsline {subsection}{\numberline {A.3.1}Attention au sein d'une image}{51}{subsection.A.3.1}%
+\contentsline {subsection}{\numberline {A.3.2}Attention globale entre les vues}{51}{subsection.A.3.2}%
+\contentsline {section}{\numberline {A.4}Têtes de prédiction et sorties géométriques}{51}{section.A.4}%
+\contentsline {subsection}{\numberline {A.4.1}Paramètres et poses des caméras}{52}{subsection.A.4.1}%
+\contentsline {subsection}{\numberline {A.4.2}Cartes de profondeur}{52}{subsection.A.4.2}%
+\contentsline {subsection}{\numberline {A.4.3}Point maps}{52}{subsection.A.4.3}%
+\contentsline {subsection}{\numberline {A.4.4}Suivi de points entre les images}{52}{subsection.A.4.4}%
+\contentsline {section}{\numberline {A.5}Déroulement d'une inférence}{53}{section.A.5}%
+\contentsline {section}{\numberline {A.6}Intérêt du pré-traitement pour VGGT}{53}{section.A.6}%
+\contentsline {section}{\numberline {A.7}Limites dans le contexte de l'étude}{54}{section.A.7}%
+\contentsline {chapter}{\numberline {B}Principes de fonctionnement et modélisation des capteurs embarqués}{55}{chapter.B}%
+\contentsline {section}{\numberline {B.1}Modèle cinématique à quatre roues directrices (Four-Wheel Steering -- 4WS)}{55}{section.B.1}%
+\contentsline {section}{\numberline {B.2}Positionnement et vérité terrain par GNSS / GPS}{56}{section.B.2}%
