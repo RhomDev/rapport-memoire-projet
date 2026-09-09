@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.8.26)  9 SEP 2026 11:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.8.26)  9 SEP 2026 12:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -278,16 +278,107 @@ Package tocloft Info: The document has chapter divisions on input line 51.
 \cfttabindent=\skip89
 \cfttabnumwidth=\skip90
 )
+(/usr/share/texlive/texmf-dist/tex/latex/needspace/needspace.sty
+Package: needspace 2025/03/13 v1.3e reserve vertical space
+)
+(/usr/share/texlive/texmf-dist/tex/latex/etoc/etoc.sty
+Package: etoc 2023/10/29 v1.2d Completely customisable TOCs (JFB)
+
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
+\c@tracingmulticols=\count312
+\mult@box=\box57
+\multicol@leftmargin=\dimen184
+\c@unbalance=\count313
+\c@collectmore=\count314
+\doublecol@number=\count315
+\multicoltolerance=\count316
+\multicolpretolerance=\count317
+\full@width=\dimen185
+\page@free=\dimen186
+\premulticols=\dimen187
+\postmulticols=\dimen188
+\multicolsep=\skip91
+\multicolbaselineskip=\skip92
+\partial@page=\box58
+\last@line=\box59
+\mc@boxedresult=\box60
+\maxbalancingoverflow=\dimen189
+\mult@rightbox=\box61
+\mult@grightbox=\box62
+\mult@firstbox=\box63
+\mult@gfirstbox=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\c@minrows=\count318
+\c@columnbadness=\count319
+\c@finalcolumnbadness=\count320
+\last@try=\dimen190
+\multicolovershoot=\dimen191
+\multicolundershoot=\dimen192
+\mult@nat@firstbox=\box101
+\colbreak@box=\box102
+\mc@col@check@num=\count321
+\g__mc_curr_col_int=\count322
+)
+\Etoc@toctoks=\toks29
+\c@etoc@tocid=\count323
+\etoc@framed@titlebox=\box103
+\etoc@framed@contentsbox=\box104
+)
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks29
-\pgfutil@tempdima=\dimen184
-\pgfutil@tempdimb=\dimen185
+\pgfutil@everybye=\toks30
+\pgfutil@tempdima=\dimen193
+\pgfutil@tempdimb=\dimen194
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box57
+\pgfutil@abb=\box105
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)
@@ -301,33 +392,33 @@ Package: pgf 2025-08-29 v3.1.11a (3.1.11a)
 Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks30
-\pgfkeys@temptoks=\toks31
+\pgfkeys@pathtoks=\toks31
+\pgfkeys@temptoks=\toks32
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered
 .code.tex
-\pgfkeys@tmptoks=\toks32
+\pgfkeys@tmptoks=\toks33
 ))
-\pgf@x=\dimen186
-\pgf@y=\dimen187
-\pgf@xa=\dimen188
-\pgf@ya=\dimen189
-\pgf@xb=\dimen190
-\pgf@yb=\dimen191
-\pgf@xc=\dimen192
-\pgf@yc=\dimen193
-\pgf@xd=\dimen194
-\pgf@yd=\dimen195
+\pgf@x=\dimen195
+\pgf@y=\dimen196
+\pgf@xa=\dimen197
+\pgf@ya=\dimen198
+\pgf@xb=\dimen199
+\pgf@yb=\dimen256
+\pgf@xc=\dimen257
+\pgf@yc=\dimen258
+\pgf@xd=\dimen259
+\pgf@yd=\dimen260
 \w@pgf@writea=\write3
 \r@pgf@reada=\read3
-\c@pgf@counta=\count312
-\c@pgf@countb=\count313
-\c@pgf@countc=\count314
-\c@pgf@countd=\count315
-\t@pgf@toka=\toks33
-\t@pgf@tokb=\toks34
-\t@pgf@tokc=\toks35
-\pgf@sys@id@count=\count316
+\c@pgf@counta=\count324
+\c@pgf@countb=\count325
+\c@pgf@countc=\count326
+\c@pgf@countd=\count327
+\t@pgf@toka=\toks34
+\t@pgf@tokb=\toks35
+\t@pgf@tokc=\toks36
+\pgf@sys@id@count=\count328
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
 )
@@ -342,8 +433,8 @@ File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
 tex
 File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfsyssoftpath@smallbuffer@items=\count317
-\pgfsyssoftpath@bigbuffer@items=\count318
+\pgfsyssoftpath@smallbuffer@items=\count329
+\pgfsyssoftpath@bigbuffer@items=\count330
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
 tex
@@ -373,12 +464,12 @@ Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen196
-\pgfmath@count=\count319
-\pgfmath@box=\box58
-\pgfmath@toks=\toks36
-\pgfmath@stack@operand=\toks37
-\pgfmath@stack@operation=\toks38
+\pgfmath@dimen=\dimen261
+\pgfmath@count=\count331
+\pgfmath@box=\box106
+\pgfmath@toks=\toks37
+\pgfmath@stack@operand=\toks38
+\pgfmath@stack@operation=\toks39
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
@@ -399,58 +490,58 @@ tex)
 thmetics.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count320
+\c@pgfmathroundto@lastzeros=\count332
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
 x
 File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@picminx=\dimen197
-\pgf@picmaxx=\dimen198
-\pgf@picminy=\dimen199
-\pgf@picmaxy=\dimen256
-\pgf@pathminx=\dimen257
-\pgf@pathmaxx=\dimen258
-\pgf@pathminy=\dimen259
-\pgf@pathmaxy=\dimen260
-\pgf@xx=\dimen261
-\pgf@xy=\dimen262
-\pgf@yx=\dimen263
-\pgf@yy=\dimen264
-\pgf@zx=\dimen265
-\pgf@zy=\dimen266
+\pgf@picminx=\dimen262
+\pgf@picmaxx=\dimen263
+\pgf@picminy=\dimen264
+\pgf@picmaxy=\dimen265
+\pgf@pathminx=\dimen266
+\pgf@pathmaxx=\dimen267
+\pgf@pathminy=\dimen268
+\pgf@pathmaxy=\dimen269
+\pgf@xx=\dimen270
+\pgf@xy=\dimen271
+\pgf@yx=\dimen272
+\pgf@yy=\dimen273
+\pgf@zx=\dimen274
+\pgf@zy=\dimen275
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
 code.tex
 File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@path@lastx=\dimen267
-\pgf@path@lasty=\dimen268
+\pgf@path@lastx=\dimen276
+\pgf@path@lasty=\dimen277
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
 .tex
 File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@shorten@end@additional=\dimen269
-\pgf@shorten@start@additional=\dimen270
+\pgf@shorten@end@additional=\dimen278
+\pgf@shorten@start@additional=\dimen279
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
 x
 File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfpic=\box59
-\pgf@hbox=\box60
-\pgf@layerbox@main=\box61
-\pgf@picture@serial@count=\count321
+\pgfpic=\box107
+\pgf@hbox=\box108
+\pgf@layerbox@main=\box109
+\pgf@picture@serial@count=\count333
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
 ode.tex
 File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgflinewidth=\dimen271
+\pgflinewidth=\dimen280
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
 s.code.tex
 File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@pt@x=\dimen272
-\pgf@pt@y=\dimen273
-\pgf@pt@temp=\dimen274
+\pgf@pt@x=\dimen281
+\pgf@pt@y=\dimen282
+\pgf@pt@temp=\dimen283
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2025-08-29 v3.1.11a (3.1.11a)
@@ -466,13 +557,13 @@ File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
 x
 File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfarrowsep=\dimen275
+\pgfarrowsep=\dimen284
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@max=\dimen276
-\pgf@sys@shading@range@num=\count322
-\pgf@shadingcount=\count323
+\pgf@max=\dimen285
+\pgf@sys@shading@range@num=\count334
+\pgf@shadingcount=\count335
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
@@ -480,7 +571,7 @@ File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
 tex
 File: pgfcoreexternal.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfexternal@startupbox=\box62
+\pgfexternal@startupbox=\box110
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
 x
@@ -499,15 +590,15 @@ File: pgfcorerdf.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfnodeparttextbox=\box63
+\pgfnodeparttextbox=\box111
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
 .sty
 Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@nodesepstart=\dimen277
-\pgf@nodesepend=\dimen278
+\pgf@nodesepstart=\dimen286
+\pgf@nodesepend=\dimen287
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
 .sty
@@ -519,10 +610,10 @@ Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
-\pgffor@iter=\dimen279
-\pgffor@skip=\dimen280
-\pgffor@stack=\toks39
-\pgffor@toks=\toks40
+\pgffor@iter=\dimen288
+\pgffor@skip=\dimen289
+\pgffor@stack=\toks40
+\pgffor@toks=\toks41
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
@@ -530,33 +621,33 @@ Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
 .code.tex
 File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@plot@mark@count=\count324
-\pgfplotmarksize=\dimen281
+\pgf@plot@mark@count=\count336
+\pgfplotmarksize=\dimen290
 )
-\tikz@lastx=\dimen282
-\tikz@lasty=\dimen283
-\tikz@lastxsaved=\dimen284
-\tikz@lastysaved=\dimen285
-\tikz@lastmovetox=\dimen286
-\tikz@lastmovetoy=\dimen287
-\tikzleveldistance=\dimen288
-\tikzsiblingdistance=\dimen289
-\tikz@figbox=\box64
-\tikz@figbox@bg=\box65
-\tikz@tempbox=\box66
-\tikz@tempbox@bg=\box67
-\tikztreelevel=\count325
-\tikznumberofchildren=\count326
-\tikznumberofcurrentchild=\count327
-\tikz@fig@count=\count328
+\tikz@lastx=\dimen291
+\tikz@lasty=\dimen292
+\tikz@lastxsaved=\dimen293
+\tikz@lastysaved=\dimen294
+\tikz@lastmovetox=\dimen295
+\tikz@lastmovetoy=\dimen296
+\tikzleveldistance=\dimen297
+\tikzsiblingdistance=\dimen298
+\tikz@figbox=\box112
+\tikz@figbox@bg=\box113
+\tikz@tempbox=\box114
+\tikz@tempbox@bg=\box115
+\tikztreelevel=\count337
+\tikznumberofchildren=\count338
+\tikznumberofcurrentchild=\count339
+\tikz@fig@count=\count340
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfmatrixcurrentrow=\count329
-\pgfmatrixcurrentcolumn=\count330
-\pgf@matrix@numberofcolumns=\count331
+\pgfmatrixcurrentrow=\count341
+\pgfmatrixcurrentcolumn=\count342
+\pgf@matrix@numberofcolumns=\count343
 )
-\tikz@expandcount=\count332
+\tikz@expandcount=\count344
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarytopaths.code.tex
@@ -609,26 +700,26 @@ File: tikzlibraryshapes.multipart.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshape
 s.multipart.code.tex
 File: pgflibraryshapes.multipart.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfnodepartlowerbox=\box68
-\pgfnodeparttwobox=\box69
-\pgfnodepartthreebox=\box70
-\pgfnodepartfourbox=\box71
-\pgfnodeparttwentybox=\box72
-\pgfnodepartnineteenbox=\box73
-\pgfnodeparteighteenbox=\box74
-\pgfnodepartseventeenbox=\box75
-\pgfnodepartsixteenbox=\box76
-\pgfnodepartfifteenbox=\box77
-\pgfnodepartfourteenbox=\box78
-\pgfnodepartthirteenbox=\box79
-\pgfnodeparttwelvebox=\box80
-\pgfnodepartelevenbox=\box81
-\pgfnodeparttenbox=\box82
-\pgfnodepartninebox=\box83
-\pgfnodeparteightbox=\box84
-\pgfnodepartsevenbox=\box85
-\pgfnodepartsixbox=\box86
-\pgfnodepartfivebox=\box87
+\pgfnodepartlowerbox=\box116
+\pgfnodeparttwobox=\box117
+\pgfnodepartthreebox=\box118
+\pgfnodepartfourbox=\box119
+\pgfnodeparttwentybox=\box120
+\pgfnodepartnineteenbox=\box121
+\pgfnodeparteighteenbox=\box122
+\pgfnodepartseventeenbox=\box123
+\pgfnodepartsixteenbox=\box124
+\pgfnodepartfifteenbox=\box125
+\pgfnodepartfourteenbox=\box126
+\pgfnodepartthirteenbox=\box127
+\pgfnodeparttwelvebox=\box128
+\pgfnodepartelevenbox=\box129
+\pgfnodeparttenbox=\box130
+\pgfnodepartninebox=\box131
+\pgfnodeparteightbox=\box132
+\pgfnodepartsevenbox=\box133
+\pgfnodepartsixbox=\box134
+\pgfnodepartfivebox=\box135
 )))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibraryarrows.code.tex
@@ -637,7 +728,7 @@ File: tikzlibraryarrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.
 tex
 File: pgflibraryarrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\arrowsize=\dimen290
+\arrowsize=\dimen299
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarypositioning.code.tex
@@ -650,18 +741,12 @@ File: tikzlibrarycalc.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
 
-(/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
-Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-)
 (/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
 
-(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
-Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
-)
 (/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -684,23 +769,20 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 )
 (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
-
-(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
-Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
-))
-\c@section@level=\count333
+)
+\c@section@level=\count345
 )
 (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count334
+\etb@tempcnta=\count346
 )
 (/usr/share/texlive/texmf-dist/tex/generic/stringenc/stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
-\@linkdim=\dimen291
-\Hy@linkcounter=\count335
-\Hy@pagecounter=\count336
+\@linkdim=\dimen300
+\Hy@linkcounter=\count347
+\Hy@pagecounter=\count348
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
@@ -710,7 +792,7 @@ Now handling font encoding PD1 ...
 (/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count337
+\Hy@SavedSpaceFactor=\count349
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
@@ -724,14 +806,14 @@ Package hyperref Info: Plain pages OFF on input line 4210.
 Package hyperref Info: Backreferencing OFF on input line 4215.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4462.
-\c@Hy@tempcnt=\count338
+\c@Hy@tempcnt=\count350
 
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4801.
-\XeTeXLinkMargin=\dimen292
+\XeTeXLinkMargin=\dimen301
 
 (/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -740,9 +822,9 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count339
-\Field@Width=\dimen293
-\Fld@charsize=\dimen294
+\Fld@menulength=\count351
+\Field@Width=\dimen302
+\Fld@charsize=\dimen303
 Package hyperref Info: Hyper figures OFF on input line 6078.
 Package hyperref Info: Link nesting OFF on input line 6083.
 Package hyperref Info: Hyper index ON on input line 6086.
@@ -750,16 +832,16 @@ Package hyperref Info: backreferencing OFF on input line 6093.
 Package hyperref Info: Link coloring OFF on input line 6098.
 Package hyperref Info: Link coloring with OCG OFF on input line 6103.
 Package hyperref Info: PDF/A mode OFF on input line 6108.
-\Hy@abspage=\count340
-\c@Item=\count341
-\c@Hfootnote=\count342
+\Hy@abspage=\count352
+\c@Item=\count353
+\c@Hfootnote=\count354
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2025-07-12 v7.01o Hyperref driver for pdfTeX
-\Fld@listcount=\count343
-\c@bookmark@seq@number=\count344
+\Fld@listcount=\count355
+\c@bookmark@seq@number=\count356
 
 (/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
@@ -770,59 +852,59 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 84.
 )
-\Hy@SectionHShift=\skip91
+\Hy@SectionHShift=\skip93
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 35.
+Package hyperref Info: Option `colorlinks' set `true' on input line 73.
 Package french3.ldf Info: Setting StandardItemizeEnv=true for
 (french3.ldf)             compatibility with enumitem package,
-(french3.ldf)             reported on input line 58.
+(french3.ldf)             reported on input line 96.
 Package french3.ldf Info: Setting StandardEnumerateEnv=true for
 (french3.ldf)             compatibility with enumitem package,
-(french3.ldf)             reported on input line 58.
+(french3.ldf)             reported on input line 96.
 
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count345
+\l__color_backend_stack_int=\count357
 )
 (./rapport.aux
 Package babel Info: 'french' activates 'french' shorthands.
-(babel)             Reported on input line 11.
+(babel)             Reported on input line 12.
 )
 \openout1 = `rapport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Info: Redefining \degres on input line 58.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Info: Redefining \degres on input line 96.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count346
-\scratchdimen=\dimen295
-\scratchbox=\box88
-\nofMPsegments=\count347
-\nofMParguments=\count348
-\everyMPshowfont=\toks41
-\MPscratchCnt=\count349
-\MPscratchDim=\dimen296
-\MPnumerator=\count350
-\makeMPintoPDFobject=\count351
-\everyMPtoPDFconversion=\toks42
+\scratchcounter=\count358
+\scratchdimen=\dimen304
+\scratchbox=\box136
+\nofMPsegments=\count359
+\nofMParguments=\count360
+\everyMPshowfont=\toks42
+\MPscratchCnt=\count361
+\MPscratchDim=\dimen305
+\MPnumerator=\count362
+\makeMPintoPDFobject=\count363
+\everyMPtoPDFconversion=\toks43
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -866,109 +948,104 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 58.
+\Etoc@tf=\read4
+Package hyperref Info: Link coloring ON on input line 96.
 (./rapport.out) (./rapport.out)
 \@outlinefile=\write4
 \openout4 = `rapport.out'.
 
-<img_garde/logo_uca.png, id=275, 501.875pt x 485.815pt>
+<img_garde/logo_uca.png, id=211, 501.875pt x 485.815pt>
 File: img_garde/logo_uca.png Graphic file (type png)
 <use img_garde/logo_uca.png>
-Package pdftex.def Info: img_garde/logo_uca.png  used on input line 69.
+Package pdftex.def Info: img_garde/logo_uca.png  used on input line 107.
 (pdftex.def)             Requested size: 56.9055pt x 55.07806pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 70.
-
+LaTeX Font Info:    Trying to load font information for U+msa on input line 108
+.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 70.
-
+LaTeX Font Info:    Trying to load font information for U+msb on input line 108
+.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<img_garde/logo_eupi.png, id=277, 677.1699pt x 137.7948pt>
+<img_garde/logo_eupi.png, id=213, 677.1699pt x 137.7948pt>
 File: img_garde/logo_eupi.png Graphic file (type png)
 <use img_garde/logo_eupi.png>
-Package pdftex.def Info: img_garde/logo_eupi.png  used on input line 74.
+Package pdftex.def Info: img_garde/logo_eupi.png  used on input line 112.
 (pdftex.def)             Requested size: 182.09486pt x 37.0537pt.
-<img_garde/logo_institut.png, id=278, 501.875pt x 501.875pt>
+<img_garde/logo_institut.png, id=214, 501.875pt x 501.875pt>
 File: img_garde/logo_institut.png Graphic file (type png)
 <use img_garde/logo_institut.png>
-Package pdftex.def Info: img_garde/logo_institut.png  used on input line 79.
+Package pdftex.def Info: img_garde/logo_institut.png  used on input line 117.
 (pdftex.def)             Requested size: 56.9055pt x 56.89883pt.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./img_garde/logo_uca.png> 
 <./img_garde/logo_eupi.png> <./img_garde/logo_institut.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 136--137
+Underfull \hbox (badness 10000) in paragraph at lines 174--175
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 138--140
+Underfull \hbox (badness 10000) in paragraph at lines 176--178
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 141--142
+Underfull \hbox (badness 10000) in paragraph at lines 179--180
 
  []
 
 
-Overfull \hbox (2.53847pt too wide) in paragraph at lines 143--144
+Overfull \hbox (2.53847pt too wide) in paragraph at lines 181--182
 []\T1/cmr/m/n/12 Je sa-lue cha-leu-reu-se-ment l'en-semble des in-gé-nieurs, ch
 er-cheurs et doc-to-rants de l'équipe
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 143--144
+Underfull \hbox (badness 10000) in paragraph at lines 181--182
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 145--146
+Underfull \hbox (badness 10000) in paragraph at lines 183--184
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 147--148
+Underfull \hbox (badness 10000) in paragraph at lines 185--186
 
  []
 
 [1
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 164--165
+Underfull \hbox (badness 10000) in paragraph at lines 202--203
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 166--168
+Underfull \hbox (badness 10000) in paragraph at lines 204--206
 
  []
 
-[2] (./rapport.toc
-Overfull \hbox (33.57408pt too wide) in paragraph at lines 62--62
+[2]
+\tf@toc=\write5
+\openout5 = `rapport.toc'.
+
+ [3]
+Overfull \hbox (33.57408pt too wide) in paragraph at lines 251--251
  [][] [][][]\T1/cmtt/m/n/12 Filtrage visuel intelligent par LoFTR et optimisati
 on du recouvrement[][] []  
  []
 
-[3]
-Overfull \hbox (26.80074pt too wide) in paragraph at lines 91--91
- [][] [][][]\T1/cmtt/m/n/12 Modèle cinématique à quatre roues directrices (Four
--Wheel Steering 
- []
-
-)
-\tf@toc=\write5
-\openout5 = `rapport.toc'.
-
- [4]
+[4]
 Chapitre 1.
 
-Overfull \hbox (13.49097pt too wide) in paragraph at lines 237--260
+Overfull \hbox (13.49097pt too wide) in paragraph at lines 275--298
  [][] 
  []
 
@@ -977,107 +1054,116 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.268     \item \textbf
-                       {2017 : DeuxiÃ¨me phase d'extension.} IntÃ©gration de...
-[1
+l.302 \newpage
+               [1
 
 ]
-<img/map_institut.png, id=394, 1923.185pt x 1014.79124pt>
+<img/map_institut.png, id=312, 1923.185pt x 1014.79124pt>
 File: img/map_institut.png Graphic file (type png)
 <use img/map_institut.png>
-Package pdftex.def Info: img/map_institut.png  used on input line 282.
+Package pdftex.def Info: img/map_institut.png  used on input line 323.
 (pdftex.def)             Requested size: 364.19667pt x 192.16199pt.
-<img_pdf/organigramme_IP.pdf, id=396, 845.1575pt x 597.23125pt>
+<img_pdf/organigramme_IP.pdf, id=314, 845.1575pt x 597.23125pt>
 File: img_pdf/organigramme_IP.pdf Graphic file (type pdf)
 <use img_pdf/organigramme_IP.pdf>
-Package pdftex.def Info: img_pdf/organigramme_IP.pdf  used on input line 291.
+Package pdftex.def Info: img_pdf/organigramme_IP.pdf  used on input line 332.
 (pdftex.def)             Requested size: 409.71692pt x 289.52922pt.
  [2 <./img/map_institut.png>] [3 <./img_pdf/organigramme_IP.pdf>]
-Overfull \hbox (1.17035pt too wide) in paragraph at lines 309--310
+Overfull \hbox (1.17035pt too wide) in paragraph at lines 350--351
 []\T1/cmr/bx/n/12 Enseignants-chercheurs et cher-cheurs : \T1/cmr/m/n/12 137 en
 seignants-chercheurs (UCA, Cler-
  []
 
 
-Overfull \hbox (3.10776pt too wide) in paragraph at lines 320--322
+Overfull \hbox (3.10776pt too wide) in paragraph at lines 361--362
 []\T1/cmr/m/n/12 Plus spé-ci-fi-que-ment, j'ai été in-té-gré au c÷ur de l'équip
 e de re-cherche \T1/cmr/bx/n/12 Com-See \T1/cmr/m/n/12 (contrac-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 370--372
+
  []
 
 [4
 
 ]
-Overfull \hbox (1.15778pt too wide) in paragraph at lines 334--335
+Overfull \hbox (1.15778pt too wide) in paragraph at lines 378--380
 []\T1/cmr/bx/n/12 PAVIN (Pla-te-forme Au-ver-gnate Pour les Vé-hi-cules In-tel-
-li-gents / CNRS) :
+li-gents / CNRS) : 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 387--388
+
  []
 
 [5]
 Chapitre 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 354--356
+Underfull \hbox (badness 10000) in paragraph at lines 409--411
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 357--359
+Underfull \hbox (badness 10000) in paragraph at lines 412--414
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 360--362
+Underfull \hbox (badness 10000) in paragraph at lines 415--417
 
  []
 
 [6
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 372--373
+Underfull \hbox (badness 10000) in paragraph at lines 427--428
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 374--375
+Underfull \hbox (badness 10000) in paragraph at lines 429--430
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 376--379
+Underfull \hbox (badness 10000) in paragraph at lines 431--434
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 380--382
+Underfull \hbox (badness 10000) in paragraph at lines 435--437
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 383--385
+Underfull \hbox (badness 10000) in paragraph at lines 438--440
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 386--387
+Underfull \hbox (badness 10000) in paragraph at lines 441--442
 
  []
 
-<img_src/PAVIN_navette.jpg, id=526, 601.24625pt x 400.49625pt>
+<img_src/PAVIN_navette.jpg, id=442, 601.24625pt x 400.49625pt>
 File: img_src/PAVIN_navette.jpg Graphic file (type jpg)
 <use img_src/PAVIN_navette.jpg>
-Package pdftex.def Info: img_src/PAVIN_navette.jpg  used on input line 393.
+Package pdftex.def Info: img_src/PAVIN_navette.jpg  used on input line 448.
 (pdftex.def)             Requested size: 218.51521pt x 145.55353pt.
-<img_src/navelle_schÃ©ma.png, id=527, 1239.12938pt x 658.71094pt>
+<img_src/navelle_schÃ©ma.png, id=443, 1239.12938pt x 658.71094pt>
 File: img_src/navelle_schÃ©ma.png Graphic file (type png)
 <use img_src/navelle_schÃ©ma.png>
-Package pdftex.def Info: img_src/navelle_schÃ©ma.png  used on input line 399.
+Package pdftex.def Info: img_src/navelle_schÃ©ma.png  used on input line 454.
 (pdftex.def)             Requested size: 218.51521pt x 116.16063pt.
 [7 <./img_src/PAVIN_navette.jpg> <./img_src/navelle_schÃ©ma.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 418--419
+Underfull \hbox (badness 10000) in paragraph at lines 473--474
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 420--422
+Underfull \hbox (badness 10000) in paragraph at lines 475--477
 
  []
 
@@ -1086,139 +1172,119 @@ Chapitre 3.
 [9
 
 ] [10]
-Overfull \hbox (23.14728pt too wide) in paragraph at lines 494--495
+Overfull \hbox (23.14728pt too wide) in paragraph at lines 549--550
 \T1/cmr/m/n/12 gis-tre-ments, l'\T1/cmtt/m/n/12 objectif du projet s'est réorie
 nté vers une approche stratégique : 
  []
 
 
 LaTeX Font Warning: Font shape `T1/cmr/sb/n' undefined
-(Font)              using `T1/cmr/b/n' instead on input line 515.
+(Font)              using `T1/cmr/b/n' instead on input line 570.
 
 
 LaTeX Font Warning: Font shape `T1/cmr/sb/n' undefined
-(Font)              using `T1/cmr/b/n' instead on input line 515.
+(Font)              using `T1/cmr/b/n' instead on input line 570.
 
 
 LaTeX Font Warning: Font shape `T1/cmr/sb/n' undefined
-(Font)              using `T1/cmr/b/n' instead on input line 516.
+(Font)              using `T1/cmr/b/n' instead on input line 571.
 
 
 LaTeX Font Warning: Font shape `T1/cmr/sb/n' undefined
-(Font)              using `T1/cmr/b/n' instead on input line 516.
+(Font)              using `T1/cmr/b/n' instead on input line 571.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 518--519
+Underfull \hbox (badness 10000) in paragraph at lines 573--574
 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 522--523
+Underfull \hbox (badness 10000) in paragraph at lines 577--578
 
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 528--531
+Underfull \hbox (badness 10000) in paragraph at lines 583--586
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 532--534
+Underfull \hbox (badness 10000) in paragraph at lines 587--589
 
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 547--550
+Underfull \hbox (badness 10000) in paragraph at lines 602--605
 
  []
 
 
-Overfull \hbox (62.3995pt too wide) in paragraph at lines 564--591
+Overfull \hbox (62.3995pt too wide) in paragraph at lines 619--646
  []|  [] 
  []
 
 [14]
 Chapitre 4.
-<img_src/PAVIN.jpg, id=581, 255.95625pt x 170.88844pt>
+<img_src/PAVIN.jpg, id=498, 255.95625pt x 170.88844pt>
 File: img_src/PAVIN.jpg Graphic file (type jpg)
 <use img_src/PAVIN.jpg>
-Package pdftex.def Info: img_src/PAVIN.jpg  used on input line 610.
+Package pdftex.def Info: img_src/PAVIN.jpg  used on input line 665.
 (pdftex.def)             Requested size: 318.66948pt x 212.773pt.
 [15
 
  <./img_src/PAVIN.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 633--636
+Underfull \hbox (badness 10000) in paragraph at lines 689--692
 
  []
 
 [16]
-<img_src/image_source.png, id=593, 1483.5425pt x 637.38126pt>
+<img_src/image_source.png, id=510, 1483.5425pt x 637.38126pt>
 File: img_src/image_source.png Graphic file (type png)
 <use img_src/image_source.png>
-Package pdftex.def Info: img_src/image_source.png  used on input line 646.
+Package pdftex.def Info: img_src/image_source.png  used on input line 702.
 (pdftex.def)             Requested size: 409.71692pt x 176.0244pt.
-<img_src/rviz2_lidar.png, id=594, 1927.2pt x 1204.5pt>
+<img_src/rviz2_lidar.png, id=511, 1927.2pt x 1204.5pt>
 File: img_src/rviz2_lidar.png Graphic file (type png)
 <use img_src/rviz2_lidar.png>
-Package pdftex.def Info: img_src/rviz2_lidar.png  used on input line 656.
+Package pdftex.def Info: img_src/rviz2_lidar.png  used on input line 712.
 (pdftex.def)             Requested size: 409.71692pt x 256.05855pt.
  [17 <./img_src/image_source.png> <./img_src/rviz2_lidar.png>] [18]
-Underfull \hbox (badness 10000) in paragraph at lines 675--679
+Underfull \hbox (badness 10000) in paragraph at lines 731--735
 
  []
 
-<img_src/robag_rqt.png, id=607, 1927.2pt x 1204.5pt>
+<img_src/robag_rqt.png, id=524, 1927.2pt x 1204.5pt>
 File: img_src/robag_rqt.png Graphic file (type png)
 <use img_src/robag_rqt.png>
-Package pdftex.def Info: img_src/robag_rqt.png  used on input line 684.
+Package pdftex.def Info: img_src/robag_rqt.png  used on input line 740.
 (pdftex.def)             Requested size: 409.71692pt x 256.05855pt.
 [19 <./img_src/robag_rqt.png>] [20]
-Underfull \hbox (badness 10000) in paragraph at lines 705--707
+Underfull \hbox (badness 10000) in paragraph at lines 761--763
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 708--711
+Underfull \hbox (badness 10000) in paragraph at lines 764--767
 
  []
 
 [21] [22]
-Underfull \hbox (badness 10000) in paragraph at lines 753--754
+Underfull \hbox (badness 10000) in paragraph at lines 809--810
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 755--756
+Underfull \hbox (badness 10000) in paragraph at lines 811--812
 
  []
 
 [23] [24]
-Underfull \hbox (badness 10000) in paragraph at lines 795--796
+Underfull \hbox (badness 10000) in paragraph at lines 851--852
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 797--798
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 810--811
-
- []
-
-[25] [26]
-Underfull \hbox (badness 10000) in paragraph at lines 842--844
-
- []
-
-[27]
-Underfull \hbox (badness 10000) in paragraph at lines 860--861
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 864--865
+Underfull \hbox (badness 10000) in paragraph at lines 853--854
 
  []
 
@@ -1227,304 +1293,327 @@ Underfull \hbox (badness 10000) in paragraph at lines 866--867
 
  []
 
+[25] [26]
+Underfull \hbox (badness 10000) in paragraph at lines 898--900
+
+ []
+
+[27]
+Underfull \hbox (badness 10000) in paragraph at lines 916--917
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 920--921
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 922--923
+
+ []
+
 [28] [29]
-Underfull \hbox (badness 10000) in paragraph at lines 885--886
+Underfull \hbox (badness 10000) in paragraph at lines 941--942
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 887--888
+Underfull \hbox (badness 10000) in paragraph at lines 943--944
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 914--915
+Underfull \hbox (badness 10000) in paragraph at lines 970--971
 
  []
 
 [30] [31]
-Underfull \hbox (badness 10000) in paragraph at lines 934--935
+Underfull \hbox (badness 10000) in paragraph at lines 990--991
 
  []
 
-<img_src/environement_lidar.png, id=693, 1625.07124pt x 922.44624pt>
+<img_src/environement_lidar.png, id=610, 1625.07124pt x 922.44624pt>
 File: img_src/environement_lidar.png Graphic file (type png)
 <use img_src/environement_lidar.png>
-Package pdftex.def Info: img_src/environement_lidar.png  used on input line 959
-.
+Package pdftex.def Info: img_src/environement_lidar.png  used on input line 101
+5.
 (pdftex.def)             Requested size: 432.48051pt x 245.48866pt.
-[32]
-Underfull \hbox (badness 10000) in paragraph at lines 968--970
+[32] [33 <./img_src/environement_lidar.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1025--1027
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 971--972
+Underfull \hbox (badness 10000) in paragraph at lines 1028--1029
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 973--974
-
- []
-
-[33 <./img_src/environement_lidar.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 980--981
+Underfull \hbox (badness 10000) in paragraph at lines 1030--1031
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 982--983
+Underfull \hbox (badness 10000) in paragraph at lines 1037--1038
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1000--1002
+Underfull \hbox (badness 10000) in paragraph at lines 1039--1040
 
  []
 
-[34]
-Underfull \hbox (badness 10000) in paragraph at lines 1008--1010
+[34
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 1057--1059
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1012--1013
+Underfull \hbox (badness 10000) in paragraph at lines 1065--1067
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1069--1070
 
  []
 
 [35]
-Underfull \hbox (badness 10000) in paragraph at lines 1031--1033
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1034--1035
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1036--1037
+Underfull \hbox (badness 10000) in paragraph at lines 1088--1090
 
  []
 
 [36]
-Underfull \hbox (badness 10000) in paragraph at lines 1060--1062
-
- []
-
-[37]
-Underfull \hbox (badness 10000) in paragraph at lines 1071--1072
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1081--1082
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1089--1090
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 1091--1092
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1093--1095
-
- []
-
-[38] [39]
-Underfull \hbox (badness 10000) in paragraph at lines 1101--1102
+Underfull \hbox (badness 10000) in paragraph at lines 1093--1094
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1103--1105
+Underfull \hbox (badness 10000) in paragraph at lines 1117--1119
+
+ []
+
+[37] [38]
+Underfull \hbox (badness 10000) in paragraph at lines 1128--1129
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1111--1112
+Underfull \hbox (badness 10000) in paragraph at lines 1138--1139
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1113--1114
-
- []
-
-[40]
-Underfull \hbox (badness 10000) in paragraph at lines 1134--1135
+Underfull \hbox (badness 10000) in paragraph at lines 1146--1147
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1136--1138
-
- []
-
-[41]
-Underfull \hbox (badness 10000) in paragraph at lines 1150--1151
+Underfull \hbox (badness 10000) in paragraph at lines 1148--1149
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1152--1155
+Underfull \hbox (badness 10000) in paragraph at lines 1150--1152
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1156--1157
-
- []
-
-
+[39] [40]
 Underfull \hbox (badness 10000) in paragraph at lines 1158--1159
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1165--1166
+Underfull \hbox (badness 10000) in paragraph at lines 1160--1162
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1167--1169
+Underfull \hbox (badness 10000) in paragraph at lines 1168--1169
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1170--1171
+
+ []
+
+[41]
+Underfull \hbox (badness 10000) in paragraph at lines 1191--1192
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1193--1195
 
  []
 
 [42]
-Underfull \hbox (badness 10000) in paragraph at lines 1176--1177
+Underfull \hbox (badness 10000) in paragraph at lines 1207--1208
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1200--1201
+Underfull \hbox (badness 10000) in paragraph at lines 1209--1212
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1202--1204
+Underfull \hbox (badness 10000) in paragraph at lines 1213--1214
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1216
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1222--1223
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1224--1226
 
  []
 
 [43]
-Underfull \hbox (badness 10000) in paragraph at lines 1210--1212
+Underfull \hbox (badness 10000) in paragraph at lines 1233--1234
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1257--1258
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1259--1261
 
  []
 
 [44]
-Underfull \hbox (badness 10000) in paragraph at lines 1220--1222
+Underfull \hbox (badness 10000) in paragraph at lines 1267--1269
+
+ []
+
+[45]
+Underfull \hbox (badness 10000) in paragraph at lines 1277--1279
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1228--1229
+Underfull \hbox (badness 10000) in paragraph at lines 1285--1286
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1247--1248
+Underfull \hbox (badness 10000) in paragraph at lines 1304--1305
 
  []
 
-[45
+[46
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1266--1267
+Underfull \hbox (badness 10000) in paragraph at lines 1323--1324
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1268--1270
+Underfull \hbox (badness 10000) in paragraph at lines 1325--1327
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1276--1277
-
- []
-
-[46]
-Underfull \hbox (badness 10000) in paragraph at lines 1278--1280
+Underfull \hbox (badness 10000) in paragraph at lines 1333--1334
 
  []
 
 [47]
-Underfull \hbox (badness 3601) in paragraph at lines 1294--1295
+Underfull \hbox (badness 10000) in paragraph at lines 1335--1337
+
+ []
+
+[48]
+Underfull \hbox (badness 3601) in paragraph at lines 1351--1352
 []\T1/cmr/m/n/12 Université Cler-mont Au-vergne, \T1/cmr/m/it/12 Pré-sen-ta-tio
 n de l'Ins-ti-tut Pas-cal (IP)\T1/cmr/m/n/12 , An-
  []
 
-(./rapport.lof [48
+[49
 
-])
+] (./rapport.lof)
 \tf@lof=\write6
 \openout6 = `rapport.lof'.
 
- [49]
-Annexe A.
-[50
-
-
-]
-Overfull \hbox (3.34119pt too wide) in paragraph at lines 1378--1378
-|[]\T1/cmr/bx/n/20.74 Têtes de pré-dic-tion et sor-ties géo-mé-triques| 
+ [50] (./rapport.annextoc
+Overfull \hbox (26.80074pt too wide) in paragraph at lines 16--16
+ [][] [][][]\T1/cmtt/m/n/12 Modèle cinématique à quatre roues directrices (Four
+-Wheel Steering 
  []
 
-[51] [52] [53] [54]
-Annexe B.
+)
+\tf@annextoc=\write7
+\openout7 = `rapport.annextoc'.
 
-Overfull \hbox (8.02986pt too wide) in paragraph at lines 1460--1461
+ [51
+
+
+] [52] [53
+
+]
+Overfull \hbox (3.34119pt too wide) in paragraph at lines 1440--1440
+|\T1/cmr/bx/n/20.74 A.4 Têtes de pré-dic-tion et sor-ties géo-mé-triques| 
+ []
+
+[54] [55] [56] [57]
+Overfull \hbox (8.02986pt too wide) in paragraph at lines 1522--1523
 []\T1/cmr/bx/n/12 Type de mes-sage : \T1/cmtt/m/n/12 four_wheel_steering_msgs/m
 sg/FourWheelSteeringStamped 
  []
 
 
-Overfull \hbox (2.38416pt too wide) in paragraph at lines 1473--1473
-|[]\T1/cmr/bx/n/20.74 Positionnement et vé-rité ter-rain par GNSS
+Overfull \hbox (2.38416pt too wide) in paragraph at lines 1535--1535
+|\T1/cmr/bx/n/20.74 B.2 Po-si-tion-ne-ment et vé-rité ter-rain par GNSS
  []
 
-[55
+[58
 
 ]
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 1485.
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 1547.
 
-Overfull \hbox (2.64691pt too wide) in paragraph at lines 1489--1490
+Overfull \hbox (2.64691pt too wide) in paragraph at lines 1551--1552
 []\T1/cmr/m/n/12 Cette struc-ture offre une base ma-thé-ma-tique for-melle pour
  bâ-tir la \T1/cmr/bx/n/12 vé-rité ter-rain \T1/cmr/m/n/12 (\T1/cmr/m/it/12 Gro
 und
  []
 
-[56] (./rapport.aux)
+[59] (./rapport.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-
-
-Package rerunfilecheck Warning: File `rapport.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `rapport.out':
-(rerunfilecheck)             Before: 9510A8B01432BD1A4DBDFB6619F75BFA;17579
-(rerunfilecheck)             After:  7D220B142BED42841A5A9804B72AA215;17385.
+Package rerunfilecheck Info: File `rapport.out' has not changed.
+(rerunfilecheck)             Checksum: AF08EA469D8F42277F7AAFB661E32970;12848.
  ) 
 Here is how much of TeX's memory you used:
- 26656 strings out of 469485
- 511642 string characters out of 5468803
- 937090 words of memory out of 5000000
- 54667 multiletter control sequences out of 15000+600000
+ 27410 strings out of 469485
+ 525105 string characters out of 5468803
+ 962728 words of memory out of 5000000
+ 55404 multiletter control sequences out of 15000+600000
  656296 words of font info for 106 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 84i,9n,104p,828b,863s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,9n,104p,828b,842s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/rhomdev/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi1200.6
 00pk> </home/rhomdev/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt109
 5.600pk> </home/rhomdev/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrb
@@ -1557,10 +1646,10 @@ onts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.
 pfb>
-Output written on rapport.pdf (61 pages, 5938449 bytes).
+Output written on rapport.pdf (64 pages, 5937512 bytes).
 PDF statistics:
- 1808 PDF objects out of 2073 (max. 8388607)
- 853 compressed objects within 9 object streams
- 203 named destinations out of 1000 (max. 500000)
- 609 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1775 PDF objects out of 2073 (max. 8388607)
+ 818 compressed objects within 9 object streams
+ 208 named destinations out of 1000 (max. 500000)
+ 481 words of extra memory for PDF output out of 10000 (max. 10000000)
 

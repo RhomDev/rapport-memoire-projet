@@ -13,11 +13,16 @@
 \usepackage{indentfirst}
 \usepackage{enumitem}
 \usepackage{tocloft}
+\usepackage{needspace}
+\usepackage{etoc}
 
 % Positionne et centre le titre du sommaire.
 \setlength{\cftbeforetoctitleskip}{0pt}
 \setlength{\cftaftertoctitleskip}{0.5em}
-\setlength{\cftbeforechapskip}{0.3cm}
+\setlength{\cftbeforechapskip}{0.5cm}
+\setlength{\cftbeforesecskip}{0.4em}
+\setlength{\cftbeforesubsecskip}{0.3em}
+\setlength{\cftbeforeparaskip}{0.2em}
 \renewcommand{\cfttoctitlefont}{\centering\Huge\bfseries}
 \renewcommand{\cftaftertoctitle}{\par}
 \renewcommand{\cftchapfont}{\large\bfseries}
@@ -28,6 +33,39 @@
 
 \newcommand{\textsb}[1]{{\fontseries{sb}\selectfont #1}}
 \newcommand{\bulle}{\textbullet}
+
+\makeatletter
+\newcommand{\printannextoc}{%
+    \begingroup
+    \section*{Sommaire des annexes}
+    \@starttoc{annextoc}
+    \endgroup
+}
+
+\newcommand{\annexchapter}[1]{%
+    \refstepcounter{chapter}%
+    \chapter*{\thechapter\quad #1}%
+    \addcontentsline{annextoc}{chapter}{\protect\numberline{\thechapter}#1}%
+}
+
+\newcommand{\annexsection}[1]{%
+    \refstepcounter{section}%
+    \section*{\thesection\quad #1}%
+    \addcontentsline{annextoc}{section}{\protect\numberline{\thesection}#1}%
+}
+
+\newcommand{\annexsubsection}[1]{%
+    \refstepcounter{subsection}%
+    \subsection*{\thesubsection\quad #1}%
+    \addcontentsline{annextoc}{subsection}{\protect\numberline{\thesubsection}#1}%
+}
+
+\newcommand{\annexsubsubsection}[1]{%
+    \refstepcounter{subsubsection}%
+    \subsubsection*{\thesubsubsubsection\quad #1}%
+    \addcontentsline{annextoc}{subsubsection}{\protect\numberline{\thesubsubsection}#1}%
+}
+\makeatother
 
 \usepackage{tikz}
 \usetikzlibrary{shapes,arrows,positioning,calc}
@@ -228,7 +266,7 @@ Mon stage Master 1 en Automatique et Robotique s'est déroulé à l'\textbf{Inst
 %L'accueil d'un stagiaire au sein d'une structure de recherche ou d'une entreprise nécessite une compréhension globale de son environnement macroéconomique, institutionnel et structurel. C'est dans ce cadre que cette section présente l'Institut Pascal, l'unité mixte de recherche au sein de laquelle s'est déroulé ce stage de Master 1 en Automatique et Robotique.
 
 \subsection{Carte d'identité et caractéristiques}
-L'Institut Pascal est une Unité Mixte de Recherche (UMR 6602) caractérisée par une forte interdisciplinarité, combinant recherche fondamentale et technologique ainsi que formation de haut niveau. Ses principales caractéristiques administratives et institutionnelles sont synthétisées dans le tableau~\ref{tab:carte_identite}.
+L'Institut Pascal est une Unité Mixte de Recherche (UMR 6602) caractérisée par une forte interdisciplinarité, combinant recherches fondamentales et technologiques ainsi que des formations de haut niveau. Ses principales caractéristiques administratives et institutionnelles sont synthétisées dans le tableau~\ref{tab:carte_identite}.
 
 \begin{table}[htbp]
     \centering
@@ -261,6 +299,8 @@ L'Institut Pascal est une Unité Mixte de Recherche (UMR 6602) caractérisée pa
     \label{tab:carte_identite}
 \end{table}
 
+\newpage
+
 \subsection{Historique de l'entreprise}
 L'Institut Pascal est une structure moderne née d'une volonté politique et académique de structurer et de fédérer les forces de recherche en ingénierie sur le site clermontois. Son évolution s'articule autour de trois jalons chronologiques essentiels :
 \begin{itemize}
@@ -270,7 +310,8 @@ L'Institut Pascal est une structure moderne née d'une volonté politique et aca
 \end{itemize}
 
 \subsection{Implantation géographique}
-Bien que la direction générale et le cœur historique de l'Institut Pascal soient basés à Aubière, la structure presents une organisation multi-sites stratégique pour collaborer étroitement avec les centres hospitaliers et les antennes universitaires régionales. Les forces vives sont réparties de la manière suivante :
+Bien que la direction générale et le cœur historique de l'Institut Pascal soient basés à Aubière, la structure presente une organisation stratégique multi-sites afin de collaborer étroitement avec les centres hospitaliers et les antennes universitaires régionales.\\
+Les forces vives sont réparties de la manière suivante :
 \begin{enumerate}
     \item \textbf{Site principal (Campus des Cézeaux) :} Accueille la direction, l'administration centrale ainsi que les équipes adossées à l'EUPI, Polytech Clermont et SIGMA Clermont.
     \item \textbf{Site Hospitalier (CHU de Clermont-Ferrand) :} Situé au sein des hôpitaux Gabriel Montpied et d'Estaing pour les recherches en technologies de la santé (Thérapies Guidées par l'Image).
@@ -284,7 +325,7 @@ Bien que la direction générale et le cœur historique de l'Institut Pascal soi
     \label{fig:implantation}
 \end{figure}
 
-L'implantation sur le Campus des Cézeaux (illustrée par la figure~\ref{fig:implantation}) offre une proximité immédiate avec les infrastructures de l'École Universitaire de Physique et d'Ingénierie (EUPI), ce qui facilite grandement le continuum entre formation et recherche d'excellence.
+L'implantation sur le Campus des Cézeaux (illustrée par la figure~\ref{fig:implantation}) offre une proximité immédiate avec les infrastructures de l'École Universitaire de Physique et d'Ingénierie (EUPI), facilitant le continuum entre formations et recherches d'excellence.
 
 \begin{figure}[htbp]
     \centering
@@ -301,24 +342,24 @@ Chaque axe regroupe un ensemble de personnels de recherche et d'appui dont la r�
 % ==============================================================================
 \section{Le service d'accueil}
 
-Mon intégration dans une structure de recherches d'envergures impliquer de comprendre le fonctionnement quotidien de l'équipe et des infrastructures techniques qui m'encadrent.
+Mon intégration dans une structure de recherches d'envergures impliquait ma compréhension du fonctionnement quotidien de l'équipe et des infrastructures techniques.
 
 \subsection{Gouvernance globale et environnement humain}
 L'unité rassemble une communauté scientifique de près de 400 personnes caractérisée par une grande diversité de statuts. La répartition des effectifs met en évidence une forte composante académique et une dynamique d'encadrement importante :
-\begin{itemize}
+\begin{itemize}[label=\textbullet]
     \item \textbf{Enseignants-chercheurs et chercheurs :} 137 enseignants-chercheurs (UCA, Clermont Auvergne INP), 5 chercheurs permanents CNRS, et 28 enseignants-chercheurs praticiens hospitaliers (UCA/CHU).
     \item \textbf{Personnels de santé et d'enseignement :} 23 praticiens hospitaliers (CHU) et 5 PRAG/PAST.
     \item \textbf{Personnels d'appui technique et administratif :} 11 ingénieurs et techniciens ITA (CNRS) et 15 personnels BIATSS (UCA).
     \item \textbf{Jeunes chercheurs et contractuels :} 147 doctorants et 28 contractuels à durée déterminée (CDD/Post-doc).
 \end{itemize}
 
-Au sommet de cette organisation, la direction générale de l'unité est assurée par \textbf{Evelyne GIL} (Directrice), secondée par \textbf{Christophe VIAL} (Directeur Adjoint). La gestion opérationnelle et le secrétariat général sont coordonnés par \textbf{Pascale DUGAT}, responsable administrative du site.
+Au sommet de cette organisation, la direction générale de l'unité est assurée par \textbf{Mme. Evelyne GIL} (Directrice), secondée par \textbf{Mr. Christophe VIAL} (Directeur Adjoint). La gestion opérationnelle et le secrétariat général sont coordonnés par \textbf{Mme. Pascale DUGAT}, responsable administrative du site.
 
 \subsection{L'Axe ISPR et l'équipe ComSee}
-En parfaite adéquation avec la formation dispensée à l'EUPI, mon stage s'est déroulé au sein de l'axe \textbf{ISPR (Image, Systèmes de Perception, Robotique)}, sous la responsabilité scientifique de \textbf{Omar AIT AIDER}. L'activité de cet axe cible trois piliers scientifiques : l'image, la perception artificielle et la commande pour la robotique. 
+En parfaite adéquation avec la formation dispensée à l'EUPI, mon stage s'est déroulé au sein de l'axe \textbf{ISPR (Image, Systèmes de Perception, Robotique)}, sous la responsabilité scientifique de \textbf{M. Omar AIT AIDER}. L'activité de cet axe cible trois piliers scientifiques : l'image, la perception artificielle et la commande pour la robotique. 
 
 Plus spécifiquement, j'ai été intégré au cœur de l'équipe de recherche \textbf{ComSee} (contraction de \textit{COMputers that SEE}), dont les travaux s'articulent autour du domaine de la vision par ordinateur. Les activités de recherche de ComSee se concentrent sur deux thématiques principales qui croisent directement mon sujet d'étude :
-\begin{itemize}
+\begin{itemize}[label=\textbullet]
     \item \textbf{La vision géométrique :} Modélisation et étalonnage (calibration) de capteurs de vision (classiques, à obturateur roulant, plénoptiques), localisation et reconstruction 3D.
     \item \textbf{L'interprétation de séquences d'images :} Détection, reconnaissance et suivi d'éléments dans des séquences dynamiques, en utilisant des techniques d'apprentissage automatique (\textit{Machine Learning}) et de transfert d'apprentissage.
 \end{itemize}
@@ -326,22 +367,36 @@ Plus spécifiquement, j'ai été intégré au cœur de l'équipe de recherche \t
 Les applications de cette équipe s'orientent vers les transports intelligents (navigation autonome de véhicules), la réalité augmentée, la vidéosurveillance et la vision robotique. Cette configuration offre un cadre idéal pour l'application concrète des concepts théoriques étudiés en Master 1.
 
 \subsection{Environnement technique et plateformes d'expérimentation}
-L'Institut Pascal se distingue par un écosystème technique exceptionnel composé de 7 plateformes expérimentales internes et 8 plateformes partenaires, offrant un appui unique pour la validation des travaux de recherche en ingénierie.
+L'Institut Pascal se distingue par un écosystème technique exceptionnel composé de 7 plateformes expérimentales internes et 8 plateformes partenaires.\\
+Il offre un appui unique pour la validation des travaux de recherche en ingénierie.\\
 
-\paragraph{Les plateformes majeures de l'axe ISPR :}
-Pour les applications en automatique et en robotique, deux plateformes nationales de premier plan sont implantées sur le site :
-\begin{itemize}
-    \item \textbf{PAVIN (Plateforme Auvergnate Pour les Véhicules Intelligents / CNRS) :} Dédiée à l'évaluation d'algorithmes de navigation, de perception et de commande en environnement routier urbain ou naturel simulé pour les véhicules autonomes.
-    \item \textbf{PRMDex / ROBTOOL (EquipEx CNRS ROBOTEX) :} Plateforme robotique de manipulation dextre et d'usinage robotisé, équipée de bras manipulateurs de haute précision, essentielle pour l'étude de l'interaction physique et de la commande d'outils complexes.
+\bigskip
+
+\textbf{Les plateformes majeures de l'axe ISPR :}\\
+\hspace*{1cm} Pour les applications en automatique et en robotique, deux plateformes nationales de premier plan sont implantées sur les sites :
+\begin{itemize}[label=\textbullet]
+    \item \textbf{PAVIN (Plateforme Auvergnate Pour les Véhicules Intelligents / CNRS) :} \\
+    \hspace*{.5cm} Dédiée à l'évaluation d'algorithmes de navigation, de perception et de commande en environnement routier urbain ou naturel simulé pour les véhicules autonomes.
+    \item \textbf{PRMDex / ROBTOOL (EquipEx CNRS ROBOTEX) :}\\
+    \hspace*{.5cm} Plateforme robotique de manipulation dextre et d'usinage robotisé.\\
+    Elle est équipée de bras manipulateurs de haute précision, qui sont essentiels pour l'étude de l'interaction physique et de la commande d'outils complexes.
 \end{itemize}
 
-L'institut s'appuie également sur d'autres plateformes internes spécialisées comme la plateforme PACEM (Compatibilité Électromagnétique). De plus, la collaboration avec Polytech Clermont et SIGMA Clermont donne accès à des infrastructures partenaires d'essais mécaniques (2MATech, MSGC).
+\bigskip
 
-\paragraph{Organisation et rythmes de travail :}
-L'accueil et l'encadrement quotidien sont structurés pour simuler l'activité d'un ingénieur en recherche et développement au sein d'un laboratoire public. Les modalités incluent :
-\begin{itemize}
-    \item \textbf{Horaires et présence :} Le service fonctionne sur une base de présence en journée (généralement 9h00 - 18h00), rythmée par l'accès aux salles de développement informatique de l'équipe ComSee et aux plateformes robotiques.
-    \item \textbf{Suivi scientifique :} Des réunions de suivi et des séminaires d'axe permettent de faire régulièrement le point sur l'avancée de l'étude avec mes maîtres de stage, M.~\textbf{Thierry CHATEAU} et M.~\textbf{François MARMOITON}, afin de valider les choix d'implémentation et de lever les verrous technologiques rencontrés.
+L'institut s'appuie également sur d'autres plateformes internes spécialisées comme la plateforme \textbf{PACEM} (Compatibilité Électromagnétique). De plus, la collaboration avec \textbf{Polytech Clermont} et \textbf{SIGMA Clermont} donne accès à des infrastructures partenaires d'essais mécaniques (\textbf{2MATech, MSGC}).\\
+
+\bigskip
+\bigskip
+
+\textbf{Organisation et rythmes de travail :}\\
+L'accueil et l'encadrement quotidien était structurés pour simuler l'activité d'un ingénieur en recherche et développement au sein d'un laboratoire public.\\
+Les modalités incluaient :
+\begin{itemize}[label=\textbullet]
+    \item \textbf{Le respect des horaires et présence sur site}\\
+    \hspace*{.5cm} Le service fonctionne sur une base de présence en journée (généralement 9h00 - 18h00), rythmée par l'accès aux salles de développement informatique de l'équipe ComSee et aux plateformes robotiques.
+    \item \textbf{Le suivi scientifique} \\
+    \hspace*{.5cm} Des réunions de suivi et des séminaires d'axe permettent de faire régulièrement le point sur l'avancée de l'étude avec mes maîtres de stage, M.~\textbf{Thierry CHATEAU} et M.~\textbf{François MARMOITON}, afin de valider ou non les choix d'implémentation et de lever les verrous technologiques rencontrés.
 \end{itemize}
 
 % ==============================================================================
@@ -613,10 +668,11 @@ Les scénarios sélectionnés simulaient une cinématique hautement dynamique :
 \end{figure}
 
 
-\subsection{Scénario expérimental retenu}
+\subsection{Scénario retenu}
 \paragraph{}
 Au cours de mon stage, j'ai finalement exploité principalement le scénario de la gestion d'un carrefour à sens unique.\\
-\hspace*{.5cm}Ce choix a été dicté par les résultats obtenus lors des expérimentations. En effet, avec mon collègue, nous n'avons pas réussi à obtenir à partir de VGGT une réalité terrain stable et cohérente dans les configurations plus exigeantes. Les sorties du modèle ne pouvaient alors être évaluées de manière fiable que par un regard subjectif, fondé sur une interprétation visuelle des résultats, sans mesure quantitative de référence.\\
+\hspace*{.5cm}Ce choix a été dicté par les résultats obtenus lors des expérimentations. En effet, avec mon collègue, nous n'avons pas réussi à obtenir à partir de VGGT une réalité terrain stable et cohérente dans les configurations plus exigeantes.\\
+\hspace*{.5cm}\textbf{Les sorties du modèle ne pouvaient alors être évaluées de manière fiable que par un regard subjectif, fondé sur une interprétation visuelle des résultats, sans mesure quantitative de référence.\\}
 \hspace*{.5cm}Cette limite a renforcé l'idée qu'il fallait privilégier un cas d'étude suffisamment représentatif du comportement réel du système, tout en restant exploitable pour une évaluation objective. \\
 \hspace*{.5cm}Le scénario du rond-point a été retenu pour soumettre les modèles d'apprentissage profond à des contraintes fortement non linéaires, tout en offrant un cadre de navigation maîtrisé et représentatif pour l'évaluation des performances.\\
 L'hypothèse sous-jacente à ce choix de trajectoire était double :
@@ -731,7 +787,7 @@ Les caméras grand public ou industrielles acquérant les lignes de pixels de ma
 
 \newpage
 
-\section{Traitement pour l'amélioration de Qualité des images}
+\section{Amélioration de la Qualité des Images}
 
 \subsection{Traitement de la distorsion optique}
 
@@ -811,7 +867,7 @@ La saturation (ou « brûlage ») survient lorsque l'éclairement incident dépa
 
 \newpage
 
-\subsection{Traitement de la contraste}
+\subsection{Traitement du contraste}
 \paragraph{}
 Dans ce projet, nous avons observé que certaines images présentaient des aplats (tout noir, tout blanc ou gris uniforme) traduisant un faible contraste.\\
 Un contraste insuffisant réduit la quantité d'informations locales exploitables pour l'appariement et la calibration.
@@ -833,7 +889,7 @@ où :
 
 \newpage
 
-\subsection{Traitement de la flou}
+\subsection{Traitement du flou}
 
 \paragraph{}
 Dans ce projet, le test de flou identifie l'absence de contours nets dans l'image. Une image bien focalisée présente des transitions d'intensité abruptes sur les bords des objets ; le flou lisse ces transitions.
@@ -859,7 +915,7 @@ Ensuite on calcule la variance des valeurs du Laplacien sur l'image : une varian
 
 \hspace*{0.3cm} \textit{L'objectif de cette deuxième approche consistait à exploiter la complémentarité géométrique entre les capteurs proprioceptifs et extéroceptifs afin de générer une référence de vérité terrain (\textit{Ground Truth}) tridimensionnelle suffisamment précise pour servir de référence lors de la phase d'auto-calibration.}\\
 
-\subsection{Développement d'un algorithme de SLAM personnalisé}
+\subsection{Développement d'un algorithme SLAM personnalisé}
 
 \hspace*{.3cm}Afin d'appréhender finement les mécanismes de fusion des différentes sources de données, sans dépendre directement d'une architecture considérée comme une « boîte noire », un premier pipeline de SLAM (\textit{Simultaneous Localization and Mapping}) spécifique a été développé à partir des données extraites du \texttt{rosbag}.\\
 
@@ -880,7 +936,7 @@ flux devait permettre d'estimer progressivement la pose du véhicule et d'assemb
 
 \newpage
 
-\subsection{Déploiement d'une architecture SLAM de l'état de l'art}
+\subsection{Déploiement d'une architecture SLAM}
 
 \hspace*{.3cm}Dans une démarche de recherche visant à comparer le développement réalisé avec une solution existante et validée, une seconde architecture de SLAM tridimensionnelle a été déployée en parallèle sous l'environnement ROS~2.\\
 
@@ -961,8 +1017,9 @@ Cette image constituait alors une référence géométrique intermédiaire pouva
     \label{fig:environnement_lidar}
 \end{figure}
 
-\newpage
-
+\clearpage
+\addtocontents{toc}{\protect\Needspace{15\baselineskip}}
+\Needspace{12\baselineskip}
 \section{Filtrage visuel intelligent par LoFTR et optimisation du recouvrement}
 
 \hspace*{0.3cm}Cette troisième approche marquait un tournant dans la méthodologie de l'étude. Après avoir vérifié que le filtrage purement cinématique permettait de supprimer les images statiques ou fortement redondantes, j'avais cherché à aller plus loin en analysant le mécanisme interne du modèle \textbf{VGGT}. Le point crucial n'était pas uniquement la qualité visuelle des images, mais surtout leur \textbf{cohérence géométrique} entre elles.\\
@@ -1322,6 +1379,8 @@ A. Censi, \textit{``On Sensor Fusion and Calibration in Robotics''}, Internation
 
 \end{thebibliography}
 
+\newpage
+
 % ==============================================================================
 % TABLE DES ILLUSTRATIONS
 % ==============================================================================
@@ -1333,10 +1392,13 @@ A. Censi, \textit{``On Sensor Fusion and Calibration in Robotics''}, Internation
 % ANNEXES
 % ==============================================================================
 \appendix
+\chapter*{Annexes}
+\addcontentsline{toc}{chapter}{Annexes}
+\printannextoc
 
-\chapter{Compléments techniques sur VGGT}
+\annexchapter{Compléments techniques sur VGGT}
 
-\section{Objectif et principe général}
+\annexsection{Objectif et principe général}
 
 VGGT (\textit{Visual Geometry Grounded Transformer}) est un modèle d'apprentissage profond conçu pour estimer la géométrie d'une scène à partir d'un ensemble d'images. Son objectif est de produire directement, en une seule passe d'inférence, plusieurs informations utiles à la reconstruction tridimensionnelle : les paramètres des caméras, les cartes de profondeur, les \textit{point maps} et le suivi de points entre les différentes vues.
 
@@ -1344,7 +1406,7 @@ Cette approche se distingue d'un pipeline classique de type Structure-from-Motio
 
 Le caractère feed-forward simplifie le traitement et permet de produire rapidement une première estimation. Toutefois, les sorties restent sensibles à la qualité des images, au recouvrement entre les vues, aux mouvements de la caméra et à la cohérence de la séquence fournie en entrée. Dans le cadre de ce stage, le pré-traitement des images constitue donc une étape indispensable avant l'inférence.
 
-\section{Représentation des images et des tokens}
+\annexsection{Représentation des images et des tokens}
 
 Chaque image d'entrée est découpée en petites régions, appelées \textit{patches}. Ces régions sont transformées en représentations numériques appelées \textit{tokens visuels}. Cette représentation permet au Transformer de manipuler simultanément le contenu de l'image et les relations entre les différentes vues.
 
@@ -1356,15 +1418,15 @@ On peut représenter cette étape de manière simplifiée par :
 \end{equation}
 où $I_i$ désigne la $i$-ième image, $H_i$ sa représentation sous forme de tokens et $P$ le nombre de patches utilisés pour cette image.
 
-\section{Mécanisme d'attention alternée}
+\annexsection{Mécanisme d'attention alternée}
 
 Le cœur de VGGT repose sur l'alternance de deux mécanismes d'attention complémentaires.
 
-\subsection{Attention au sein d'une image}
+\annexsubsection{Attention au sein d'une image}
 
 L'attention de type \textit{frame-wise} traite les tokens appartenant à une même image. Elle permet au réseau de consolider les relations spatiales locales, les contours, les textures et les éléments de structure visibles dans chaque vue. Cette étape contribue à construire une représentation cohérente de la scène observée par une caméra donnée.
 
-\subsection{Attention globale entre les vues}
+\annexsubsection{Attention globale entre les vues}
 
 L'attention globale met ensuite en relation les tokens provenant des différentes images. Le réseau peut ainsi comparer les observations, identifier les éléments communs et exploiter la parallaxe entre les vues. Cette information est essentielle pour estimer les relations géométriques entre les caméras et reconstruire une structure 3D cohérente.
 
@@ -1375,11 +1437,11 @@ L'alternance de ces deux attentions peut être résumée par :
 \end{equation}
 où $H^{(l)}$ désigne les représentations internes à la couche $l$, tandis que $\mathcal{A}_{\mathrm{frame}}$ et $\mathcal{A}_{\mathrm{global}}$ représentent respectivement l'attention intra-image et l'attention inter-images.
 
-\section{Têtes de prédiction et sorties géométriques}
+\annexsection{Têtes de prédiction et sorties géométriques}
 
 Après la fusion des informations par le Transformer, plusieurs têtes spécialisées produisent les sorties géométriques du modèle.
 
-\subsection{Paramètres et poses des caméras}
+\annexsubsection{Paramètres et poses des caméras}
 
 La \textit{camera head} exploite notamment les \textit{camera tokens} pour estimer les paramètres associés aux vues. Les paramètres intrinsèques décrivent les propriétés internes de la caméra, comme la focale et le centre principal. Les paramètres extrinsèques décrivent la position et l'orientation de la caméra dans un repère donné.
 
@@ -1393,23 +1455,23 @@ Une pose peut être représentée par une transformation rigide :
 \end{equation}
 où $\mathbf{R}_i \in SO(3)$ est la matrice de rotation et $\mathbf{t}_i \in \mathbb{R}^3$ le vecteur de translation de la caméra $i$. Dans la pratique, les poses prédites par VGGT sont utilisées pour extraire une trajectoire relative. Cette trajectoire doit ensuite être alignée sur une référence métrique, comme une trajectoire GPS ou une trajectoire obtenue par LiDAR-SLAM.
 
-\subsection{Cartes de profondeur}
+\annexsubsection{Cartes de profondeur}
 
 La tête dense du modèle produit une carte de profondeur pour chaque image. À chaque pixel est associée une estimation de sa distance par rapport à la caméra. Ces cartes permettent de représenter la structure de la scène sous une forme dense, contrairement au nuage de points clairsemé produit par les premières étapes d'un pipeline SfM classique.
 
 La profondeur prédite ne doit cependant pas être considérée automatiquement comme une mesure métrique parfaite. Selon les conditions d'inférence, elle peut être affectée par une ambiguïté d'échelle, des surfaces peu texturées, des occultations ou des erreurs de prédiction locales.
 
-\subsection{Point maps}
+\annexsubsection{Point maps}
 
 Une \textit{point map} associe à chaque pixel une position 3D estimée. Elle peut être vue comme une représentation dense de la scène dans laquelle les pixels ne sont plus seulement décrits par leur intensité ou leur couleur, mais aussi par des coordonnées spatiales.
 
 Cette sortie est particulièrement intéressante pour analyser la cohérence géométrique d'une reconstruction. Elle peut également servir à comparer les observations issues des différentes vues et à identifier les zones où la géométrie prédite est peu fiable.
 
-\subsection{Suivi de points entre les images}
+\annexsubsection{Suivi de points entre les images}
 
 VGGT fournit également des informations de suivi de points 3D à travers les vues. Le principe consiste à retrouver, dans plusieurs images, les projections correspondant à un même élément de la scène. Ces correspondances contribuent à maintenir une cohérence multi-vues et à relier les représentations produites pour chaque image.
 
-\section{Déroulement d'une inférence}
+\annexsection{Déroulement d'une inférence}
 
 Dans l'application étudiée, le déroulement d'une inférence peut être décrit en plusieurs étapes :
 \begin{enumerate}
@@ -1423,7 +1485,7 @@ Dans l'application étudiée, le déroulement d'une inférence peut être décri
 
 Le traitement par blocs est nécessaire lorsque la séquence complète est trop volumineuse pour être traitée en une seule fois. Dans le rapport, les sorties de chaque bloc sont ensuite alignées et concaténées. Cette opération introduit toutefois un risque de discontinuité entre deux blocs, car chaque inférence peut produire un repère relatif ou une échelle différente.
 
-\section{Intérêt du pré-traitement pour VGGT}
+\annexsection{Intérêt du pré-traitement pour VGGT}
 
 Le fonctionnement de VGGT dépend fortement de la qualité du jeu d'images fourni. Des images trop proches dans le temps apportent une information redondante et augmentent le coût de calcul. À l'inverse, des images trop éloignées peuvent présenter un recouvrement insuffisant, ce qui complique l'établissement des relations géométriques.
 
@@ -1431,7 +1493,7 @@ Le filtrage cinématique permet d'éliminer certaines images prises pendant des 
 
 Cette préparation ne modifie pas l'architecture de VGGT. Elle agit en amont, en contrôlant les données transmises au modèle afin de rendre l'inférence plus stable et plus exploitable dans un contexte de reconstruction de trajectoire.
 
-\section{Limites dans le contexte de l'étude}
+\annexsection{Limites dans le contexte de l'étude}
 
 Plusieurs limites doivent être prises en compte lors de l'interprétation des résultats :
 \begin{itemize}
@@ -1446,9 +1508,9 @@ Ainsi, VGGT doit être considéré comme un estimateur géométrique puissant fo
 
 % Principes de fonctionnement des systèmes embarqués
 
-\chapter{Principes de fonctionnement et modélisation des capteurs embarqués}
+\annexchapter{Principes de fonctionnement et modélisation des capteurs embarqués}
 
-\section{Modèle cinématique à quatre roues directrices (Four-Wheel Steering -- 4WS)}
+\annexsection{Modèle cinématique à quatre roues directrices (Four-Wheel Steering -- 4WS)}
 
 Contrairement aux véhicules automobiles classiques à deux roues directrices (système de type Ackermann), la plateforme de test utilisée dispose d'un système à quatre roues directrices (4WS -- \textit{Four-Wheel Steering}). Cette configuration mécanique offre une flexibilité accrue pour les manœuvres à basse vitesse (comme la circulation dans un rond-point), permettant de réduire considérablement le rayon de braquage en orientant les essieux avant et arrière en opposition, ou de se déplacer latéralement en orientant les roues dans le même sens (marche en crabe).
 
@@ -1470,7 +1532,7 @@ Ce message structuré comprend une estampille temporelle (\textit{timestamp}) in
 L'exploitation conjointe de ces paramètres permet de reconstruire l'odométrie à partir du modèle cinématique du robot mobile, servant d'indicateur pour détecter l'état stationnaire (vitesse nulle) ou pour initialiser le calcul de trajectoire.
 
 
-\section{Positionnement et vérité terrain par GNSS / GPS}
+\annexsection{Positionnement et vérité terrain par GNSS / GPS}
 
 Afin d'évaluer la précision spatiale de l'auto-calibration générée par le modèle d'IA VGGT, les données de positionnement par satellite (GNSS) ont été extraites. Sur la plateforme d'expérimentation, ces informations géospatiales sont publiées à travers le système ROS 2 :
 \begin{itemize}
