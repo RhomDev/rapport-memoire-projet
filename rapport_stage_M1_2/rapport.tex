@@ -499,47 +499,54 @@ Les objectifs premiers étaient :
 
 \chapter{Le Démarrage de mon étude}
 
-\section{Analyse et Critique de l'existant avant le démarrage de l'étude}
-
-\paragraph{\large\fontseries{bx}\selectfont L'analyse :}
-
-Avant le début de ces travaux, le laboratoire disposait de jeux de données massifs enregistrés lors des circulations des véhicules autonomes sur la plateforme PAVIN. Ces données brutes, stockées sous forme de \texttt{.rosbag}, contiennent l'intégralité des flux non-synchronisés alimenté : 
-\begin{itemize}[label=\textbullet]
-    \item les images issues des caméras embarquées (avant, arrière, gauche, droite)
-    \item les nuages de points 3D générés par les LiDARs
-    \item les informations de position et d'orientation du véhicule (odometry, GNSS, GPS)
-    \item les données issues des centrales inertielles (IMU)
-\end{itemize}
-\bigskip
-Le point de départ algorithmique du modèle d'IA VGGT n'avait aucun pipeline structuré pour alimenter efficacement ce réseau avec des données pré-traitées, filtrées ou adaptées aux contraintes géométriques au modèle imposées.
-
-\paragraph{\large\fontseries{bx}\selectfont La critique :}
-\label{subsec:critique_vggt}
-
-L'analyse approfondie du modèle \textbf{VGGT} et des données brutes issues des véhicules autonomes de la plateforme PAVIN mettait en évidence un décalage majeur entre la théorie algorithmique et son application sur des données réelles du monde physique~:\par\bigskip
-
+\section{Analyse et Critique préalables de l'existant}
+\subsection{Analyse et Constat}
+\vspace{0.5cm}
+\hspace*{1em}Avant le début de ces travaux, le laboratoire disposait de jeux de données massifs enregistrés lors des circulations des véhicules autonomes sur la plateforme PAVIN. Ces données brutes, stockées sous forme de \texttt{.rosbag}, contiennaient l'intégralité des flux non-synchronisés alimenté : 
+\vspace{.5cm}
 \begin{itemize}
     \setlength{\itemsep}{1em}
     \renewcommand{\labelitemi}{{\large\bfseries\textbullet}}
-    \item {\large\bfseries Gourmandise computationnelle et contraintes de passage à l'échelle~:} \\
+    \item {\bfseries Les images issues des caméras embarquées (avant, arrière, gauche, droite)}
+    \item {\bfseries Les nuages de points 3D générés par les LiDARs}
+    \item {\bfseries Les informations de position et d'orientation du véhicule (odometry, GNSS, GPS)}
+    \item {\bfseries Les données issues des centrales inertielles (IMU)}
+\end{itemize}
+\bigskip
+\hspace*{.5cm}Le point de départ algorithmique du modèle d'IA VGGT n'avait \textbf{aucun pipeline structuré} pour alimenter efficacement ce réseau avec des données pré-traitées, filtrées ou adaptées aux contraintes géométriques au modèle imposées.
+
+\bigskip
+
+L'analyse approfondie du modèle \textbf{VGGT} et des données brutes issues des véhicules autonomes de la plateforme PAVIN mettait en évidence un décalage majeur entre la théorie algorithmique et son application sur des données réelles du monde physique~:\par\bigskip
+
+\newpage
+
+\subsection{Critique}
+\vspace{0.5cm}
+\begin{itemize}
+    \setlength{\itemsep}{1.5em}
+    \renewcommand{\labelitemi}{{\large\bfseries\textbullet}}
+    \item {\bfseries Gourmandise computationnelle et contraintes de passage à l'échelle~: \vspace{0.3cm}} \\ 
     \hspace*{1em}Le modèle VGGT repose sur un mécanisme d'attention alternée (\textit{Frame-wise} et \textit{Global Attention}) appliqué à des \textit{tokens} visuels.\\
-    Si cette architecture offre d'excellentes capacités de prédiction géométrique directe (poses caméras, cartes de profondeur, \textit{point maps}), sa complexité mémoire (VRAM GPU) et en temps de calcul croît de manière exponentielle avec le nombre d'images. \\
-    \hspace*{1em}En raison des contraintes matérielles existantes, le traitement était limité à un volume de 20 images. \\
-    \hspace*{1em}L'application directe de VGGT sur des séquences vidéo longues ou continues est donc impraticable sans un découpage strict en blocs (\textit{chunks}), ce qui introduit inévitablement des dérives d'échelle et d'orientation cumulatives lors de la concaténation.
+    \hspace*{.8cm} Si cette architecture offre d'excellentes capacités de prédiction géométrique directe (poses caméras, cartes de profondeur, \textit{point maps}), sa complexité mémoire (VRAM GPU) et les temps de calcul croîssent de manière exponentielle avec le nombre d'images. \\
+
+    \hspace*{1em}\textbf{Certaine contraintes matérielles(équipements informatiques, capacité de traitement),on limitait malheureusement l'échantillonnage référentiel du modèle à seulement 20 images.} \\
+
+    \hspace*{1em}L'application directe de VGGT sur des séquences vidéo longues ou continues était donc impraticable sans un découpage strict en blocs (\textit{chunks}), introduissant inévitablement des dérives d'échelles et d'orientations cumulatives lors de la concaténation.
     
-    \item {\large\bfseries Inadéquation des flux rosbags bruts et redondance sémantique~:}\\ 
-    \hspace*{1em}Les enregistrements issus des véhicules autonomes (\texttt{.rosbag}) contiennent des données acquises à haute fréquence. \\
-    Dans des conditions réelles de circulation, le véhicule traverse régulièrement des phases d'arrêt (feux rouges, intersections) et de circulation très lente.\\
+    \item {\bfseries Inadéquation des flux rosbags bruts et redondance sémantique~:  \vspace{0.3cm}}\\
+    \hspace*{1em}Les enregistrements issus des véhicules autonomes (\texttt{.rosbag}) contiennent des données acquises à hautes fréquences. \\
+    \hspace*{.8cm}Dans des conditions réelles de circulation, le véhicule traverse régulièrement des phases d'arrêt (feux rouges, intersections) et de circulation très lente.\\
     \hspace*{1em}Injecter ces images répétitives dans un réseau lourd comme VGGT provoque un gaspillage massif de ressources de calcul sans aucun gain géométrique, et peut induire le modèle en erreur sur des scènes statiques.
     
-    \item {\large\bfseries Absence d'une Vérité Terrain (\textit{Ground Truth}) métrique directe~:}\\
-    \hspace*{1em}le modèleVGGT produit des prédictions de poses relatives et non métriques. \\
-    Pour évaluer la pertinence de l'auto-calibration extrinsèque et mesurer précisément l'erreur d'estimation du modèle, il est impossible de se contenter des données GPS brutes du véhicule (soumises aux masquages urbains, au bruit et aux décalages de synchronisation).\\
-    \hspace*{1em}Une référence géométrique continue et ultra-précise s'avère donc indispensable.
+    \item {\bfseries Absence d'une Vérité Terrain (\textit{Ground Truth}) métrique directe~:  \vspace{0.3cm}}\\
+    \hspace*{1em}Le modèle VGGT produit des prédictions de poses relatives et non métriques. \\
+    \hspace*{.8cm}Pour évaluer la pertinence de l'auto-calibration extrinsèque et mesurer précisément l'erreur d'estimation du modèle, il est impossible de se contenter des données GPS brutes du véhicule (soumises aux masquages urbains, au bruit et aux décalages de synchronisation).\\
+    \hspace*{1em}\textbf{Une référence géométrique continue et ultra-précise s'avère donc indispensable.}
     
-    \item {\large\bfseries Hétérogénéité des modalités (2D visuel vs 3D LiDAR)~:} \\
+    \item {\bfseries Hétérogénéité des modalités (2D visuel vs 3D LiDAR)~:  \vspace{0.3cm}} \\
     \hspace*{1em}Alors que le modèle VGGT travaille exclusivement sur l'information chromatique (RGB 2D), les véhicules autonomes disposent de LiDARs 3D qui fournissent une géométrie métrique absolue. \\
-    \hspace*{1em}L'absence de passerelle(s) logicielle(s) permettant de projeter ces nuages de points 3D sous forme de représentations denses 2D limite l'exploitation conjointe des capteurs.
+    \hspace*{1em}\textbf{L'absence de passerelle(s) logicielle(s) }permettant de projeter ces nuages de points 3D sous forme de représentations denses 2D limite l'exploitation conjointe des capteurs.
 
 \end{itemize}
 
