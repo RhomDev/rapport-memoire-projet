@@ -6,10 +6,11 @@
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Navette autonome EasyMile EZ10 utilisée lors des expérimentations.}}{7}{figure.2.1}%
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Schéma de l’architecture optique et des capteurs embarqués.}}{7}{figure.2.2}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Schéma récapitulatif du pipeline de sélection d'images appliqué avant l'alimentation de VGGT.}}{14}{figure.3.1}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Schéma récapitulatif du pipeline de sélection d'images appliqué avant l'alimentation de VGGT.}}{13}{figure.3.1}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Plateforme d'expérienmentation PAVIN situé à Aubière}}{15}{figure.4.1}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Exemples d'images acquises par les caméras embarquées}}{17}{figure.4.2}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Exemples d'acquisitions par un capteurs LiDAR}}{17}{figure.4.3}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Représentation des flux de données de tous les périphériques, visualisés dans l'environnement RQT\_graph}}{19}{figure.4.4}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Reconstruction de l'environnement à partir des données LiDAR}}{33}{figure.4.5}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Plateforme d'expérienmentation PAVIN situé à Aubière}}{14}{figure.4.1}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Exemples d'images acquises par les caméras embarquées}}{16}{figure.4.2}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Exemples d'acquisitions par un capteurs LiDAR}}{16}{figure.4.3}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Graphique de l'évolution de la vitesse du véhicule, mesurée par les capteurs d'odométrie}}{17}{figure.4.4}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Représentation des flux de données de tous les périphériques, visualisés dans l'environnement RQT\_graph}}{18}{figure.4.5}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Reconstruction de l'environnement à partir des données LiDAR}}{32}{figure.4.6}%
