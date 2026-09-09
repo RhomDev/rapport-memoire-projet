@@ -329,7 +329,7 @@ L'implantation sur le Campus des Cézeaux (illustrée par la figure~\ref{fig:imp
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.9\textwidth]{img_pdf/organigramme_IP.pdf}
+    \includegraphics[width=\textwidth]{img_pdf/organigramme_IP.pdf}
     \caption{Organigramme structurel de l'Institut Pascal et de ses cinq axes de recherche}
     \label{fig:organigramme}
 \end{figure}
@@ -402,41 +402,46 @@ Les modalités incluaient :
 % ==============================================================================
 % DEUXIÈME PARTIE : LE POSTE OCCUPÉ ET L'ÉTUDE CONFIÉE
 % ==============================================================================
-\chapter{Présentation du poste occupé et l'étude}
+\chapter{Présentation du poste occupé et de l'étude}
 
 \section{Mon poste}
 
-Dans le cadre de ce stage de Master~1 au sein de l'équipe \textbf{ComSee} de l'Institut Pascal, mon rôle s'est organisé autour d'un profil de stagiaire ingénieur spécialisé dans le traitement de données et la vision par ordinateur.\\
-\hspace*{.5cm}Il s'insérait dans une recherche mener par l'Institut Pascal sur auto-calibration d'un système avec ses différents périphériques hétérogènes.\\
+Dans le cadre de ce stage de Master~1 au sein de l'équipe \textbf{ComSee} de l'Institut Pascal, ma fonction a été d'adopter le profil d'un ingénieur stagiaire spécialisé dans le traitement de données et la vision par ordinateur.\\
 
-Sous l'encadrement de M. \textbf{Thierry CHATEAU} et de M. \textbf{François MARMOITON}, mes missions quotidiennes ont été construct autour de la manipuler, l'extraction et le traitement des données complexes. \\
-\hspace*{.5cm}Provener des différents capteurs embarqués sur les plateformes expérimentales du laboratoire.\\
+\hspace*{.5cm}Elle s'insérait dans une recherche menée par l'Institut Pascal sur l'auto-calibration d'un système avec ses différents périphériques hétérogènes.\\
 
-Mon intégration au sein de ce projet m'a conduit à pouvoir établir un lien entre la recherche algorithmique, donc l'exploitation de modèles d'intelligence artificielle, l'ingénierie des données nécessaires à leur utilisation dans des conditions expérimentales réelles.\\
-\hspace*{.5cm}Cela m'a permis de pouvoir concevoir, développer et tester différents pipelines de traitement de données en m'appuyant sur l'environnement Linux, notamment Ubuntu, ainsi que sur le middleware de robotique \textbf{ROS~2}.\\
+Sous l'encadrement de M. \textbf{Thierry CHATEAU} et de M. \textbf{François MARMOITON}, mes missions quotidiennes ont été construite autour de la manipulation, de l'extraction et du traitement des données complexes. \\
 
-Ce travail a été effectué en étroite collaboration avec un autre stagiaire de Master~2 en Automatique et Robotique, \textbf{Amadou BARRY}. \\
-\hspace*{.5cm}Notre complémentarité a permis de répartir efficacement les tâches du projet : \\
-\hspace*{1cm}Personnellement, je me suis principalement occupé du traitement des données en amont pour améliorer les performances du modèle d'intelligence artificielle\\
-\hspace*{1cm}"Mon Binôme" s'est inversti sur le développement et l'optimisation du modèle IA lui-même.
+\hspace*{.5cm}Celle-ci provenaient des différents capteurs embarqués sur les plateformes expérimentales du laboratoire.\\
+
+Cette intégration au sein du projet m'a permis de pouvoir établir un lien entre la recherche algorithmique\footnote{exploitation de modèles d'intelligence artificielle}, l'ingénierie des données nécessaires, et leur utilisation dans des conditions expérimentales réelles.\\
+\hspace*{.5cm}Cela m'a permis de pouvoir concevoir, développer et tester différents pipelines de traitement de données en m'appuyant sur l'environnement \textbf{Linux}, notamment \textbf{Ubuntu}, ainsi que sur le middleware de robotique \textbf{ROS~2}.\\
+
+J'ai effectué ce travail en étroite collaboration avec un autre stagiaire de Master~2 en Automatique et Robotique, \textbf{M. Amadou BARRY}. \\
+Notre complémentarité a permis de répartir efficacement les tâches du projet : 
+\begin{itemize}[label=\textbullet]
+    \item Personnellement, je me suis principalement occupé du traitement des données en amont pour améliorer les performances du modèle d'intelligence artificielle\\
+    \item "Mon Binôme" c'est investi sur le développement et l'optimisation du modèle IA.
+\end{itemize}
 
 \newpage
 
 \section{L'étude confiée}
 
-\hspace*{0.3cm}Les travaux menés au cours de ce projet s'inscrivaient dans le cadre des problématiques par la perception multi-capteurs et la navigation des véhicules autonomes. \\
+\hspace*{0.3cm}Les travaux menés au cours de ce projet s'inscrivaient dans le cadre des problématiques posées par la perception multi-capteurs et la navigation des véhicules autonomes. \\
 
-\hspace*{.3cm}Enfin d'étudier les possibilités de l'auto-calibration extrinsèque du système de vision d'un véhicule autonome, j'ai étudier le déploiement du modèle d'apprentissage \textbf{VGGT}\footnote{Visual Geometry Grounded Transformer} en évaluant sa faisabilité, sa robustesse et sa pertinence.\\
+\hspace*{.3cm}Afin d'évaluer les possibilités de l'auto-calibration extrinsèque du système de vision d'un véhicule autonome, j'ai étudié le déploiement du modèle d'apprentissage \textbf{VGGT}\footnote{Visual Geometry Grounded Transformer} en estimant sa faisabilité, sa robustesse et sa pertinence.\\
 
-En robotique mobile, l'auto-calibration extrinsèque est fondamental pour garantir la cohérence géométrique entre les différents capteurs embarqués.\\
+En robotique mobile, l'auto-calibration extrinsèque est fondamentale pour garantir la cohérence géométrique entre les différents capteurs embarqués.\\
 Généralement, les méthodes classiques sont réalisées hors ligne à l'aide de mires géométriques fixes et dans des environnements contrôlés.\\
 \hspace*{.5cm}L'auto-calibration vise à estimer de manière autonome la pose relative entre les différents capteurs et le référentiel du véhicule.\\
 
-La plateforme mobile imposé pour les expérimentations était une navette autonome de type EasyMile EZ10.\\
+La plateforme mobile imposée pour les expérimentations était une navette autonome de type EasyMile EZ10.\\
 \hspace*{.3cm} Cette dernière était équipée d’une caméra arrière monochrome ainsi qu’une autre caméra identique à l'avant, associées à deux caméras couleur disposées à l'avant, orientées respectivement vers la droite et vers la gauche.\\
 
 Cette architecture présentait une limitation importante pour la réalisation du projet :\\
-\hspace*{1.5cm}\textbf{Les caméras ne partageaient aucune zone de recouvrement visuel commune}.\\
+
+\hspace*{1cm}\textbf{Les caméras ne partageaient aucune zone de recouvrement visuel commune}.\\
 
 \hspace*{.5cm}En complément, le véhicule embarquait deux LiDAR 3D à 360°, installés sur le toit, l’un à l’avant et l’autre à l’arrière, afin de fournir une perception géométrique 3D de l’environnement.\\
 
@@ -459,25 +464,25 @@ Cette architecture présentait une limitation importante pour la réalisation du
 \newpage
 
 \hspace*{.3cm}La configuration imposé multi-capteurs hétérogènes, bien que réaliste et représentative d’un véhicule autonome, constituait l’un des principaux défis du projet.\\
-Elle limitait la redondance visuelle nécessaire à l’estimation robuste des poses et de la calibration extrinsèque.
+Elle limitait la redondance visuelle, nécessaire pour l’estimation robuste des poses et de la calibration extrinsèque.
 
 \bigskip
 
-Dans ce contexte, j'ai donc articulé ma réfléssion autour de:
+Dans ce contexte, j'ai donc articulé ma réflection autour de:
 \begin{itemize}[label=\textbullet]
     \item \textbf{L'ingénierie}
     \item \textbf{La création d'un pipeline de traitement de données} 
 \end{itemize}
 \bigskip
 
-\hspace*{.5cm}Les enregistrements \textbf{bruts} issus des différents capteurs physiques réels et stockés sous forme de fichiers \texttt{.rosbag}, nécessitait la mise en place d'une chaîne de traitement capable d'alimenter efficacement un modèle d'IA spécialisé dans l'analyse géométrique.\\
+\hspace*{.5cm}Les enregistrements \textbf{bruts} issus des différents capteurs physiques réels et stockés sous forme de fichiers \texttt{.rosbag}, nécessitaient la mise en place d'une chaîne de traitement capable d'alimenter efficacement un modèle d'IA spécialisé dans l'analyse géométrique.\\
 
-\hspace*{.3cm}Ma première réfléxion a été de concevoir une infrastructure nécessaire à l'extraction et à l'exploitation de ces différents flux de données.\\
-J'ai ensuite proposé à l'ensemble de l'équipe, d'implémenté et d'évalué plusieurs stratégies de pré-traitement numérique visant à améliorer la qualité des données transmises au modèle \textbf{VGGT}.\\
+\hspace*{.3cm}J'ai d'abord conçu une infrastructure nécessaire à l'extraction et à l'exploitation de ces différents flux de données.\\
+J'ai ensuite proposé à l'ensemble de l'équipe, d'implémenter et d'évaluer plusieurs stratégies de pré-traitement numérique visant à améliorer la qualité des données transmises au modèle \textbf{VGGT}.\\
 
 \bigskip
 
-\hspace*{.3cm}Les stratégies reposaient notamment sur le filtrage des données selon des critères \textbf{cinématiques}, \textbf{temporels} et \textbf{visuels}, et sur l'exploitation des informations tridimensionnelles fournies par le LiDAR.\\
+\hspace*{.3cm}Mes stratégies étaient basées principalement sur le filtrage des données à partir de critères \textbf{cinématiques}, \textbf{temporels} et \textbf{visuels} définis préalablement, et sur l'exploitation des informations tridimensionnelles fournies par le LiDAR.\\
 Les objectifs premiers étaient :
 \begin{itemize}[label=\textbullet]
     \item \textbf{limiter la redondance des données}
@@ -485,7 +490,10 @@ Les objectifs premiers étaient :
     \item \textbf{respecter les contraintes de calcul imposées par l'architecture du modèle}
 \end{itemize}
 
-\hspace*{.3cm}Cette démarche m'a ainsi permis de construire progressivement un pipeline complet allant de l'extraction des données brutes issues de la plateforme expérimentale jusqu'à leur conditionnement pour l'analyse par le réseau \textbf{VGGT}, et de conservant les informations nécessaires à l'évaluation ainsi que la validation des résultats obtenus.
+\bigskip
+\bigskip
+
+\hspace*{.3cm}Cette méthodologie m'a ainsi permis de construire progressivement un pipeline complet allant de l'extraction des données brutes issues de la plateforme expérimentale jusqu'à leur conditionnement pour l'analyse par le réseau \textbf{VGGT}, et de conserver les informations nécessaires à l'évaluation ainsi que la validation des résultats obtenus.
 
 \newpage
 
