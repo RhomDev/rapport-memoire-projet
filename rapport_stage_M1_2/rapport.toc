@@ -1,59 +1,59 @@
 \babel@toc {french}{}\relax 
 \contentsline {chapter}{Remerciements}{i}{chapter*.1}%
-\contentsline {chapter}{Résumé}{ii}{chapter*.1}%
+\contentsline {chapter}{Objectif du stage}{ii}{chapter*.1}%
 \contentsline {chapter}{\numberline {1}Présentation de l'entreprise et du service}{1}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Présentation de l'entreprise}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.1}L'entreprise}{1}{section.1.1}%
 \contentsline {subsection}{\numberline {1.1.1}Carte d'identité et caractéristiques}{1}{subsection.1.1.1}%
 \contentsline {subsection}{\numberline {1.1.2}Historique de l'entreprise}{1}{subsection.1.1.2}%
 \contentsline {subsection}{\numberline {1.1.3}Implantation géographique}{2}{subsection.1.1.3}%
-\contentsline {section}{\numberline {1.2}Présentation du service d'accueil}{4}{section.1.2}%
+\contentsline {section}{\numberline {1.2}Le service d'accueil}{4}{section.1.2}%
 \contentsline {subsection}{\numberline {1.2.1}Gouvernance globale et environnement humain}{4}{subsection.1.2.1}%
 \contentsline {subsection}{\numberline {1.2.2}L'Axe ISPR et l'équipe ComSee}{4}{subsection.1.2.2}%
 \contentsline {subsection}{\numberline {1.2.3}Environnement technique et plateformes d'expérimentation}{5}{subsection.1.2.3}%
-\contentsline {paragraph}{Les plateformes majeures de l'axe ISPR :}{5}{paragraph*.3}%
-\contentsline {paragraph}{Organisation et rythmes de travail :}{5}{paragraph*.4}%
-\contentsline {chapter}{\numberline {2}Mon poste occupé et l'étude confiée}{6}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Présentation du poste}{6}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Présentation de l'étude}{7}{section.2.2}%
+\contentsline {paragraph}{Les plateformes majeures de l'axe ISPR :}{5}{paragraph*.2}%
+\contentsline {paragraph}{Organisation et rythmes de travail :}{5}{paragraph*.3}%
+\contentsline {chapter}{\numberline {2}Présentation du poste occupé et l'étude}{6}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Mon poste}{6}{section.2.1}%
+\contentsline {section}{\numberline {2.2}L'étude confiée}{7}{section.2.2}%
 \contentsline {chapter}{\numberline {3}Le Démarrage de mon étude}{9}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Analyse et Critique de l'existant avant le démarrage de l'étude}{9}{section.3.1}%
-\contentsline {paragraph}{\large \fontseries {bx}\selectfont L'analyse :}{9}{paragraph*.5}%
-\contentsline {paragraph}{\large \fontseries {bx}\selectfont La critique :}{9}{paragraph*.6}%
+\contentsline {paragraph}{\large \fontseries {bx}\selectfont L'analyse :}{9}{paragraph*.4}%
+\contentsline {paragraph}{\large \fontseries {bx}\selectfont La critique :}{9}{paragraph*.5}%
 \contentsline {section}{\numberline {3.2}Proposition de solutions}{11}{section.3.2}%
-\contentsline {paragraph}{}{11}{paragraph*.7}%
+\contentsline {paragraph}{}{11}{paragraph*.6}%
 \contentsline {subsection}{\numberline {3.2.1}Pipeline de pré-traitement amont}{11}{subsection.3.2.1}%
+\contentsline {paragraph}{}{11}{paragraph*.7}%
 \contentsline {paragraph}{}{11}{paragraph*.8}%
 \contentsline {paragraph}{}{11}{paragraph*.9}%
-\contentsline {paragraph}{}{11}{paragraph*.10}%
 \contentsline {subsection}{\numberline {3.2.2}Exploitation des données LiDAR}{13}{subsection.3.2.2}%
-\contentsline {paragraph}{}{13}{paragraph*.11}%
+\contentsline {paragraph}{}{13}{paragraph*.10}%
 \contentsline {subsection}{\numberline {3.2.3}Sélection d'images et recouvrement visuel}{14}{subsection.3.2.3}%
-\contentsline {paragraph}{}{14}{paragraph*.12}%
+\contentsline {paragraph}{}{14}{paragraph*.11}%
 \contentsline {chapter}{\numberline {4}Étude : Mise en place et suivi des solutions proposées}{15}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Cadre expérimental}{15}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Scénario expérimental retenu}{16}{subsection.4.1.1}%
+\contentsline {paragraph}{}{16}{paragraph*.12}%
 \contentsline {paragraph}{}{16}{paragraph*.13}%
-\contentsline {paragraph}{}{16}{paragraph*.14}%
 \contentsline {subsection}{\numberline {4.1.2}Logistique utilisée}{17}{subsection.4.1.2}%
 \contentsline {section}{\numberline {4.2}Filtrage cinématique (A l'Arrêt du véhicule)}{19}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Synchronisation temporelle stricte et gestion des flux intermittents}{19}{subsection.4.2.1}%
-\contentsline {paragraph}{}{19}{paragraph*.15}%
+\contentsline {paragraph}{}{19}{paragraph*.14}%
 \contentsline {subsection}{\numberline {4.2.2}Extraction et tri odométrique }{21}{subsection.4.2.2}%
-\contentsline {paragraph}{}{21}{paragraph*.16}%
+\contentsline {paragraph}{}{21}{paragraph*.15}%
 \contentsline {section}{\numberline {4.3}Traitement pour l'amélioration de Qualité des images}{23}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Traitement de la distorsion optique}{23}{subsection.4.3.1}%
+\contentsline {paragraph}{}{23}{paragraph*.16}%
 \contentsline {paragraph}{}{23}{paragraph*.17}%
-\contentsline {paragraph}{}{23}{paragraph*.18}%
 \contentsline {subsection}{\numberline {4.3.2}Traitement de la saturation}{25}{subsection.4.3.2}%
-\contentsline {paragraph}{}{25}{paragraph*.19}%
+\contentsline {paragraph}{}{25}{paragraph*.18}%
 \contentsline {subsection}{\numberline {4.3.3}Traitement de la contraste}{26}{subsection.4.3.3}%
+\contentsline {paragraph}{}{26}{paragraph*.19}%
 \contentsline {paragraph}{}{26}{paragraph*.20}%
-\contentsline {paragraph}{}{26}{paragraph*.21}%
-\contentsline {paragraph}{Calcul de l'écart-type du contraste :}{26}{paragraph*.22}%
+\contentsline {paragraph}{Calcul de l'écart-type du contraste :}{26}{paragraph*.21}%
 \contentsline {subsection}{\numberline {4.3.4}Traitement de la flou}{27}{subsection.4.3.4}%
+\contentsline {paragraph}{}{27}{paragraph*.22}%
 \contentsline {paragraph}{}{27}{paragraph*.23}%
-\contentsline {paragraph}{}{27}{paragraph*.24}%
-\contentsline {paragraph}{Calcul de la variance du Laplacien :}{27}{paragraph*.25}%
+\contentsline {paragraph}{Calcul de la variance du Laplacien :}{27}{paragraph*.24}%
 \contentsline {section}{\numberline {4.4}Génération d'images à partir du LiDAR 3D}{28}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}Développement d'un algorithme de SLAM personnalisé}{28}{subsection.4.4.1}%
 \contentsline {subsection}{\numberline {4.4.2}Déploiement d'une architecture SLAM de l'état de l'art}{30}{subsection.4.4.2}%
@@ -69,11 +69,11 @@
 \contentsline {subsection}{\numberline {4.5.7}Développement des algorithmes de sélection sous consigne}{37}{subsection.4.5.7}%
 \contentsline {subsection}{\numberline {4.5.8}Intérêt du contrôle du recouvrement pour le modèle VGGT}{37}{subsection.4.5.8}%
 \contentsline {section}{\numberline {4.6}Mise en place et suivi des solutions}{38}{section.4.6}%
-\contentsline {subsubsection}{Filtrage cinématique (Arrêt du véhicule)}{38}{subsubsection*.26}%
+\contentsline {subsubsection}{Filtrage cinématique (Arrêt du véhicule)}{38}{subsubsection*.25}%
 \contentsline {section}{\numberline {4.7}Bilan}{42}{section.4.7}%
-\contentsline {chapter}{Conclusion}{45}{chapter*.27}%
-\contentsline {chapter}{Bibliographie}{48}{chapter*.28}%
-\contentsline {chapter}{\numberline {A}Compléments techniques sur VGGT}{50}{chapter.A}%
+\contentsline {chapter}{Conclusion}{45}{chapter*.26}%
+\contentsline {chapter}{Bibliographie}{48}{chapter*.27}%
+\contentsline {chapter}{\numberline {A}Compléments techniques sur VGGT}{50}{appendix.A}%
 \contentsline {section}{\numberline {A.1}Objectif et principe général}{50}{section.A.1}%
 \contentsline {section}{\numberline {A.2}Représentation des images et des tokens}{50}{section.A.2}%
 \contentsline {section}{\numberline {A.3}Mécanisme d'attention alternée}{51}{section.A.3}%
@@ -87,6 +87,6 @@
 \contentsline {section}{\numberline {A.5}Déroulement d'une inférence}{53}{section.A.5}%
 \contentsline {section}{\numberline {A.6}Intérêt du pré-traitement pour VGGT}{53}{section.A.6}%
 \contentsline {section}{\numberline {A.7}Limites dans le contexte de l'étude}{54}{section.A.7}%
-\contentsline {chapter}{\numberline {B}Principes de fonctionnement et modélisation des capteurs embarqués}{55}{chapter.B}%
+\contentsline {chapter}{\numberline {B}Principes de fonctionnement et modélisation des capteurs embarqués}{55}{appendix.B}%
 \contentsline {section}{\numberline {B.1}Modèle cinématique à quatre roues directrices (Four-Wheel Steering -- 4WS)}{55}{section.B.1}%
 \contentsline {section}{\numberline {B.2}Positionnement et vérité terrain par GNSS / GPS}{56}{section.B.2}%

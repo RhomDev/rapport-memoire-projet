@@ -12,7 +12,17 @@
 \usepackage{titlesec}
 \usepackage{indentfirst}
 \usepackage{enumitem}
+\usepackage{tocloft}
 
+% Positionne et centre le titre du sommaire.
+\setlength{\cftbeforetoctitleskip}{0pt}
+\setlength{\cftaftertoctitleskip}{0.5em}
+\setlength{\cftbeforechapskip}{0.3cm}
+\renewcommand{\cfttoctitlefont}{\centering\Huge\bfseries}
+\renewcommand{\cftaftertoctitle}{\par}
+\renewcommand{\cftchapfont}{\large\bfseries}
+\renewcommand{\cftchappagefont}{\large\bfseries}
+\renewcommand{\cftsecfont}{\ttfamily}
 
 \geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
 
@@ -142,30 +152,28 @@ Je n'oublie pas ma famille et mes amis pour leur soutien inconditionnel et leurs
 % RÉSUMÉ
 % ==============================================================================
 \begin{center}
-    \vspace*{0.5cm}
     {\Huge\bfseries Objectif du stage}\par
     \vspace{0.5cm}
     {\Large\bfseries Auto-calibration d'un système avec ses différents périphériques hétérogènes}
 \end{center}
-\addcontentsline{toc}{chapter}{Résumé}
+\addcontentsline{toc}{chapter}{Objectif du stage}
 \thispagestyle{empty} % Supprime le numéro en bas du résumé
 
-\bigskip
 \bigskip
 
 \hspace*{1cm}Mon stage de Master 1 a été consacré à l'étude de la calibration extrinsèque hétérogène entre capteurs LiDAR et caméras sur une plateforme autonome.\\
 
 \hspace*{1cm}Mon travail s'inscrivait dans le cadre de la perception multi-capteurs et visait à améliorer la robustesse des systèmes de navigation intelligent en environnement réel, notamment pour les véhicules autonomes et les robots mobiles. \\
-\hspace*{1cm}Le contexte scientifique du projet reposait à partir du constat que les données issues de capteurs variés sont souvent acquises dans des référentiels différents, basé sur des cadences, des résolutions et des erreurs de synchronisation distinctes. \\
+\hspace*{1cm}Le contexte scientifique du projet l'appuyait sur le constat que les données issues de capteurs variés sont souvent acquises dans des référentiels différents, basés sur des cadences, des résolutions et des erreurs de synchronisation distinctes. \\
 
 Cette hétérogénéité compliquait fortement l'estimation précise des poses relatives, alors même que cette étape était déterminante pour la reconstruction 3D, la perception environnementale et la navigation autonome.
 
 \bigskip
 
 Dans ce cadre, j'ai pu étudier le comportement du modèle d'intelligence artificielle \textbf{VGGT} (\textit{Visual Geometry Grounded Transformer}) appliqué à des séquences d'images issues de véhicules autonomes. \\
-\hspace*{.3cm}Le principal verrou que j'ai identifié concernait la qualité et la cohérence géométrique des données alimentant le réseau : 
+\hspace*{.3cm}Les principaux verrous que j'ai identifié concernait la qualité et la cohérence géométrique des données alimentant le réseau. Les séquences brutes contenaient :
 \begin{itemize}[label=\textbullet]
-    \item \textbf{les séquences brutes contenaient des vues redondantes}
+    \item \textbf{des vues redondantes}
     \item \textbf{des phases stationnaires}
     \item \textbf{des artefacts de synchronisation}
     \item \textbf{des informations peu utiles pour la calibration}
@@ -173,20 +181,20 @@ Dans ce cadre, j'ai pu étudier le comportement du modèle d'intelligence artifi
 
 \bigskip
 
-Enfin d'essayer de répondre à cette problématique, j'ai mis en œuvre et développé un pipeline de prétraitement structuré : 
+Afin de répondre à cette problématique, j'ai mis en œuvre et développé un pipeline de prétraitement structuré : 
 \begin{itemize}[label=\textbullet]
-    \item \textbf{le filtrage cinématique}
-    \item \textbf{la sélection visuelle intelligente}
-    \item \textbf{la génération d'une vérité terrain à partir de données LiDAR et SLAM}
+    \item \textbf{Filtrage cinématique}
+    \item \textbf{Sélection visuelle intelligente}
+    \item \textbf{Génération d'une vérité terrain à partir de données LiDAR et SLAM}
 \end{itemize}
 
 \bigskip
 
 Mon travail a aussi porté sur trois axes complémentaires :
     \begin{itemize}[label=\textbullet]
-    \item \textbf{la synchronisation temporelle des flux hétérogènes}
-    \item \textbf{le filtrage des images non pertinentes}
-    \item \textbf{la mise en place d'une stratégie de comparaison avec une référence géométrique}
+    \item \textbf{La synchronisation temporelle des flux hétérogènes}
+    \item \textbf{La sélection d'images non pertinentes}
+    \item \textbf{La mise en place d'une stratégie de comparaison avec une référence géométrique}
 \end{itemize}
 
 \hspace*{1cm} J'ai pu notamment exploité les données odométriques du véhicule, les informations GPS, les nuages de points LiDAR et les appariements visuels par \textbf{LoFTR} sélectionnant ainsi des vues à forte valeur géométrique.\\
@@ -215,7 +223,7 @@ Cette approche a permis d'attenuer la charge de calcul du modèle limitant les r
 % ==============================================================================
 \chapter{Présentation de l'entreprise et du service}
 
-\section{Présentation de l'entreprise}
+\section{L'entreprise}
 Mon stage Master 1 en Automatique et Robotique s'est déroulé à l'\textbf{Institut Pascal} au sein de l'unité mixte de recherche au Campus des Cézeaux à Aubière.
 %L'accueil d'un stagiaire au sein d'une structure de recherche ou d'une entreprise nécessite une compréhension globale de son environnement macroéconomique, institutionnel et structurel. C'est dans ce cadre que cette section présente l'Institut Pascal, l'unité mixte de recherche au sein de laquelle s'est déroulé ce stage de Master 1 en Automatique et Robotique.
 
@@ -291,7 +299,7 @@ Chaque axe regroupe un ensemble de personnels de recherche et d'appui dont la r�
 % ==============================================================================
 
 % ==============================================================================
-\section{Présentation du service d'accueil}
+\section{Le service d'accueil}
 
 Mon intégration dans une structure de recherches d'envergures impliquer de comprendre le fonctionnement quotidien de l'équipe et des infrastructures techniques qui m'encadrent.
 
@@ -339,9 +347,9 @@ L'accueil et l'encadrement quotidien sont structurés pour simuler l'activité d
 % ==============================================================================
 % DEUXIÈME PARTIE : LE POSTE OCCUPÉ ET L'ÉTUDE CONFIÉE
 % ==============================================================================
-\chapter{Mon poste occupé et l'étude confiée}
+\chapter{Présentation du poste occupé et l'étude}
 
-\section{Présentation du poste}
+\section{Mon poste}
 
 Dans le cadre de ce stage de Master~1 au sein de l'équipe \textbf{ComSee} de l'Institut Pascal, mon rôle s'est organisé autour d'un profil de stagiaire ingénieur spécialisé dans le traitement de données et la vision par ordinateur.\\
 \hspace*{.5cm}Il s'insérait dans une recherche mener par l'Institut Pascal sur auto-calibration d'un système avec ses différents périphériques hétérogènes.\\
@@ -359,7 +367,7 @@ Ce travail a été effectué en étroite collaboration avec un autre stagiaire d
 
 \newpage
 
-\section{Présentation de l'étude}
+\section{L'étude confiée}
 
 \hspace*{0.3cm}Les travaux menés au cours de ce projet s'inscrivaient dans le cadre des problématiques par la perception multi-capteurs et la navigation des véhicules autonomes. \\
 
@@ -567,8 +575,7 @@ Si le recouvrement était trop important, les images devenaient redondantes et l
         \node[box, right=1.6cm of sync] (kin) {Filtrage cinématique\\(arrêt du véhicule)};
         \node[box, right=1.6cm of kin] (vis) {Filtrage visuel\\(contraste, flou, saturation)};
 
-        \node[box, below=1.7cm of vis] (m
-atch) {Appariement LoFTR\\et recouvrement visuel};
+        \node[box, below=1.7cm of vis] (match) {Appariement LoFTR\\et recouvrement visuel};
         \node[select, below=1.7cm of kin] (sel) {Sous-séquence retenue\\recouvrement contrôlé};
         \node[box, below=1.7cm of raw] (out) {Entrées VGGT\\sélectionnées};
         \node[ref, left=1.8cm of sel] (refbox) {LiDAR + SLAM\\référence géométrique};
@@ -852,7 +859,7 @@ Ensuite on calcule la variance des valeurs du Laplacien sur l'image : une varian
 
 \hspace*{0.3cm} \textit{L'objectif de cette deuxième approche consistait à exploiter la complémentarité géométrique entre les capteurs proprioceptifs et extéroceptifs afin de générer une référence de vérité terrain (\textit{Ground Truth}) tridimensionnelle suffisamment précise pour servir de référence lors de la phase d'auto-calibration.}\\
 
-\subsection{Développement d'un algorithme de SLAM personnalisé}\\
+\subsection{Développement d'un algorithme de SLAM personnalisé}
 
 \hspace*{.3cm}Afin d'appréhender finement les mécanismes de fusion des différentes sources de données, sans dépendre directement d'une architecture considérée comme une « boîte noire », un premier pipeline de SLAM (\textit{Simultaneous Localization and Mapping}) spécifique a été développé à partir des données extraites du \texttt{rosbag}.\\
 
@@ -902,7 +909,7 @@ En parallèle, l'accumulation des différents nuages de points recalés était p
 \par\bigskip
 \par\bigskip
 
-\subsection{Conditionnement et filtrage du nuage de points}\\
+\subsection{Conditionnement et filtrage du nuage de points}
 
 \hspace*{.3cm}Avant d'être exploitées pour la reconstruction tridimensionnelle, les données LiDAR brutes nécessitaient un pré-traitement spatial afin de limiter l'influence des mesures parasites et de concentrer la reconstruction sur la zone réellement utile à l'étude.\\
 
@@ -922,7 +929,7 @@ L'objectif était de concentrer la densité de points sur l'environnement imméd
 
 \newpage
 
-\subsection{Intérêt de la reconstruction LiDAR pour la référence géométrique}\\
+\subsection{Intérêt de la reconstruction LiDAR pour la référence géométrique}
 
 \hspace*{.3cm}À l'issue de ces différentes étapes de traitement, le nuage de points filtré pouvait être exploité afin de construire une représentation tridimensionnelle de l'environnement.\\
 
@@ -968,7 +975,7 @@ En effet, le modèle n'évaluait pas chaque vue de manière isolée : il dépend
 \par\bigskip
 \par\bigskip
 
-\subsection{Développement d'un module de sélection visuelle}\\
+\subsection{Développement d'un module de sélection visuelle}
 
 \hspace*{.3cm}C'est dans ce contexte que j'ai proposé de concevoir un module de sélection visuelle capable de récupérer une séquence d'images dont le taux de recouvrement pouvait être contrôlé et modulé.\\
 
@@ -977,7 +984,7 @@ En effet, le modèle n'évaluait pas chaque vue de manière isolée : il dépend
 \par\bigskip
 \par\bigskip
 
-\subsection{Conditionnement et normalisation qualitative des images}\\
+\subsection{Conditionnement et normalisation qualitative des images}
 
 \hspace*{.3cm}Avant toute mesure de recouvrement, les images devaient être préparées de manière homogène afin de ne pas introduire de biais artificiels dans l'évaluation. Pour cela, chaque trame était d'abord soumise à un pré-traitement visuel sous OpenCV.\\
 Cette étape reposait principalement sur deux opérations :
@@ -996,7 +1003,7 @@ Cette étape reposait principalement sur deux opérations :
 \hspace*{.3cm}Une nomenclature standardisée de type \texttt{predictions\_chunk\_XXXX.npy} était utilisée afin d'identifier les différents blocs et de faciliter leur traitement ultérieur.\\
 Cette stratégie permettait de limiter la consommation de mémoire GPU et d'assurer une exploitation progressive des résultats, tout en conservant une continuité suffisante entre les différentes portions de la séquence.
 
-\subsection{Algorithme de concaténation et reconstruction de trajectoire}\\
+\subsection{Algorithme de concaténation et reconstruction de trajectoire}
 
 \hspace*{.3cm}Le traitement bloc par bloc ne suffisait pas, à lui seul, à reconstituer une trajectoire directement exploitable. Il était ensuite nécessaire de réassembler les résultats partiels dans un cadre spatio-temporel commun.\\
 \hspace*{.3cm}Un algorithme de concaténation a donc été développé afin de fusionner les sorties obtenues sur chaque \textit{chunk}. Le principe reposait sur une fenêtre de recouvrement inter-blocs fixée à \texttt{n\_overlap = 3}.\\
@@ -1007,19 +1014,19 @@ Cette étape de normalisation était essentielle, car un recouvrement calculé s
 \par\bigskip
 \par\bigskip
 
-\subsection{Utilisation des données LiDAR pour l'alimentation du modèle d'IA}\\
+\subsection{Utilisation des données LiDAR pour l'alimentation du modèle d'IA}
 
 \hspace*{.3cm}Dans le cadre de cette étude, on m'a également demandé d'explorer la possibilité d'utiliser les données LiDAR comme source d'information visuelle pour alimenter le modèle. L'objectif était de transformer les nuages de points 3D en représentations exploitables par le réseau, afin de les comparer aux images RGB issues des caméras.\
 \hspace*{.3cm}Deux pistes ont été étudiées dans ce contexte. La première consistait en une conversion brute des données LiDAR en image 2D, en associant à chaque point un pixel et en ajustant la nuance de gris selon la distance mesurée. Cette méthode offrait une représentation simple et directe du nuage de points, mais elle présentait une forte sensibilité au bruit et à la densité de points. La seconde approche, plus structurée, consistait à reconstruire un maillage 3D à partir des données LiDAR puis à placer une caméra virtuelle dans ce maillage afin de générer une vue synthétique comparable à une image de caméra réelle.\
 \hspace*{.3cm}Cette seconde piste s'est révélée plus robuste, car elle permettait de mieux préserver la géométrie de la scène et de construire une représentation cohérente de l'environnement observé.\
 
-\subsection{Piste de développement : SLAM / Mapping pour comparaison géométrique}\\
+\subsection{Piste de développement : SLAM / Mapping pour comparaison géométrique}
 
 \hspace*{.3cm}Au cours du développement, j'ai également exploré une voie particulièrement intéressante : l'utilisation d'un algorithme de SLAM / Mapping afin de reconstruire un modèle 3D de l'environnement expérimental. L'idée était de disposer d'une représentation 3D fiable, exploitable et comparable à la sortie du modèle d'IA, afin d'évaluer la qualité de la reconstruction géométrique produite par le réseau.\
 \hspace*{0.3cm}Cette perspective offrait un double intérêt. D'une part, elle permettait d'obtenir une référence géométrique indépendante, basée sur le LiDAR et sur l'odométrie du véhicule. D'autre part, elle ouvrait la possibilité de comparer directement le modèle 3D reconstruit par le système de SLAM avec le résultat estimé par l'IA, ce qui constitue un point de contrôle précieux pour l'évaluation de la robustesse de la calibration extrinsèque.\
 
 \hspace*{0.3cm}
-\subsection{Appariement dense par Transformer (LoFTR) et estimation du recouvrement}\\
+\subsection{Appariement dense par Transformer (LoFTR) et estimation du recouvrement}
 
 \hspace*{.3cm}Pour quantifier précisément le chevauchement entre deux images, j'avais utilisé le modèle de \textit{deep learning} \textbf{LoFTR} (\textit{Local Feature Transformer}). Contrairement aux méthodes traditionnelles basées sur des détecteurs locaux tels que SIFT ou ORB, LoFTR repose sur une approche \textit{detector-free} permettant de réaliser un appariement dense de points d'intérêt à partir d'un mécanisme d'attention de type Transformer.\\
 \hspace*{.3cm}Cette propriété était particulièrement adaptée à notre cas, car les scènes observées pouvaient présenter des zones faiblement texturées, des variations de luminosité ou encore des changements de perspective relativement importants.\\
@@ -1031,7 +1038,7 @@ Cette étape de normalisation était essentielle, car un recouvrement calculé s
 \par\bigskip
 \par\bigskip
 
-\subsection{Développement des algorithmes de sélection sous consigne}\\
+\subsection{Développement des algorithmes de sélection sous consigne}
 
 \hspace*{.3cm}À partir de cette mesure de recouvrement, deux outils logiciels ont été développés en Python afin de sélectionner automatiquement les images les plus pertinentes :
 \begin{enumerate}[label=$\bullet$, itemsep=0.5em]
@@ -1048,7 +1055,7 @@ Cette étape de normalisation était essentielle, car un recouvrement calculé s
 \par\bigskip
 \par\bigskip
 
-\subsection{Intérêt du contrôle du recouvrement pour le modèle VGGT}\\
+\subsection{Intérêt du contrôle du recouvrement pour le modèle VGGT}
 
 \hspace*{.3cm}L'originalité de cette approche résidait dans le fait que la sélection des images n'était plus arbitraire, mais guidée par une contrainte géométrique explicite.\\
 Ainsi, au lieu de transmettre à VGGT une suite d'images très dense et potentiellement redondante, l'objectif était de lui fournir une séquence plus compacte, plus informative et mieux adaptée à sa structure de traitement.\\
