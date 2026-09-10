@@ -1092,27 +1092,15 @@ Cette stratégie devait limiter la consommation de mémoire GPU et d'assurer une
 
 \subsection{Algorithme de concaténation et reconstruction de trajectoire}
 
-\hspace*{.3cm}Le traitement bloc par bloc ne suffisait pas, à lui seul, à reconstituer une trajectoire directement exploitable. Il était ensuite nécessaire de réassembler les résultats partiels dans un cadre spatio-temporel commun.\\
-\hspace*{.3cm}Un algorithme de concaténation a donc été développé afin de fusionner les sorties obtenues sur chaque \textit{chunk}. Le principe reposait sur une fenêtre de recouvrement inter-blocs fixée à \texttt{n\_overlap = 3}.\\
+\hspace*{.3cm}Le traitement bloc par bloc ne suffisait pas, à lui seul, à reconstituer une trajectoire directement exploitable. Il était donc nécessaire de réassembler les résultats partiels dans un cadre spatio-temporel commun.\\
+\hspace*{.3cm}Un algorithme de concaténation a été développé afin de fusionner les sorties obtenues sur chaque \textit{chunk}. Le principe reposait sur une fenêtre de recouvrement inter-blocs fixée à \texttt{n\_overlap = 3}.\\
 
 \par\bigskip
-Cette étape de normalisation était essentielle, car un recouvrement calculé sur des images fortement bruitées, saturées ou déformées ne serait pas nécessairement représentatif de la cohérence géométrique réelle entre les différentes vues.\\
+Cette étape de normalisation était essentielle, car un recouvrement calculé sur des images fortement bruitées, saturées ou déformées ne devenait pas nécessairement représentatif de la cohérence géométrique réelle entre les différentes vues.\\
 
 \par\bigskip
 \par\bigskip
 
-\subsection{Utilisation des données LiDAR pour l'alimentation du modèle d'IA}
-
-\hspace*{.3cm}Dans le cadre de cette étude, il a également été demandé d'explorer la possibilité d'utiliser les données LiDAR comme source d'information visuelle pour alimenter le modèle. L'objectif était de transformer les nuages de points 3D en représentations exploitables par le réseau, afin de les comparer aux images RGB issues des caméras.\
-\hspace*{.3cm}Deux pistes ont été étudiées dans ce contexte. La première consistait en une conversion brute des données LiDAR en image 2D, en associant à chaque point un pixel et en ajustant la nuance de gris selon la distance mesurée. Cette méthode offrait une représentation simple et directe du nuage de points, mais elle présentait une forte sensibilité au bruit et à la densité de points. La seconde approche, plus structurée, consistait à reconstruire un maillage 3D à partir des données LiDAR puis à placer une caméra virtuelle dans ce maillage afin de générer une vue synthétique comparable à une image de caméra réelle.\
-\hspace*{.3cm}Cette seconde piste s'est révélée plus robuste, car elle permettait de mieux préserver la géométrie de la scène et de construire une représentation cohérente de l'environnement observé.\
-
-\subsection{Piste de développement : SLAM / Mapping pour comparaison géométrique}
-
-\hspace*{.3cm}Au cours du développement, une voie particulièrement intéressante a également été explorée : l'utilisation d'un algorithme de SLAM / Mapping afin de reconstruire un modèle 3D de l'environnement expérimental. L'idée était de disposer d'une représentation 3D fiable, exploitable et comparable à la sortie du modèle d'IA, afin d'évaluer la qualité de la reconstruction géométrique produite par le réseau.\
-\hspace*{0.3cm}Cette perspective offrait un double intérêt. D'une part, elle permettait d'obtenir une référence géométrique indépendante, basée sur le LiDAR et sur l'odométrie du véhicule. D'autre part, elle ouvrait la possibilité de comparer directement le modèle 3D reconstruit par le système de SLAM avec le résultat estimé par l'IA, ce qui constitue un point de contrôle précieux pour l'évaluation de la robustesse de la calibration extrinsèque.\
-
-\hspace*{0.3cm}
 \subsection{Appariement dense par Transformer (LoFTR) et estimation du recouvrement}
 
 \hspace*{.3cm}Pour quantifier précisément le chevauchement entre deux images, le modèle de \textit{deep learning} \textbf{LoFTR} (\textit{Local Feature Transformer}) a été utilisé. Contrairement aux méthodes traditionnelles basées sur des détecteurs locaux tels que SIFT ou ORB, LoFTR repose sur une approche \textit{detector-free} permettant de réaliser un appariement dense de points d'intérêt à partir d'un mécanisme d'attention de type Transformer.\\
@@ -1144,11 +1132,11 @@ Cette étape de normalisation était essentielle, car un recouvrement calculé s
 
 \subsection{Intérêt du contrôle du recouvrement pour le modèle VGGT}
 
-\hspace*{.3cm}L'originalité de cette approche résidait dans le fait que la sélection des images n'était plus arbitraire, mais guidée par une contrainte géométrique explicite.\\
-Ainsi, au lieu de transmettre à VGGT une suite d'images très dense et potentiellement redondante, l'objectif était de lui fournir une séquence plus compacte, plus informative et mieux adaptée à sa structure de traitement.\\
+\hspace*{.3cm}L'originalité de cette approche a résidé dans le fait que la sélection des images n'était plus arbitraire, mais guidée par une contrainte géométrique explicite.\\
+Ainsi, au lieu de transmettre à VGGT une suite d'images très dense et potentiellement redondantes, l'objectif était de lui fournir une séquence plus compacte, plus informative et mieux adaptée à sa structure de traitement.\\
 
 \hspace*{.3cm}Cette optimisation devait permettre de réduire la quantité de données traitées et, par conséquent, la charge de calcul associée à l'inférence du modèle. Elle devait également favoriser la stabilité des estimations de pose et d'auto-calibration lorsque les images présentaient un niveau de recouvrement suffisamment cohérent.\\
-\hspace*{.3cm}Ce formalisme permettait ainsi d'alimenter le réseau avec des paires de vues présentant des caractéristiques géométriques contrôlées, ouvrant la voie à une analyse plus systématique de la sensibilité de VGGT face à différentes valeurs de ligne de base et de recouvrement visuel.
+\hspace*{.3cm}Ce formalisme pouvait ainsi alimenter le réseau avec des paires de vues présentant des caractéristiques géométriques contrôlées, ouvrant la voie à une analyse plus systématique de la sensibilité de VGGT face à différentes valeurs de recouvrement visuel.
 
 \newpage
 
@@ -1163,29 +1151,29 @@ Ainsi, au lieu de transmettre à VGGT une suite d'images très dense et potentie
 \par\bigskip
 \par\bigskip
 
-\subsubsection{Filtrage cinématique (Arrêt du véhicule)}
+\subsection{Filtrage cinématique (Arrêt du véhicule)}
 
-\hspace*{.3cm}Le filtrage cinématique a constitué la première couche de traitement mise en place afin d'isoler les images pertinentes et d'éliminer les trames non exploitables pour l'analyse géométrique.\\
+\hspace*{.3cm}Le filtrage cinématique a constitué la première couche du traitement mis en place afin d'isoler les images pertinentes et d'éliminer les trames non exploitables pour l'analyse géométrique.\\
 
-\hspace*{.3cm}Son rôle principal était de supprimer les phases de déplacement parasite, les phénomènes de bougé ainsi que les instants durant lesquels le véhicule ne se trouvait pas dans une configuration suffisamment stable pour la calibration.\\
+\hspace*{.3cm}Son rôle principal était de supprimer les phases de déplacements parasites, les phénomènes de bougé ainsi que les instants durant lesquels le véhicule ne se trouvait pas dans une configuration suffisamment stable pour la calibration.\\
 \hspace*{.3cm}Cette opération a permis d'obtenir des séquences plus nettes, plus homogènes et mieux adaptées à l'analyse par le modèle \textbf{VGGT}.
 
 \par\bigskip
 \par\bigskip
 
-\hspace*{0.4cm}\textbf{Architecture d'extraction et traitement par blocs (\textit{Chunks})}\\
+\subsubsection{Architecture d'extraction et traitement par blocs (\textit{Chunks})}\\
 
 \hspace*{.3cm}Compte tenu de la complexité structurelle du réseau \textbf{VGGT}, l'inférence directe sur de longues séquences vidéo s'est révélée inadaptée aux contraintes de mémoire GPU et de temps de calcul.\\
 
 \hspace*{.3cm}Pour contourner cette limitation technique, un pipeline de découpage dynamique a été mis en place. Les séquences synchronisées extraites de chaque \texttt{rosbag} ont été partitionnées en blocs discrets de 20 images, appelés \textit{chunks}.\\
 \hspace*{.3cm}Chaque bloc contenait des vues géométriquement cohérentes, tandis que les sorties du modèle, notamment les poses extrinsèques, les cartes de profondeur et les informations de scène, étaient sauvegardées sous forme de fichiers binaires compressés au format \texttt{.npy}.\\
 
-\hspace*{.3cm}Une nomenclature standardisée de type \texttt{predictions\_chunk\_XXXX.npy} était utilisée afin d'identifier les différents blocs et de faciliter leur traitement ultérieur.\\
-Cette stratégie permettait de limiter la consommation de mémoire GPU et d'assurer une exploitation progressive des résultats, tout en conservant une continuité suffisante entre les différentes portions de la séquence.
+\hspace*{.3cm}Une nomenclature standardisée de type \texttt{predictions\_chunk\_XXXX.npy} a été utilisée afin d'identifier les différents blocs et de faciliter leur traitement ultérieur.\\
+Cette stratégie a permis de limiter la consommation de mémoire GPU et d'assurer une exploitation progressive des résultats, tout en conservant une continuité suffisante entre les différentes portions de la séquence.
 
 \newpage
 
-\hspace*{0.4cm}\textbf{Algorithme de concaténation et reconstruction de trajectoire}\\
+\subsubsection{Algorithme de concaténation et reconstruction de trajectoire}\\
 
 \hspace*{.3cm}Le traitement bloc par bloc ne suffisait pas, à lui seul, à reconstituer une trajectoire directement exploitable. Il était ensuite nécessaire de réassembler les résultats partiels dans un cadre spatio-temporel commun.\\
 \hspace*{.3cm}Un algorithme de concaténation a donc été développé afin de fusionner les sorties obtenues sur chaque \textit{chunk}. Le principe reposait sur une fenêtre de recouvrement inter-blocs fixée à \texttt{n\_overlap = 3}.\\
@@ -1195,7 +1183,7 @@ Cette stratégie permettait de limiter la consommation de mémoire GPU et d'assu
 \par\bigskip
 \par\bigskip
 
-\hspace*{0.4cm}\textbf{Stratégies de recalage face à la vérité terrain (GPS)}\\
+\subsubsection{Stratégies de recalage face à la vérité terrain (GPS)}\\
 
 \hspace*{.3cm}La trajectoire reconstruite par \textbf{VGGT} n'était pas directement comparable à la référence géométrique, car elle était exprimée dans un référentiel relatif et pouvait être affectée par une dérive au cours du temps.\\
 
@@ -1214,7 +1202,7 @@ Cette stratégie permettait de limiter la consommation de mémoire GPU et d'assu
 \end{enumerate}
 
 \par\bigskip
-Cette stratégie permettait ainsi de mieux rendre compte des erreurs locales liées à la dérive visuelle, tout en conservant une cohérence globale de la trajectoire reconstruite.
+Cette stratégie a permis ainsi de mieux rendre compte des erreurs locales liées à la dérive visuelle, tout en conservant une cohérence globale de la trajectoire reconstruite.
 
 \newpage
 
