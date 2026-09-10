@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.8.26)  10 SEP 2026 15:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.8.26)  10 SEP 2026 15:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -866,30 +866,46 @@ Package french3.ldf Info: Setting StandardEnumerateEnv=true for
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count357
 )
-No file rapport_cor2.aux.
-\openout1 = `rapport_cor2.aux'.
+(./rapport_cor2.aux
+Package babel Info: 'french' activates 'french' shorthands.
+(babel)             Reported on input line 12.
+)
+Runaway argument?
+{\contentsline {section}{\numberline {3.1}Analyse et Critique prÃ©ala\ETC.
+! File ended while scanning use of \@writefile.
+<inserted text> 
+                \par 
+l.96 \begin{document}
+                     
+? 
+! Interruption.
+\@filef@und ->"rapport_cor2.aux" 
+                                 
+l.96 \begin{document}
+                     
+? 
+! Emergency stop.
+\@filef@und ->"rapport_cor2.aux" 
+                                 
+l.96 \begin{document}
+                     
+End of file on the terminal!
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
+ 
+Here is how much of TeX's memory you used:
+ 26228 strings out of 469485
+ 505720 string characters out of 5468803
+ 931840 words of memory out of 5000000
+ 54511 multiletter control sequences out of 15000+600000
+ 628783 words of font info for 42 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 84i,0n,104p,440b,385s stack positions out of 10000i,1000n,20000p,200000b,200000s
+!  ==> Fatal error occurred, no output PDF file produced!
+ut line 96.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 96.
 LaTeX Font Info:    ... okay on input line 96.
-Package babel Info: 'french' activates 'french' shorthands.
-(babel)             Reported on input line 96.
 LaTeX Info: Redefining \degres on input line 96.
+
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count358
@@ -946,18 +962,20 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-No file rapport_cor2.toc.
+\Etoc@tf=\read4
 Package hyperref Info: Link coloring ON on input line 96.
+(./rapport_cor2.out) (./rapport_cor2.out)
 \@outlinefile=\write4
 \openout4 = `rapport_cor2.out'.
 
-<img_garde/logo_uca.png, id=7, 501.875pt x 485.815pt>
+<img_garde/logo_uca.png, id=219, 501.875pt x 485.815pt>
 File: img_garde/logo_uca.png Graphic file (type png)
 <use img_garde/logo_uca.png>
 Package pdftex.def Info: img_garde/logo_uca.png  used on input line 107.
 (pdftex.def)             Requested size: 56.9055pt x 55.07806pt.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 108
 .
+
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
@@ -967,12 +985,12 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 108
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<img_garde/logo_eupi.png, id=9, 677.1699pt x 137.7948pt>
+<img_garde/logo_eupi.png, id=221, 677.1699pt x 137.7948pt>
 File: img_garde/logo_eupi.png Graphic file (type png)
 <use img_garde/logo_eupi.png>
 Package pdftex.def Info: img_garde/logo_eupi.png  used on input line 112.
 (pdftex.def)             Requested size: 182.09486pt x 37.0537pt.
-<img_garde/logo_institut.png, id=10, 501.875pt x 501.875pt>
+<img_garde/logo_institut.png, id=222, 501.875pt x 501.875pt>
 File: img_garde/logo_institut.png Graphic file (type png)
 <use img_garde/logo_institut.png>
 Package pdftex.def Info: img_garde/logo_institut.png  used on input line 117.
@@ -1033,11 +1051,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 204--206
 \openout5 = `rapport_cor2.toc'.
 
  [3]
+Overfull \hbox (33.57408pt too wide) in paragraph at lines 251--251
+ [][] [][][]\T1/cmtt/m/n/12 Filtrage visuel intelligent par LoFTR et optimisati
+on du recouvrement[][] []  
+ []
+
+[4]
 Chapitre 1.
-
-LaTeX Warning: Reference `tab:carte_identite' on page 1 undefined on input line
- 269.
-
 
 Overfull \hbox (13.49097pt too wide) in paragraph at lines 275--298
  [][] 
@@ -1052,22 +1072,17 @@ l.302 \newpage
                [1
 
 ]
-<img/map_institut.png, id=53, 1923.185pt x 1014.79124pt>
+<img/map_institut.png, id=322, 1923.185pt x 1014.79124pt>
 File: img/map_institut.png Graphic file (type png)
 <use img/map_institut.png>
 Package pdftex.def Info: img/map_institut.png  used on input line 323.
 (pdftex.def)             Requested size: 364.19667pt x 192.16199pt.
-
-
-LaTeX Warning: Reference `fig:implantation' on page 2 undefined on input line 3
-28.
-
-<img_pdf/organigramme_IP.pdf, id=54, 845.1575pt x 597.23125pt>
+<img_pdf/organigramme_IP.pdf, id=324, 845.1575pt x 597.23125pt>
 File: img_pdf/organigramme_IP.pdf Graphic file (type pdf)
 <use img_pdf/organigramme_IP.pdf>
 Package pdftex.def Info: img_pdf/organigramme_IP.pdf  used on input line 332.
 (pdftex.def)             Requested size: 455.24411pt x 321.70723pt.
-[2 <./img/map_institut.png>] [3 <./img_pdf/organigramme_IP.pdf>]
+ [2 <./img/map_institut.png>] [3 <./img_pdf/organigramme_IP.pdf>]
 Overfull \hbox (1.17035pt too wide) in paragraph at lines 350--351
 []\T1/cmr/bx/n/12 Enseignants-chercheurs et cher-cheurs : \T1/cmr/m/n/12 137 en
 seignants-chercheurs (UCA, Cler-
@@ -1165,12 +1180,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 446--447
 
  []
 
-<img_src/PAVIN_navette.jpg, id=194, 601.24625pt x 400.49625pt>
+<img_src/PAVIN_navette.jpg, id=456, 601.24625pt x 400.49625pt>
 File: img_src/PAVIN_navette.jpg Graphic file (type jpg)
 <use img_src/PAVIN_navette.jpg>
 Package pdftex.def Info: img_src/PAVIN_navette.jpg  used on input line 453.
 (pdftex.def)             Requested size: 218.51521pt x 145.55353pt.
-<img_src/navelle_schÃ©ma.png, id=195, 1239.12938pt x 658.71094pt>
+<img_src/navelle_schÃ©ma.png, id=457, 1239.12938pt x 658.71094pt>
 File: img_src/navelle_schÃ©ma.png Graphic file (type png)
 <use img_src/navelle_schÃ©ma.png>
 Package pdftex.def Info: img_src/navelle_schÃ©ma.png  used on input line 459.
@@ -1242,4 +1257,523 @@ Underfull \hbox (badness 10000) in paragraph at lines 612--614
  []
 
 [12]
-Underfull \hbox (badness
+Underfull \hbox (badness 10000) in paragraph at lines 627--630
+
+ []
+
+
+Overfull \hbox (62.3995pt too wide) in paragraph at lines 644--671
+ []|  [] 
+ []
+
+[13]
+Chapitre 4.
+! Missing $ inserted.
+<inserted text> 
+                $
+l.684 \item l
+             e parcours du pÃ©rimÃ¨tre du site PAVIN ;
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+\llap  #1->\hb@xt@ \z@ {\hss #1}
+                                
+l.684 \item l
+             e parcours du pÃ©rimÃ¨tre du site PAVIN ;
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.684 \item l
+             e parcours du pÃ©rimÃ¨tre du site PAVIN ;
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.684 \item l
+             e parcours du pÃ©rimÃ¨tre du site PAVIN ;
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.685 \item l
+             a gestion d'un carrefour Ã  sens unique (rond-point).
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+\llap  #1->\hb@xt@ \z@ {\hss #1}
+                                
+l.685 \item l
+             a gestion d'un carrefour Ã  sens unique (rond-point).
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.685 \item l
+             a gestion d'un carrefour Ã  sens unique (rond-point).
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.685 \item l
+             a gestion d'un carrefour Ã  sens unique (rond-point).
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+<img_src/PAVIN.jpg, id=502, 255.95625pt x 170.88844pt>
+File: img_src/PAVIN.jpg Graphic file (type jpg)
+<use img_src/PAVIN.jpg>
+Package pdftex.def Info: img_src/PAVIN.jpg  used on input line 690.
+(pdftex.def)             Requested size: 318.66948pt x 212.773pt.
+[14
+
+ <./img_src/PAVIN.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 714--717
+
+ []
+
+[15]
+<img_src/image_source.png, id=516, 1483.5425pt x 637.38126pt>
+File: img_src/image_source.png Graphic file (type png)
+<use img_src/image_source.png>
+Package pdftex.def Info: img_src/image_source.png  used on input line 727.
+(pdftex.def)             Requested size: 409.71692pt x 176.0244pt.
+<img_src/rviz2_lidar.png, id=517, 1927.2pt x 1204.5pt>
+File: img_src/rviz2_lidar.png Graphic file (type png)
+<use img_src/rviz2_lidar.png>
+Package pdftex.def Info: img_src/rviz2_lidar.png  used on input line 737.
+(pdftex.def)             Requested size: 409.71692pt x 256.05855pt.
+ [16 <./img_src/image_source.png> <./img_src/rviz2_lidar.png>]
+<img_src/vitesse_odom.png, id=526, 462.528pt x 346.896pt>
+File: img_src/vitesse_odom.png Graphic file (type png)
+<use img_src/vitesse_odom.png>
+Package pdftex.def Info: img_src/vitesse_odom.png  used on input line 750.
+(pdftex.def)             Requested size: 409.71692pt x 307.302pt.
+ [17 <./img_src/vitesse_odom.png>]
+Overfull \hbox (0.1552pt too wide) in paragraph at lines 759--759
+|[]\T1/cmr/bx/n/20.74 Filtrage ci-né-ma-tique (à l'ar-rêt du vé-hi-cule)| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 763--767
+
+ []
+
+<img_src/robag_rqt.png, id=533, 1927.2pt x 1204.5pt>
+File: img_src/robag_rqt.png Graphic file (type png)
+<use img_src/robag_rqt.png>
+Package pdftex.def Info: img_src/robag_rqt.png  used on input line 772.
+(pdftex.def)             Requested size: 409.71692pt x 256.05855pt.
+[18 <./img_src/robag_rqt.png>] [19]
+Underfull \hbox (badness 10000) in paragraph at lines 793--795
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 796--799
+
+ []
+
+[20] [21]
+Underfull \hbox (badness 10000) in paragraph at lines 845--846
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 847--848
+
+ []
+
+[22] [23]
+Underfull \hbox (badness 10000) in paragraph at lines 887--888
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 889--890
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 902--903
+
+ []
+
+[24] [25]
+Underfull \hbox (badness 10000) in paragraph at lines 934--936
+
+ []
+
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 952--953
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 956--957
+
+ []
+
+[27]
+Underfull \hbox (badness 10000) in paragraph at lines 970--971
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 972--973
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 999--1000
+
+ []
+
+[28] [29]
+Underfull \hbox (badness 10000) in paragraph at lines 1019--1020
+
+ []
+
+<img_src/environement_lidar.png, id=613, 1625.07124pt x 922.44624pt>
+File: img_src/environement_lidar.png Graphic file (type png)
+<use img_src/environement_lidar.png>
+Package pdftex.def Info: img_src/environement_lidar.png  used on input line 104
+4.
+(pdftex.def)             Requested size: 432.48051pt x 245.48866pt.
+[30] [31 <./img_src/environement_lidar.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1054--1056
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1057--1058
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1059--1060
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1066--1067
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1068--1069
+
+ []
+
+[32
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 1086--1088
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1094--1096
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1098--1099
+
+ []
+
+[33]
+Underfull \hbox (badness 10000) in paragraph at lines 1117--1119
+
+ []
+
+[34]
+Underfull \hbox (badness 10000) in paragraph at lines 1120--1121
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1122--1123
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1146--1148
+
+ []
+
+[35] [36]
+Underfull \hbox (badness 10000) in paragraph at lines 1157--1158
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1167--1168
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1175--1176
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1177--1178
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1179--1181
+
+ []
+
+[37] [38]
+Underfull \hbox (badness 10000) in paragraph at lines 1187--1188
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1189--1191
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1197--1198
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1199--1200
+
+ []
+
+[39]
+Underfull \hbox (badness 10000) in paragraph at lines 1220--1221
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1222--1224
+
+ []
+
+[40]
+Underfull \hbox (badness 10000) in paragraph at lines 1236--1237
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1238--1241
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1242--1243
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1244--1245
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1251--1252
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1253--1255
+
+ []
+
+[41]
+Underfull \hbox (badness 10000) in paragraph at lines 1262--1263
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1286--1287
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1288--1290
+
+ []
+
+[42]
+Underfull \hbox (badness 10000) in paragraph at lines 1296--1298
+
+ []
+
+[43]
+Underfull \hbox (badness 10000) in paragraph at lines 1306--1308
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1314--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1333--1334
+
+ []
+
+[44
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 1352--1353
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1354--1356
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1362--1363
+
+ []
+
+[45]
+Underfull \hbox (badness 10000) in paragraph at lines 1364--1366
+
+ []
+
+[46]
+Underfull \hbox (badness 3601) in paragraph at lines 1380--1381
+[]\T1/cmr/m/n/12 Université Cler-mont Au-vergne, \T1/cmr/m/it/12 Pré-sen-ta-tio
+n de l'Ins-ti-tut Pas-cal (IP)\T1/cmr/m/n/12 , An-
+ []
+
+[47
+
+] (./rapport_cor2.lof)
+\tf@lof=\write6
+\openout6 = `rapport_cor2.lof'.
+
+ [48] (./rapport_cor2.annextoc
+Overfull \hbox (26.80074pt too wide) in paragraph at lines 16--16
+ [][] [][][]\T1/cmtt/m/n/12 Modèle cinématique à quatre roues directrices (Four
+-Wheel Steering 
+ []
+
+)
+\tf@annextoc=\write7
+\openout7 = `rapport_cor2.annextoc'.
+
+ [49
+
+
+] [50] [51
+
+]
+Overfull \hbox (3.34119pt too wide) in paragraph at lines 1469--1469
+|\T1/cmr/bx/n/20.74 A.4 Têtes de pré-dic-tion et sor-ties géo-mé-triques| 
+ []
+
+[52] [53] [54] [55]
+Overfull \hbox (8.02986pt too wide) in paragraph at lines 1551--1552
+[]\T1/cmr/bx/n/12 Type de mes-sage : \T1/cmtt/m/n/12 four_wheel_steering_msgs/m
+sg/FourWheelSteeringStamped 
+ []
+
+
+Overfull \hbox (2.38416pt too wide) in paragraph at lines 1564--1564
+|\T1/cmr/bx/n/20.74 B.2 Po-si-tion-ne-ment et vé-rité ter-rain par GNSS
+ []
+
+[56
+
+]
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 1576.
+
+Overfull \hbox (2.64691pt too wide) in paragraph at lines 1580--1581
+[]\T1/cmr/m/n/12 Cette struc-ture offre une base ma-thé-ma-tique for-melle pour
+ bâ-tir la \T1/cmr/bx/n/12 vé-rité ter-rain \T1/cmr/m/n/12 (\T1/cmr/m/it/12 Gro
+und
+ []
+
+[57] (./rapport_cor2.aux)
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+ ***********
+Package rerunfilecheck Info: File `rapport_cor2.out' has not changed.
+(rerunfilecheck)             Checksum: 34BA9B7A070BA28E949FB4919AD615C2;13047.
+ ) 
+Here is how much of TeX's memory you used:
+ 27415 strings out of 469485
+ 525476 string characters out of 5468803
+ 962726 words of memory out of 5000000
+ 55411 multiletter control sequences out of 15000+600000
+ 655595 words of font info for 105 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 84i,9n,104p,833b,842s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ </home/rhomdev/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.6
+00pk> </home/rhomdev/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrb120
+0.600pk> </home/rhomdev/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi
+1200.600pk> </home/rhomdev/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/t
+cbx1440.600pk> </home/rhomdev/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/e
+c/ecrm1000.600pk> </home/rhomdev/.texlive2025/texmf-var/fonts/pk/ljfour/jknappe
+n/ec/ecrm0800.600pk> </home/rhomdev/.texlive2025/texmf-var/fonts/pk/ljfour/jkna
+ppen/ec/eccc1200.600pk> </home/rhomdev/.texlive2025/texmf-var/fonts/pk/ljfour/j
+knappen/ec/ecrm1095.600pk> </home/rhomdev/.texlive2025/texmf-var/fonts/pk/ljfou
+r/jknappen/ec/ecbx1095.600pk> </home/rhomdev/.texlive2025/texmf-var/fonts/pk/lj
+four/jknappen/ec/ectt1200.600pk> </home/rhomdev/.texlive2025/texmf-var/fonts/pk
+/ljfour/jknappen/ec/tcrm1200.600pk> </home/rhomdev/.texlive2025/texmf-var/fonts
+/pk/ljfour/jknappen/ec/ecbx1728.600pk> </home/rhomdev/.texlive2025/texmf-var/fo
+nts/pk/ljfour/jknappen/ec/ecti1200.600pk> </home/rhomdev/.texlive2025/texmf-var
+/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/rhomdev/.texlive2025/texmf-
+var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk> </home/rhomdev/.texlive2025/tex
+mf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk> </home/rhomdev/.texlive2025/
+texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2074.600pk> </home/rhomdev/.texlive20
+25/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/rhomdev/.texliv
+e2025/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </home/rhomdev/.tex
+live2025/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
+>
+Output written on rapport_cor2.pdf (62 pages, 5967058 bytes).
+PDF statistics:
+ 1768 PDF objects out of 2073 (max. 8388607)
+ 820 compressed objects within 9 object streams
+ 207 named destinations out of 1000 (max. 500000)
+ 502 words of extra memory for PDF output out of 10000 (max. 10000000)
+

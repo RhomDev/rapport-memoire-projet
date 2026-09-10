@@ -957,10 +957,9 @@ Ensuite on calcule la variance des valeurs du Laplacien sur l'image : une varian
 
 \hspace*{.3cm}Ce pipeline reposait et s'articulait sur la combinaison de plusieurs sources d'informations complémentaires :
 \begin{itemize}[label=\textbullet]
-    
-\item\textbf{L'odométrie cinématique} issue du châssis à quatre roues directrices (4WS)
-\hspace*{.3cm}\textbf{Les informations géospatiales absolues} fournies par le récepteur GNSS (GPS),
-\hspace*{.3cm}\textbf{Les scans tridimensionnels bruts} acquis par le LiDAR 3D \textbf{Hesai Pandar XT32}.
+    \item\textbf{L'odométrie cinématique} issue du châssis à quatre roues directrices (4WS)
+    \item\textbf{Les informations géospatiales absolues} fournies par le récepteur GNSS (GPS),
+    \item\textbf{Les scans tridimensionnels bruts} acquis par le LiDAR 3D \textbf{Hesai Pandar XT32}.
 \end{itemize}
 
 
@@ -972,7 +971,7 @@ Ensuite on calcule la variance des valeurs du Laplacien sur l'image : une varian
 
 \hspace*{.3cm}Le choix s'est porté sur le framework open-source \textbf{Kitware LiDAR SLAM}, intégré au système à travers le package \textit{lidar\_slam}. Cette seconde implémentation devait permettre de disposer d'un point de comparaison (\textit{benchmark}) pour évaluer les résultats obtenus avec le pipeline de SLAM personnalisé développé en amont.\\
 
-\hspace*{.3cm}L'intégration de cette architecture reposait principalement sur trois étapes successives :
+\hspace*{.3cm}L'intégration de cette architecture a reposé principalement sur trois étapes successives :
 
 \begin{itemize}[itemsep=0.5em]
 
@@ -986,18 +985,18 @@ L'algorithme réalisait un recalage de type \textit{Scan-to-Map} en exploitant d
 
 \item \textbf{Publication de la trajectoire et de la reconstruction :}\\
 La trajectoire estimée par le système était publiée sous forme d'odométrie filtrée sur le topic \texttt{kitware\_slam/slam\_odom}.\\
-En parallèle, l'accumulation des différents nuages de points recalés était publiée sur le topic \texttt{kitware\_slam/aggregated\_cloud}, permettant ainsi de visualiser progressivement la reconstruction tridimensionnelle de l'environnement.
+En parallèle, l'accumulation des différents nuages de points recalés était publiée sur le topic \texttt{kitware\_slam/aggregated\_cloud}, afin de visualiser progressivement la reconstruction tridimensionnelle de l'environnement.
 
 \end{itemize}
 
-\hspace*{.3cm}Cette seconde implémentation fournissait ainsi un point de comparaison indépendant pour analyser les performances du SLAM personnalisé. L'objectif était notamment de vérifier que les erreurs observées lors de la reconstruction ne provenaient pas uniquement de l'algorithme développé spécifiquement dans le cadre du projet.
+\hspace*{.3cm}Cette seconde implémentation déterminait ainsi un point de comparaison indépendant pour analyser les performances du SLAM personnalisé. L'objectif était notamment de vérifier que les erreurs observées lors de la reconstruction ne provenaient pas uniquement de l'algorithme développé spécifiquement dans le cadre du projet.
 
 \par\bigskip
 \par\bigskip
 
 \subsection{Conditionnement et filtrage du nuage de points}
 
-\hspace*{.3cm}Avant d'être exploitées pour la reconstruction tridimensionnelle, les données LiDAR brutes nécessitaient un pré-traitement spatial afin de limiter l'influence des mesures parasites et de concentrer la reconstruction sur la zone réellement utile à l'étude.\\
+\hspace*{.3cm}Avant d'être exploitées pour la reconstruction tridimensionnelle, les données LiDAR brutes devaient faire l'objet d'un pré-traitement spatial afin de limiter l'influence des mesures parasites et de concentrer la reconstruction sur la zone réellement utile à l'étude.\\
 
 \hspace*{.3cm}Un algorithme de filtrage géométrique par seuillage des distances a donc été appliqué en amont du pipeline de reconstruction. Cette opération reposait principalement sur deux contraintes :
 
@@ -1017,28 +1016,28 @@ L'objectif était de concentrer la densité de points sur l'environnement imméd
 
 \subsection{Intérêt de la reconstruction LiDAR pour la référence géométrique}
 
-\hspace*{.3cm}À l'issue de ces différentes étapes de traitement, le nuage de points filtré pouvait être exploité afin de construire une représentation tridimensionnelle de l'environnement.\\
+\hspace*{.3cm}À l'issue de ces différentes étapes de traitement, le nuage de points filtré devenait exploitable aux fins de construire une représentation tridimensionnelle de l'environnement.\\
 
-\hspace*{.3cm}Cette stratégie de cartographie répondait à un double objectif scientifique, directement lié à l'évaluation du modèle d'IA étudié :
+\hspace*{.3cm}Cette stratégie de cartographie a répondu à un double objectif scientifique, directement lié à l'évaluation du modèle d'IA étudié :
 
 \begin{itemize}
 
 \item \textbf{Comparaison géométrique 3D :}\\
-La reconstruction LiDAR devait fournir une représentation tridimensionnelle de référence de l'environnement réel du campus.\\
-Cette reconstruction pouvait ensuite être confrontée aux prédictions spatiales et à la représentation 3D estimée par le réseau de neurones \textbf{VGGT}, afin d'évaluer la cohérence géométrique des résultats obtenus.
+La reconstruction LiDAR fournissait une représentation tridimensionnelle de référence de l'environnement réel du campus.\\
+Celle-ci pouvait ensuite être confrontée aux prédictions spatiales et à la représentation 3D estimée par le réseau de neurones \textbf{VGGT}, afin d'évaluer la cohérence géométrique des résultats obtenus.
 
 \item \textbf{Génération d'une caméra virtuelle :}\\
-Une caméra virtuelle était définie mathématiquement à l'origine du repère LiDAR, soit au point $(0,0,0)$.\\
+Une caméra virtuelle a été définie mathématiquement à l'origine du repère LiDAR, soit au point $(0,0,0)$.\\
 Le maillage tridimensionnel obtenu à partir des données LiDAR pouvait alors être projeté sur le plan image de cette caméra virtuelle à partir des matrices de projection perspective.\\
-Cette opération permettait de générer une image de synthèse correspondant à une observation virtuelle de l'environnement depuis le centre du LiDAR.\\
-Cette image constituait alors une référence géométrique intermédiaire pouvant être utilisée pour établir des correspondances de repères et contribuer à l'estimation de l'orientation extrinsèque des différentes caméras réelles réparties sur le véhicule autonome.
+Cette opération était necessaire a la générer d'une image de synthèse correspondant à une observation virtuelle de l'environnement depuis le centre du LiDAR.\\
+Cette image devenait alors une référence géométrique intermédiaire pouvant être utilisée pour établir des correspondances de repères et contribuer à l'estimation de l'orientation extrinsèque des différentes caméras réelles réparties sur le véhicule autonome.
 
 \end{itemize}
 
 \par\bigskip
 \par\bigskip
 
-\hspace*{0.3cm}La génération de cette représentation virtuelle devait ainsi permettre de créer un lien entre les données tridimensionnelles issues du LiDAR et les images acquises par les caméras. L'objectif final était de disposer d'une référence géométrique indépendante des prédictions du modèle VGGT afin de pouvoir analyser plus précisément les erreurs de calibration extrinsèque.
+\hspace*{0.3cm}La génération de cette représentation virtuelle devait permettre de créer un lien entre les données tridimensionnelles issues du LiDAR et les images acquises par les caméras. L'objectif final étant de disposer d'une référence géométrique indépendante des prédictions du modèle VGGT afin de pouvoir analyser plus précisément les erreurs de calibration extrinsèque.
 
 \begin{figure}[htbp]
     \centering
@@ -1052,7 +1051,8 @@ Cette image constituait alors une référence géométrique intermédiaire pouva
 \Needspace{12\baselineskip}
 \section{Filtrage visuel intelligent par LoFTR et optimisation du recouvrement}
 
-\hspace*{0.3cm}Cette troisième approche marquait un tournant dans la méthodologie de l'étude. Après avoir vérifié que le filtrage purement cinématique permettait de supprimer les images statiques ou fortement redondantes, l'analyse a été poussée plus loin en s'intéressant au mécanisme interne du modèle \textbf{VGGT}. Le point crucial n'était pas uniquement la qualité visuelle des images, mais surtout leur \textbf{cohérence géométrique} entre elles.\\
+\hspace*{0.3cm}Cette troisième approche marquait un tournant dans la méthodologie de l'étude. Après avoir vérifié que le filtrage purement cinématique était utilisable pour la suppression des images statiques ou fortement redondantes, l'analyse a été poussée plus loin en s'intéressant au mécanisme interne du modèle \textbf{VGGT}. \\
+Le point crucial n'était pas uniquement la qualité visuelle des images, mais surtout leur \textbf{cohérence géométrique} entre elles.\\
 En effet, le modèle n'évaluait pas chaque vue de manière isolée : il dépendait fortement du \textbf{taux de recouvrement visuel} entre les différentes images pour établir des correspondances et estimer la cohérence de la scène ainsi que la stabilité de la calibration.\\
 
 \hspace*{.3cm}Au cours des premiers tests, il est apparu que l'envoi brut de séquences d'images conduisait à une surabondance d'informations. Lorsque le recouvrement entre deux vues était trop élevé, les images devenaient fortement redondantes et le modèle consommait inutilement des ressources de calcul sans apporter de gain géométrique significatif.\\
@@ -1073,7 +1073,7 @@ En effet, le modèle n'évaluait pas chaque vue de manière isolée : il dépend
 
 \subsection{Conditionnement et normalisation qualitative des images}
 
-\hspace*{.3cm}Avant toute mesure de recouvrement, les images devaient être préparées de manière homogène afin de ne pas introduire de biais artificiels dans l'évaluation. Pour cela, chaque trame était d'abord soumise à un pré-traitement visuel sous OpenCV.\\
+\hspace*{.3cm}Avant toute mesure de recouvrement, les images était obligatoirement être préparées de manière homogène afin de ne pas introduire de biais artificiels dans l'évaluation. Pour cela, chaque trame a d'abord  été soumise à un pré-traitement visuel sous OpenCV.\\
 Cette étape reposait principalement sur deux opérations :
 \begin{itemize}[itemsep=0.5em]
 
@@ -1087,8 +1087,8 @@ Cette étape reposait principalement sur deux opérations :
 \hspace*{.3cm}Pour contourner cette limitation technique, un pipeline de découpage dynamique a été mis en place. Les séquences synchronisées extraites de chaque \texttt{rosbag} ont été partitionnées en blocs discrets de 20 images, appelés \textit{chunks}.\\
 \hspace*{.3cm}Chaque bloc contenait des vues géométriquement cohérentes, tandis que les sorties du modèle, notamment les poses extrinsèques, les cartes de profondeur et les informations de scène, étaient sauvegardées sous forme de fichiers binaires compressés au format \texttt{.npy}.\\
 
-\hspace*{.3cm}Une nomenclature standardisée de type \texttt{predictions\_chunk\_XXXX.npy} était utilisée afin d'identifier les différents blocs et de faciliter leur traitement ultérieur.\\
-Cette stratégie permettait de limiter la consommation de mémoire GPU et d'assurer une exploitation progressive des résultats, tout en conservant une continuité suffisante entre les différentes portions de la séquence.
+\hspace*{.3cm}Une nomenclature standardisée de type \texttt{predictions\_chunk\_XXXX.npy} a été utilisée afin d'identifier les différents blocs et de faciliter leur traitement ultérieur.\\
+Cette stratégie devait limiter la consommation de mémoire GPU et d'assurer une exploitation progressive des résultats, tout en conservant une continuité suffisante entre les différentes portions de la séquence.
 
 \subsection{Algorithme de concaténation et reconstruction de trajectoire}
 
