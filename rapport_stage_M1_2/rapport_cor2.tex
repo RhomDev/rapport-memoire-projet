@@ -1161,7 +1161,7 @@ Ainsi, au lieu de transmettre à VGGT une suite d'images très dense et potentie
 \par\bigskip
 \par\bigskip
 
-\subsubsection{Architecture d'extraction et traitement par blocs (\textit{Chunks})}\\
+\subsubsection{Architecture d'extraction et traitement par blocs (\textit{Chunks})}
 
 \hspace*{.3cm}Compte tenu de la complexité structurelle du réseau \textbf{VGGT}, l'inférence directe sur de longues séquences vidéo s'est révélée inadaptée aux contraintes de mémoire GPU et de temps de calcul.\\
 
@@ -1171,11 +1171,10 @@ Ainsi, au lieu de transmettre à VGGT une suite d'images très dense et potentie
 \hspace*{.3cm}Une nomenclature standardisée de type \texttt{predictions\_chunk\_XXXX.npy} a été utilisée afin d'identifier les différents blocs et de faciliter leur traitement ultérieur.\\
 Cette stratégie a permis de limiter la consommation de mémoire GPU et d'assurer une exploitation progressive des résultats, tout en conservant une continuité suffisante entre les différentes portions de la séquence.
 
-\newpage
 
-\subsubsection{Algorithme de concaténation et reconstruction de trajectoire}\\
+\subsubsection{Algorithme de concaténation et reconstruction de trajectoire}
 
-\hspace*{.3cm}Le traitement bloc par bloc ne suffisait pas, à lui seul, à reconstituer une trajectoire directement exploitable. Il était ensuite nécessaire de réassembler les résultats partiels dans un cadre spatio-temporel commun.\\
+\hspace*{.3cm}Le traitement bloc par bloc ne suffisant pas, à lui seul, à reconstituer une trajectoire directement exploitable. Il était donc nécessaire de réassembler les résultats partiels dans un cadre spatio-temporel commun.\\
 \hspace*{.3cm}Un algorithme de concaténation a donc été développé afin de fusionner les sorties obtenues sur chaque \textit{chunk}. Le principe reposait sur une fenêtre de recouvrement inter-blocs fixée à \texttt{n\_overlap = 3}.\\
 
 \hspace*{.3cm}Cette zone commune permettait d'estimer les transformations homogènes nécessaires pour relier un bloc à son prédécesseur. En exploitant ensuite les vecteurs de translation associés aux différentes poses des caméras réalignées, il devenait possible de reconstruire progressivement une trajectoire continue du véhicule sur l'ensemble de la séquence.
@@ -1193,7 +1192,7 @@ Cette stratégie a permis de limiter la consommation de mémoire GPU et d'assure
 
     \item \textbf{Recalage global par similitude 2D ($\text{Sim}(2)$) :}\\
     Une première transformation globale était estimée afin d'aligner les trajectoires dans un même espace métrique. Cette transformation combinait un angle de rotation $\theta$, un facteur d'échelle $s$ ainsi qu'un vecteur de translation $t = [t_x, t_y]^T$.\\
-    L'optimisation était réalisée à l'aide d'un estimateur robuste basé sur la fonction de coût de Huber afin de limiter l'influence des éventuels points aberrants présents dans les données.
+    L'optimisation a été réalisée à l'aide d'un estimateur robuste basé sur la fonction de coût de Huber afin de limiter l'influence des éventuels points aberrants présents dans les données.
 
     \item \textbf{Recalage hiérarchique récursif (\textit{Piecewise split}) :}\\
     Après l'alignement global, des écarts locaux persistants pouvaient être observés sur certaines portions de la trajectoire. Afin de corriger ces déformations non uniformes, un recalage récursif était appliqué.\\
@@ -1206,10 +1205,10 @@ Cette stratégie a permis ainsi de mieux rendre compte des erreurs locales liée
 
 \newpage
 
-\hspace*{0.4cm}\textbf{Suivi du filtrage intelligent par LoFTR}\\
+\subsection{Suivi du filtrage intelligent par LoFTR}\\
 
-\hspace*{.3cm}En parallèle, le module de sélection visuelle basé sur \textbf{LoFTR} a été intégré en amont du traitement par blocs. Son rôle consistait à réguler la densité géométrique des vues transmises au modèle en évaluant leur niveau de recouvrement visuel.\\
-\hspace*{.3cm}Les trames présentant un recouvrement trop important, supérieur à $80\%$, ou fortement influencées par un mouvement parasite étaient éliminées. Cette sélection permettait d'optimiser la répartition des 20 images de chaque bloc vers des zones présentant une valeur ajoutée géométrique plus importante.\\
+\hspace*{.3cm}En parallèle, le module de sélection visuelle basé sur \textbf{LoFTR} a été intégré en amont du traitement par blocs. Sa fonction consistait à réguler la densité géométrique des vues transmises au modèle en évaluant leur niveau de recouvrement visuel.\\
+\hspace*{.3cm}Les trames présentant un recouvrement trop important, supérieur à $80\%$, ou fortement influencées par un mouvement parasite étaient éliminées. Cette sélection organisait l'optimiser la répartition des 20 images de chaque bloc vers des zones présentant une valeur ajoutée géométrique plus importante.\\
 
 \hspace*{.3cm}L'objectif était ainsi d'éviter de saturer inutilement le réseau avec des vues fortement redondantes, tout en conservant suffisamment d'informations communes entre les différentes images pour permettre une estimation géométrique cohérente.
 
@@ -1264,7 +1263,7 @@ Des erreurs de pose faibles mais persistantes peuvent s'accumuler au fil des vue
     L'interpolation linéaire utilisée pour aligner les différentes séries temporelles permet de réduire ce biais, mais ne suffit pas nécessairement à le supprimer totalement, notamment lors des phases d'accélération, de freinage ou de changement de direction.
 
     \item \textbf{Sensibilité aux conditions visuelles :}\\
-    Les images acquises dans des conditions de luminosité variables ou présentant une forte distorsion optique peuvent conduire à des appariements visuels moins fiables.\\
+    Les images acquises dans des conditions de luminosisté variables ou présentant une forte distorsion optique peuvent conduire à des appariements visuels moins fiables.\\
     Cette dégradation affecte directement la sélection géométrique des vues par \textbf{LoFTR} et peut, par conséquent, influencer la qualité des estimations produites lors de l'étape d'auto-calibration.
 
 \end{enumerate}
