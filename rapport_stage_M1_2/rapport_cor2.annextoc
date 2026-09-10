@@ -1,17 +1,17 @@
-\contentsline {chapter}{\numberline {A}Compléments techniques sur VGGT}{51}{appendix*.24}%
-\contentsline {section}{\numberline {A.1}Objectif et principe général}{51}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Représentation des images et des tokens}{51}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Mécanisme d'attention alternée}{52}{section.A.3}%
-\contentsline {subsection}{\numberline {A.3.1}Attention au sein d'une image}{52}{subsection.A.3.1}%
-\contentsline {subsection}{\numberline {A.3.2}Attention globale entre les vues}{52}{subsection.A.3.2}%
-\contentsline {section}{\numberline {A.4}Têtes de prédiction et sorties géométriques}{52}{section.A.4}%
-\contentsline {subsection}{\numberline {A.4.1}Paramètres et poses des caméras}{53}{subsection.A.4.1}%
-\contentsline {subsection}{\numberline {A.4.2}Cartes de profondeur}{53}{subsection.A.4.2}%
-\contentsline {subsection}{\numberline {A.4.3}Point maps}{53}{subsection.A.4.3}%
-\contentsline {subsection}{\numberline {A.4.4}Suivi de points entre les images}{53}{subsection.A.4.4}%
-\contentsline {section}{\numberline {A.5}Déroulement d'une inférence}{54}{section.A.5}%
-\contentsline {section}{\numberline {A.6}Intérêt du pré-traitement pour VGGT}{54}{section.A.6}%
-\contentsline {section}{\numberline {A.7}Limites dans le contexte de l'étude}{55}{section.A.7}%
-\contentsline {chapter}{\numberline {B}Principes de fonctionnement et modélisation des capteurs embarqués}{56}{appendix*.25}%
-\contentsline {section}{\numberline {B.1}Modèle cinématique à quatre roues directrices (Four-Wheel Steering -- 4WS)}{56}{section.B.1}%
-\contentsline {section}{\numberline {B.2}Positionnement et vérité terrain par GNSS / GPS}{57}{section.B.2}%
+\contentsline {chapter}{\numberline {A}Compléments techniques sur VGGT}{48}{appendix*.23}%
+\contentsline {section}{\numberline {A.1}Objectif et principe général}{48}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Représentation des images et des tokens}{48}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Mécanisme d'attention alternée}{49}{section.A.3}%
+\contentsline {subsection}{\numberline {A.3.1}Attention au sein d'une image}{49}{subsection.A.3.1}%
+\contentsline {subsection}{\numberline {A.3.2}Attention globale entre les vues}{49}{subsection.A.3.2}%
+\contentsline {section}{\numberline {A.4}Têtes de prédiction et sorties géométriques}{49}{section.A.4}%
+\contentsline {subsection}{\numberline {A.4.1}Paramètres et poses des caméras}{49}{subsection.A.4.1}%
+\contentsline {subsection}{\numberline {A.4.2}Cartes de profondeur}{50}{subsection.A.4.2}%
+\contentsline {subsection}{\numberline {A.4.3}Point maps}{50}{subsection.A.4.3}%
+\contentsline {subsection}{\numberline {A.4.4}Suivi de points entre les images}{50}{subsection.A.4.4}%
+\contentsline {section}{\numberline {A.5}Déroulement d'une inférence}{50}{section.A.5}%
+\contentsline {section}{\numberline {A.6}Intérêt du pré-traitement pour VGGT}{51}{section.A.6}%
+\contentsline {section}{\numberline {A.7}Limites dans le contexte de l'étude}{51}{section.A.7}%
+\contentsline {chapter}{\numberline {B}Principes de fonctionnement et modélisation des capteurs embarqués}{53}{appendix*.24}%
+\contentsline {section}{\numberline {B.1}Modèle cinématique à quatre roues directrices (Four-Wheel Steering -- 4WS)}{53}{section.B.1}%
+\contentsline {section}{\numberline {B.2}Positionnement et vérité terrain par GNSS / GPS}{53}{section.B.2}%

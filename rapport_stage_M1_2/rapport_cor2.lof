@@ -13,4 +13,4 @@
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Exemple d'acquisition par un capteur LiDAR}}{16}{figure.4.3}%
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Graphique de l'évolution de la vitesse du véhicule, mesurée par les capteurs d'odométrie}}{17}{figure.4.4}%
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Représentation des flux de données de tous les périphériques, visualisés dans l'environnement RQT\_graph}}{18}{figure.4.5}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Reconstruction de l'environnement à partir des données LiDAR}}{31}{figure.4.6}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Reconstruction de l'environnement à partir des données LiDAR}}{30}{figure.4.6}%
