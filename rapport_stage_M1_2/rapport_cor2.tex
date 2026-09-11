@@ -744,7 +744,7 @@ Au cours du stage, le scénario de la gestion d'un carrefour à sens unique a fi
 \label{fig:pavin}
 \end{figure}
 
-\vspace{0.5cm}
+\vspace{0.2cm}
 
 \hspace*{.5cm}Le scénario du rond-point a été retenu pour soumettre les modèles d'apprentissage profond à des contraintes fortement non linéaires, tout en offrant un cadre de navigation maîtrisé et représentatif pour l'évaluation des performances.
 
@@ -754,43 +754,46 @@ Au cours du stage, le scénario de la gestion d'un carrefour à sens unique a fi
 
 \textbf{\hspace*{0.3cm} L'hypothèse sous-jacente a ce choix de trajectoire était double :}\vspace{0.05cm}
 
-\begin{itemize}[itemsep=1em, label=\textbullet, leftmargin=1.5cm]
+\begin{itemize}[itemsep=0.5em, label=\textbullet, leftmargin=1.5cm]
     \item \textbf{Garantie de généralisation :}\vspace{0.02cm}
 
     \hspace*{0.5cm}Un environnement curviligne et changeant (le rond-point) pouvait induire des variations continues de l'orientation des caméras, de la parallaxe et du champ visuel global.\\
     \hspace*{0.4cm}Si le réseau était capable de converger et d'estimer une auto-calibration intrinsèque stable dans ces conditions critiques, sa capacité de généralisation était implicitement validée pour des trajectoires rectilignes ou des scénarios autoroutiers plus simples, alors que la réciproque n'est pas forcément vraie.
+
     \item \textbf{Sollicitation cinématique :}\vspace{0.02cm}
 
     \hspace*{0.5cm}Le mouvement de rotation continue autour du centre du rond-point permettait de valider le comportement du modèle face à des couplages de mouvements complexes (translations latérales et rotations simultanées).
 \end{itemize}
 
+\vspace{0.1cm}
 
-\paragraph{}
-La séquence d'enregistrement a débuté en amont du rond-point par une phase stationnaire d'une durée calibrée d'environ 15 secondes.\\
+\hspace*{1cm}La séquence d'enregistrement a débuté en amont du rond-point par une phase stationnaire d'une durée calibrée d'environ 15 secondes.\\
  Cet arrêt initial n'était pas un artefact d'enregistrement, mais une phase de contrôle volontaire.\vspace{0.1cm}
 
-\hspace*{.5cm}Elle permettait de constituer une ligne de base (\textit{baseline}) d'images de référence les plus nettes possible, exemptes de flou cinétique, offrant ainsi des conditions idéales pour le traitement des données obtenues.\\
-
-\newpage
+\hspace*{.5cm}Elle permettait de constituer une ligne de base (\textit{baseline}) d'images de référence les plus nettes possible, exemptes de flou cinétique, offrant ainsi des conditions idéales pour le traitement des données obtenues.
 
 \subsection{Logistique utilisée}
-\begin{itemize}[itemsep=1.3em]
+
+\begin{itemize}[itemsep=0.2em, leftmargin=2cm, label=\textbullet]
+
     \item \textbf{Perception optique périphérique :} \\
-    \hspace*{1cm}Quatre caméras couvrant l'espace périphérique du véhicule : deux caméras monochromes (avant et arrière) et deux caméras couleur (avant-droite et avant-gauche), fournissant la matière première bidimensionnelle au réseau VGGT.
-    
+    \hspace*{0.5cm}Quatre caméras couvrant l'espace périphérique du véhicule : deux caméras monochromes (avant et arrière) et deux caméras couleur (avant-droite et avant-gauche), fournissant la matière première bidimensionnelle au réseau VGGT.
+
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.9\textwidth]{img_src/image_source.png}
+    \includegraphics[width=0.8\textwidth]{img_src/image_source.png}
     \caption{Exemples d'images acquises par les caméras embarquées}
     \label{fig:images_sources_camera}
 \end{figure}
+
+\newpage
 
     \item \textbf{Perception télémétrique 3D :}\\
     \hspace*{1cm}Deux capteurs LiDAR 3D (\textbf{Hesai Pandar XT32}) disposés de part et d'autre des essieux avant et arrière, fournissant les nuages de points de l'environnement.
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.9\textwidth]{img_src/rviz2_lidar.png}
+    \includegraphics[width=0.7\textwidth]{img_src/rviz2_lidar.png}
     \caption{Exemple d'acquisition par un capteur LiDAR}
     \label{fig:images_sources_lidar}
 \end{figure}
@@ -804,7 +807,7 @@ La séquence d'enregistrement a débuté en amont du rond-point par une phase st
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.9\textwidth]{img_src/vitesse_odom.png}
+    \includegraphics[width=0.6\textwidth]{img_src/vitesse_odom.png}
     \caption{Graphique de l'évolution de la vitesse du véhicule, mesurée par les capteurs d'odométrie}
     \label{fig:images_sources_odom}
 \end{figure}
@@ -816,11 +819,14 @@ La séquence d'enregistrement a débuté en amont du rond-point par une phase st
 \section{Filtrage cinématique (à l'arrêt du véhicule)}
 
 \subsection{Synchronisation temporelle stricte et gestion des flux intermittents}
-\paragraph{}
-La décompression du fichier \textit{rosbag} donnait la possibilité d'isoler l'accès aux flux des quatre caméras périphériques.\\
-\hspace*{.3cm}La première étape indispensable a consisté pour réaliser une synchronisation temporelle rigoureuse de ces images.\\
-\hspace*{.3cm}En effet, lors du lancement d'un enregistrement sous l'architecture ROS, la souscription et la capture effective des données de chaque nœud capteur ne débutaient pas de manière strictement simultanée.\\
-C'est pour cette raison qu'un temps de calibration a été prévu chaque début d'enregistrement, pour garantir que les flux d'images présentent, à un moment donné, un alignement temporel.\\
+
+\hspace*{1cm}La décompression du fichier \textit{rosbag} donnait la possibilité d'isoler l'accès aux flux des quatre caméras périphériques.\vspace{0.1cm}
+
+\hspace*{.5cm}La première étape indispensable a consisté pour réaliser une synchronisation temporelle rigoureuse de ces images.\vspace{0.1cm}
+
+\hspace*{.5cm}En effet, lors du lancement d'un enregistrement sous l'architecture ROS, la souscription et la capture effective des données de chaque nœud capteur ne débutaient pas de manière strictement simultanée.\vspace{0.1cm}
+
+\hspace*{1cm}C'est pour cette raison qu'un temps de calibration a été prévu chaque début d'enregistrement, pour garantir que les flux d'images présentent, à un moment donné, un alignement temporel.
 
 \bigskip
 
@@ -829,14 +835,21 @@ C'est pour cette raison qu'un temps de calibration a été prévu chaque début 
     \includegraphics[width=0.9\textwidth]{img_src/robag_rqt.png}
     \caption{Représentation des flux de données de tous les périphériques, visualisés dans l'environnement RQT\_graph}
     \label{fig:images_aff_rosbags}
-    \end{figure}
+\end{figure}
 
-\hspace*{.3cm}Pour y remédier, un algorithme d'appariement basé sur une fenêtre temporelle glissante, développé en langage Python, a été utilisé. \\
+\vspace{1cm}
+
+\hspace*{1cm}Pour y remédier, un algorithme d'appariement basé sur une fenêtre temporelle glissante, développé en langage Python, a été utilisé. \\
 L'objectif était de surveiller les estampilles temporelles (\textit{timestamps}) de chaque image reçue et d'associer celles dont l'écart temporel était inférieur à un seuil critique fixé à 1~ms. 
 
-\hspace*{.3cm}Afin de garantir l'intégrité de la géométrie de reconstruction, le script appliquait une politique de filtrage stricte à chaque instant $T$.\\
-\hspace*{0.3cm} Si l'une des quatre caméras présentait une perte de trame (\textit{frame drop}) ou un retard de publication, le groupe d'images incomplet était systématiquement rejeté du pipeline.\\
-\hspace*{.3cm} Bien que cette exclusion stricte réduise le volume total des données et puisse théoriquement impacter la densité spatiale de l'échantillonnage, ce choix a été ici pleinement justifié.
+\newpage
+
+\hspace*{1cm}Afin de garantir l'intégrité de la géométrie de reconstruction, le script appliquait une politique de filtrage stricte à chaque instant $T$.\vspace{0.1cm}
+
+\hspace*{.5cm} Si l'une des quatre caméras présentait une perte de trame (\textit{frame drop}) ou un retard de publication, le groupe d'images incomplet était systématiquement rejeté du pipeline.\vspace{0.1cm}
+
+\hspace*{1cm} Bien que cette exclusion stricte réduise le volume total des données et puisse théoriquement impacter la densité spatiale de l'échantillonnage, ce choix a été ici pleinement justifié.\vspace{0.05cm}
+
 \begin{itemize}[itemsep=0.5em]
 	\item D'une part, la phase d'arrêt de 15 secondes planifiée lors de l'acquisition offrait une redondance temporelle suffisante pour compenser ces pertes.
 	\item D'autre part, le modèle VGGT était particulièrement lourd et consommateur en ressources de calcul, ce qui nous limitait à 20 images et rendait la qualité et la complétude de la synchronisation prioritaires sur la quantité de données.
@@ -847,37 +860,50 @@ L'objectif était de surveiller les estampilles temporelles (\textit{timestamps}
 
 \subsection{Extraction et tri odométrique }
 
+\vspace{1cm}
 
-\hspace*{.5cm}Une fois le script Python exécuté, les quadruplets d'images parfaitement synchronisés ont été répartis dans quatre répertoires distincts correspondant à chaque caméra.\\
-L'étape suivante a été le filtrage automatique des phases stationnaires.\\
+\hspace*{1cm}Une fois le script Python exécuté, les quadruplets d'images parfaitement synchronisés ont été répartis dans quatre répertoires distincts correspondant à chaque caméra.\vspace{0.1cm}
 
-\hspace*{.5cm} En exploitant les données odométriques issues du châssis cinématique à quatre roues directrices (4WS), l'algorithme devait isoler les séquences où le véhicule présentait une vitesse linéaire nulle.\\
-Un premier script Python a donc été développé afin d'extraire les données d'odométrie et de les analyser pour identifier les périodes d'immobilité. Il a ensuite suffi de créer un second script pour extraire les images des caméras à partir des timestamps où le véhicule était à l'arrêt.\\
+\hspace*{0.5cm}L'étape suivante a été le filtrage automatique des phases stationnaires.\vspace{0.05cm}
 
-\hspace*{.5cm} Pour s'affranchir du bruit des mesures des capteurs odométriques embarqués, un seuil de tolérance minimal, proche de zéro, a été configuré afin de valider mathématiquement l'état d'immobilité. Lors des expérimentations, ce seuil a permis de détecter précisément les instants où le véhicule était effectivement à l'arrêt.\\
+\hspace*{1cm} En exploitant les données odométriques issues du châssis cinématique à quatre roues directrices (4WS), l'algorithme devait isoler les séquences où le véhicule présentait une vitesse linéaire nulle.\vspace{0.1cm}
 
-\hspace*{.3cm}À l'issue de ce pipeline de pré-traitement, les images filtrées ont été soumises au modèle VGGT. Le choix de privilégier des scènes fixes répondait à une double contrainte scientifique :
+\hspace*{0.5cm}Un premier script Python a donc été développé afin d'extraire les données d'odométrie et de les analyser pour identifier les périodes d'immobilité.\\
+\hspace*{0.5cm}Il a ensuite suffi de créer un second script pour extraire les images des caméras à partir des timestamps où le véhicule était à l'arrêt.\\
+
+\hspace*{1cm} Pour s'affranchir du bruit des mesures des capteurs odométriques embarqués, un seuil de tolérance minimal, proche de zéro, a été configuré afin de valider mathématiquement l'état d'immobilité. Lors des expérimentations, ce seuil a permis de détecter précisément les instants où le véhicule était effectivement à l'arrêt.\\
+
+\newpage
+
+\hspace*{1cm}À l'issue de ce pipeline de pré-traitement, les images filtrées ont été soumises au modèle VGGT. Le choix de privilégier des scènes fixes répondait à une double contrainte scientifique :\vspace{0.05cm}
 
 \begin{itemize}
-    \item \textbf{Élimination du flou cinétique :}\\
- L'immobilité du véhicule devait garantir des contours nets sur les objets de l'environnement.\\
- Il était attendu que cela facilite la convergence des convolutions du réseau de neurones.
+    \item \textbf{Élimination du flou cinétique :}\vspace{0.05cm}
+
+ \hspace{1cm}L'immobilité du véhicule devait garantir des contours nets sur les objets de l'environnement.\vspace{0.05cm}
+ 
+ \hspace{0.5cm}Il était attendu que cela facilite la convergence des convolutions du réseau de neurones.
     
 \end{itemize}
 
-\bigskip
+\vspace{0.5cm}
 
-\hspace*{.3cm} À la fin de ce module, une analyse critique des données a mis en évidence deux limitations majeures des capteurs:
-\begin{itemize}
-    \item \textbf{Distorsion optique :}\\
- Les objectifs des caméras avants et arrières présentaient des distorsions géométriques notables (effet grand angle / \textit{fisheye}). Un étalonnage intrinsèque (correction de distorsion) s'avérait donc nécessaire pour ne pas fausser l'analyse géométrique du modèle d'IA.
-    \item \textbf{Sensibilité aux conditions lumineuses :}\\
- Selon l'orientation du véhicule par rapport au soleil, certaines images souffraient d'un phénomène de saturation (surexposition), les rendant problématiques pour leur exploitation. Un filtrage basé sur l'histogramme de luminance devait être envisagé pour écarter automatiquement ces trames saturées.
+\hspace*{1cm} À la fin de ce module, une analyse critique des données a mis en évidence deux limitations majeures des capteurs: \vspace{0.05cm}
+
+\begin{itemize}[label=\textbullet, itemsep=0.3cm]
+    \item \textbf{Distorsion optique :}\vspace{0.05cm}
+
+ \hspace{0.5cm}Les objectifs des caméras avants et arrières présentaient des distorsions géométriques notables (effet grand angle / \textit{fisheye}). Un étalonnage intrinsèque (correction de distorsion) s'avérait donc nécessaire pour ne pas fausser l'analyse géométrique du modèle d'IA.
+
+    \item \textbf{Sensibilité aux conditions lumineuses :}\vspace{0.05cm}
+
+ \hspace{0.5cm}Selon l'orientation du véhicule par rapport au soleil, certaines images souffraient d'un phénomène de saturation (surexposition), les rendant problématiques pour leur exploitation. Un filtrage basé sur l'histogramme de luminance devait être envisagé pour écarter automatiquement ces trames saturées.
+
 \end{itemize}
 
-\bigskip    
+\vspace{1cm}
 
-\textbf{Ce constat nécessitait l'introduction d'un post-traitement d'images.}
+\textbf{\hspace{1cm}Ce constat nécessitait l'introduction d'un post-traitement d'images.}
 
 \newpage
 
@@ -966,11 +992,11 @@ pour lire les couleurs dans l'image brute en utilisant ces cartes flottantes.
 
 \subsection{Traitement de la saturation}
 \paragraph{}
-La saturation (ou « brûlage ») survient lorsque l'éclairement incident dépasse la plage dynamique du capteur ; les photosites atteignent leur valeur maximale et l'information des hautes lumières est irrémédiablement perdue. \\
+La saturation (ou \textsb{« brûlage »}) survient lorsque l'éclairement incident dépasse la plage dynamique du capteur ; les photosites atteignent leur valeur maximale et l'information des hautes lumières est irrémédiablement perdue. \vspace{0.1cm}
 
-\hspace*{.5cm} Dans ce projet, la quantification de cet effet a été réalisée par le calcul de la proportion de pixels dont l'intensité atteint la valeur maximale du codage (255 en image 8 bits). Ce test a été exécuté en prétraitement pour identifier et rejeter les trames dont une portion significative de la dynamique est perdue.\\
+\hspace*{1cm} Dans ce projet, la quantification de cet effet a été réalisée par le calcul de la proportion de pixels dont l'intensité atteint la valeur maximale du codage (255 en image 8 bits). Ce test a été exécuté en prétraitement pour identifier et rejeter les trames dont une portion significative de la dynamique est perdue.\vspace{0.05cm}
 
-\begin{enumerate}[label=\arabic*)]
+\begin{enumerate}[label=\arabic*),leftmargin=2cm]
     \item On construit un masque bool\'een \texttt{mask = (img\_gray == 255)} valant \texttt{True} uniquement pour les pixels satur\'es ($255$).
     \item On calcule $N_{\text{satur\'es}} = \texttt{np.sum(mask)}$, le nombre total de pixels satur\'es.
     \item On normalise par la surface totale $N_{\text{total}}$ pour obtenir :
@@ -979,21 +1005,18 @@ La saturation (ou « brûlage ») survient lorsque l'éclairement incident dépa
     \]
 \end{enumerate}
 
-\hspace*{.5cm} Cette proportion fournit une mesure simple et robuste de la surface « brûlée » de l'image et sert, si elle dépasse un seuil fixé, à rejeter la trame avant l'appariement visuel.
+\hspace*{1cm} Cette proportion fournit une mesure simple et robuste de la surface « brûlée » de l'image et sert, si elle dépasse un seuil fixé, à rejeter la trame avant l'appariement visuel.
 
-\hspace*{.5cm} Dans le pipeline développé, le seuil de tolérance retenu est de $15\%$ de pixels saturés. Cette valeur empirique a été choisie après analyse des performances du modèle \textbf{VGGT} sur le jeu de données de l'étude.\\
-
-\newpage
+\hspace*{1cm} Dans le pipeline développé, le seuil de tolérance retenu est de $15\%$ de pixels saturés. Cette valeur empirique a été choisie après analyse des performances du modèle \textbf{VGGT} sur le jeu de données de l'étude.\vspace{0.05cm}
 
 \subsection{Traitement du contraste}
-\paragraph{}
-Dans ce projet, nous avons observé que certaines images présentaient des aplats (tout noir, tout blanc ou gris uniforme) traduisant un faible contraste.\\
-Un contraste insuffisant réduit la quantité d'informations locales exploitables pour l'appariement et la calibration.
 
-\paragraph{}
-Si tous les pixels ont la même valeur ($x_i = \mu$ pour tout $i$), alors $\sigma=0$. Un $\sigma$ très faible indique un manque de contraste. Dans ce pipeline de prétraitement, nous avons rejeté les images dont $\sigma < 5$ (seuil empirique pour images 8 bits), car elles apportaient peu d'informations géométriques au modèle.
+\hspace{1cm}Dans ce projet, nous avons observé que certaines images présentaient des aplats (tout noir, tout blanc ou gris uniforme) traduisant un faible contraste.\\
+Un contraste insuffisant réduit la quantité d'informations locales exploitables pour l'appariement et la calibration.\vspace{0.1cm}
 
-\paragraph{Calcul de l'écart-type du contraste :}
+\hspace{1cm}Si tous les pixels ont la même valeur ($x_i = \mu$ pour tout $i$), alors $\sigma=0$. Un $\sigma$ très faible indique un manque de contraste. Dans ce pipeline de prétraitement, nous avons rejeté les images dont $\sigma < 5$ (seuil empirique pour images 8 bits), car elles apportaient peu d'informations géométriques au modèle.\vspace{0.05cm}
+
+\textbf{Calcul de l'écart-type du contraste :}
 L'écart-type $\sigma$ mesure la dispersion des valeurs des pixels autour de la moyenne $\mu$ de l'image :
 \[
 \sigma = \sqrt{\frac{1}{N} \sum_{i=1}^{N} (x_i - \mu)^2}
@@ -1009,22 +1032,33 @@ où :
 
 \subsection{Traitement du flou}
 
-\paragraph{}
-Dans ce projet, le test de flou identifie l'absence de contours nets dans l'image. Une image bien focalisée présente des transitions d'intensité abruptes sur les bords des objets ; le flou lisse ces transitions.
+\vspace{1cm}
 
 \paragraph{}
-On considère une image comme nette si la variance du Laplacien est élevée (ex. $>100$ sur images 8 bits).\\
-\hspace*{.5cm}On considère une image comme floue si la variance est faible (ex. $<50$), auquel cas la trame est rejetée en prétraitement.\\
+Dans ce projet, le test de flou a identifié l'absence de contours nets dans l'image. Une image bien focalisée présente des transitions d'intensité abruptes sur les bords des objets ; le flou lisse ces transitions.
 
-\hspace*{.5cm} Bien évidemment, ces seuils sont empiriques et peuvent être ajustés selon les besoins du projet et la sensibilité du modèle VGGT aux variations de netteté. \\
-Mais les seuils choisis ont été validés par des tests sur notre jeu de données, en comparant visuellement les images rejetées avec celles conservées.
+\paragraph{}
+On a déterminé : \vspace{0.05cm}
+\begin{itemize}[itemsep=1em]
+    \item une image comme nette si la variance du Laplacien est élevée (ex. $>100$ sur images 8 bits)
+    \item une image comme floue si la variance est faible (ex. $<15$), auquel cas la trame est rejetée en prétraitement.
+\end{itemize}
 
-\paragraph{Calcul de la variance du Laplacien :}
+\vspace{0.5cm}
+
+\hspace*{1cm} Bien évidemment, ces seuils sont empiriques et peuvent être ajustés selon les besoins du projet et la sensibilité du modèle VGGT aux variations de netteté. \vspace{0.05cm}
+
+\hspace*{0.5cm}Mais les seuils choisis ont été validés par des tests sur notre jeu de données, en comparant visuellement les images rejetées avec celles conservées.\vspace{1cm}
+
+\textbf{Calcul de la variance du Laplacien :}\\
 On applique d'abord l'opérateur Laplacien pour extraire la dérivée seconde spatiale de l'image :
 \[
 \Delta I = \frac{\partial^2 I}{\partial x^2} + \frac{\partial^2 I}{\partial y^2}
 \]
-Ensuite on calcule la variance des valeurs du Laplacien sur l'image : une variance élevée indique la présence de contours marqués, une variance faible indique une image floue.
+
+\vspace{1cm}
+
+\hspace{0.5cm}Ensuite on calcule la variance des valeurs du Laplacien sur l'image : une variance élevée indique la présence de contours marqués, une variance faible indique une image floue.
 
 
 \newpage
@@ -1051,13 +1085,15 @@ A plus developpé sur les problème de dévelleoppement
 
 \subsection{Déploiement d'une architecture SLAM}
 
-\hspace*{.3cm}Dans une démarche de recherche visant à comparer le développement réalisé avec une solution existante et validée, une seconde architecture de SLAM tridimensionnelle a été déployée en parallèle sous l'environnement ROS~2.\\
+\hspace*{1cm}Dans une démarche de recherche visant à comparer le développement réalisé avec une solution existante et validée, une seconde architecture de SLAM tridimensionnelle a été déployée en parallèle sous l'environnement ROS~2.\\
 
-\hspace*{.3cm}Le choix s'est porté sur le framework open-source \textbf{Kitware LiDAR SLAM}, intégré au système à travers le package \textit{lidar\_slam}. Cette seconde implémentation devait permettre de disposer d'un point de comparaison (\textit{benchmark}) pour évaluer les résultats obtenus avec le pipeline de SLAM personnalisé développé en amont.\\
+\hspace*{1cm}Le choix s'est porté sur le framework open-source \textbf{Kitware LiDAR SLAM}, intégré au système à travers le package \textit{lidar\_slam}.\vspace{0.05cm}
 
-\hspace*{.3cm}L'intégration de cette architecture a reposé principalement sur trois étapes successives :
+\hspace*{0.5cm} Cette seconde implémentation devait permettre de disposer d'un point de comparaison (\textit{benchmark}) pour évaluer les résultats obtenus avec le pipeline de SLAM personnalisé développé en amont.\\
 
-\begin{itemize}[itemsep=0.5em]
+\hspace*{1cm}L'intégration de cette architecture a reposé principalement sur trois étapes successives :\vspace{0.05cm}
+
+\begin{itemize}[itemsep=1em]
 
 \item \textbf{Conversion des données LiDAR :}\\
 Le nœud \texttt{hesai\_conversion\_node}, issu du package \texttt{lidar\_conversions}, était utilisé afin d'intercepter les données brutes provenant du LiDAR \textbf{Hesai Pandar XT32}.\\
@@ -1073,26 +1109,32 @@ En parallèle, l'accumulation des différents nuages de points recalés était p
 
 \end{itemize}
 
-\hspace*{.3cm}Cette seconde implémentation déterminait ainsi un point de comparaison indépendant pour analyser les performances du SLAM personnalisé. L'objectif était notamment de vérifier que les erreurs observées lors de la reconstruction ne provenaient pas uniquement de l'algorithme développé spécifiquement dans le cadre du projet.
+\vspace{0.05cm}
 
-\par\bigskip
-\par\bigskip
+\hspace*{1cm}Cette seconde implémentation déterminait ainsi un point de comparaison indépendant pour analyser les performances du SLAM personnalisé. \vspace{0.05cm}
+
+\hspace*{0.5cm}L'objectif était notamment de vérifier que les erreurs observées lors de la reconstruction ne provenaient pas uniquement de l'algorithme développé spécifiquement dans le cadre du projet.
+
+\newpage
 
 \subsection{Conditionnement et filtrage du nuage de points}
 
-\hspace*{.3cm}Avant d'être exploitées pour la reconstruction tridimensionnelle, les données LiDAR brutes devaient faire l'objet d'un pré-traitement spatial afin de limiter l'influence des mesures parasites et de concentrer la reconstruction sur la zone réellement utile à l'étude.\\
+\vspace{1cm}
 
-\hspace*{.3cm}Un algorithme de filtrage géométrique par seuillage des distances a donc été appliqué en amont du pipeline de reconstruction. Cette opération reposait principalement sur deux contraintes :
+\hspace*{1cm}Avant d'être exploitées pour la reconstruction tridimensionnelle, les données LiDAR brutes devaient faire l'objet d'un pré-traitement spatial afin de limiter l'influence des mesures parasites et de concentrer la reconstruction sur la zone réellement utile à l'étude.\\
 
-\begin{itemize}[itemsep=0.5em]
+\hspace*{1cm}Un algorithme de filtrage géométrique par seuillage des distances a donc été appliqué en amont du pipeline de reconstruction. \\
+Cette opération reposait principalement sur deux contraintes :\vspace{0.1cm}
+
+\begin{itemize}[itemsep=0.8em]
 
 \item \textbf{Élimination de l'auto-occlusion :}\\
-Les points situés à très faible distance du LiDAR étaient supprimés afin d'éliminer les mesures susceptibles de provenir directement du véhicule.\\
-Cette zone morte inférieure permettait notamment de limiter les réflexions parasites du faisceau laser sur le toit, le châssis ou les différentes structures porteuses du véhicule.
+\hspace*{0.5cm}Les points situés à très faible distance du LiDAR étaient supprimés afin d'éliminer les mesures susceptibles de provenir directement du véhicule.\\
+\hspace*{0.3cm}Cette zone morte inférieure permettait notamment de limiter les réflexions parasites du faisceau laser sur le toit, le châssis ou les différentes structures porteuses du véhicule.
 
 \item \textbf{Limitation de la portée utile :}\\
-Les points situés à une distance supérieure à 20~m étaient également supprimés.\\
-L'objectif était de concentrer la densité de points sur l'environnement immédiat du véhicule, correspondant à une bande utile comprise entre environ 2 et 20~m. Cette restriction devait permettre de privilégier les informations géométriques les plus pertinentes pour l'étude de l'auto-calibration.
+\hspace*{0.5cm}Les points situés à une distance supérieure à 20~m étaient également supprimés.\\
+\hspace*{0.3cm}L'objectif était de concentrer la densité de points sur l'environnement immédiat du véhicule, correspondant à une bande utile comprise entre environ 2 et 20~m. Cette restriction devait permettre de privilégier les informations géométriques les plus pertinentes pour l'étude de l'auto-calibration.
 
 \end{itemize}
 
@@ -1100,36 +1142,30 @@ L'objectif était de concentrer la densité de points sur l'environnement imméd
 
 \subsection{Intérêt de la reconstruction LiDAR pour la référence géométrique}
 
-\hspace*{.3cm}À l'issue de ces différentes étapes de traitement, le nuage de points filtré devenait exploitable aux fins de construire une représentation tridimensionnelle de l'environnement.\vspace{0.2cm}
-
-\hspace*{.3cm}Cette stratégie de cartographie a répondu à un double objectif scientifique, directement lié à l'évaluation du modèle d'IA étudié :
-
-\begin{itemize}
+\hspace*{1cm}À l'issue de ces différentes étapes de traitement, le nuage de points filtré devenait exploitable aux fins de construire une représentation tridimensionnelle de l'environnement.\\
+\hspace*{1cm}Cette stratégie de cartographie a répondu à un double objectif scientifique, directement lié à l'évaluation du modèle d'IA étudié :
+\begin{itemize}[label=\textbullet]
 
 \item \textbf{Comparaison géométrique 3D :}\\
-\hspace*{.5cm}La reconstruction LiDAR a fourni une représentation tridimensionnelle de référence de l'environnement réel du campus. \vspace{0.2cm}
-
-\hspace*{.5cm}Celle-ci pouvait ensuite être confrontée aux prédictions spatiales et à la représentation 3D estimée par le réseau de neurones \textbf{VGGT}, afin d'évaluer la cohérence géométrique des résultats obtenus.
-
-\bigskip
+\hspace*{1cm}La reconstruction LiDAR a fourni une représentation tridimensionnelle de référence de l'environnement réel du campus. \\
+\hspace*{1cm}Celle-ci pouvait ensuite être confrontée aux prédictions spatiales et à la représentation 3D estimée par le réseau de neurones \textbf{VGGT}, afin d'évaluer la cohérence géométrique des résultats obtenus.
 
 \item \textbf{Génération d'une caméra virtuelle :}\\
-\hspace*{.5cm}Une caméra virtuelle a été définie mathématiquement à l'origine du repère LiDAR, soit au point $(0,0,0)$.\\
-\hspace*{.3cm}Le maillage tridimensionnel obtenu à partir des données LiDAR pouvait alors être projeté sur le plan image de cette caméra virtuelle à partir des matrices de projection perspective.\vspace{0.2cm}
-
-\hspace*{.5cm}Cette opération était necessaire a la générer d'une image de synthèse correspondant à une observation virtuelle de l'environnement depuis le centre du LiDAR.\\
-\hspace*{.3cm}Cette image devenait alors une référence géométrique intermédiaire pouvant être utilisée pour établir des correspondances de repères et contribuer à l'estimation de l'orientation extrinsèque des différentes caméras réelles réparties sur le véhicule autonome.
+\hspace*{1cm}Une caméra virtuelle a été définie mathématiquement à l'origine du repère LiDAR, soit au point $(0,0,0)$.\\
+\hspace*{0.5cm}Le maillage tridimensionnel obtenu à partir des données LiDAR pouvait alors être projeté sur le plan image de cette caméra virtuelle à partir des matrices de projection perspective.\\
+\hspace*{1cm}Cette opération était necessaire a la générer d'une image de synthèse correspondant à une observation virtuelle de l'environnement depuis le centre du LiDAR.\\
+\hspace*{0.5cm}Cette image devenait alors une référence géométrique intermédiaire pouvant être utilisée pour établir des correspondances de repères et contribuer à l'estimation de l'orientation extrinsèque des différentes caméras réelles réparties sur le véhicule autonome.
 
 \end{itemize}
 
-\par\bigskip
-\par\bigskip
+\vspace{0.1cm}
 
-\hspace*{0.3cm}La génération de cette représentation virtuelle devait permettre de créer un lien entre les données tridimensionnelles issues du LiDAR et les images acquises par les caméras. L'objectif final étant de disposer d'une référence géométrique indépendante des prédictions du modèle VGGT afin de pouvoir analyser plus précisément les erreurs de calibration extrinsèque.
+\hspace*{1cm}La génération de cette représentation virtuelle devait permettre de créer un lien entre les données tridimensionnelles issues du LiDAR et les images acquises par les caméras.\\
+L'objectif final étant de disposer d'une référence géométrique indépendante des prédictions du modèle VGGT afin de pouvoir analyser plus précisément les erreurs de calibration extrinsèque.
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.95\textwidth]{img_src/environement_lidar.png}
+    \includegraphics[width=0.65\textwidth]{img_src/environement_lidar.png}
     \caption{Trame LIDAR}
     \label{fig:environnement_lidar}
 \end{figure}
