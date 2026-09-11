@@ -1,7 +1,7 @@
 \@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
 \babel@toc {french}{}\relax 
-\contentsline {chapter}{Remerciements}{i}{chapter*.1}%
-\contentsline {chapter}{Objectif du stage}{ii}{chapter*.1}%
+\contentsline {chapter}{Remerciements}{i}{Doc-Start}%
+\contentsline {chapter}{Objectif du stage}{ii}{Doc-Start}%
 \contentsline {chapter}{\numberline {1}Présentation de l'entreprise et du service}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}L'entreprise}{1}{section.1.1}%
 \contentsline {subsection}{\numberline {1.1.1}Carte d'identité et caractéristiques}{1}{subsection.1.1.1}%
@@ -17,57 +17,56 @@
 \contentsline {chapter}{\numberline {3}Le démarrage de l'étude}{9}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Analyse et Critique préalables de l'existant}{9}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Analyse et Constat}{9}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Critique}{10}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.2}Critique}{9}{subsection.3.1.2}%
 \contentsline {section}{\numberline {3.2}Propositions de solutions}{11}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Pipeline de pré-traitement en amont}{11}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Exploitation des données LiDAR}{12}{subsection.3.2.2}%
-\contentsline {paragraph}{}{12}{paragraph*.2}%
 \contentsline {subsection}{\numberline {3.2.3}Sélection d'images et recouvrement visuel}{13}{subsection.3.2.3}%
-\contentsline {paragraph}{}{13}{paragraph*.3}%
+\contentsline {paragraph}{}{13}{paragraph*.1}%
 \contentsline {chapter}{\numberline {4}Étude : Mise en place et suivi des solutions proposées}{14}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Cadre expérimental}{14}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Scénario retenu}{15}{subsection.4.1.1}%
-\contentsline {paragraph}{}{15}{paragraph*.4}%
-\contentsline {paragraph}{}{15}{paragraph*.5}%
-\contentsline {subsection}{\numberline {4.1.2}Logistique utilisée}{16}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Filtrage cinématique (à l'arrêt du véhicule)}{18}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Synchronisation temporelle stricte et gestion des flux intermittents}{18}{subsection.4.2.1}%
-\contentsline {paragraph}{}{18}{paragraph*.6}%
-\contentsline {subsection}{\numberline {4.2.2}Extraction et tri odométrique }{19}{subsection.4.2.2}%
-\contentsline {section}{\numberline {4.3}Amélioration de la Qualité des Images}{21}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Traitement de la distorsion optique}{21}{subsection.4.3.1}%
-\contentsline {paragraph}{}{21}{paragraph*.7}%
-\contentsline {paragraph}{}{21}{paragraph*.8}%
-\contentsline {subsection}{\numberline {4.3.2}Traitement de la saturation}{23}{subsection.4.3.2}%
-\contentsline {paragraph}{}{23}{paragraph*.9}%
-\contentsline {subsection}{\numberline {4.3.3}Traitement du contraste}{24}{subsection.4.3.3}%
-\contentsline {paragraph}{}{24}{paragraph*.10}%
-\contentsline {paragraph}{}{24}{paragraph*.11}%
-\contentsline {paragraph}{Calcul de l'écart-type du contraste :}{24}{paragraph*.12}%
-\contentsline {subsection}{\numberline {4.3.4}Traitement du flou}{25}{subsection.4.3.4}%
-\contentsline {paragraph}{}{25}{paragraph*.13}%
-\contentsline {paragraph}{}{25}{paragraph*.14}%
-\contentsline {paragraph}{Calcul de la variance du Laplacien :}{25}{paragraph*.15}%
-\contentsline {section}{\numberline {4.4}Génération d'images à partir du LiDAR 3D}{26}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Développement d'un algorithme SLAM personnalisé}{26}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Déploiement d'une architecture SLAM}{27}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Conditionnement et filtrage du nuage de points}{28}{subsection.4.4.3}%
-\contentsline {subsection}{\numberline {4.4.4}Intérêt de la reconstruction LiDAR pour la référence géométrique}{29}{subsection.4.4.4}%
+\contentsline {paragraph}{}{15}{paragraph*.2}%
+\contentsline {paragraph}{}{16}{paragraph*.3}%
+\contentsline {subsection}{\numberline {4.1.2}Logistique utilisée}{17}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Filtrage cinématique (à l'arrêt du véhicule)}{19}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Synchronisation temporelle stricte et gestion des flux intermittents}{19}{subsection.4.2.1}%
+\contentsline {paragraph}{}{19}{paragraph*.4}%
+\contentsline {subsection}{\numberline {4.2.2}Extraction et tri odométrique }{20}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Amélioration de la Qualité des Images}{22}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Traitement de la distorsion optique}{22}{subsection.4.3.1}%
+\contentsline {paragraph}{}{22}{paragraph*.5}%
+\contentsline {paragraph}{}{22}{paragraph*.6}%
+\contentsline {subsection}{\numberline {4.3.2}Traitement de la saturation}{24}{subsection.4.3.2}%
+\contentsline {paragraph}{}{24}{paragraph*.7}%
+\contentsline {subsection}{\numberline {4.3.3}Traitement du contraste}{25}{subsection.4.3.3}%
+\contentsline {paragraph}{}{25}{paragraph*.8}%
+\contentsline {paragraph}{}{25}{paragraph*.9}%
+\contentsline {paragraph}{Calcul de l'écart-type du contraste :}{25}{paragraph*.10}%
+\contentsline {subsection}{\numberline {4.3.4}Traitement du flou}{26}{subsection.4.3.4}%
+\contentsline {paragraph}{}{26}{paragraph*.11}%
+\contentsline {paragraph}{}{26}{paragraph*.12}%
+\contentsline {paragraph}{Calcul de la variance du Laplacien :}{26}{paragraph*.13}%
+\contentsline {section}{\numberline {4.4}Génération d'images à partir du LiDAR 3D}{27}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Développement d'un algorithme SLAM personnalisé}{27}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Déploiement d'une architecture SLAM}{28}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Conditionnement et filtrage du nuage de points}{29}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}Intérêt de la reconstruction LiDAR pour la référence géométrique}{30}{subsection.4.4.4}%
 \Needspace {15\baselineskip }
-\contentsline {section}{\numberline {4.5}Filtrage visuel intelligent par LoFTR et optimisation du recouvrement}{31}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Développement d'un module de sélection visuelle}{31}{subsection.4.5.1}%
-\contentsline {subsection}{\numberline {4.5.2}Conditionnement et normalisation qualitative des images}{32}{subsection.4.5.2}%
-\contentsline {subsection}{\numberline {4.5.3}Algorithme de concaténation et reconstruction de trajectoire}{32}{subsection.4.5.3}%
-\contentsline {subsection}{\numberline {4.5.4}Appariement dense par Transformer (LoFTR) et estimation du recouvrement}{33}{subsection.4.5.4}%
-\contentsline {subsection}{\numberline {4.5.5}Développement des algorithmes de sélection sous consigne}{33}{subsection.4.5.5}%
-\contentsline {subsection}{\numberline {4.5.6}Intérêt du contrôle du recouvrement pour le modèle VGGT}{34}{subsection.4.5.6}%
-\contentsline {section}{\numberline {4.6}Mise en place et suivi des solutions}{35}{section.4.6}%
-\contentsline {subsubsection}{Filtrage cinématique (Arrêt du véhicule)}{35}{subsubsection*.16}%
-\contentsline {subsubsection}{Architecture d'extraction et traitement par blocs (\textit {Chunks})}{35}{subsubsection*.17}%
-\contentsline {subsubsection}{Algorithme de concaténation et reconstruction de trajectoire}{36}{subsubsection*.18}%
-\contentsline {subsubsection}{Stratégies de recalage face à la vérité terrain (GPS)}{36}{subsubsection*.19}%
-\contentsline {subsection}{\numberline {4.6.1}Suivi du filtrage intelligent par LoFTR}{38}{subsection.4.6.1}%
-\contentsline {section}{\numberline {4.7}Bilan}{39}{section.4.7}%
-\contentsline {chapter}{Conclusion}{42}{chapter*.20}%
-\contentsline {chapter}{Bibliographie}{45}{chapter*.21}%
-\contentsline {chapter}{Annexes}{47}{appendix*.22}%
+\contentsline {section}{\numberline {4.5}Filtrage visuel intelligent par LoFTR et optimisation du recouvrement}{32}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Développement d'un module de sélection visuelle}{32}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Conditionnement et normalisation qualitative des images}{33}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}Algorithme de concaténation et reconstruction de trajectoire}{34}{subsection.4.5.3}%
+\contentsline {subsection}{\numberline {4.5.4}Appariement dense par Transformer (LoFTR) et estimation du recouvrement}{34}{subsection.4.5.4}%
+\contentsline {subsection}{\numberline {4.5.5}Développement des algorithmes de sélection sous consigne}{35}{subsection.4.5.5}%
+\contentsline {subsection}{\numberline {4.5.6}Intérêt du contrôle du recouvrement pour le modèle VGGT}{35}{subsection.4.5.6}%
+\contentsline {section}{\numberline {4.6}Mise en place et suivi des solutions}{36}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Filtrage cinématique (Arrêt du véhicule)}{36}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Architecture d'extraction et traitement par blocs (\textit {Chunks})}{37}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.6.3}Algorithme de concaténation et reconstruction de trajectoire}{37}{subsection.4.6.3}%
+\contentsline {subsection}{\numberline {4.6.4}Stratégies de recalage face à la vérité terrain (GPS)}{38}{subsection.4.6.4}%
+\contentsline {subsection}{\numberline {4.6.5}Suivi du filtrage intelligent par LoFTR}{39}{subsection.4.6.5}%
+\contentsline {section}{\numberline {4.7}Bilan}{40}{section.4.7}%
+\contentsline {chapter}{Conclusion}{43}{chapter*.14}%
+\contentsline {chapter}{Bibliographie}{46}{chapter*.15}%
+\contentsline {chapter}{Annexes}{48}{appendix*.16}%

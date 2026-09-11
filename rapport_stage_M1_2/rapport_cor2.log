@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.8.26)  10 SEP 2026 19:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.8.26)  11 SEP 2026 17:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -877,6 +877,10 @@ File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 (./rapport_cor2.aux
 Package babel Info: 'french' activates 'french' shorthands.
 (babel)             Reported on input line 12.
+
+
+LaTeX Warning: Label `fig:pavin' multiply defined.
+
 )
 \openout1 = `rapport_cor2.aux'.
 
@@ -899,8 +903,7 @@ LaTeX Font Info:    ... okay on input line 98.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 98.
 LaTeX Font Info:    ... okay on input line 98.
 LaTeX Info: Redefining \degres on input line 98.
-
-(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count359
 \scratchdimen=\dimen304
@@ -962,7 +965,7 @@ Package hyperref Info: Link coloring ON on input line 98.
 \@outlinefile=\write4
 \openout4 = `rapport_cor2.out'.
 
-<img_garde/logo_uca.png, id=215, 501.875pt x 485.815pt>
+<img_garde/logo_uca.png, id=231, 501.875pt x 485.815pt>
 File: img_garde/logo_uca.png Graphic file (type png)
 <use img_garde/logo_uca.png>
 Package pdftex.def Info: img_garde/logo_uca.png  used on input line 109.
@@ -979,12 +982,12 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 110
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<img_garde/logo_eupi.png, id=217, 677.1699pt x 137.7948pt>
+<img_garde/logo_eupi.png, id=233, 677.1699pt x 137.7948pt>
 File: img_garde/logo_eupi.png Graphic file (type png)
 <use img_garde/logo_eupi.png>
 Package pdftex.def Info: img_garde/logo_eupi.png  used on input line 114.
 (pdftex.def)             Requested size: 182.09486pt x 37.0537pt.
-<img_garde/logo_institut.png, id=218, 501.875pt x 501.875pt>
+<img_garde/logo_institut.png, id=234, 501.875pt x 501.875pt>
 File: img_garde/logo_institut.png Graphic file (type png)
 <use img_garde/logo_institut.png>
 Package pdftex.def Info: img_garde/logo_institut.png  used on input line 119.
@@ -993,50 +996,18 @@ Package pdftex.def Info: img_garde/logo_institut.png  used on input line 119.
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./img_garde/logo_uca.png> 
 <./img_garde/logo_eupi.png> <./img_garde/logo_institut.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 176--177
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 178--180
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 181--182
-
- []
-
-
-Overfull \hbox (2.53847pt too wide) in paragraph at lines 183--184
+Overfull \hbox (2.53847pt too wide) in paragraph at lines 188--189
 []\T1/cmr/m/n/12 Je sa-lue cha-leu-reu-se-ment l'en-semble des in-gé-nieurs, ch
 er-cheurs et doc-to-rants de l'équipe
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 183--184
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 185--186
+[1]
+Underfull \hbox (badness 10000) in paragraph at lines 210--211
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 187--188
-
- []
-
-[1
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 204--205
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 206--208
+Underfull \hbox (badness 10000) in paragraph at lines 212--214
 
  []
 
@@ -1045,7 +1016,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 206--208
 \openout5 = `rapport_cor2.toc'.
 
  [3]
-Overfull \hbox (33.57408pt too wide) in paragraph at lines 253--253
+Overfull \hbox (33.57408pt too wide) in paragraph at lines 259--259
  [][] [][][]\T1/cmtt/m/n/12 Filtrage visuel intelligent par LoFTR et optimisati
 on du recouvrement[][] []  
  []
@@ -1053,7 +1024,7 @@ on du recouvrement[][] []
 [4]
 Chapitre 1.
 
-Overfull \hbox (13.49097pt too wide) in paragraph at lines 280--303
+Overfull \hbox (13.49097pt too wide) in paragraph at lines 289--312
  [][] 
  []
 
@@ -1062,101 +1033,86 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.307 \newpage
+l.316 \newpage
                [1
 
 ]
-<img/map_institut.png, id=316, 1923.185pt x 1014.79124pt>
+<img/map_institut.png, id=335, 1923.185pt x 1014.79124pt>
 File: img/map_institut.png Graphic file (type png)
 <use img/map_institut.png>
-Package pdftex.def Info: img/map_institut.png  used on input line 328.
+Package pdftex.def Info: img/map_institut.png  used on input line 337.
 (pdftex.def)             Requested size: 364.19667pt x 192.16199pt.
  [2 <./img/map_institut.png>]
-<img_pdf/organigramme_IP.pdf, id=328, 845.1575pt x 597.23125pt>
+<img_pdf/organigramme_IP.pdf, id=348, 845.1575pt x 597.23125pt>
 File: img_pdf/organigramme_IP.pdf Graphic file (type pdf)
 <use img_pdf/organigramme_IP.pdf>
-Package pdftex.def Info: img_pdf/organigramme_IP.pdf  used on input line 342.
+Package pdftex.def Info: img_pdf/organigramme_IP.pdf  used on input line 351.
 (pdftex.def)             Requested size: 500.77129pt x 353.87613pt.
  [3 <./img_pdf/organigramme_IP.pdf>]
-Overfull \hbox (1.17035pt too wide) in paragraph at lines 365--366
+Overfull \hbox (1.17035pt too wide) in paragraph at lines 374--375
 []\T1/cmr/bx/n/12 Enseignants-chercheurs et cher-cheurs : \T1/cmr/m/n/12 137 en
 seignants-chercheurs (UCA, Cler-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 385--387
+Underfull \hbox (badness 10000) in paragraph at lines 394--396
 
  []
 
 [4
 
 ]
-Overfull \hbox (1.15778pt too wide) in paragraph at lines 393--395
+Overfull \hbox (1.15778pt too wide) in paragraph at lines 402--404
 []\T1/cmr/bx/n/12 PAVIN (Pla-te-forme Au-ver-gnate Pour les Vé-hi-cules In-tel-
 li-gents / CNRS) : 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 402--403
+Underfull \hbox (badness 10000) in paragraph at lines 411--412
 
  []
 
 [5]
 Chapitre 2.
 
-Overfull \hbox (16.07333pt too wide) in paragraph at lines 420--420
+Overfull \hbox (16.07333pt too wide) in paragraph at lines 429--429
 |\T1/cmr/bx/n/24.88 Présentation du poste oc-cupé et de l'étude| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 424--425
+Underfull \hbox (badness 10000) in paragraph at lines 433--434
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 426--427
+Underfull \hbox (badness 10000) in paragraph at lines 435--436
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 428--429
+Underfull \hbox (badness 10000) in paragraph at lines 437--438
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 430--431
+Underfull \hbox (badness 10000) in paragraph at lines 439--440
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 432--434
+Underfull \hbox (badness 10000) in paragraph at lines 441--443
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 438--439
+Underfull \hbox (badness 10000) in paragraph at lines 447--448
 
  []
 
 [6
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 446--447
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 448--449
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 450--453
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 454--456
+Underfull \hbox (badness 10000) in paragraph at lines 455--456
 
  []
 
@@ -1166,226 +1122,211 @@ Underfull \hbox (badness 10000) in paragraph at lines 457--458
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 459--460
+Underfull \hbox (badness 10000) in paragraph at lines 459--462
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 461--462
+Underfull \hbox (badness 10000) in paragraph at lines 463--465
 
  []
 
-<img_src/PAVIN_navette.jpg, id=450, 601.24625pt x 400.49625pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 466--467
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 468--469
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 470--471
+
+ []
+
+<img_src/PAVIN_navette.jpg, id=469, 601.24625pt x 400.49625pt>
 File: img_src/PAVIN_navette.jpg Graphic file (type jpg)
 <use img_src/PAVIN_navette.jpg>
-Package pdftex.def Info: img_src/PAVIN_navette.jpg  used on input line 468.
+Package pdftex.def Info: img_src/PAVIN_navette.jpg  used on input line 477.
 (pdftex.def)             Requested size: 218.51521pt x 145.55353pt.
-<img_src/navelle_schÃ©ma.png, id=451, 1239.12938pt x 658.71094pt>
+<img_src/navelle_schÃ©ma.png, id=470, 1239.12938pt x 658.71094pt>
 File: img_src/navelle_schÃ©ma.png Graphic file (type png)
 <use img_src/navelle_schÃ©ma.png>
-Package pdftex.def Info: img_src/navelle_schÃ©ma.png  used on input line 474.
+Package pdftex.def Info: img_src/navelle_schÃ©ma.png  used on input line 483.
 (pdftex.def)             Requested size: 218.51521pt x 116.16063pt.
 [7 <./img_src/PAVIN_navette.jpg> <./img_src/navelle_schÃ©ma.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 493--494
+Underfull \hbox (badness 10000) in paragraph at lines 505--506
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 495--497
+Underfull \hbox (badness 10000) in paragraph at lines 507--509
 
  []
+
+
+LaTeX Font Warning: Font shape `T1/cmr/sb/n' undefined
+(Font)              using `T1/cmr/b/n' instead on input line 523.
 
 [8]
 Chapitre 3.
+
+Underfull \hbox (badness 10000) in paragraph at lines 551--554
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 555--556
+
+ []
+
 [9
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 544--547
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 548--549
-
- []
-
-[10]
-Overfull \hbox (30.96902pt too wide) in paragraph at lines 580--581
+] [10]
+Overfull \hbox (30.96902pt too wide) in paragraph at lines 593--594
 []\T1/cmtt/m/n/12 Comprendre le fonctionnement du pipeline de traitement de don
 nées existant 
  []
 
 
-Overfull \hbox (12.44855pt too wide) in paragraph at lines 581--582
+Overfull \hbox (12.44855pt too wide) in paragraph at lines 594--595
 []\T1/cmtt/m/n/12 Identification des principaux points de blocage liés à l'util
 isation du
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 591--593
+Underfull \hbox (badness 10000) in paragraph at lines 604--606
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 594--596
+Underfull \hbox (badness 10000) in paragraph at lines 607--609
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 603--604
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 607--610
+Underfull \hbox (badness 10000) in paragraph at lines 616--617
 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 611--613
 
- []
-
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 626--629
-
- []
+LaTeX Font Warning: Font shape `T1/cmr/sb/n' undefined
+(Font)              using `T1/cmr/b/n' instead on input line 626.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 634--635
 
  []
 
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 649--652
 
-Underfull \hbox (badness 10000) in paragraph at lines 636--638
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 657--658
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 659--661
 
  []
 
 [13]
 Chapitre 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 684--685
+Underfull \hbox (badness 10000) in paragraph at lines 707--708
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 686--687
+Underfull \hbox (badness 10000) in paragraph at lines 709--710
 
  []
 
-<img_src/PAVIN.jpg, id=491, 255.95625pt x 170.88844pt>
+<img_src/PAVIN.jpg, id=510, 255.95625pt x 170.88844pt>
 File: img_src/PAVIN.jpg Graphic file (type jpg)
 <use img_src/PAVIN.jpg>
-Package pdftex.def Info: img_src/PAVIN.jpg  used on input line 699.
+Package pdftex.def Info: img_src/PAVIN.jpg  used on input line 722.
 (pdftex.def)             Requested size: 318.66948pt x 212.773pt.
 [14
 
  <./img_src/PAVIN.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 708--710
+Underfull \hbox (badness 10000) in paragraph at lines 731--733
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 711--712
+Underfull \hbox (badness 10000) in paragraph at lines 734--735
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 713--714
+<img_src/parcours_du_vehicule.png, id=517, 337.26pt x 337.26pt>
+File: img_src/parcours_du_vehicule.png Graphic file (type png)
+<use img_src/parcours_du_vehicule.png>
+Package pdftex.def Info: img_src/parcours_du_vehicule.png  used on input line 7
+42.
+(pdftex.def)             Requested size: 227.62206pt x 227.62523pt.
+[15 <./img_src/parcours_du_vehicule.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 772--773
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 727--730
-
- []
-
-[15]
-<img_src/image_source.png, id=504, 1483.5425pt x 637.38126pt>
+[16]
+<img_src/image_source.png, id=529, 1483.5425pt x 637.38126pt>
 File: img_src/image_source.png Graphic file (type png)
 <use img_src/image_source.png>
-Package pdftex.def Info: img_src/image_source.png  used on input line 740.
+Package pdftex.def Info: img_src/image_source.png  used on input line 783.
 (pdftex.def)             Requested size: 409.71692pt x 176.0244pt.
-<img_src/rviz2_lidar.png, id=505, 1927.2pt x 1204.5pt>
+<img_src/rviz2_lidar.png, id=530, 1927.2pt x 1204.5pt>
 File: img_src/rviz2_lidar.png Graphic file (type png)
 <use img_src/rviz2_lidar.png>
-Package pdftex.def Info: img_src/rviz2_lidar.png  used on input line 750.
+Package pdftex.def Info: img_src/rviz2_lidar.png  used on input line 793.
 (pdftex.def)             Requested size: 409.71692pt x 256.05855pt.
- [16 <./img_src/image_source.png> <./img_src/rviz2_lidar.png>]
-<img_src/vitesse_odom.png, id=514, 462.528pt x 346.896pt>
+ [17 <./img_src/image_source.png> <./img_src/rviz2_lidar.png>]
+<img_src/vitesse_odom.png, id=539, 462.528pt x 346.896pt>
 File: img_src/vitesse_odom.png Graphic file (type png)
 <use img_src/vitesse_odom.png>
-Package pdftex.def Info: img_src/vitesse_odom.png  used on input line 764.
+Package pdftex.def Info: img_src/vitesse_odom.png  used on input line 807.
 (pdftex.def)             Requested size: 409.71692pt x 307.302pt.
- [17 <./img_src/vitesse_odom.png>]
-Overfull \hbox (0.1552pt too wide) in paragraph at lines 773--773
+ [18 <./img_src/vitesse_odom.png>]
+Overfull \hbox (0.1552pt too wide) in paragraph at lines 816--816
 |[]\T1/cmr/bx/n/20.74 Filtrage ci-né-ma-tique (à l'ar-rêt du vé-hi-cule)| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 777--781
+Underfull \hbox (badness 10000) in paragraph at lines 820--824
 
  []
 
-<img_src/robag_rqt.png, id=521, 1927.2pt x 1204.5pt>
+<img_src/robag_rqt.png, id=546, 947.54pt x 523.9575pt>
 File: img_src/robag_rqt.png Graphic file (type png)
 <use img_src/robag_rqt.png>
-Package pdftex.def Info: img_src/robag_rqt.png  used on input line 786.
-(pdftex.def)             Requested size: 409.71692pt x 256.05855pt.
-[18
+Package pdftex.def Info: img_src/robag_rqt.png  used on input line 829.
+(pdftex.def)             Requested size: 409.71692pt x 226.56053pt.
+[19
 
  <./img_src/robag_rqt.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 808--810
+Underfull \hbox (badness 10000) in paragraph at lines 851--853
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 811--813
+Underfull \hbox (badness 10000) in paragraph at lines 854--856
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 814--815
+Underfull \hbox (badness 10000) in paragraph at lines 857--858
 
  []
 
-[19] [20]
-Underfull \hbox (badness 10000) in paragraph at lines 851--852
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 856--857
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 858--860
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 865--866
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 867--868
-
- []
-
-[21]
-Underfull \hbox (badness 10000) in paragraph at lines 874--875
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 882--883
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 890--891
+[20] [21]
+Underfull \hbox (badness 10000) in paragraph at lines 892--893
 
  []
 
@@ -1394,259 +1335,277 @@ Underfull \hbox (badness 10000) in paragraph at lines 897--898
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 899--901
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 906--907
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 908--909
+
+ []
+
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 928--929
+Underfull \hbox (badness 10000) in paragraph at lines 915--916
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 930--931
+Underfull \hbox (badness 10000) in paragraph at lines 923--924
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 943--944
-
- []
-
-[23] [24]
-Underfull \hbox (badness 10000) in paragraph at lines 975--977
-
- []
-
-[25]
-Underfull \hbox (badness 10000) in paragraph at lines 995--996
+Underfull \hbox (badness 10000) in paragraph at lines 931--932
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 999--1000
+Underfull \hbox (badness 10000) in paragraph at lines 938--939
+
+ []
+
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 969--970
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 971--972
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 984--985
+
+ []
+
+[24] [25]
+Underfull \hbox (badness 10000) in paragraph at lines 1016--1018
 
  []
 
 [26]
-Underfull \hbox (badness 10000) in paragraph at lines 1013--1014
+Underfull \hbox (badness 10000) in paragraph at lines 1036--1037
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1015--1016
+Underfull \hbox (badness 10000) in paragraph at lines 1040--1041
+
+ []
+
+[27]
+Underfull \hbox (badness 10000) in paragraph at lines 1054--1055
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1042--1043
+Underfull \hbox (badness 10000) in paragraph at lines 1056--1057
 
  []
 
-[27] [28]
-Underfull \hbox (badness 10000) in paragraph at lines 1062--1063
+
+Underfull \hbox (badness 10000) in paragraph at lines 1083--1084
 
  []
 
-<img_src/environement_lidar.png, id=599, 1625.07124pt x 922.44624pt>
+[28] [29]
+<img_src/environement_lidar.png, id=624, 1625.07124pt x 922.44624pt>
 File: img_src/environement_lidar.png Graphic file (type png)
 <use img_src/environement_lidar.png>
-Package pdftex.def Info: img_src/environement_lidar.png  used on input line 108
-7.
+Package pdftex.def Info: img_src/environement_lidar.png  used on input line 113
+2.
 (pdftex.def)             Requested size: 432.48051pt x 245.48866pt.
-[29] [30 <./img_src/environement_lidar.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1097--1100
+ [30] [31 <./img_src/environement_lidar.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1148--1149
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1101--1102
+Underfull \hbox (badness 10000) in paragraph at lines 1161--1162
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1103--1104
+Underfull \hbox (badness 10000) in paragraph at lines 1166--1167
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1110--1111
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1112--1113
-
- []
-
-[31
+[32
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1130--1132
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1138--1140
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1142--1143
-
- []
-
-[32]
-Underfull \hbox (badness 10000) in paragraph at lines 1149--1151
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1152--1153
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1154--1155
+Underfull \hbox (badness 10000) in paragraph at lines 1196--1197
 
  []
 
 [33]
-Underfull \hbox (badness 10000) in paragraph at lines 1178--1180
-
- []
-
-[34]
-Underfull \hbox (badness 10000) in paragraph at lines 1189--1190
+Underfull \hbox (badness 10000) in paragraph at lines 1207--1208
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1199--1200
+Underfull \hbox (badness 10000) in paragraph at lines 1210--1211
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1209--1210
+Underfull \hbox (badness 10000) in paragraph at lines 1217--1219
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1211--1213
+Underfull \hbox (badness 10000) in paragraph at lines 1220--1221
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1222--1223
+
+ []
+
+[34
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 1250--1251
 
  []
 
 [35]
-Underfull \hbox (badness 10000) in paragraph at lines 1220--1222
+Underfull \hbox (badness 10000) in paragraph at lines 1272--1273
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1230--1231
-
- []
-
-[36] [37]
-Underfull \hbox (badness 10000) in paragraph at lines 1253--1255
-
- []
-
-[38]
-Underfull \hbox (badness 10000) in paragraph at lines 1267--1268
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1269--1272
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1273--1274
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1275--1276
-
- []
-
-
+[36]
 Underfull \hbox (badness 10000) in paragraph at lines 1282--1283
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1284--1286
+Underfull \hbox (badness 10000) in paragraph at lines 1286--1287
 
  []
+
+[37]
+Overfull \hbox (9.60147pt too wide) in paragraph at lines 1311--1311
+|[]\T1/cmr/bx/n/17.28 Stratégies de re-ca-lage face à la vé-rité ter-rain (GPS)
+| 
+ []
+
+
+LaTeX Font Warning: Font shape `T1/cmr/sb/n' undefined
+(Font)              using `T1/cmr/b/n' instead on input line 1335.
+
+[38]
+
+LaTeX Font Warning: Font shape `T1/cmr/sb/n' undefined
+(Font)              using `T1/cmr/b/n' instead on input line 1351.
 
 [39]
-Underfull \hbox (badness 10000) in paragraph at lines 1293--1294
+Underfull \hbox (badness 10000) in paragraph at lines 1357--1358
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1317--1318
+Underfull \hbox (badness 10000) in paragraph at lines 1359--1362
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1319--1321
+Underfull \hbox (badness 10000) in paragraph at lines 1363--1364
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1365--1366
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1372--1373
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1374--1376
 
  []
 
 [40]
-Underfull \hbox (badness 10000) in paragraph at lines 1327--1329
-
- []
-
-[41]
-Underfull \hbox (badness 10000) in paragraph at lines 1337--1339
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1345--1346
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1364--1365
-
- []
-
-[42
-
-]
 Underfull \hbox (badness 10000) in paragraph at lines 1383--1384
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1385--1387
+Underfull \hbox (badness 10000) in paragraph at lines 1407--1408
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1393--1394
+Underfull \hbox (badness 10000) in paragraph at lines 1409--1411
+
+ []
+
+[41]
+Underfull \hbox (badness 10000) in paragraph at lines 1417--1419
+
+ []
+
+[42]
+Underfull \hbox (badness 10000) in paragraph at lines 1427--1429
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1395--1397
+Underfull \hbox (badness 10000) in paragraph at lines 1435--1436
 
  []
 
-[43] [44]
-Underfull \hbox (badness 3601) in paragraph at lines 1411--1412
+
+Underfull \hbox (badness 10000) in paragraph at lines 1454--1455
+
+ []
+
+[43
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 1473--1474
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1477
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1483--1484
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1485--1487
+
+ []
+
+[44] [45]
+Underfull \hbox (badness 3601) in paragraph at lines 1501--1502
 []\T1/cmr/m/n/12 Université Cler-mont Au-vergne, \T1/cmr/m/it/12 Pré-sen-ta-tio
 n de l'Ins-ti-tut Pas-cal (IP)\T1/cmr/m/n/12 , An-
  []
 
-[45
+[46
 
 ] (./rapport_cor2.lof)
 \tf@lof=\write6
 \openout6 = `rapport_cor2.lof'.
 
- [46] (./rapport_cor2.annextoc
+ [47] (./rapport_cor2.annextoc
 Overfull \hbox (26.80074pt too wide) in paragraph at lines 16--16
  [][] [][][]\T1/cmtt/m/n/12 Modèle cinématique à quatre roues directrices (Four
 -Wheel Steering 
@@ -1656,92 +1615,97 @@ Overfull \hbox (26.80074pt too wide) in paragraph at lines 16--16
 \tf@annextoc=\write7
 \openout7 = `rapport_cor2.annextoc'.
 
- [47
+ [48
 
 
-] [48
+] [49
 
 ]
-Overfull \hbox (3.34119pt too wide) in paragraph at lines 1500--1500
+Overfull \hbox (3.34119pt too wide) in paragraph at lines 1590--1590
 |\T1/cmr/bx/n/20.74 A.4 Têtes de pré-dic-tion et sor-ties géo-mé-triques| 
  []
 
-[49] [50] [51] [52]
-Overfull \hbox (8.02986pt too wide) in paragraph at lines 1582--1583
+[50] [51] [52] [53]
+Overfull \hbox (8.02986pt too wide) in paragraph at lines 1672--1673
 []\T1/cmr/bx/n/12 Type de mes-sage : \T1/cmtt/m/n/12 four_wheel_steering_msgs/m
 sg/FourWheelSteeringStamped 
  []
 
 
-Overfull \hbox (2.38416pt too wide) in paragraph at lines 1595--1595
+Overfull \hbox (2.38416pt too wide) in paragraph at lines 1685--1685
 |\T1/cmr/bx/n/20.74 B.2 Po-si-tion-ne-ment et vé-rité ter-rain par GNSS
  []
 
-[53
+[54
 
 ]
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 1607.
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 1697.
 
-Overfull \hbox (2.64691pt too wide) in paragraph at lines 1611--1612
+Overfull \hbox (2.64691pt too wide) in paragraph at lines 1701--1702
 []\T1/cmr/m/n/12 Cette struc-ture offre une base ma-thé-ma-tique for-melle pour
  bâ-tir la \T1/cmr/bx/n/12 vé-rité ter-rain \T1/cmr/m/n/12 (\T1/cmr/m/it/12 Gro
 und
  []
 
-[54] (./rapport_cor2.aux)
+[55] (./rapport_cor2.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `rapport_cor2.out' has not changed.
-(rerunfilecheck)             Checksum: 31B7168C49DCB9EA735567EF6C665938;12487.
+(rerunfilecheck)             Checksum: 9998D06C5A40D17ACA48DF0079E7A3CA;13902.
  ) 
 Here is how much of TeX's memory you used:
- 27479 strings out of 469485
- 526486 string characters out of 5468803
- 963246 words of memory out of 5000000
- 55476 multiletter control sequences out of 15000+600000
- 655519 words of font info for 105 fonts, out of 8000000 for 9000
+ 27490 strings out of 469485
+ 526798 string characters out of 5468803
+ 963150 words of memory out of 5000000
+ 55486 multiletter control sequences out of 15000+600000
+ 656295 words of font info for 106 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  84i,10n,104p,833b,859s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </home/rhomdev/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi1440.6
-00pk> </home/rhomdev/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt080
-0.600pk> </home/rhomdev/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx
+ </home/rhomdev/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi1200.6
+00pk> </home/rhomdev/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi172
+8.600pk> </home/rhomdev/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt
 0800.600pk> </home/rhomdev/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/e
-cbi1200.600pk> </home/rhomdev/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/e
+cbx0800.600pk> </home/rhomdev/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/e
 c/ectt1095.600pk> </home/rhomdev/.texlive2025/texmf-var/fonts/pk/ljfour/jknappe
 n/ec/tcbx1440.600pk> </home/rhomdev/.texlive2025/texmf-var/fonts/pk/ljfour/jkna
-ppen/ec/ecrm1000.600pk> </home/rhomdev/.texlive2025/texmf-var/fonts/pk/ljfour/j
-knappen/ec/ecrm0800.600pk> </home/rhomdev/.texlive2025/texmf-var/fonts/pk/ljfou
-r/jknappen/ec/eccc1200.600pk> </home/rhomdev/.texlive2025/texmf-var/fonts/pk/lj
-four/jknappen/ec/ecrm1095.600pk> </home/rhomdev/.texlive2025/texmf-var/fonts/pk
-/ljfour/jknappen/ec/ecbx1095.600pk> </home/rhomdev/.texlive2025/texmf-var/fonts
-/pk/ljfour/jknappen/ec/ectt1200.600pk> </home/rhomdev/.texlive2025/texmf-var/fo
-nts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </home/rhomdev/.texlive2025/texmf-var
-/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </home/rhomdev/.texlive2025/texmf-
-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </home/rhomdev/.texlive2025/tex
+ppen/ec/ecrb1200.600pk> </home/rhomdev/.texlive2025/texmf-var/fonts/pk/ljfour/j
+knappen/ec/ecrm1000.600pk> </home/rhomdev/.texlive2025/texmf-var/fonts/pk/ljfou
+r/jknappen/ec/ecrm0800.600pk> </home/rhomdev/.texlive2025/texmf-var/fonts/pk/lj
+four/jknappen/ec/eccc1200.600pk> </home/rhomdev/.texlive2025/texmf-var/fonts/pk
+/ljfour/jknappen/ec/ecrm1095.600pk> </home/rhomdev/.texlive2025/texmf-var/fonts
+/pk/ljfour/jknappen/ec/ecbx1095.600pk> </home/rhomdev/.texlive2025/texmf-var/fo
+nts/pk/ljfour/jknappen/ec/ectt1200.600pk> </home/rhomdev/.texlive2025/texmf-var
+/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </home/rhomdev/.texlive2025/texmf-
+var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </home/rhomdev/.texlive2025/tex
 mf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/rhomdev/.texlive2025/
-texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk> </home/rhomdev/.texlive20
-25/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk> </home/rhomdev/.texliv
-e2025/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2074.600pk> </home/rhomdev/.tex
-live2025/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/rhomdev/.
-texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </home/rhomde
-v/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm
-10.pfb>
-Output written on rapport_cor2.pdf (59 pages, 5956875 bytes).
+texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </home/rhomdev/.texlive20
+25/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk> </home/rhomdev/.texliv
+e2025/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk> </home/rhomdev/.tex
+live2025/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2074.600pk> </home/rhomdev/.
+texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/rhomde
+v/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </home/rho
+mdev/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/m
+sbm10.pfb>
+Output written on rapport_cor2.pdf (60 pages, 5955144 bytes).
 PDF statistics:
- 1730 PDF objects out of 2073 (max. 8388607)
- 810 compressed objects within 9 object streams
+ 1781 PDF objects out of 2073 (max. 8388607)
+ 833 compressed objects within 9 object streams
  202 named destinations out of 1000 (max. 500000)
- 494 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 531 words of extra memory for PDF output out of 10000 (max. 10000000)
 
