@@ -1201,8 +1201,7 @@ L'objectif final étant de disposer d'une référence géométrique indépendant
 
 \hspace*{.5cm}L'objectif était de ne conserver que les vues présentant un niveau de chevauchement spatial adapté au modèle, ni trop élevé, ni trop faible. Ce mécanisme devait ainsi permettre de réduire le nombre d'images transmises à VGGT sans dégrader la qualité de l'information géométrique utile à l'estimation.\\
 
-\par\bigskip
-\par\bigskip
+\newpage
 
 \subsection{Conditionnement et normalisation qualitative des images}
 
@@ -1257,8 +1256,7 @@ Cette stratégie devait limiter la consommation de mémoire GPU et d'assurer une
 
 \hspace*{1cm}À partir de cette densité de points homologues, il devenait possible de calculer un \textbf{taux de recouvrement visuel} exprimé en pourcentage. Cette mesure constituait alors un indicateur de la quantité d'information commune entre les deux vues et permettait d'évaluer leur pertinence pour l'étape d'auto-calibration.\\
 
-\par\bigskip
-\par\bigskip
+\newpage
 
 \subsection{Développement des algorithmes de sélection sous consigne}
 
@@ -1281,6 +1279,8 @@ Cette stratégie devait limiter la consommation de mémoire GPU et d'assurer une
 
 \subsection{Intérêt du contrôle du recouvrement pour le modèle VGGT}
 
+\vspace{1cm}
+
 \hspace*{1cm}L'originalité de cette approche a résidé dans le fait que la sélection des images n'était plus arbitraire, mais guidée par une contrainte géométrique explicite.\vspace{0.05cm}
 
 \hspace*{0.3cm}Ainsi, au lieu de transmettre à VGGT une suite d'images très dense et potentiellement redondantes, l'objectif était de lui fournir une séquence plus compacte, plus informative et mieux adaptée à sa structure de traitement.\\
@@ -1294,16 +1294,19 @@ Cette stratégie devait limiter la consommation de mémoire GPU et d'assurer une
 
 \section{Mise en place et suivi des solutions}
 
+\vspace{1cm}
+
 \hspace*{1cm}La mise en place des solutions développées a constitué la phase de transition entre le constat théorique et l'évaluation expérimentale.\vspace{0.3cm}
 
-\hspace*{1cm}L'objectif n'était pas seulement de corriger les défauts liés à la qualité des données, mais de construire un pipeline complet, cohérent et exploitable sur des séquences réelles de navigation autonome.\vspace{0.05cm}
+\hspace*{1cm}L'objectif n'était pas seulement de corriger les défauts liés à la qualité des données, mais de construire un pipeline complet, cohérent et exploitable sur des séquences réelles de navigation autonome.\vspace{0.1cm}
 
 \hspace*{1cm}Cette étape a permis de passer d'une observation qualitative des problèmes rencontrés, notamment la redondance, la dérive, les défauts de synchronisation ou encore le recouvrement insuffisant, à une mise en œuvre concrète, pilotée par des règles géométriques et des contraintes de calcul.
 
-\par\bigskip
-\par\bigskip
+\vspace{2cm}
 
 \subsection{Filtrage cinématique (Arrêt du véhicule)}
+
+\vspace{1cm}
 
 \hspace*{1cm}Le filtrage cinématique a constitué la première couche du traitement mis en place afin d'isoler les images pertinentes et d'éliminer les trames non exploitables pour l'analyse géométrique.\\
 
@@ -1374,6 +1377,8 @@ Cette stratégie devait limiter la consommation de mémoire GPU et d'assurer une
 
 \subsection{Suivi du filtrage intelligent par LoFTR}
 
+\vspace{1cm}
+
 \hspace*{1cm}En parallèle, le module de sélection visuelle basé sur \textbf{LoFTR} a été intégré en amont du traitement par blocs. \vspace{0.01cm}
 
 \hspace*{0.5cm}Sa fonction consistait à réguler la densité géométrique des vues transmises au modèle en évaluant leur niveau de recouvrement visuel.\vspace{0.1cm}
@@ -1382,7 +1387,7 @@ Cette stratégie devait limiter la consommation de mémoire GPU et d'assurer une
 
 \hspace*{0.5cm}Cette sélection organisait l'optimiser la répartition des 20 images de chaque bloc vers des zones présentant une valeur ajoutée géométrique plus importante.\vspace{0.1cm}
 
-\hspace*{1cm}L'objectif était ainsi d'éviter de saturer inutilement le réseau avec des vues fortement redondantes, tout en conservant suffisamment d'informations communes entre les différentes images pour permettre une estimation géométrique cohérente.\vspace{1cm}
+\hspace*{1cm}L'objectif était ainsi d'éviter de saturer inutilement le réseau avec des vues fortement redondantes, tout en conservant suffisamment d'informations communes entre les différentes images pour permettre une estimation géométrique cohérente.\vspace{1.5cm}
 
 \hspace*{1cm}\textsb{Dans l'ensemble, cette première couche de mise en œuvre a montré que la qualité de la calibration dépendait autant du modèle utilisé que de la manière dont les données étaient filtrées, ordonnées et réassemblées.}
 
