@@ -47,20 +47,20 @@
 \contentsline {subsection}{\numberline {4.4.3}Conditionnement et filtrage du nuage de points}{27}{subsection.4.4.3}%
 \contentsline {subsection}{\numberline {4.4.4}Intérêt de la reconstruction LiDAR pour la référence géométrique}{28}{subsection.4.4.4}%
 \Needspace {15\baselineskip }
-\contentsline {section}{\numberline {4.5}Filtrage visuel intelligent par LoFTR et optimisation du recouvrement}{29}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Développement d'un module de sélection visuelle}{29}{subsection.4.5.1}%
-\contentsline {subsection}{\numberline {4.5.2}Conditionnement et normalisation qualitative des images}{30}{subsection.4.5.2}%
-\contentsline {subsection}{\numberline {4.5.3}Algorithme de concaténation et reconstruction de trajectoire}{31}{subsection.4.5.3}%
-\contentsline {subsection}{\numberline {4.5.4}Appariement dense par Transformer (LoFTR) et estimation du recouvrement}{31}{subsection.4.5.4}%
-\contentsline {subsection}{\numberline {4.5.5}Développement des algorithmes de sélection sous consigne}{32}{subsection.4.5.5}%
-\contentsline {subsection}{\numberline {4.5.6}Intérêt du contrôle du recouvrement pour le modèle VGGT}{32}{subsection.4.5.6}%
-\contentsline {section}{\numberline {4.6}Mise en place et suivi des solutions}{33}{section.4.6}%
-\contentsline {subsection}{\numberline {4.6.1}Filtrage cinématique (Arrêt du véhicule)}{33}{subsection.4.6.1}%
-\contentsline {subsection}{\numberline {4.6.2}Architecture d'extraction et traitement par blocs (\textit {Chunks})}{34}{subsection.4.6.2}%
-\contentsline {subsection}{\numberline {4.6.3}Algorithme de concaténation et reconstruction de trajectoire}{34}{subsection.4.6.3}%
-\contentsline {subsection}{\numberline {4.6.4}Stratégies de recalage face à la vérité terrain (GPS)}{35}{subsection.4.6.4}%
-\contentsline {subsection}{\numberline {4.6.5}Suivi du filtrage intelligent par LoFTR}{36}{subsection.4.6.5}%
-\contentsline {section}{\numberline {4.7}Bilan}{37}{section.4.7}%
-\contentsline {chapter}{Conclusion}{40}{chapter*.8}%
-\contentsline {chapter}{Bibliographie}{43}{chapter*.9}%
-\contentsline {chapter}{Annexes}{45}{appendix*.10}%
+\contentsline {section}{\numberline {4.5}Filtrage visuel intelligent par LoFTR et optimisation du recouvrement}{30}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Développement d'un module de sélection visuelle}{30}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Conditionnement et normalisation qualitative des images}{31}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}Algorithme de concaténation et reconstruction de trajectoire}{32}{subsection.4.5.3}%
+\contentsline {subsection}{\numberline {4.5.4}Appariement dense par Transformer (LoFTR) et estimation du recouvrement}{32}{subsection.4.5.4}%
+\contentsline {subsection}{\numberline {4.5.5}Développement des algorithmes de sélection sous consigne}{33}{subsection.4.5.5}%
+\contentsline {subsection}{\numberline {4.5.6}Intérêt du contrôle du recouvrement pour le modèle VGGT}{33}{subsection.4.5.6}%
+\contentsline {section}{\numberline {4.6}Mise en place et suivi des solutions}{34}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Filtrage cinématique (Arrêt du véhicule)}{34}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Architecture d'extraction et traitement par blocs (\textit {Chunks})}{35}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.6.3}Algorithme de concaténation et reconstruction de trajectoire}{35}{subsection.4.6.3}%
+\contentsline {subsection}{\numberline {4.6.4}Stratégies de recalage face à la vérité terrain (GPS)}{36}{subsection.4.6.4}%
+\contentsline {subsection}{\numberline {4.6.5}Suivi du filtrage intelligent par LoFTR}{37}{subsection.4.6.5}%
+\contentsline {section}{\numberline {4.7}Bilan}{38}{section.4.7}%
+\contentsline {chapter}{Conclusion}{42}{chapter*.8}%
+\contentsline {chapter}{Bibliographie}{45}{chapter*.9}%
+\contentsline {chapter}{Annexes}{47}{appendix*.10}%
