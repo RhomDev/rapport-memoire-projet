@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.9.6)  13 SEP 2026 08:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.8.26)  13 SEP 2026 14:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **rapport_cor2.tex
 (./rapport_cor2.tex
 LaTeX2e <2025-11-01>
-L3 programming layer <2026-03-20>
+L3 programming layer <2026-01-19>
 (/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
@@ -22,7 +22,7 @@ File: size12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 \c@table=\count283
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
-\bibindent=\dimen150
+\bibindent=\dimen148
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
@@ -33,7 +33,7 @@ Package: inputenc 2024/02/08 v1.3d Input encoding file
 Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
 )
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2026/04/15 v26.6 The multilingual framework for LuaLaTeX, pdfLaT
+Package: babel 2026/01/18 v26.1 The multilingual framework for LuaLaTeX, pdfLaT
 eX and XeLaTeX
 \babel@savecnt=\count284
 LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input li
@@ -50,8 +50,8 @@ LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?)
 on input line 2086.
 LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) 
 on input line 2111.
-\U@D=\dimen151
-\l@unhyphenated=\language89
+\U@D=\dimen149
+\l@unhyphenated=\language5
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
@@ -73,20 +73,20 @@ Package babel Info: Making ! an active character on input line 275.
 Package babel Info: Making ? an active character on input line 276.
 \FBguill@level=\count287
 \FBold@everypar=\toks19
-\FB@Mht=\dimen152
+\FB@Mht=\dimen150
 \mc@charclass=\count288
 \mc@charfam=\count289
 \mc@charslot=\count290
 \std@mcc=\count291
 \dec@mcc=\count292
-\FB@pardim=\dimen153
-\listindentFB=\dimen154
-\descindentFB=\dimen155
-\labelindentFB=\dimen156
-\labelwidthFB=\dimen157
-\leftmarginFB=\dimen158
-\parindentFFN=\dimen159
-\FBfnindent=\dimen160
+\FB@pardim=\dimen151
+\listindentFB=\dimen152
+\descindentFB=\dimen153
+\labelindentFB=\dimen154
+\labelwidthFB=\dimen155
+\leftmarginFB=\dimen156
+\parindentFFN=\dimen157
+\FBfnindent=\dimen158
 )))
 (/usr/share/texlive/texmf-dist/tex/latex/carlisle/scalefnt.sty)
 (/usr/share/texlive/texmf-dist/tex/generic/ulem/ulem.sty
@@ -94,12 +94,12 @@ Package babel Info: Making ? an active character on input line 276.
 \UL@hyphenbox=\box54
 \UL@skip=\skip51
 \UL@hook=\toks20
-\UL@height=\dimen161
+\UL@height=\dimen159
 \UL@pe=\count293
-\UL@pixel=\dimen162
+\UL@pixel=\dimen160
 \ULC@box=\box55
 Package: ulem 2019/11/18
-\ULdepth=\dimen163
+\ULdepth=\dimen161
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
@@ -122,8 +122,8 @@ Package graphics Info: Driver file: pdftex.def on input line 106.
 (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen164
-\Gin@req@width=\dimen165
+\Gin@req@height=\dimen162
+\Gin@req@width=\dimen163
 )
 (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
@@ -144,11 +144,11 @@ Package: amstext 2024/11/17 v2.01 AMS text
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks24
-\ex@=\dimen166
+\ex@=\dimen164
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen167
+\pmbraise@=\dimen165
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
@@ -170,7 +170,7 @@ LaTeX Info: Redefining \big on input line 721.
 LaTeX Info: Redefining \Big on input line 722.
 LaTeX Info: Redefining \bigg on input line 723.
 LaTeX Info: Redefining \Bigg on input line 724.
-\big@size=\dimen168
+\big@size=\dimen166
 LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
 \macc@depth=\count300
@@ -188,12 +188,12 @@ LaTeX Info: Redefining \Relbar on input line 970.
 \column@=\count305
 \maxfields@=\count306
 \andhelp@=\toks26
-\eqnshift@=\dimen169
-\alignsep@=\dimen170
-\tagshift@=\dimen171
-\tagwidth@=\dimen172
-\totwidth@=\dimen173
-\lineht@=\dimen174
+\eqnshift@=\dimen167
+\alignsep@=\dimen168
+\tagshift@=\dimen169
+\tagwidth@=\dimen170
+\totwidth@=\dimen171
+\lineht@=\dimen172
 \@envbody=\toks27
 \multlinegap=\skip53
 \multlinetaggap=\skip54
@@ -213,7 +213,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
-Package: geometry 2026/03/07 v6.0 Page Geometry
+Package: geometry 2020/01/02 v5.9 Page Geometry
 
 (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
@@ -224,14 +224,14 @@ Package: iftex 2024/12/12 v1.0g TeX engine tests
 \Gm@cnth=\count307
 \Gm@cntv=\count308
 \c@Gm@tempcnt=\count309
-\Gm@bindingoffset=\dimen175
-\Gm@wd@mp=\dimen176
-\Gm@odd@mp=\dimen177
-\Gm@even@mp=\dimen178
-\Gm@layoutwidth=\dimen179
-\Gm@layoutheight=\dimen180
-\Gm@layouthoffset=\dimen181
-\Gm@layoutvoffset=\dimen182
+\Gm@bindingoffset=\dimen173
+\Gm@wd@mp=\dimen174
+\Gm@odd@mp=\dimen175
+\Gm@even@mp=\dimen176
+\Gm@layoutwidth=\dimen177
+\Gm@layoutheight=\dimen178
+\Gm@layouthoffset=\dimen179
+\Gm@layoutvoffset=\dimen180
 \Gm@dimlist=\toks29
 )
 (/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
@@ -239,12 +239,12 @@ Package: titlesec 2025/01/04 v2.17 Sectioning titles
 \ttl@box=\box60
 \beforetitleunit=\skip55
 \aftertitleunit=\skip56
-\ttl@plus=\dimen183
-\ttl@minus=\dimen184
+\ttl@plus=\dimen181
+\ttl@minus=\dimen182
 \ttl@toksa=\toks30
-\titlewidth=\dimen185
-\titlewidthlast=\dimen186
-\titlewidthfirst=\dimen187
+\titlewidth=\dimen183
+\titlewidthlast=\dimen184
+\titlewidthfirst=\dimen185
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/indentfirst.sty
 Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
@@ -252,7 +252,7 @@ Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
 (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2025/02/06 v3.11 Customized lists
 \labelindent=\skip57
-\enit@outerparindent=\dimen188
+\enit@outerparindent=\dimen186
 \enit@toks=\toks31
 \enit@inbox=\box61
 \enit@count@id=\count310
@@ -302,7 +302,7 @@ Package tocloft Info: The document has chapter divisions on input line 51.
 Package: needspace 2025/03/13 v1.3e reserve vertical space
 )
 (/usr/share/texlive/texmf-dist/tex/latex/etoc/etoc.sty
-Package: etoc 2026/05/04 v1.2e Completely customisable TOCs (JFB)
+Package: etoc 2023/10/29 v1.2d Completely customisable TOCs (JFB)
 
 (/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
@@ -317,22 +317,22 @@ Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
 \c@tracingmulticols=\count314
 \mult@box=\box62
-\multicol@leftmargin=\dimen189
+\multicol@leftmargin=\dimen187
 \c@unbalance=\count315
 \c@collectmore=\count316
 \doublecol@number=\count317
 \multicoltolerance=\count318
 \multicolpretolerance=\count319
-\full@width=\dimen190
-\page@free=\dimen191
-\premulticols=\dimen192
-\postmulticols=\dimen193
+\full@width=\dimen188
+\page@free=\dimen189
+\premulticols=\dimen190
+\postmulticols=\dimen191
 \multicolsep=\skip92
 \multicolbaselineskip=\skip93
 \partial@page=\box63
 \last@line=\box64
 \mc@boxedresult=\box65
-\maxbalancingoverflow=\dimen194
+\maxbalancingoverflow=\dimen192
 \mult@rightbox=\box66
 \mult@grightbox=\box67
 \mult@firstbox=\box68
@@ -376,9 +376,9 @@ Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
 \c@minrows=\count320
 \c@columnbadness=\count321
 \c@finalcolumnbadness=\count322
-\last@try=\dimen195
-\multicolovershoot=\dimen196
-\multicolundershoot=\dimen197
+\last@try=\dimen193
+\multicolovershoot=\dimen194
+\multicolundershoot=\dimen195
 \mult@nat@firstbox=\box106
 \colbreak@box=\box107
 \mc@col@check@num=\count323
@@ -394,8 +394,8 @@ Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks33
-\pgfutil@tempdima=\dimen198
-\pgfutil@tempdimb=\dimen199
+\pgfutil@tempdima=\dimen196
+\pgfutil@tempdimb=\dimen197
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
 \pgfutil@abb=\box110
@@ -419,16 +419,16 @@ Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
 .code.tex
 \pgfkeys@tmptoks=\toks36
 ))
-\pgf@x=\dimen256
-\pgf@y=\dimen257
-\pgf@xa=\dimen258
-\pgf@ya=\dimen259
-\pgf@xb=\dimen260
-\pgf@yb=\dimen261
-\pgf@xc=\dimen262
-\pgf@yc=\dimen263
-\pgf@xd=\dimen264
-\pgf@yd=\dimen265
+\pgf@x=\dimen198
+\pgf@y=\dimen199
+\pgf@xa=\dimen256
+\pgf@ya=\dimen257
+\pgf@xb=\dimen258
+\pgf@yb=\dimen259
+\pgf@xc=\dimen260
+\pgf@yc=\dimen261
+\pgf@xd=\dimen262
+\pgf@yd=\dimen263
 \w@pgf@writea=\write3
 \r@pgf@reada=\read3
 \c@pgf@counta=\count326
@@ -484,7 +484,7 @@ Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen266
+\pgfmath@dimen=\dimen264
 \pgfmath@count=\count333
 \pgfmath@box=\box111
 \pgfmath@toks=\toks40
@@ -516,32 +516,32 @@ thmetics.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
 x
 File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@picminx=\dimen267
-\pgf@picmaxx=\dimen268
-\pgf@picminy=\dimen269
-\pgf@picmaxy=\dimen270
-\pgf@pathminx=\dimen271
-\pgf@pathmaxx=\dimen272
-\pgf@pathminy=\dimen273
-\pgf@pathmaxy=\dimen274
-\pgf@xx=\dimen275
-\pgf@xy=\dimen276
-\pgf@yx=\dimen277
-\pgf@yy=\dimen278
-\pgf@zx=\dimen279
-\pgf@zy=\dimen280
+\pgf@picminx=\dimen265
+\pgf@picmaxx=\dimen266
+\pgf@picminy=\dimen267
+\pgf@picmaxy=\dimen268
+\pgf@pathminx=\dimen269
+\pgf@pathmaxx=\dimen270
+\pgf@pathminy=\dimen271
+\pgf@pathmaxy=\dimen272
+\pgf@xx=\dimen273
+\pgf@xy=\dimen274
+\pgf@yx=\dimen275
+\pgf@yy=\dimen276
+\pgf@zx=\dimen277
+\pgf@zy=\dimen278
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
 code.tex
 File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@path@lastx=\dimen281
-\pgf@path@lasty=\dimen282
+\pgf@path@lastx=\dimen279
+\pgf@path@lasty=\dimen280
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
 .tex
 File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@shorten@end@additional=\dimen283
-\pgf@shorten@start@additional=\dimen284
+\pgf@shorten@end@additional=\dimen281
+\pgf@shorten@start@additional=\dimen282
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
 x
@@ -554,14 +554,14 @@ File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
 ode.tex
 File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgflinewidth=\dimen285
+\pgflinewidth=\dimen283
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
 s.code.tex
 File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@pt@x=\dimen286
-\pgf@pt@y=\dimen287
-\pgf@pt@temp=\dimen288
+\pgf@pt@x=\dimen284
+\pgf@pt@y=\dimen285
+\pgf@pt@temp=\dimen286
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2025-08-29 v3.1.11a (3.1.11a)
@@ -577,11 +577,11 @@ File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
 x
 File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfarrowsep=\dimen289
+\pgfarrowsep=\dimen287
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@max=\dimen290
+\pgf@max=\dimen288
 \pgf@sys@shading@range@num=\count336
 \pgf@shadingcount=\count337
 )
@@ -617,8 +617,8 @@ File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
 .sty
 Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@nodesepstart=\dimen291
-\pgf@nodesepend=\dimen292
+\pgf@nodesepstart=\dimen289
+\pgf@nodesepend=\dimen290
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
 .sty
@@ -630,8 +630,8 @@ Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
-\pgffor@iter=\dimen293
-\pgffor@skip=\dimen294
+\pgffor@iter=\dimen291
+\pgffor@skip=\dimen292
 \pgffor@stack=\toks43
 \pgffor@toks=\toks44
 ))
@@ -642,16 +642,16 @@ Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
 .code.tex
 File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@plot@mark@count=\count338
-\pgfplotmarksize=\dimen295
+\pgfplotmarksize=\dimen293
 )
-\tikz@lastx=\dimen296
-\tikz@lasty=\dimen297
-\tikz@lastxsaved=\dimen298
-\tikz@lastysaved=\dimen299
-\tikz@lastmovetox=\dimen300
-\tikz@lastmovetoy=\dimen301
-\tikzleveldistance=\dimen302
-\tikzsiblingdistance=\dimen303
+\tikz@lastx=\dimen294
+\tikz@lasty=\dimen295
+\tikz@lastxsaved=\dimen296
+\tikz@lastysaved=\dimen297
+\tikz@lastmovetox=\dimen298
+\tikz@lastmovetoy=\dimen299
+\tikzleveldistance=\dimen300
+\tikzsiblingdistance=\dimen301
 \tikz@figbox=\box117
 \tikz@figbox@bg=\box118
 \tikz@tempbox=\box119
@@ -748,7 +748,7 @@ File: tikzlibraryarrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.
 tex
 File: pgflibraryarrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\arrowsize=\dimen304
+\arrowsize=\dimen302
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarypositioning.code.tex
@@ -759,7 +759,7 @@ zlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2026-04-24 v7.01q Hypertext links for LaTeX
+Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
 
 (/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
@@ -782,7 +782,7 @@ Package pdftexcmds Info: \pdfdraftmode found.
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
-Package: nameref 2026-01-29 v2.58 Cross-referencing by name of section
+Package: nameref 2025-06-21 v2.57 Cross-referencing by name of section
 
 (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
@@ -800,12 +800,12 @@ Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
-\@linkdim=\dimen305
+\@linkdim=\dimen303
 \Hy@linkcounter=\count349
 \Hy@pagecounter=\count350
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2026-04-24 v7.01q Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
@@ -815,25 +815,25 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 \Hy@SavedSpaceFactor=\count351
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
-File: puenc.def 2026-04-24 v7.01q Hyperref: PDF Unicode definition (HO)
+File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
-Package hyperref Info: Hyper figures OFF on input line 4199.
-Package hyperref Info: Link nesting OFF on input line 4204.
-Package hyperref Info: Hyper index ON on input line 4207.
-Package hyperref Info: Plain pages OFF on input line 4214.
-Package hyperref Info: Backreferencing OFF on input line 4219.
+Package hyperref Info: Hyper figures OFF on input line 4195.
+Package hyperref Info: Link nesting OFF on input line 4200.
+Package hyperref Info: Hyper index ON on input line 4203.
+Package hyperref Info: Plain pages OFF on input line 4210.
+Package hyperref Info: Backreferencing OFF on input line 4215.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4466.
+Package hyperref Info: Bookmarks ON on input line 4462.
 \c@Hy@tempcnt=\count352
 
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 4805.
-\XeTeXLinkMargin=\dimen306
+LaTeX Info: Redefining \url on input line 4801.
+\XeTeXLinkMargin=\dimen304
 
 (/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -843,15 +843,15 @@ Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
 \Fld@menulength=\count353
-\Field@Width=\dimen307
-\Fld@charsize=\dimen308
-Package hyperref Info: Hyper figures OFF on input line 6091.
-Package hyperref Info: Link nesting OFF on input line 6096.
-Package hyperref Info: Hyper index ON on input line 6099.
-Package hyperref Info: backreferencing OFF on input line 6106.
-Package hyperref Info: Link coloring OFF on input line 6111.
-Package hyperref Info: Link coloring with OCG OFF on input line 6116.
-Package hyperref Info: PDF/A mode OFF on input line 6121.
+\Field@Width=\dimen305
+\Fld@charsize=\dimen306
+Package hyperref Info: Hyper figures OFF on input line 6078.
+Package hyperref Info: Link nesting OFF on input line 6083.
+Package hyperref Info: Hyper index ON on input line 6086.
+Package hyperref Info: backreferencing OFF on input line 6093.
+Package hyperref Info: Link coloring OFF on input line 6098.
+Package hyperref Info: Link coloring with OCG OFF on input line 6103.
+Package hyperref Info: PDF/A mode OFF on input line 6108.
 \Hy@abspage=\count354
 \c@Item=\count355
 \c@Hfootnote=\count356
@@ -859,7 +859,7 @@ Package hyperref Info: PDF/A mode OFF on input line 6121.
 Package hyperref Info: Driver (autodetected): hpdftex.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2026-04-24 v7.01q Hyperref driver for pdfTeX
+File: hpdftex.def 2025-07-12 v7.01o Hyperref driver for pdfTeX
 \Fld@listcount=\count357
 \c@bookmark@seq@number=\count358
 
@@ -883,7 +883,7 @@ Package french3.ldf Info: Setting StandardEnumerateEnv=true for
 (french3.ldf)             reported on input line 99.
 
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2026-02-18 L3 backend support: PDF output (pdfTeX)
+File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count359
 )
 (./rapport_cor2.aux
@@ -918,13 +918,13 @@ LaTeX Info: Redefining \degres on input line 99.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count360
-\scratchdimen=\dimen309
+\scratchdimen=\dimen307
 \scratchbox=\box141
 \nofMPsegments=\count361
 \nofMParguments=\count362
 \everyMPshowfont=\toks45
 \MPscratchCnt=\count363
-\MPscratchDim=\dimen310
+\MPscratchDim=\dimen308
 \MPnumerator=\count364
 \makeMPintoPDFobject=\count365
 \everyMPtoPDFconversion=\toks46
@@ -1006,9 +1006,8 @@ Package pdftex.def Info: img_garde/logo_institut.png  used on input line 120.
 (pdftex.def)             Requested size: 56.9055pt x 56.89883pt.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-di
-st/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./img_garde/logo_uca.png> <./img_
-garde/logo_eupi.png> <./img_garde/logo_institut.png>]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./img_garde/logo_uca.png> 
+<./img_garde/logo_eupi.png> <./img_garde/logo_institut.png>]
 Overfull \hbox (2.53847pt too wide) in paragraph at lines 189--190
 []\T1/cmr/m/n/12 Je sa-lue cha-leu-reu-se-ment l'en-semble des in-gé-nieurs, ch
 er-cheurs et doc-to-rants de l'équipe
@@ -1024,12 +1023,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 213--215
 
  []
 
-[2{/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+[2]
 \tf@toc=\write5
 \openout5 = `rapport_cor2.toc'.
 
-
-[3]
+ [3]
 Overfull \hbox (33.57408pt too wide) in paragraph at lines 260--260
  [][] [][][]\T1/cmtt/m/n/12 Filtrage visuel intelligent par LoFTR et optimisati
 on du recouvrement[][] []  
@@ -1584,56 +1582,21 @@ Overfull \hbox (10.51929pt too wide) in paragraph at lines 1556--1557
 géo-mé-trique des vues par \T1/cmr/bx/n/12 LoFTR
  []
 
-[40] [41]
-Underfull \hbox (badness 10000) in paragraph at lines 1600--1602
+[40] [41] [42
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1608--1609
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1627--1628
-
- []
-
-[42
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 1646--1647
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1648--1650
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1656--1657
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1658--1660
-
- []
-
-[43] [44]
-Underfull \hbox (badness 3601) in paragraph at lines 1674--1675
+] [43]
+Underfull \hbox (badness 3601) in paragraph at lines 1688--1689
 []\T1/cmr/m/n/12 Université Cler-mont Au-vergne, \T1/cmr/m/it/12 Pré-sen-ta-tio
 n de l'Ins-ti-tut Pas-cal (IP)\T1/cmr/m/n/12 , An-
  []
 
-[45
+[44
 
 ] (./rapport_cor2.lof)
 \tf@lof=\write6
 \openout6 = `rapport_cor2.lof'.
 
- [46] (./rapport_cor2.annextoc
+ [45] (./rapport_cor2.annextoc
 Overfull \hbox (26.80074pt too wide) in paragraph at lines 16--16
  [][] [][][]\T1/cmtt/m/n/12 Modèle cinématique à quatre roues directrices (Four
 -Wheel Steering 
@@ -1643,43 +1606,43 @@ Overfull \hbox (26.80074pt too wide) in paragraph at lines 16--16
 \tf@annextoc=\write7
 \openout7 = `rapport_cor2.annextoc'.
 
- [47
+ [46
 
 
-] [48
+] [47
 
 ]
-Overfull \hbox (3.34119pt too wide) in paragraph at lines 1763--1763
+Overfull \hbox (3.34119pt too wide) in paragraph at lines 1777--1777
 |\T1/cmr/bx/n/20.74 A.4 Têtes de pré-dic-tion et sor-ties géo-mé-triques| 
  []
 
-[49] [50] [51] [52]
-Overfull \hbox (8.02986pt too wide) in paragraph at lines 1845--1846
+[48] [49] [50] [51]
+Overfull \hbox (8.02986pt too wide) in paragraph at lines 1859--1860
 []\T1/cmr/bx/n/12 Type de mes-sage : \T1/cmtt/m/n/12 four_wheel_steering_msgs/m
 sg/FourWheelSteeringStamped 
  []
 
 
-Overfull \hbox (2.38416pt too wide) in paragraph at lines 1858--1858
+Overfull \hbox (2.38416pt too wide) in paragraph at lines 1872--1872
 |\T1/cmr/bx/n/20.74 B.2 Po-si-tion-ne-ment et vé-rité ter-rain par GNSS
  []
 
-[53
+[52
 
 ]
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 1870.
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 1884.
 
-Overfull \hbox (2.64691pt too wide) in paragraph at lines 1874--1875
+Overfull \hbox (2.64691pt too wide) in paragraph at lines 1888--1889
 []\T1/cmr/m/n/12 Cette struc-ture offre une base ma-thé-ma-tique for-melle pour
  bâ-tir la \T1/cmr/bx/n/12 vé-rité ter-rain \T1/cmr/m/n/12 (\T1/cmr/m/it/12 Gro
 und
  []
 
-[54] (./rapport_cor2.aux)
+[53] (./rapport_cor2.aux)
  ***********
 LaTeX2e <2025-11-01>
-L3 programming layer <2026-03-20>
+L3 programming layer <2026-01-19>
  ***********
 
 
@@ -1692,47 +1655,52 @@ Package rerunfilecheck Info: File `rapport_cor2.out' has not changed.
 (rerunfilecheck)             Checksum: 255940928182F3649B1E1D629FE4B58A;13900.
  ) 
 Here is how much of TeX's memory you used:
- 27627 strings out of 467363
- 529682 string characters out of 5419002
- 972943 words of memory out of 6000000
- 56042 multiletter control sequences out of 15000+600000
+ 27580 strings out of 469485
+ 527845 string characters out of 5468803
+ 963485 words of memory out of 5000000
+ 55577 multiletter control sequences out of 15000+600000
  657961 words of font info for 109 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 84i,10n,104p,833b,837s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/
-sfbi1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfbi172
-8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfbx0800.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/cm-super/sfbx2074.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/cm-super/sfbx2488.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/cm-super/sfcc1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-cm-super/sfrb0800.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-supe
-r/sfrb1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm0
-800.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/cm-super/sftt0800.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/cm-super/sftt1095.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/cm-super/sftt1200.pfb>
-Output written on rapport_cor2.pdf (59 pages, 6212027 bytes).
+ 14 hyphenation exceptions out of 8191
+ 84i,10n,104p,833b,841s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ </home/rhomdev/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi1200.6
+00pk> </home/rhomdev/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi172
+8.600pk> </home/rhomdev/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrb
+0800.600pk> </home/rhomdev/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/e
+ctt0800.600pk> </home/rhomdev/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/e
+c/ecbx0800.600pk> </home/rhomdev/.texlive2025/texmf-var/fonts/pk/ljfour/jknappe
+n/ec/ectt1095.600pk> </home/rhomdev/.texlive2025/texmf-var/fonts/pk/ljfour/jkna
+ppen/ec/tcbx1440.600pk> </home/rhomdev/.texlive2025/texmf-var/fonts/pk/ljfour/j
+knappen/ec/ecrb1200.600pk> </home/rhomdev/.texlive2025/texmf-var/fonts/pk/ljfou
+r/jknappen/ec/ecrm1000.600pk> </home/rhomdev/.texlive2025/texmf-var/fonts/pk/lj
+four/jknappen/ec/ecrm0800.600pk> </home/rhomdev/.texlive2025/texmf-var/fonts/pk
+/ljfour/jknappen/ec/eccc1200.600pk> </home/rhomdev/.texlive2025/texmf-var/fonts
+/pk/ljfour/jknappen/ec/ecrm1095.600pk> </home/rhomdev/.texlive2025/texmf-var/fo
+nts/pk/ljfour/jknappen/ec/ecbx1095.600pk> </home/rhomdev/.texlive2025/texmf-var
+/fonts/pk/ljfour/jknappen/ec/ectt1200.600pk> </home/rhomdev/.texlive2025/texmf-
+var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </home/rhomdev/.texlive2025/tex
+mf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </home/rhomdev/.texlive2025/
+texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/rhomdev/.texlive20
+25/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </home/rhomdev/.texliv
+e2025/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk> </home/rhomdev/.tex
+live2025/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk> </home/rhomdev/.
+texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2074.600pk> </home/rhomde
+v/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/rho
+mdev/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </home/
+rhomdev/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbol
+s/msbm10.pfb>
+Output written on rapport_cor2.pdf (58 pages, 6118463 bytes).
 PDF statistics:
- 1005 PDF objects out of 1200 (max. 8388607)
- 803 compressed objects within 9 object streams
- 195 named destinations out of 1000 (max. 500000)
+ 1811 PDF objects out of 2073 (max. 8388607)
+ 824 compressed objects within 9 object streams
+ 194 named destinations out of 1000 (max. 500000)
  531 words of extra memory for PDF output out of 10000 (max. 10000000)
 

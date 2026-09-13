@@ -1597,68 +1597,82 @@ Cette stratégie devait limiter la consommation de mémoire GPU et d'assurer une
 \chapter*{Conclusion}
 \addcontentsline{toc}{chapter}{Conclusion}
 
-\hspace*{1cm}Ce stage a permis d'aborder un enjeu central de la robotique autonome : la qualité de la perception ne dépend pas uniquement des capteurs utilisés, mais également de la manière dont les données sont préparées, synchronisées et exploitées.\\
-À travers l'étude du modèle \textbf{VGGT} et des données issues de la plateforme \textbf{PAVIN}, un constat fondamental a pu être mis en évidence : l'utilisation directe de séquences vidéo présentant une forte redondance n'est pas nécessairement adaptée à un modèle de géométrie visuelle particulièrement coûteux en ressources de calcul.\\
+\hspace*{1cm}Ce stage m'a permis d'aborder une des problèmatiques centrales de la robotique autonome :\vspace{0.01cm}
 
-\hspace*{1cm}Le prétraitement des données apparaît ainsi comme une étape nécessaire, voire déterminante, pour améliorer la stabilité des estimations, limiter la dérive de reconstruction et exploiter plus efficacement les capacités du modèle.
+\hspace*{0.5cm}\textbf{La qualité de la perception ne dépend pas uniquement des capteurs utilisés, mais également de la manière dont les données sont préparées, synchronisées et exploitées.}\vspace{0.1cm}
 
-\par\bigskip
-\par\bigskip
+\hspace*{1cm}Les travaux réalisés ont progressivement montré que l'utilisation directe de séquences vidéo fortement redondantes n'était pas véritablement adaptée à un modèle gourmand en ressources de calcul.\vspace{0.01cm}
 
-\hspace*{0.4cm}\textbf{Apports scientifiques}\\
+\hspace*{0.5cm}La synchronisation des flux, le filtrage cinématique et la sélection des images selon leur qualité visuelle et leur recouvrement géométrique se sont donc révélés essentiels pour construire des entrées cohérentes et exploitables.\vspace{0.1cm}
 
-\hspace*{.3cm}Les travaux réalisés au cours de ce stage ont permis de développer et d'évaluer plusieurs briques de traitement destinées à améliorer la qualité des données fournies au modèle. Les principaux apports scientifiques peuvent être résumés de la manière suivante :
+\hspace*{1cm}Au-delà de ces résultats techniques, ce stage m'a apporté des connaissances scientifiques, des compétences professionnelles et une expérience concrète de la recherche en robotique autonome.
 
-\begin{itemize}[itemsep=0.5em]
-    \item Développement d'un pipeline de synchronisation temporelle et de filtrage de flux de données hétérogènes ;
+\vspace{0.5cm}
+
+\noindent\textbf{\uline{\large {Apports scientifiques}}}\par
+\medskip
+
+\vspace{0.5cm}
+
+\hspace*{1cm}Les travaux réalisés au cours de ce stage m'ont permis de développer et d'évaluer plusieurs briques de traitement destinées à améliorer la qualité des données fournies au modèle. \vspace{0.1cm}
+
+\hspace*{0.5cm}Les principaux apports scientifiques peuvent être résumés de la manière suivante :
+
+\begin{itemize}[itemsep=0.2em, label=\textbullet, leftmargin=2cm]
+    \item Développement d'un pipeline de synchronisation temporelle et de filtrage de flux de données hétérogènes 
     
-    \item Étude du comportement du modèle \textbf{VGGT} face à des données réelles issues d'une plateforme robotique autonome et analyse de l'influence de la redondance géométrique ;
+    \item Étude du comportement du modèle IA face à des données réelles issues d'une plateforme robotique autonome et analyse de l'influence de la redondance géométrique 
     
-    \item Mise en place d'un module de sélection d'images fondé sur l'analyse du recouvrement visuel à l'aide de \textbf{LoFTR} ;
+    \item Mise en place d'un module de sélection d'images fondé sur l'analyse du recouvrement visuel à l'aide de \textbf{LoFTR} 
     
-    \item Développement d'une stratégie de comparaison avec une vérité terrain obtenue à partir des données LiDAR et des trajectoires issues du SLAM ;
+    \item Développement d'une stratégie de comparaison liée à une vérité terrain obtenue à partir des données \textbf{LiDAR} et les resultats de \textbf{VGGT}
     
-    \item Mise en évidence de l'influence du conditionnement des données sur la qualité des estimations de pose et sur la stabilité de la reconstruction géométrique.
+    \item Mise en évidence de l'influence du conditionnement des données sur la qualité des estimations de pose et sur la stabilité de la reconstruction géométrique 
+
 \end{itemize}
 
-\par\bigskip
-\par\bigskip
+\newpage
 
-\hspace*{0.4cm}\textbf{Apports professionnels}\\
+\noindent\textbf{\uline{\large {Apports professionnels}}}\par
+\medskip
 
-\hspace*{.3cm}Au-delà des résultats scientifiques obtenus, ce stage m'a également permis de développer plusieurs compétences techniques et méthodologiques directement liées aux problématiques de perception robotique et de recherche expérimentale :
+\vspace{0.1cm}
 
-\begin{itemize}[itemsep=0.5em]
-    \item Acquisition de compétences avancées en perception multi-capteurs et en robotique autonome ;
+\hspace*{1cm}Au-delà des résultats scientifiques obtenus, ce stage m'a également permis de développer plusieurs compétences techniques et méthodologiques directement liées aux problématiques de perception robotique et de recherche expérimentale :
+
+\begin{itemize}[itemsep=0.2em, label=\textbullet]
+    \item Acquisition de compétences avancées en \textbf{perception multi-capteurs} et \textbf{robotique autonome }
     
-    \item Maîtrise d'outils de développement scientifique et robotique tels que \textbf{ROS~2}, \textbf{Python}, \textbf{OpenCV} ainsi que des méthodes de traitement de nuages de points ;
+    \item Maîtrise d'outils de développement scientifique et robotique tels que \textbf{ROS~2}, \textbf{Python}, \textbf{OpenCV} ainsi que des méthodes de traitement de nuages de points 
     
-    \item Développement de compétences en analyse de données, en conception d'algorithmes de filtrage et en évaluation expérimentale ;
+    \item Développement de compétences en \textbf{analyse de données, en conception d'algorithmes de filtrage et en évaluation expérimentale}
     
-    \item Acquisition d'une expérience dans la mise en œuvre d'un pipeline complet, depuis l'extraction des données issues du \texttt{rosbag} jusqu'à leur exploitation pour l'analyse géométrique ;
+    \item Acquisition d'une expérience dans la mise en œuvre \textbf{d'un pipeline complet}, depuis l'extraction des données issues du \textbf{rosbag} jusqu'à leur exploitation pour l'analyse géométrique 
     
-    \item Développement d'une capacité à formaliser un problème technique, à identifier ses limitations et à proposer une solution structurée pouvant être évaluée expérimentalement.
+    \item Développement d'une capacité à \textbf{formaliser} un problème technique, à \textbf{identifier} ses limitations et à \textbf{proposer} une solution structurée pouvant être évaluée expérimentalement
+
+    \item Optimisation des programmes et amélioration de l'utilisation des ressources matérielles de l'ordinateur, notamment par une \textbf{gestion plus efficace du processeur (CPU), de la mémoire vive (RAM) et du processeur graphique (GPU)}
 \end{itemize}
 
-\par\bigskip
-\par\bigskip
 
-\hspace*{0.4cm}\textbf{Perspectives}\\
+\vspace{0.5cm}
 
-\hspace*{.3cm}Les résultats obtenus au cours de ce stage ouvrent plusieurs perspectives de poursuite. La prochaine étape consiste à coupler de manière plus systématique les séquences visuelles sélectionnées selon un recouvrement géométrique optimal avec la vérité terrain générée à partir des données LiDAR et du SLAM.\\
-Cette association permettrait de quantifier plus rigoureusement la précision de l'auto-calibration extrinsèque des différentes caméras et d'établir une comparaison métrique entre les estimations produites par \textbf{VGGT} et une référence tridimensionnelle indépendante.\\
+\noindent\textbf{\uline{\large {Travail en équipe et découverte de l'environnement de recherche}}}\par
+\medskip
 
-\hspace*{.3cm}L'amélioration du conditionnement des images constitue également une perspective importante. La correction systématique de la distorsion optique ainsi qu'une meilleure gestion des variations de luminosité pourraient contribuer à renforcer la robustesse des correspondances visuelles et, par conséquent, la stabilité de l'estimation géométrique.\\
-\hspace*{.5cm}Enfin, les méthodes développées pourraient être évaluées sur des scénarios plus variés, notamment dans des environnements urbains plus complexes, sur des trajectoires plus longues ou dans des conditions de déplacement différentes. Cette extension permettrait d'étudier la capacité de généralisation du pipeline et d'identifier les limites de son fonctionnement dans des situations plus représentatives d'une utilisation opérationnelle.
+\vspace{0.1cm}
 
-\par\bigskip
+\hspace*{1cm}Ce stage m'a aidé à \textbf{développer mon aptitude au travail en équipe}. \vspace{0.01cm}
 
-\hspace*{.3cm}En somme, ce stage a permis de mettre en évidence l'importance du prétraitement et du conditionnement des données dans les systèmes modernes de perception robotique.\\
+\hspace*{0.5cm}Pour mener cette étude à bien, j'ai collaborer étroitement avec un autre stagiaire.\\
+\textbf{La coordination de nos travaux était une nécessitée pour l'objectif commun.\vspace{0.01cm}}
 
-\hspace*{.3cm}Les expérimentations réalisées montrent que des performances robustes en reconstruction géométrique et en calibration ne dépendent pas uniquement de l'architecture du modèle utilisé, mais également de la qualité, de la cohérence temporelle et de la pertinence géométrique des informations qui lui sont transmises.\\
-\hspace*{.3cm}La combinaison du filtrage cinématique, de la sélection visuelle par \textbf{LoFTR}, de l'exploitation des données LiDAR et de la comparaison avec une référence SLAM constitue ainsi une approche cohérente pour améliorer l'exploitation de modèles de géométrie visuelle tels que \textbf{VGGT}.\\
+\hspace*{0.5cm}Elle demendait un \textbf{partage régulier de nos résultats}, un \textbf{échange sur les difficultés rencontrées} et \textbf{une adaptation commune de nos méthodes} en fonction de l'avancement du projet.\vspace{0.1cm}
 
-\hspace*{.3cm}Cette démarche constitue une base solide pour la poursuite des travaux du laboratoire sur l'auto-calibration multi-capteurs et, plus largement, pour le développement de systèmes de perception autonomes plus fiables, plus robustes et mieux adaptés aux contraintes des plateformes robotiques réelles.
+\hspace*{1cm}Les échanges avec les doctorants du laboratoire m'ont permis d'identifier de \textbf{nouvelles pistes de travail} et de mieux \textbf{comprendre les démarches mises en œuvre} dans un véritable contexte de recherche. \\
+Les réunions de formation consacrées aux bases de l'intelligence artificielle ont consolidé mes connaissances théoriques et facilités leurs mises en application dans le cadre du projet.\vspace{0.1cm}
+
+\hspace*{1cm}Ma participation aux \textbf{séminaires du laboratoire}, ainsi qu'à plusieurs \textbf{soutenances et présentations scientifiques} liées à mon domaine d'étude dans des disciplines connexes, a facilité \textbf{mon appréhension de la diversité des travaux menés au sein d'une unité de recherche, son organisation, ses méthodes de collaboration et de la dynamique d'échanges nécessaire entre ses membres}.
 
 
 % ==============================================================================

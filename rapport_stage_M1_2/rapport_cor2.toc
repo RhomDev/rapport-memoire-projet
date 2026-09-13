@@ -62,5 +62,5 @@
 \contentsline {subsection}{\numberline {4.6.5}Suivi du filtrage intelligent par LoFTR}{37}{subsection.4.6.5}%
 \contentsline {section}{\numberline {4.7}Bilan}{38}{section.4.7}%
 \contentsline {chapter}{Conclusion}{42}{chapter*.8}%
-\contentsline {chapter}{Bibliographie}{45}{chapter*.9}%
-\contentsline {chapter}{Annexes}{47}{appendix*.10}%
+\contentsline {chapter}{Bibliographie}{44}{chapter*.9}%
+\contentsline {chapter}{Annexes}{46}{appendix*.10}%
