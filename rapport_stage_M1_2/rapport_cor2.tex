@@ -9,6 +9,8 @@
 \usepackage[normalem]{ulem}
 \usepackage{graphicx} % Pour les images et l'organigramme PDF
 \usepackage{float}
+\usepackage{bm}
+\usepackage{setspace}
 \usepackage{amsmath,amssymb}
 \usepackage{geometry}
 \usepackage{titlesec}
@@ -17,19 +19,33 @@
 \usepackage{tocloft}
 \usepackage{needspace}
 \usepackage{etoc}
+\usepackage{tocloft}
+
+
+
+% Pour la liste des figures :
+\setlength{\cftbeforefigskip}{20pt} % Espace avant chaque figure (par défaut ~0.2em)
+
+% Pour la liste des tableaux :
+\setlength{\cftbeforetabskip}{15pt} % Espace avant chaque tableau
 
 % Positionne et centre le titre du sommaire.
 \setlength{\cftbeforetoctitleskip}{0pt}
 \setlength{\cftaftertoctitleskip}{0.5em}
 \setlength{\cftbeforechapskip}{0.5cm}
 \setlength{\cftbeforesecskip}{0.9em}
-\setlength{\cftbeforesubsecskip}{0.3em}
+\setlength{\cftbeforesubsecskip}{0.4em}
 \setlength{\cftbeforeparaskip}{0.2em}
 \renewcommand{\cfttoctitlefont}{\centering\Huge\bfseries}
 \renewcommand{\cftaftertoctitle}{\par}
 \renewcommand{\cftchapfont}{\large\bfseries}
 \renewcommand{\cftchappagefont}{\large\bfseries}
 \renewcommand{\cftsecfont}{\ttfamily}
+
+% Style en \ttfamily pour la liste des figures
+\renewcommand{\cftfigfont}{\ttfamily}        % Titre de la figure
+\renewcommand{\cftfigpagefont}{\ttfamily}    % Numéro de page
+\renewcommand{\cftfigpresnum}{\ttfamily}     % Numéro de la figure
 
 \geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
 
@@ -125,11 +141,11 @@
     % 1. Bloc Institutionnel (Haut)
     {\large \textbf{UNIVERSITÉ CLERMONT AUVERGNE} \\ Clermont-Ferrand \par}
     \vspace{0.2cm}
-    {---- \par}
+    {\par}
     \vspace{0.2cm}
     {\large École Universitaire de Physique et d'Ingénierie \par}
     \vspace{0.2cm}
-    {---- \par}
+    {\par}
     
     \vspace{2cm}
     
@@ -138,7 +154,7 @@
     \vspace{0.4cm}
     {\Large 1\textsuperscript{ère} année de Master \par}
     \vspace{0.2cm}
-    {---- \par}
+    { \par}
     \vspace{0.2cm}
     {\large Spécialité : Automatique et Robotique \par}
     
@@ -177,14 +193,14 @@
 \addcontentsline{toc}{chapter}{Remerciements}
 \thispagestyle{empty} % Supprime le numéro "i" en bas des remerciements
 
-\vspace{2cm}
+\vspace{3cm}
 
 \textit{En préambule à la présentation de mon rapport de stage, je tiens à exprimer tous mes remerciements à toutes les personnes qui ont permis le bon déroulement de celui-ci ainsi que l'expérience que j'ai pu en retirer.}\vspace{2cm}
 
 - \textbf{M. Thierry CHATEAU} et \textbf{M. François MARMOITON}, mes maîtres de stage, pour leur disponibilité constante, leur patience et la pertinence de leur encadrement \\
 Leurs conseils avisés, leurs connaissances techniques en robotique ainsi que leur vision scientifique m'ont aidé tout au long de la structuration de ma méthode de calibration.\vspace{0.5cm}
 
-Mes remerciements s'adressent également aux partenaires du projet \textbf{PAVIN} pour leur collaboration et le grand intérêt porté à mes travaux.\vspace{0.5cm}
+Mes remerciements s'adressent également aux partenaires du projet \textbf{PAVIN} pour leur collaboration et leur grand intérêt porté à mes travaux.\vspace{0.5cm}
 
 Je salue chaleureusement l'ensemble des ingénieurs, chercheurs et doctorants de l'équipe pour leur accueil, leur aide précieuse au quotidien — notamment lors de la prise en main de ROS 2 et des phases d'expérimentation sur les plateformes du laboratoire — ainsi que pour la très bonne ambiance de travail.\vspace{1cm}
 
@@ -276,12 +292,12 @@ Cette approche a permis d'atténuer la charge de calcul du modèle en limitant l
 Mon stage de Master 1 en Automatique et Robotique s'est déroulé à l'\textbf{Institut Pascal}, unité mixte de recherche située sur le campus des Cézeaux à Aubière.
 %L'accueil d'un stagiaire au sein d'une structure de recherche ou d'une entreprise nécessite une compréhension globale de son environnement macroéconomique, institutionnel et structurel. C'est dans ce cadre que cette section présente l'Institut Pascal, l'unité mixte de recherche au sein de laquelle s'est déroulé ce stage de Master 1 en Automatique et Robotique.
 
-\vspace{1cm}
+\vspace{0.5cm}
 
 \subsection{Carte d'identité et caractéristiques}
 L'Institut Pascal est une Unité Mixte de Recherche (UMR 6602) caractérisée par une forte interdisciplinarité, combinant recherches fondamentales et technologiques ainsi que des formations de haut niveau. Ses principales caractéristiques administratives et institutionnelles sont synthétisées dans le tableau~\ref{tab:carte_identite}.
 
-\vspace{2cm}
+\vspace{1cm}
 
 \begin{table}[htbp]
     \centering
@@ -310,6 +326,7 @@ L'Institut Pascal est une Unité Mixte de Recherche (UMR 6602) caractérisée pa
         \textbf{Téléphone} & +33 (0)4 73 40 72 50 \\
         \hline
     \end{tabular}
+    \setlength{\abovecaptionskip}{15pt}
     \caption{Carte d'identité institutionnelle de l'Institut Pascal}
     \label{tab:carte_identite}
 \end{table}
@@ -381,6 +398,7 @@ L'unité rassemble une communauté scientifique de près de 400 personnes caract
 Au sommet de cette organisation, la direction générale de l'unité est assurée par \textbf{Mme Evelyne GIL} (Directrice), secondée par \textbf{M. Christophe VIAL} (Directeur Adjoint). La gestion opérationnelle et le secrétariat général sont coordonnés par \textbf{Mme Pascale DUGAT}, responsable administrative du site.
 
 \subsection{L'Axe ISPR et l'équipe ComSee}
+
 En parfaite adéquation avec la formation dispensée à l'EUPI, mon stage s'est déroulé au sein de l'axe \textbf{ISPR (Image, Systèmes de Perception, Robotique)}, sous la responsabilité scientifique de \textbf{M. Omar AIT AIDER}. L'activité de cet axe cible trois piliers scientifiques : l'image, la perception artificielle et la commande pour la robotique. 
 
 Plus spécifiquement, l'intégration a eu lieu au cœur de l'équipe de recherche \textbf{ComSee} (contraction de \textit{COMputers that SEE}), dont les travaux s'articulent autour du domaine de la vision par ordinateur. Les activités de recherche de ComSee se concentrent sur deux thématiques principales qui croisent directement le sujet d'étude :
@@ -392,17 +410,24 @@ Plus spécifiquement, l'intégration a eu lieu au cœur de l'équipe de recherch
 Les applications de cette équipe s'orientent vers les transports intelligents (navigation autonome de véhicules), la réalité augmentée, la vidéosurveillance et la vision robotique. Cette configuration offre un cadre idéal pour l'application concrète des concepts théoriques étudiés en Master 1.
 
 \subsection{Environnement technique et plateformes d'expérimentation}
+
+\vspace{1cm}
+
 L'Institut Pascal se distingue par un écosystème technique exceptionnel composé de 7 plateformes expérimentales internes et 8 plateformes partenaires.\\
 Il offre un appui unique pour la validation des travaux de recherche en ingénierie.\\
 
 \bigskip
 
 \textbf{Les plateformes majeures de l'axe ISPR :}\\
-\hspace*{1cm} Pour les applications en automatique et en robotique, deux plateformes nationales de premier plan sont implantées sur les sites :
-\begin{itemize}[label=\textbullet]
-    \item \textbf{PAVIN (Plateforme Auvergnate Pour les Véhicules Intelligents / CNRS) :} \\
+\hspace*{1cm} Pour les applications en automatique et en robotique, deux plateformes nationales de premier plan sont implantées sur les sites :\vspace{0.05cm}
+
+\begin{itemize}[label=\textbullet, itemsep=0.5em]
+    \item \textbf{PAVIN (Plateforme Auvergnate Pour les Véhicules Intelligents / CNRS) :} \vspace{0.05cm}
+
     \hspace*{.5cm} Dédiée à l'évaluation d'algorithmes de navigation, de perception et de commande en environnement routier urbain ou naturel simulé pour les véhicules autonomes.
-    \item \textbf{PRMDex / ROBTOOL (EquipEx CNRS ROBOTEX) :}\\
+
+    \item \textbf{PRMDex / ROBTOOL (EquipEx CNRS ROBOTEX) :}\vspace{0.05cm}
+
     \hspace*{.5cm} Plateforme robotique de manipulation dextre et d'usinage robotisé.\\
     Elle est équipée de bras manipulateurs de haute précision, qui sont essentiels pour l'étude de l'interaction physique et de la commande d'outils complexes.
 \end{itemize}
@@ -416,11 +441,15 @@ L'institut s'appuie également sur d'autres plateformes internes spécialisées 
 
 \textbf{Organisation et rythmes de travail :}\\
 L'accueil et l'encadrement quotidiens étaient structurés pour simuler l'activité d'un ingénieur en recherche et développement au sein d'un laboratoire public.\\
-Les modalités incluaient :
-\begin{itemize}[label=\textbullet]
-    \item \textbf{Le respect des horaires et présence sur site}\\
+Les modalités incluaient :\vspace{0.05cm}
+
+\begin{itemize}[label=\textbullet, itemsep=0.5em]
+    \item \textbf{Le respect des horaires et présence sur site}\vspace{0.05cm}
+
     \hspace*{.5cm} Le service fonctionne sur une base de présence en journée (généralement 9h00 - 18h00), rythmée par l'accès aux salles de développement informatique de l'équipe ComSee et aux plateformes robotiques.
-    \item \textbf{Le suivi scientifique} \\
+
+    \item \textbf{Le suivi scientifique} \vspace{0.05cm}
+
     \hspace*{.5cm} Des réunions de suivi et des séminaires d'axe permettent de faire régulièrement le point sur l'avancée de l'étude avec mes maîtres de stage, M.~\textbf{Thierry CHATEAU} et M.~\textbf{François MARMOITON}, afin de valider ou non les choix d'implémentation et de lever les verrous technologiques rencontrés.
 \end{itemize}
 
@@ -439,13 +468,16 @@ Sous l'encadrement de M. \textbf{Thierry CHATEAU} et de M. \textbf{François MAR
 
 \hspace*{.5cm}Celles-ci provenaient des différents capteurs embarqués sur les plateformes expérimentales du laboratoire.\\
 
-Cette intégration au sein du projet a permis d'établir un lien entre la recherche algorithmique\footnote{exploitation de modèles d'intelligence artificielle}, l'ingénierie des données nécessaires, et leur utilisation dans des conditions expérimentales réelles.\\
+Cette intégration au sein du projet a permis d'établir un lien entre la recherche algorithmique\footnote{exploitation de modèles d'intelligence artificielle}, l'ingénierie des données nécessaires, et leur utilisation dans des conditions expérimentales réelles.\vspace{0.05cm}
+
 \hspace*{.5cm}Elle a ainsi conduit à concevoir, à développer et à tester différents pipelines de traitement de données en s'appuyant sur l'environnement \textbf{Linux}, notamment \textbf{Ubuntu}, ainsi que sur le middleware de robotique \textbf{ROS~2}.\\
 
-Ce travail a été effectué en étroite collaboration avec un autre stagiaire de Master~2 en Automatique et Robotique, \textbf{M. Amadou BARRY}. \\
-Notre complémentarité a permis de répartir efficacement les tâches du projet : 
-\begin{itemize}[label=\textbullet]
-    \item d'une part, le traitement des données en amont, destiné à améliorer les performances du modèle d'intelligence artificielle, qui fait l'objet de ce rapport ;\\
+Ce travail a été effectué en étroite collaboration avec un autre stagiaire de Master~2 en Automatique et Robotique, \textbf{M. Amadou BARRY}. \vspace{0.1cm}
+
+Cette complémentarité nous a permis de répartir efficacement les tâches du projet : \vspace{0.05cm}
+
+\begin{itemize}[label=\textbullet, itemsep=0.5em, leftmargin=2cm]
+    \item d'une part, le traitement des données en amont, destiné à améliorer les performances du modèle d'intelligence artificielle, qui fait l'objet de ce rapport ;
     \item d'autre part, le développement et l'optimisation du modèle d'IA, pris en charge par mon binôme.
 \end{itemize}
 
@@ -458,13 +490,15 @@ Notre complémentarité a permis de répartir efficacement les tâches du projet
 \hspace*{.3cm}\textbf{L'objectif} était d'évaluer les possibilités d'auto-calibration extrinsèque des répères du système de vision d'un véhicule autonome,et des outils nécessaires à employer. Pour le déploiement du modèle d'apprentissage \textbf{VGGT}\footnote{Visual Geometry Grounded Transformer} qui a été étudié, en estimant \textbf{sa faisabilité, sa robustesse et sa pertinence}.\\
 
 \textbf{En robotique mobile}, l'auto-calibration extrinsèque est fondamentale pour garantir la cohérence géométrique entre les différents capteurs embarqués.\\
-Généralement, les méthodes classiques sont réalisées hors ligne à l'aide de mires géométriques fixes et dans des environnements contrôlés.\\
+Généralement, les méthodes classiques sont réalisées hors ligne à l'aide de mires géométriques fixes et dans des environnements contrôlés.\vspace{0.1cm}
+
 \hspace*{.5cm}L'auto-calibration vise à \textbf{estimer de manière autonome la pose relative entre les différents capteurs et le référentiel du véhicule}.\\
 
-La plateforme mobile imposée pour les expérimentations était une navette autonome de type EasyMile EZ10.\\
+La plateforme mobile imposée pour les expérimentations était une navette autonome de type EasyMile EZ10.\vspace{0.1cm}
+
 \hspace*{.3cm} Cette dernière était équipée d’une caméra arrière monochrome ainsi que d’une autre caméra identique à l'avant, associées à deux caméras couleur disposées à l'avant, orientées respectivement vers la droite et vers la gauche.\\
 
-Cette architecture présentait une limitation importante pour la réalisation du projet :\\
+Cette architecture présentait une limitation importante pour la réalisation du projet :\vspace{0.2cm}
 
 \hspace*{1cm}\textbf{Les caméras ne partageaient aucune zone de recouvrement visuel commune}.\\
 
@@ -496,7 +530,7 @@ Elle limitait la redondance visuelle, nécessaire pour l’estimation robuste de
 \bigskip
 
 Dans ce contexte, la réflexion c'est donc articulée autour de :\vspace{0.05cm}
-\begin{itemize}[label=\textbullet]
+\begin{itemize}[label=\textbullet, leftmargin=2cm]
     \item \textbf{L'ingénierie}
     \vspace{0.05cm}
     \item \textbf{La création d'un pipeline de traitement de données} 
@@ -513,7 +547,7 @@ Dans ce contexte, la réflexion c'est donc articulée autour de :\vspace{0.05cm}
 \hspace*{.3cm}Celles-ci reposaient principalement sur le filtrage des données à partir de critères \textbf{cinématiques}, \textbf{temporels} et \textbf{visuels} définis préalablement, et sur l'exploitation des informations tridimensionnelles fournies par le LiDAR.\\
 Les objectifs premiers étaient :\vspace{0.2cm}
 
-\begin{itemize}[label=\textbullet]
+\begin{itemize}[label=\textbullet, leftmargin=2cm]
     \item \textbf{limiter la redondance des données}
     \item \textbf{améliorer leur cohérence géométrique}
     \item \textbf{respecter les contraintes de calcul imposées par l'architecture du modèle}
@@ -570,7 +604,7 @@ Les objectifs premiers étaient :\vspace{0.2cm}
     \item {\bfseries Hétérogénéité des modalités (2D visuel vs 3D LiDAR)~:  \vspace{0.3cm}} \\
     \hspace*{1em}Alors que le modèle VGGT travaille exclusivement sur l'information chromatique (RGB 2D), les véhicules autonomes disposent de LiDARs 3D qui fournissent une géométrie métrique absolue. \vspace{0.05cm}
 
-    \hspace*{1em}\textbf{L'absence de passerelle(s) logicielle(s) }permettant de projeter ces nuages de points 3D sous forme de représentations denses 2D limite l'exploitation conjointe des capteurs.
+    \hspace*{1em}\textbf{L'absence de passerelle(s) logicielle(s) }limitait la projection de ces nuages de points 3D sous forme de représentations denses 2D, bloquant l'exploitation conjointe des capteurs.
 
 \end{itemize}
 
@@ -584,32 +618,32 @@ Les objectifs premiers étaient :\vspace{0.2cm}
 \setlength{\parindent}{0pt}
 \linespread{1.08}\selectfont
 
-\hspace*{0.5cm} Les contraintes computationnelles du modèle VGGT et la nature brute des enregistrements, \texttt{nous ont amenés à nous réorienter vers une approche stratégique différente~:}
+\hspace*{1cm} Les contraintes computationnelles du modèle VGGT et la nature brute des enregistrements, \texttt{nous ont amenés à nous réorienter vers une approche stratégique différente~:}
 
-\textbf{Plutôt que d'appliquer l'IA de manière brute sur l'ensemble des données, il s'agissait d'optimiser l'alimentation du réseau avec un pré-traitement intelligent}.
+\hspace*{0.5cm}\textbf{Plutôt que d'appliquer l'IA de manière brute sur l'ensemble des données, il s'agissait d'optimiser l'alimentation du réseau avec un pré-traitement intelligent}.
 \subsection{Pipeline de pré-traitement en amont}
 
 \hspace*{0.5cm} \textbf{Les premières missions confiées }:
-\begin{itemize}[label=\textbullet]
+\begin{itemize}[label=\textbullet, leftmargin=2cm]
     \item \texttt{Comprendre le fonctionnement du pipeline de traitement de données existant}
     \item \texttt{Identification des principaux points de blocage liés à l'utilisation du modèle VGGT}
 \end{itemize}
 
 Elles ont permis de mettre en évidence un problème majeur :
-\begin{itemize}[label=\textbullet]
+\begin{itemize}[label=\textbullet, leftmargin=2cm]
     \item \textbf{Le modèle utilisé, sans aucune stratégie de sélection préalable issue des bases de données des caméras, ne pouvait pas être exploitable dans un contexte réel du véhicule autonome.}
 \end{itemize}
 
 \bigskip
 
 \hspace*{.5cm}L'approche s'est avérée rapidement limitante par la création d'une forte redondance d'informations.\\
-Elle générait une surcharge de calculs et pouvait nuire à \texttt{la fiabilité des prédictions géométriques}.\\
+\hspace*{0.5cm}En générant une surcharge de calculs, elle induisait un nuisance à \texttt{la fiabilité des prédictions géométriques}.\vspace{0.2cm}
 
 \hspace*{.5cm} Une solution a donc été proposée afin d'explorer la réduction du nombre d'images injectées dans le modèle sans perte d'informations utiles.\\
-\hspace*{.5cm} L'analyse visuelle menée dans le cadre fixé par les responsables du stage a conduit à ne conserver que les vues qui présentaient un niveau de \textbf{saturation}, de \textbf{contraste} et de \textbf{flou} acceptable pour le modèle, tout en éliminant les images trop dégradées ou peu exploitables d'un point de vue géométrique.\\
+\hspace*{.5cm} L'analyse visuelle menée dans le cadre fixé par les responsables du stage a conduit à ne conserver que les vues qui présentaient un niveau de \textbf{saturation}, de \textbf{contraste} et de \textbf{flou} acceptable pour le modèle, tout en éliminant les images trop dégradées ou peu exploitables d'un point de vue géométrique.\vspace{0.1cm}
 
 \hspace*{.5cm} Le travail s'est ensuite concentré sur l'optimisation du filtrage visuel, afin de conserver les vues les plus exploitables, et de sélectionner celles où le véhicule était effectivement immobile. 
-\begin{itemize}[label=\textbullet]
+\begin{itemize}[label=\textbullet, leftmargin=2cm]
     \item \textbf{Images présentant un niveau de saturation, de contraste et de flou compatible avec l'estimation géométrique}
     \item \textbf{Vues acquises lorsque le véhicule était à l'arrêt, afin d'éviter les artefacts liés au mouvement}
 \end{itemize}
@@ -649,7 +683,7 @@ Après plusieurs tests et analyses, il est apparu que le modèle ne pouvait pas 
 
 \hspace*{.5cm} Il a rapidement été constaté que le modèle VGGT ne se contentait pas d'analyser des images isolées, mais qu'il évaluait aussi la cohérence géométrique entre plusieurs vues successives.\\
 \hspace*{.5cm}Le modèle s'appuyait sur des appariements visuels (\textit{feature matching}) entre les images pour estimer les poses relatives.\\
-\hspace*{1cm}En fait, il évaluait largement le \textbf{recouvrement visuel} entre plusieurs vues temporellement décalées, ainsi que la quantité d'informations communes partagées.\\
+\hspace*{1cm}Il évaluait largement le \textbf{recouvrement visuel} entre plusieurs vues temporellement décalées, ainsi que la quantité d'informations communes partagées.\\
 
 \hspace*{1cm}Si le recouvrement était trop important, les images devenaient redondantes et le modèle consommait inutilement des ressources sans gain géométrique. \\
 \hspace*{.3cm} À l'inverse, si celui-ci était trop faible, le lien géométrique entre les vues devenait insuffisant et la calibration devenait instable.
@@ -657,10 +691,10 @@ Après plusieurs tests et analyses, il est apparu que le modèle ne pouvait pas 
 \paragraph{} 
 Cette compréhension nous a conduit à proposer un module de sélection d'images adaptées aux besoins du modèle.\\
 
- L'objectif de ce module était de \textbf{récupérer une séquence d'images dont le taux de recouvrement était contrôlable et modulable} selon une consigne définie. \\
-\hspace*{.3cm} Ainsi, sans envoyer l'ensemble des images d'une séquence, il devenait possible d'extraire un sous-ensemble d'images géométriquement cohérentes, optimisant l'alimentation du réseau et permettant une meilleure convergence du modèle.\\
+\hspace{1cm}L'objectif de ce module était de \textbf{récupérer une séquence d'images dont le taux de recouvrement était contrôlable et modulable} selon une consigne définie. \\
+\hspace*{.5cm} Ainsi, sans envoyer l'ensemble des images d'une séquence, il devenait possible d'extraire un sous-ensemble d'images géométriquement cohérentes, optimisant l'alimentation du réseau et permettant une meilleure convergence du modèle.\\
 
- Ce module constituait une étape clé dans la chaîne de pré-traitement, permettant de \textbf{réduire le nombre d'entrées tout en conservant l'information essentielle} pour l'estimation de la calibration intrinsèque.
+\hspace{1cm}Ce module constituait une étape clé dans la chaîne de pré-traitement, permettant de \textbf{réduire le nombre d'entrées tout en conservant l'information essentielle} pour l'estimation de la calibration intrinsèque.
 
 \bigskip
 \bigskip
@@ -729,14 +763,15 @@ Les scénarios sélectionnés simulaient une cinématique hautement dynamique :
 
 \subsection{Scénario retenu}
 \paragraph{}
-Au cours du stage, le scénario de la gestion d'un carrefour à sens unique a finalement été privilégié.\\
+Au cours du stage, le scénario de la gestion d'un carrefour à sens unique a finalement été privilégié.\vspace{0.05cm}
+
 \hspace*{.5cm}Ce choix a été dicté par les résultats obtenus lors des expérimentations. En effet, les configurations plus exigeantes n'ont pas permis d'obtenir à partir de VGGT une réalité terrain stable et cohérente.\\
 
 \hspace*{.5cm}\textbf{Les sorties du modèle ne pouvaient alors être évaluées de manière fiable que par un regard subjectif, fondé sur une interprétation visuelle des résultats, sans mesure quantitative de référence.\\}
 
 \hspace*{.5cm}Cette limite a renforcé l'idée qu'il fallait privilégier un cas d'étude suffisamment représentatif du comportement réel du système, tout en restant exploitable pour une évaluation objective.
 
-\vspace{0.5cm}
+\vspace{1cm}
 
 \begin{figure}[htbp]
 \centering
@@ -838,7 +873,7 @@ Au cours du stage, le scénario de la gestion d'un carrefour à sens unique a fi
     \label{fig:images_aff_rosbags}
 \end{figure}
 
-\vspace{1cm}
+\vspace{0.8cm}
 
 \hspace*{1cm}Pour y remédier, un algorithme d'appariement basé sur une fenêtre temporelle glissante, développé en langage Python, a été utilisé. \\
 L'objectif était de surveiller les estampilles temporelles (\textit{timestamps}) de chaque image reçue et d'associer celles dont l'écart temporel était inférieur à un seuil critique fixé à 1~ms. 
@@ -853,7 +888,7 @@ L'objectif était de surveiller les estampilles temporelles (\textit{timestamps}
 
 \begin{itemize}[itemsep=0.5em]
 	\item D'une part, la phase d'arrêt de 15 secondes planifiée lors de l'acquisition offrait une redondance temporelle suffisante pour compenser ces pertes.
-	\item D'autre part, le modèle VGGT était particulièrement lourd et consommateur en ressources de calcul, ce qui nous limitait à 20 images et rendait la qualité et la complétude de la synchronisation prioritaires sur la quantité de données.
+	\item D'autre part, le modèle \textbf{VGGT} était particulièrement lourd et consommateur en ressources de calcul, ce qui nous limitait à 20 images et rendait la qualité et la complétude de la synchronisation prioritaires sur la quantité de données.
 \end{itemize}
 
 \bigskip
@@ -863,7 +898,7 @@ L'objectif était de surveiller les estampilles temporelles (\textit{timestamps}
 
 \vspace{1cm}
 
-\hspace*{1cm}Une fois le script Python exécuté, les quadruplets d'images parfaitement synchronisés ont été répartis dans quatre répertoires distincts correspondant à chaque caméra.\vspace{0.1cm}
+\hspace*{1cm}Une fois le script \textbf{Python} exécuté, les quadruplets d'images parfaitement synchronisés ont été répartis dans quatre répertoires distincts correspondant à chaque caméra.\vspace{0.1cm}
 
 \hspace*{0.5cm}L'étape suivante a été le filtrage automatique des phases stationnaires.\vspace{0.05cm}
 
@@ -878,7 +913,7 @@ L'objectif était de surveiller les estampilles temporelles (\textit{timestamps}
 
 \hspace*{1cm}À l'issue de ce pipeline de pré-traitement, les images filtrées ont été soumises au modèle VGGT. Le choix de privilégier des scènes fixes répondait à une double contrainte scientifique :\vspace{0.05cm}
 
-\begin{itemize}
+\begin{itemize}[label=\textbullet, leftmargin=2cm]
     \item \textbf{Élimination du flou cinétique :}\vspace{0.05cm}
 
  \hspace{1cm}L'immobilité du véhicule devait garantir des contours nets sur les objets de l'environnement.\vspace{0.05cm}
@@ -891,7 +926,7 @@ L'objectif était de surveiller les estampilles temporelles (\textit{timestamps}
 
 \hspace*{1cm} À la fin de ce module, une analyse critique des données a mis en évidence deux limitations majeures des capteurs: \vspace{0.05cm}
 
-\begin{itemize}[label=\textbullet, itemsep=0.3cm]
+\begin{itemize}[label=\textbullet, itemsep=0.3cm, leftmargin=2cm]
     \item \textbf{Distorsion optique :}\vspace{0.05cm}
 
  \hspace{0.5cm}Les objectifs des caméras avants et arrières présentaient des distorsions géométriques notables (effet grand angle / \textit{fisheye}). Un étalonnage intrinsèque (correction de distorsion) s'avérait donc nécessaire pour ne pas fausser l'analyse géométrique du modèle d'IA.
@@ -904,7 +939,7 @@ L'objectif était de surveiller les estampilles temporelles (\textit{timestamps}
 
 \vspace{1cm}
 
-\textbf{\hspace{1cm}Ce constat nécessitait l'introduction d'un post-traitement d'images.}
+\textbf{\hspace{1cm}Ce constat a nécessité l'introduction d'un post-traitement d'images.}
 
 \newpage
 
@@ -915,24 +950,28 @@ L'objectif était de surveiller les estampilles temporelles (\textit{timestamps}
 \paragraph{}
 La distorsion (souvent de type \textit{fisheye} ou \textit{barrel distortion}) n'est pas un défaut involontaire, mais un compromis optique assumé pour maximiser le champ de vision (FOV - Field of View).
 
-\begin{itemize}[itemsep=1.5em]
-    \item \textbf{Champ de vision ultra-large ($180^\circ$ à $220^\circ$) :}\\
+\begin{itemize}[itemsep=1.5em, label=\textbullet]
+    \item \textbf{Champ de vision ultra-large ($180^\circ$ à $220^\circ$) :}\vspace{0.2cm}
 
-    \hspace*{1cm} Pour des applications de suivi d'environnement, d'odométrie visuelle ou de SLAM, une seule caméra grand-angle permet de couvrir à la fois les angles morts latéraux et la zone frontale du véhicule.\\
-    Cela évite de multiplier le nombre de caméras embarquées tout en conservant une couverture spatiale suffisante pour les algorithmes de reconstruction et d'estimation de pose.
+    \hspace*{1cm} Pour des applications de suivi d'environnement, d'odométrie visuelle ou de SLAM, une seule caméra grand-angle permet de couvrir à la fois les angles morts latéraux et la zone frontale du véhicule.\vspace{0.05cm}
+    
+     \hspace{0.5cm}Cela évite de multiplier le nombre de caméras embarquées tout en conservant une couverture spatiale suffisante pour les algorithmes de reconstruction et d'estimation de pose.
 
-    \item \textbf{Corrigible mathématiquement :}\\
+    \item \textbf{Corrigible mathématiquement :}\vspace{0.2cm}
 
-    \hspace*{1cm} Contrairement au flou de mouvement ou au bruit numérique, la distorsion optique géométrique est \textbf{déterministe}.\\
-    Elle se modélise précisément via un étalonnage intrinsèque (par exemple un modèle à division ou un modèle omnidirectionnel de type Scaramuzza / Mei).\\
+    \hspace*{1cm} Contrairement au flou de mouvement ou au bruit numérique, la distorsion optique géométrique est \textbf{déterministe}.\vspace{0.05cm}
+
+    \hspace{0.5cm}Elle se modélise précisément via un étalonnage intrinsèque (par exemple un modèle à division ou un modèle omnidirectionnel de \textbf{type Scaramuzza / Mei)}.\\
 
     \hspace*{1cm} Une fois la caméra calibrée, on peut projeter de façon inverse les coordonnées image 2D déformées vers l'espace 3D à l'aide des paramètres intrinsèques et des coefficients de distorsion, sans perte d'information utile pour la reconstruction géométrique.
 \end{itemize}
 
 \paragraph{}
-Dans notre pipeline, la correction est effectuée en amont de l'appariement visuel : les paramètres issus du topic \texttt{camera\_info}\footnote{message ROS2 contenant les paramètres d'étalonnage (calibration) et les métadonnées d'une caméra} sont utilisés pour redresser les images avant toute étape d'extraction de caractéristiques ou d'appariement dense.\\
+Dans notre pipeline, la correction c'est effectuée en amont de l'appariement visuel : \vspace{0.01cm}
 
-\hspace*{.5cm} Le modèle unifié de Mei (Unified Camera Model), adapté aux objectifs très grand‑angle / fisheye, a ensuite été retenu. Le principe est un mapping inverse : pour chaque pixel de l'image rectifiée on calcule d'abord un vecteur directionnel 3D, on le projette sur la sphère unité, on applique le paramètre de distorsion $\xi$, puis on reprojette dans l'image brute pour effectuer un remap.\\
+\hspace*{2cm}Les paramètres issus du topic \textbf{camera\_info}\footnote{message ROS2 contenant les paramètres d'étalonnage (calibration) et les métadonnées d'une caméra} ont été utilisées pour redresser les images avant toute étapes d'extractions de caractéristiques ou d'appariements denses.\\
+
+\hspace*{.5cm} Le modèle unifié de \textbf{Mei}\footnote{Unified Camera Model}, adapté aux objectifs très grand‑angle / fisheye, a ensuite été retenu. Le principe est un mapping inverse : pour chaque pixel de l'image rectifiée on calcule d'abord un vecteur directionnel 3D, on le projette sur la sphère unité, on applique le paramètre de distorsion $\xi$, puis on reprojette dans l'image brute pour effectuer un remap.\\
 
 \newpage
 
@@ -992,42 +1031,39 @@ pour lire les couleurs dans l'image brute en utilisant ces cartes flottantes.
 \newpage
 
 \subsection{Traitement de la saturation}
-\paragraph{}
-La saturation (ou \textsb{« brûlage »}) survient lorsque l'éclairement incident dépasse la plage dynamique du capteur ; les photosites atteignent leur valeur maximale et l'information des hautes lumières est irrémédiablement perdue. \vspace{0.1cm}
 
-\hspace*{1cm} Dans ce projet, la quantification de cet effet a été réalisée par le calcul de la proportion de pixels dont l'intensité atteint la valeur maximale du codage (255 en image 8 bits). Ce test a été exécuté en prétraitement pour identifier et rejeter les trames dont une portion significative de la dynamique est perdue.\vspace{0.05cm}
+\hspace{1cm}La saturation (ou \textbf{« brûlage »}) survient lorsque l'éclairement incident dépasse la plage dynamique du capteur ; les photosites atteignent leur valeur maximale et l'information des hautes lumières est irrémédiablement perdue.\\
+\hspace{0.5cm}Dans ce projet, cet effet est quantifié par la proportion de pixels atteignant la valeur maximale de codage (255 en image 8 bits). 
 
-\begin{enumerate}[label=\arabic*),leftmargin=2cm]
-    \item On construit un masque bool\'een \texttt{mask = (img\_gray == 255)} valant \texttt{True} uniquement pour les pixels satur\'es ($255$).
-    \item On calcule $N_{\text{satur\'es}} = \texttt{np.sum(mask)}$, le nombre total de pixels satur\'es.
-    \item On normalise par la surface totale $N_{\text{total}}$ pour obtenir :
-    \[
-    \text{Ratio} = \frac{N_{\text{satur\'es}}}{N_{\text{total}}}
-    \]
+\hspace{0.5cm}Ce test, exécuté en prétraitement pour identifier et rejeter les trames altérées, s'articule ainsi :
+\begin{enumerate}[label=\arabic*), leftmargin=2cm, noitemsep, topsep=2pt, itemsep=0.5em]
+    \item Construction d'un masque booléen \texttt{mask = (img\_gray == 255)} isolant les pixels saturés.
+    \item Calcul du nombre total de pixels saturés $\bm{N_{\text{saturés}}} = \texttt{np.sum(mask)}$.
+    \item Normalisation par la surface totale $\bm{N_{\text{total}}}$ pour obtenir : $\bm{\texttt{Ratio} = \frac{N_{\texttt{saturés}}}{N_{\texttt{total}}}}$.
 \end{enumerate}
+\vspace{0.1cm}
 
-\hspace*{1cm} Cette proportion fournit une mesure simple et robuste de la surface « brûlée » de l'image et sert, si elle dépasse un seuil fixé, à rejeter la trame avant l'appariement visuel.
+\hspace{1cm}Cette proportion fournit une mesure simple et robuste de la surface brûlée de l'image. Si elle dépasse le seuil de tolérance de $\bm{15\%}$ (valeur empirique validée après analyse des performances du modèle \textbf{VGGT}), la trame est rejetée avant l'appariement.
 
-\hspace*{1cm} Dans le pipeline développé, le seuil de tolérance retenu est de $15\%$ de pixels saturés. Cette valeur empirique a été choisie après analyse des performances du modèle \textbf{VGGT} sur le jeu de données de l'étude.\vspace{0.05cm}
+\vspace{0.5cm}
 
 \subsection{Traitement du contraste}
 
-\hspace{1cm}Dans ce projet, nous avons observé que certaines images présentaient des aplats (tout noir, tout blanc ou gris uniforme) traduisant un faible contraste.\\
-Un contraste insuffisant réduit la quantité d'informations locales exploitables pour l'appariement et la calibration.\vspace{0.1cm}
+\hspace{1cm}Certaines images présentent des aplats (tout noir, tout blanc ou gris uniforme) traduisant un faible contraste. Ce défaut réduit considérablement la quantité d'informations locales exploitables pour l'appariement et la calibration. 
 
-\hspace{1cm}Si tous les pixels ont la même valeur ($x_i = \mu$ pour tout $i$), alors $\sigma=0$. Un $\sigma$ très faible indique un manque de contraste. Dans ce pipeline de prétraitement, nous avons rejeté les images dont $\sigma < 5$ (seuil empirique pour images 8 bits), car elles apportaient peu d'informations géométriques au modèle.\vspace{0.05cm}
+\hspace{1cm}Le contraste est évalué en calculant l'écart-type $\bm{\sigma}$, qui mesure la dispersion des valeurs des pixels autour de la moyenne $\bm{\mu}$ de l'image :
 
-\textbf{Calcul de l'écart-type du contraste :}
-L'écart-type $\sigma$ mesure la dispersion des valeurs des pixels autour de la moyenne $\mu$ de l'image :
+\begin{small} % Réduction de la taille de l'équation
 \[
-\sigma = \sqrt{\frac{1}{N} \sum_{i=1}^{N} (x_i - \mu)^2}
+\bm{\sigma = \sqrt{\frac{1}{N} \sum_{i=1}^{N} (x_i - \mu)^2}}
 \]
-où :
-\begin{itemize}
-    \item $x_i$ : valeur du pixel $i$,
-    \item $\mu$ : valeur moyenne de tous les pixels,
-    \item $N$ : nombre total de pixels (\texttt{img\_gray.size}).
-\end{itemize}
+\end{small}
+
+\textit{Où $\bm{x_i}$ est la valeur du pixel $\bm{i}$, $\bm{\mu}$ la valeur moyenne de tous les pixels, et $\bm{N}$ le nombre total de pixels (\texttt{img\_gray.size}).}
+
+\vspace{0.1cm}
+
+\hspace{0.5cm}Si tous les pixels ont la même valeur ($\bm{x_i = \mu}$), alors $\bm{\sigma=0}$. Dans ce pipeline de prétraitement, nous rejetons les images dont $\bm{\sigma < 5}$ (seuil empirique pour des images 8 bits), car un écart-type très faible indique qu'elles apportent peu d'informations géométriques au modèle.
 
 \newpage
 
@@ -1066,18 +1102,25 @@ On applique d'abord l'opérateur Laplacien pour extraire la dérivée seconde sp
 
 \section{Génération d'images à partir du LiDAR 3D}
 
-\hspace*{0.3cm} \textit{L'objectif de cette deuxième approche consistait à exploiter la complémentarité géométrique entre les capteurs proprioceptifs et extéroceptifs afin de générer une référence de vérité terrain (\textit{Ground Truth}) tridimensionnelle suffisamment précise pour servir de référence lors de la phase d'auto-calibration.}\\
+\hspace*{1cm} \textit{L'objectif de cette deuxième approche consistait à exploiter la complémentarité géométrique entre les capteurs proprioceptifs et extéroceptifs afin de générer une référence de vérité terrain (\textbf{Ground Truth}) tridimensionnelle suffisamment précise pour servir de référence lors de la phase d'auto-calibration.}\vspace{0.1cm}
 
-\hspace*{0.3cm}Cette approche constituait une proposition d'exploitation des données LiDAR. L'idée était de comparer une reconstruction tridimensionnelle obtenue à partir du LiDAR et d'un algorithme de SLAM avec la reconstruction prédite par le modèle \textbf{VGGT}. Une telle comparaison aurait permis d'évaluer les résultats du réseau à partir d'une référence géométrique indépendante des seules données visuelles.\\
+\hspace*{1cm}Cette approche constituait une proposition d'exploitation des données \textbf{LiDAR}. L'idée était de comparer une reconstruction tridimensionnelle obtenue à partir du \textbf{LiDAR} et d'un algorithme de \textbf{SLAM}\footnote{Simultaneous Localization and Mapping} avec la reconstruction prédite par le modèle \textbf{VGGT}.\vspace{0.01cm}
 
-\hspace*{0.3cm}Cependant, cette méthode n'a pas pu être menée à son terme dans le cadre matériel disponible. Le véhicule ne disposait pas de l'ensemble des équipements nécessaires pour garantir une acquisition et une synchronisation suffisamment adaptées à la reconstruction LiDAR-SLAM. Les essais réalisés n'ont donc pas permis d'obtenir une référence tridimensionnelle suffisamment fiable pour effectuer une comparaison quantitative avec VGGT. Cette piste reste en cours de recherche et pourra être poursuivie avec les moyens matériels disponibles ou avec une instrumentation plus adaptée.
+\hspace*{0.5cm}Une telle comparaison aurait permis d'évaluer les résultats du réseau à partir d'une référence géométrique indépendante des seules données visuelles.\vspace{0.05cm}
 
+\hspace*{1cm}Cependant, cette méthode n'a pas pu être menée à son terme dans le cadre matériel disponible.\vspace{0.01cm}
+
+\hspace*{0.5cm}Le véhicule ne disposait pas de l'ensemble des équipements nécessaires pour garantir une acquisition et une synchronisation suffisamment adaptées à la reconstruction \textbf{LiDAR-SLAM}. \vspace{0.01cm}
+
+\hspace*{0.5cm}Les essais réalisés n'ont donc pas permis d'obtenir une référence tridimensionnelle suffisamment fiable pour effectuer une comparaison quantitative avec VGGT. \vspace{0.01cm}
+
+\hspace*{0.5cm}Cette piste reste en cours de recherche et pourra être poursuivie avec les moyens matériels disponibles ou avec une instrumentation plus adaptée.
 \subsection{Développement d'un algorithme SLAM personnalisé}
 
-\hspace*{.3cm}Afin d'appréhender finement les mécanismes de fusion des différentes sources de données, sans dépendre directement d'une architecture considérée comme une « boîte noire », un premier pipeline de SLAM (\textit{Simultaneous Localization and Mapping}) spécifique a été envisagé à partir des données extraites du \texttt{rosbag}.\\
+\hspace*{1cm}Afin d'appréhender finement les mécanismes de fusion des différentes sources de données, sans dépendre directement d'une architecture considérée comme une « boîte noire », un premier pipeline de \textbf{SLAM} spécifique a été envisagé à partir des données extraites du \textbf{rosbag}.\vspace{0.1cm}
 
-\hspace*{.3cm}Le pipeline devait s'appuyer sur la combinaison de plusieurs sources d'informations complémentaires :
-\begin{itemize}[label=\textbullet]
+\hspace*{1cm}Le pipeline devait s'appuyer sur la combinaison de plusieurs sources d'informations complémentaires :
+\begin{itemize}[leftmargin=2cm, label=\textbullet, itemsep=0.4em]
     \item\textbf{L'odométrie cinématique} issue du châssis à quatre roues directrices (4WS)
     \item\textbf{Les informations géospatiales absolues} fournies par le récepteur GNSS (GPS),
     \item\textbf{Les scans tridimensionnels bruts} acquis par le LiDAR 3D \textbf{Hesai Pandar XT32}.
@@ -1088,11 +1131,11 @@ On applique d'abord l'opérateur Laplacien pour extraire la dérivée seconde sp
 
 \subsection{Déploiement d'une architecture SLAM}
 
-\hspace*{1cm}Dans une démarche de recherche visant à comparer l'approche envisagée avec une solution existante validée, une seconde architecture de SLAM tridimensionnelle a été étudiée sous l'environnement ROS~2.\vspace{0.05cm}
+\hspace*{1cm}Dans une démarche de recherche visant à comparer l'approche envisagée avec une solution existante validée, une seconde architecture de \textbf{SLAM} tridimensionnelle a été étudiée sous l'environnement \textbf{ROS~2}.\vspace{0.05cm}
 
 \hspace*{1cm}Le choix s'est porté sur le framework open-source \textbf{Kitware LiDAR SLAM}, intégré au système à travers le package \textit{lidar\_slam}.\vspace{0.05cm}
 
-\hspace*{0.5cm}Cette seconde implémentation devait permettre de disposer d'un point de comparaison (\textit{benchmark}) pour évaluer les résultats du pipeline de SLAM personnalisé envisagé en amont.\vspace{0.05cm}
+\hspace*{0.5cm}Cette seconde implémentation devait permettre de disposer d'un point de comparaison (\textbf{\textit{benchmark}}) pour évaluer les résultats du pipeline de \textbf{SLAM} personnalisé envisagé en amont.\vspace{0.05cm}
 
 \hspace*{1cm}L'intégration de cette architecture reposait principalement sur trois étapes successives :\vspace{0.05cm}
 
@@ -1100,7 +1143,7 @@ On applique d'abord l'opérateur Laplacien pour extraire la dérivée seconde sp
 
 \item \textbf{Conversion des données LiDAR :}\vspace{0.05cm}
 
-\hspace*{0.5cm}Le nœud \textsb{hesai\_conversion\_node}, issu du package \textsb{lidar\_conversions}, était utilisé afin d'intercepter les données brutes provenant du LiDAR \textbf{Hesai Pandar XT32}.\vspace{0.01cm}
+\hspace*{0.5cm}Le nœud \textsb{hesai\_conversion\_node}, issu du package \textsb{lidar\_conversions}, était utilisé afin d'intercepter les données brutes provenant du \textbf{LiDAR} \textbf{Hesai Pandar XT32}.\vspace{0.01cm}
 
 \hspace*{0.5cm}Ces données étaient ensuite converties en nuages de points au format standardisé \textsb{sensor\_msgs/msg/PointCloud2}, tout en conservant les informations géométriques associées aux 32 lasers du capteur.
 
@@ -1118,23 +1161,23 @@ On applique d'abord l'opérateur Laplacien pour extraire la dérivée seconde sp
 
 \end{itemize}
 
-\hspace*{1cm}Cette seconde implémentation devait ainsi constituer un point de comparaison indépendant pour analyser les performances du SLAM personnalisé. \vspace{0.05cm}
+\hspace*{1cm}Cette seconde implémentation devait ainsi constituer un point de comparaison indépendant pour analyser les performances du \textbf{SLAM personnalisé}. \vspace{0.05cm}
 
-\hspace*{0.5cm}L'objectif était notamment de vérifier que les erreurs observées lors de la reconstruction ne provenaient pas uniquement de l'algorithme développé spécifiquement dans le cadre du projet. En pratique, les limites de l'instrumentation disponible sur le véhicule n'ont pas permis d'obtenir une reconstruction suffisamment stable pour établir ce benchmark dans des conditions pleinement exploitables.
+\hspace*{0.5cm}L'objectif était notamment de vérifier que les erreurs observées lors de la reconstruction ne provenaient pas uniquement de l'algorithme développé spécifiquement dans le cadre du projet. En pratique, les limites de l'instrumentation disponible sur le véhicule n'ont pas permis d'obtenir une reconstruction suffisamment stable pour établir ce\textbf{ benchmark }dans des conditions pleinement exploitables.
 
 \newpage
 
 \subsection{Conditionnement et filtrage du nuage de points}
 
-\vspace{1cm}
+\vspace{1.5cm}
 
-\hspace*{1cm}Avant d'être exploitées pour la reconstruction tridimensionnelle, les données LiDAR brutes devaient faire l'objet d'un pré-traitement spatial afin de limiter l'influence des mesures parasites et de concentrer la reconstruction sur la zone réellement utile à l'étude.\\
+\hspace*{1cm}Avant d'être exploitées pour la reconstruction tridimensionnelle, les données LiDAR brutes devaient faire l'objet d'un pré-traitement spatial afin de limiter l'influence des mesures parasites et de concentrer la reconstruction sur la zone réellement utile à l'étude.\vspace{0.2cm}
 
-\hspace*{1cm}Un algorithme de filtrage géométrique par seuillage des distances a donc été appliqué en amont du pipeline de reconstruction. \vspace{0.05cm}
+\hspace*{1cm}Un algorithme de filtrage géométrique par seuillage des distances a donc été appliqué en amont du pipeline de reconstruction. \vspace{0.1cm}
 
-\hspace*{0.5cm}L'opération reposait principalement sur \textbf{deux contraintes} :\vspace{0.1cm}
+\hspace*{0.5cm}L'opération reposait principalement sur \textbf{deux contraintes} :\vspace{0.5cm}
 
-\begin{itemize}[itemsep=0.8em, leftmargin=1.5cm, label=\textbullet]
+\begin{itemize}[itemsep=1em, leftmargin=1.5cm, label=\textbullet]
 
 \item \textbf{L'élimination de l'auto-occlusion :}\vspace{0.05cm}
 
@@ -1187,7 +1230,7 @@ On applique d'abord l'opérateur Laplacien pour extraire la dérivée seconde sp
 
 \newpage
 
-\hspace*{1cm}Cette difficulté a néanmoins constitué un apprentissage important sur l'optimisation des performances informatiques.\vspace{0.05cm}
+\hspace*{1cm}Cette difficulté a permis un apprentissage important sur l'optimisation des performances informatiques.\vspace{0.05cm}
 
 \hspace*{0.5cm}J'ai notamment étudié une meilleure répartition des traitements entre les cœurs du CPU, la gestion des variables et de la mémoire, ainsi que l'utilisation adaptée du GPU pour les opérations pouvant être parallélisées. \vspace{0.05cm}
 
@@ -1213,18 +1256,19 @@ On applique d'abord l'opérateur Laplacien pour extraire la dérivée seconde sp
 \Needspace{12\baselineskip}
 \section{Filtrage visuel intelligent par LoFTR et optimisation du recouvrement}
 
+\vspace{0.5cm}
+
 \hspace*{1cm}Cette troisième approche marquait un tournant dans la méthodologie de l'étude.\vspace{0.05cm}
 
 \hspace*{1cm}Après avoir vérifié que le filtrage purement cinématique était utilisable pour la suppression des images statiques ou fortement redondantes, l'analyse a été poussée plus loin en s'intéressant au mécanisme interne du modèle \textbf{VGGT}. \vspace{0.1cm}
 
 \hspace*{0.5cm}Le point crucial n'était pas uniquement la qualité visuelle des images, mais surtout leur \textbf{cohérence géométrique} entre elles.\vspace{0.2cm}
 
-\hspace*{0.5cm}En effet, le modèle n'évaluait pas chaque vue de manière isolée : il dépendait fortement du \textbf{taux de recouvrement visuel} entre les différentes images pour établir des correspondances et estimer la cohérence de la scène ainsi que la stabilité de la calibration.\\
-
-\par\bigskip
-\par\bigskip
+\hspace*{0.5cm}En effet, le modèle n'évaluait pas chaque vue de manière isolée : il dépendait fortement du \textbf{taux de recouvrement visuel} entre les différentes images pour établir des correspondances et estimer la cohérence de la scène ainsi que la stabilité de la calibration.\vspace{0.5cm}
 
 \subsection{Développement d'un module de sélection visuelle}
+
+\vspace{0.5cm}
 
 \hspace*{1cm}Au cours des premiers tests, il est apparu que l'envoi brut de séquences d'images conduisait à une surabondance d'informations. \vspace{0.1cm}
 
@@ -1232,12 +1276,11 @@ On applique d'abord l'opérateur Laplacien pour extraire la dérivée seconde sp
 
 \hspace*{1cm}À l'inverse, lorsque ce recouvrement était trop faible, les vues ne partageaient pas suffisamment d'informations communes pour permettre une estimation fiable de la pose relative et de l'auto-calibration extrinsèque. \vspace{0.1cm}
 
-\hspace*{0.5cm}Cette observation a montré que le véritable problème ne résidait pas dans la quantité absolue d'images, mais davantage dans le \textbf{niveau de redondance géométrique} entre elles.\\
-
+\hspace*{0.5cm}Cette observation a montré que le véritable problème ne résidait pas dans la quantité absolue d'images, mais davantage dans le \textbf{niveau de redondance géométrique} entre elles.\vspace{0.1cm}
 
 \hspace*{.5cm}Le cadre de mon stage était de participer à la conception d'un module de sélection visuelle capable de récupérer une séquence d'images. Son taux de recouvrement pouvait être contrôlé et modulé.\vspace{0.1cm}
 
-\hspace*{.5cm}L'objectif était de ne conserver que les vues présentant un niveau de chevauchement spatial adapté au modèle, ni trop élevé, ni trop faible. Ce mécanisme devait ainsi permettre de réduire le nombre d'images transmises à VGGT sans dégrader la qualité de l'information géométrique utile à l'estimation.\\
+\hspace*{.5cm}L'objectif était de ne conserver que les vues présentant un niveau de chevauchement spatial adapté au modèle, ni trop élevé, ni trop faible. Ce mécanisme devait ainsi permettre de réduire le nombre d'images transmises à VGGT sans dégrader la qualité de l'information géométrique utile à l'estimation.
 
 \newpage
 
@@ -1246,9 +1289,9 @@ On applique d'abord l'opérateur Laplacien pour extraire la dérivée seconde sp
 \hspace*{1cm}Avant toute mesure de recouvrement, les images était obligatoirement être préparées de manière homogène afin de ne pas introduire de biais artificiels dans l'évaluation. \vspace{0.05cm}
 
 \hspace*{0.3cm}Pour cela, chaque trame a d'abord  été soumise à un pré-traitement visuel sous OpenCV.\\
-Cette étape reposait principalement sur deux opérations : \vspace{0.2cm}
+Cette étape reposait principalement sur deux opérations : \vspace{0.3cm}
 
-\begin{itemize}[itemsep=0.5em]
+\begin{itemize}[itemsep=0.5em, label=\textbullet]
 
     \item \textbf{Correction de la distorsion optique :}\\
     \hspace*{0.5cm}Les paramètres intrinsèques fournis par le topic ROS~2 \texttt{camera\_info} étaient utilisés afin de corriger les effets de distorsion géométrique, notamment sur les caméras grand angle ou de type \textit{fisheye}. Cette correction devait permettre d'obtenir des images géométriquement cohérentes avant l'étape d'appariement.
@@ -1275,21 +1318,17 @@ Cette stratégie devait limiter la consommation de mémoire GPU et d'assurer une
 
 \subsection{Algorithme de concaténation et reconstruction de trajectoire}
 
-\vspace{1cm}
+\vspace{0.5cm}
 
-\hspace*{1cm}Le traitement bloc par bloc ne suffisait pas, à lui seul, à reconstituer une trajectoire directement exploitable. Il était donc nécessaire de réassembler les résultats partiels dans un cadre spatio-temporel commun.\vspace{0.2cm}
+\hspace*{1cm}\textbf{Le traitement bloc par bloc} ne suffisait pas, à lui seul, à reconstituer une trajectoire directement exploitable. Il était donc nécessaire de réassembler les résultats partiels dans un cadre spatio-temporel commun.\vspace{0.2cm}
 
-\hspace*{1cm}Un algorithme de concaténation a été développé afin de fusionner les sorties obtenues sur chaque \textit{chunk}. Le principe reposait sur une fenêtre de recouvrement inter-blocs fixée à \textsb{n\_overlap = 3}.\\
-
-\vspace{0.1cm}
+\hspace*{1cm}Un algorithme de concaténation a été développé afin de fusionner les sorties obtenues sur chaque \textit{chunk}. Le principe reposait sur une fenêtre de recouvrement inter-blocs fixée à \textsb{n\_overlap = 3}.\vspace{0.1cm}
 
 \textsb{\hspace*{1cm}Cette étape de normalisation était essentielle, car un recouvrement calculé sur des images fortement bruitées, saturées ou déformées ne devenait pas nécessairement représentatif de la cohérence géométrique réelle entre les différentes vues.}
 
-\vspace{1cm}
-
 \subsection{Appariement dense par Transformer (LoFTR) et estimation du recouvrement}
 
-\vspace{1cm}
+\vspace{0.5cm}
 
 \hspace*{1cm}Pour quantifier précisément le chevauchement entre deux images, le modèle de \textsb{\textit{deep learning}} \textbf{LoFTR} (\textsb{\textit{Local Feature Transformer}}) a été utilisé. \vspace{0.05cm}
 
@@ -1308,20 +1347,20 @@ Cette stratégie devait limiter la consommation de mémoire GPU et d'assurer une
 
 \subsection{Développement des algorithmes de sélection sous consigne}
 
-\hspace*{1cm}À partir de cette mesure de recouvrement, deux outils logiciels ont été développés en Python afin de sélectionner automatiquement les images les plus pertinentes :\vspace{0.2cm}
+\hspace*{1cm}À partir de cette mesure de recouvrement, deux outils logiciels ont été développés en \textbf{Python} afin de sélectionner automatiquement les images les plus pertinentes :\vspace{0.2cm}
 \begin{enumerate}[label=$\bullet$, itemsep=0.5em]
 
     \item \textbf{Génération de séquences panoramiques contrôlées :}\vspace{0.05cm}
 
     \hspace*{1cm}Le premier script parcourait les images de manière chronologique et conservait uniquement celles dont le taux de recouvrement visuel par rapport à la dernière image validée satisfaisait une consigne donnée.\vspace{0.05cm}
 
-    \hspace*{1cm}Par exemple, une \textbf{valeur cible de $60\%$} permettait de maintenir une redondance géométrique suffisante tout en évitant de saturer inutilement l'ensemble de données.
+    \hspace*{1cm}Par exemple, une \textbf{valeur cible de 60\% } permettait de maintenir une redondance géométrique suffisante tout en évitant de saturer inutilement l'ensemble de données.
 
 \vspace{0.5cm}
 
     \item \textbf{Recherche itérative par consigne cible :}\vspace{0.05cm}
 
-    \hspace*{1cm}Le second module effectuait une recherche globale sur l'ensemble du jeu de données. À partir d'une image de référence et d'une consigne définie par l'utilisateur, il évaluait les candidats disponibles, calculait leur recouvrement visuel à l'aide de LoFTR et sélectionnait l'image dont la valeur était la plus proche de la consigne cible.
+    \hspace*{1cm}Le second module effectuait une recherche globale sur l'ensemble du jeu de données. À partir d'une image de référence et d'une consigne définie par l'utilisateur, il évaluait les candidats disponibles, calculait leur recouvrement visuel à l'aide de \textbf{LoFTR} et sélectionnait l'image dont la valeur était la plus proche de la consigne cible.
 
 \end{enumerate}
 
@@ -1334,11 +1373,11 @@ Cette stratégie devait limiter la consommation de mémoire GPU et d'assurer une
 
 \hspace*{1cm}L'originalité de cette approche a résidé dans le fait que la sélection des images n'était plus arbitraire, mais guidée par une contrainte géométrique explicite.\vspace{0.05cm}
 
-\hspace*{0.3cm}Ainsi, au lieu de transmettre à VGGT une suite d'images très dense et potentiellement redondantes, l'objectif était de lui fournir une séquence plus compacte, plus informative et mieux adaptée à sa structure de traitement.\\
+\hspace*{0.3cm}Ainsi, au lieu de transmettre à \textbf{VGGT} une suite d'images très dense et potentiellement redondantes, l'objectif était de lui fournir une séquence plus compacte, plus informative et mieux adaptée à sa structure de traitement.\\
 
 \hspace*{1cm}Cette optimisation devait permettre de réduire la quantité de données traitées et, par conséquent, la charge de calcul associée à l'inférence du modèle. Elle devait également favoriser la stabilité des estimations de pose et d'auto-calibration lorsque les images présentaient un niveau de recouvrement suffisamment cohérent.\vspace{0.05cm}
 
-\hspace*{1cm}Ce formalisme pouvait ainsi alimenter le réseau avec des paires de vues présentant des caractéristiques géométriques contrôlées, ouvrant la voie à une analyse plus systématique de la sensibilité de VGGT face à différentes valeurs de recouvrement visuel.
+\hspace*{1cm}Ce formalisme pouvait ainsi alimenter le réseau avec des paires de vues présentant des caractéristiques géométriques contrôlées, ouvrant la voie à une analyse plus systématique de la sensibilité de \textbf{VGGT} face à différentes valeurs de recouvrement visuel.
 
 \newpage
 
@@ -1359,7 +1398,7 @@ Cette stratégie devait limiter la consommation de mémoire GPU et d'assurer une
 
 \vspace{1cm}
 
-\hspace*{1cm}Le filtrage cinématique a constitué la première couche du traitement mis en place afin d'isoler les images pertinentes et d'éliminer les trames non exploitables pour l'analyse géométrique.\\
+\hspace*{1cm}Le filtrage cinématique a constitué \textbf{la première couche du traitement} mis en place afin d'isoler les images pertinentes et d'éliminer les trames non exploitables pour l'analyse géométrique.\\
 
 \hspace*{1cm}Son rôle principal était de supprimer les phases de déplacements parasites, les phénomènes de bougé ainsi que les instants durant lesquels le véhicule ne se trouvait pas dans une configuration suffisamment stable pour la calibration.\vspace{0.05cm}
 
@@ -1401,7 +1440,9 @@ Cette stratégie devait limiter la consommation de mémoire GPU et d'assurer une
 
 \newpage
 
-\subsection{Stratégies de recalage face à la vérité terrain (GPS)}
+\subsection{Stratégie de recalage face à la vérité terrain (GPS)}
+
+\vspace{0.5cm}
 
 \hspace*{1cm}La trajectoire reconstruite par \textbf{VGGT} n'était pas directement comparable à la référence géométrique, car elle était exprimée dans un référentiel relatif et pouvait être affectée par une dérive au cours du temps.\vspace{0.2cm}
 
@@ -1414,13 +1455,13 @@ Cette stratégie devait limiter la consommation de mémoire GPU et d'assurer une
     \item \textbf{Recalage global par similitude 2D ($\text{Sim}(2)$) :}\vspace{0.05cm}
 
     \hspace*{1cm}Une première transformation globale devait aligner les trajectoires dans un même espace métrique. \\
-    \hspace*{0.5cm}Elle combinait un angle de rotation $\theta$, un facteur d'échelle $s$ ainsi qu'un \textsb{vecteur de translation $t = [t_x, t_y]^T$}.\vspace{0.05cm}
+    \hspace*{0.5cm}Elle combinait un angle de rotation $\bm{\theta}$, un facteur d'échelle $\bm{s}$ ainsi qu'un \textsb{vecteur de translation $\bm{t = [t_x, t_y]^T}$}.\vspace{0.05cm}
 
     \hspace*{.5cm}L'optimisation a été réalisée à l'aide d'un estimateur robuste basé sur la fonction de \textbf{coût de Huber} afin de limiter l'influence des éventuels points aberrants présents dans les données.
 
     \item \textbf{Recalage hiérarchique récursif (\textit{Piecewise split}) :}\vspace{0.05cm}
 
-    \hspace*{1cm}Après l'alignement global, des écarts locaux persistants pouvaient être observés sur certaines portions de la trajectoire. Afin de corriger ces déformations non uniformes, un recalage récursif était appliqué.\vspace{0.05cm}
+    \hspace*{1cm}Après l'alignement global, des écarts locaux persistants pouvaient être observés sur certaines portions de la trajectoire. Afin de corriger ces déformations non uniformes, un recalage récursif a été appliqué.\vspace{0.05cm}
 
     \hspace*{0.5cm}Lorsque l'écart local entre la trajectoire estimée par \textbf{VGGT} et la référence GPS dépassait un seuil défini, le segment concerné était découpé et une nouvelle transformation locale était estimée sur cette portion.
 
@@ -1455,7 +1496,7 @@ Cette stratégie devait limiter la consommation de mémoire GPU et d'assurer une
 
 \hspace*{0.5cm}Cette sélection organisait l'\textbf{optimiser la répartition des 20 images de chaque bloc} vers des zones présentant une valeur ajoutée géométrique plus importante.\vspace{0.1cm}
 
-\hspace*{1cm}L'objectif était ainsi d'éviter de saturer inutilement le réseau avec des vues fortement redondantes, tout en conservant suffisamment d'informations communes entre les différentes images pour permettre une estimation géométrique cohérente.\vspace{1.5cm}
+\hspace*{1cm}L'objectif était d'éviter de saturer inutilement le réseau avec des vues fortement redondantes, tout en conservant suffisamment d'informations communes entre les différentes images pour permettre une estimation géométrique cohérente.\vspace{1.5cm}
 
 \hspace*{1cm}\textsb{Dans l'ensemble, cette première couche de mise en œuvre a montré que la qualité de la calibration dépendait autant du modèle utilisé que de la manière dont les données étaient filtrées, ordonnées et réassemblées.}
 
@@ -1476,16 +1517,16 @@ Cette stratégie devait limiter la consommation de mémoire GPU et d'assurer une
 
 \vspace{1cm}
 
-\noindent\textbf{\uline{\large Cette méthode c'est-elle révélée être le point de bascule du projet ?}}\par
+\noindent\textbf{\uline{\large Cette méthode a-t'elle été le point de bascule du projet ?}}\par
 \medskip
 
 \vspace{0.5cm}
 
 \hspace*{1cm}Elle a induit une gestion des données plus cohérente et une reconstruction effectivement exploitable.\vspace{0.03cm}
 
-\hspace*{0.5cm}La réalisation d'une réalité terrain plus fiable à partir des données LiDAR et SLAM, a permis de \textbf{valider cette approche dans un cadre plus rigoureux}.\vspace{0.6cm}
+\hspace*{0.5cm}La réalisation d'une réalité terrain plus fiable à partir des données \textbf{LiDAR et SLAM}, a permis de \textbf{valider cette approche dans un cadre plus rigoureux}.\vspace{0.6cm}
 
-\hspace*{1cm}La synchronisation de filtrage cinématique et de génération d'une vérité terrain à partir des données LiDAR/SLAM ont permis de renforcer cette approche, en réduisant les redondances, les zones de faible valeur informative ainsi que les distorsions temporelles.\vspace{0.2cm}
+\hspace*{1cm}La synchronisation de filtrage cinématique et de génération d'une vérité terrain à partir des données \textbf{LiDAR/SLAM} a été l'outil essentiel de renforcer cette approche, en réduisant les redondances, les zones de faible valeur informative ainsi que les distorsions temporelles.\vspace{0.2cm}
 
 \hspace*{1cm}Le bilan repose donc sur un constat général :\vspace{0.01cm}
 
@@ -1681,38 +1722,62 @@ Les réunions de formation consacrées aux bases de l'intelligence artificielle 
 \begin{thebibliography}{99}
 \addcontentsline{toc}{chapter}{Bibliographie}
 
+\vspace{1cm}
+
 \bibitem{institut_pascal_site}
 Institut Pascal, \textit{Site officiel de l'Institut Pascal - Présentation et activités}, Université Clermont Auvergne, 2024. URL: \url{https://www.institut-pascal.fr/}.
+
+\vspace{0.5cm}
 
 \bibitem{uca_institut_pascal}
 Université Clermont Auvergne, \textit{Présentation de l'Institut Pascal (IP)}, Annuaire des laboratoires UCA, 2026. URL: \url{https://www.uca.fr/laboratoires/institut-pascal-ip}.
 
+\vspace{0.5cm}
+
 \bibitem{slam_survey}
 J. Zhang et S. Singh, \textit{``A Survey on Visual Odometry and Visual SLAM''}, IEEE Transactions on Robotics, vol. 38, no. 2, pp. 367-391, mars 2022.
+
+\vspace{0.5cm}
 
 \bibitem{sensor_fusion}
 R. Mur-Artal et J. M. M. Montiel, \textit{``Multi-Sensor Fusion for Robust SLAM in Dynamic Environments''}, IEEE International Conference on Robotics and Automation (ICRA), Paris, France, pp. 1234-1240, mai 2023.
 
+\vspace{0.5cm}
+
 \bibitem{ros2_docs}
 Open Robotics, \textit{ROS 2 Documentation: Design and Architecture}, Open Robotics, 2024. URL: \url{https://docs.ros.org/en/humble/}.
+
+\vspace{0.5cm}
 
 \bibitem{pavine_platform}
 CNRS, \textit{PAVIN - Plateforme Auvergnate Pour les Véhicules Intelligents}, CNRS, 2023. URL: \url{https://www.pavin.fr/}.
 
+\vspace{0.5cm}
+
 \bibitem{vggt_repo}
 Facebook Research, \textit{VGGT: Visual Geometry Grounded Transformer}, GitHub repository, 2024. URL: \url{https://github.com/facebookresearch/vggt}.
+
+\vspace{0.5cm}
 
 \bibitem{vggt_paper}
 M. Wang, J. Ren, J. Li, Y. Zhu, F. Yang et al., \textit{``VGGT: Visual Geometry Grounded Transformer''}, arXiv preprint, 2025. URL: \url{https://arxiv.org/}.
 
+\vspace{0.5cm}
+
 \bibitem{loftr_paper}
 J. Sun, Z. Shen, Y. Wang, H. Bao et al., \textit{``LoFTR: Detector-Free Local Feature Matching with Transformers''}, IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2021.
+
+\vspace{0.5cm}
 
 \bibitem{lidar_slam_survey}
 C. Cadena, L. Carlone, H. Carrillo, Y. Latif, D. Scaramuzza et al., \textit{``Past, Present, and Future of Simultaneous Localization and Mapping: Toward the Robust-Perception Age''}, IEEE Transactions on Robotics, vol. 32, no. 6, pp. 1309-1332, 2016.
 
+\vspace{0.5cm}
+
 \bibitem{multisensor_fusion}
 A. Censi, \textit{``On Sensor Fusion and Calibration in Robotics''}, International Journal of Robotics Research, 2019.
+
+\vspace{0.5cm}
 
 \end{thebibliography}
 
@@ -1722,7 +1787,7 @@ A. Censi, \textit{``On Sensor Fusion and Calibration in Robotics''}, Internation
 % TABLE DES ILLUSTRATIONS
 % ==============================================================================
 
-\listoffigures
+\listoffigures    
 \cleardoublepage
 
 % ==============================================================================
@@ -1737,52 +1802,85 @@ A. Censi, \textit{``On Sensor Fusion and Calibration in Robotics''}, Internation
 
 \annexsection{Objectif et principe général}
 
-VGGT (\textit{Visual Geometry Grounded Transformer}) est un modèle d'apprentissage profond conçu pour estimer la géométrie d'une scène à partir d'un ensemble d'images. Son objectif est de produire directement, en une seule passe d'inférence, plusieurs informations utiles à la reconstruction tridimensionnelle : les paramètres des caméras, les cartes de profondeur, les \textit{point maps} et le suivi de points entre les différentes vues.
+\hspace*{1cm}\textbf{VGGT}\footnote{Visual Geometry Grounded Transformer} est un modèle d'apprentissage profond conçu pour estimer la géométrie d'une scène à partir d'un ensemble d'images.\\
+\hspace*{0.5cm}Son objectif est de produire directement, en une seule passe d'inférence, plusieurs informations utiles à la reconstruction tridimensionnelle : \vspace{0.1cm}
 
-Cette approche se distingue d'un pipeline classique de type Structure-from-Motion (SfM). Dans un pipeline SfM, les caractéristiques visuelles sont d'abord détectées, puis mises en correspondance entre les images. Les poses des caméras et la structure 3D sont ensuite estimées par triangulation avant d'être raffinées par ajustement de faisceaux. VGGT regroupe une grande partie de ces étapes dans un modèle feed-forward : les images sont fournies au réseau et les sorties géométriques sont prédites directement.
+\hspace*{0.5cm}\textbf{Les paramètres des caméras, les cartes de profondeur, les \textit{point maps} et le suivi de points entre les différentes vues.}\vspace{1cm}
 
-Le caractère feed-forward simplifie le traitement et permet de produire rapidement une première estimation. Toutefois, les sorties restent sensibles à la qualité des images, au recouvrement entre les vues, aux mouvements de la caméra et à la cohérence de la séquence fournie en entrée. Dans le cadre de ce stage, le pré-traitement des images constitue donc une étape indispensable avant l'inférence.
+\hspace*{1cm}Cette approche se distingue d'un pipeline classique de \textbf{type Structure-from-Motion (SfM)}. \vspace{0.01cm}
+
+\hspace*{0.5cm}Dans un \textbf{pipeline SfM}, les caractéristiques visuelles sont d'abord détectées, puis mises en correspondance entre les images. Les poses des caméras et la structure 3D sont ensuite estimées par triangulation avant d'être raffinées par ajustement de faisceaux. \vspace{1cm}
+
+\hspace*{1cm}\textbf{VGGT} regroupe une grande partie de ces étapes dans un modèle feed-forward : les images sont fournies au réseau et les sorties géométriques sont prédites directement.\vspace{0.1cm}
+
+\hspace*{1cm}Le caractère \textbf{feed-forward} simplifie le traitement et permet de produire rapidement une première estimation. \\
+Toutefois, les sorties restent sensibles à la qualité des images, au recouvrement entre les vues, aux mouvements de la caméra et à la cohérence de la séquence fournie en entrée. \vspace{1cm}
+
+\hspace*{1cm}Dans le cadre de ce stage, le pré-traitement des images constitue donc une étape indispensable avant l'inférence.
+
+\newpage
 
 \annexsection{Représentation des images et des tokens}
 
-Chaque image d'entrée est découpée en petites régions, appelées \textit{patches}. Ces régions sont transformées en représentations numériques appelées \textit{tokens visuels}. Cette représentation permet au Transformer de manipuler simultanément le contenu de l'image et les relations entre les différentes vues.
+\hspace*{1cm}Chaque image d'entrée est découpée en petites régions, appelées \textit{patches}.\vspace{0.01cm}
 
-À ces tokens visuels sont associés des \textit{camera tokens}. Ils servent à concentrer l'information nécessaire à l'estimation des paramètres de caméra. Pour une séquence de $N$ images, le réseau construit ainsi une représentation combinant les informations propres à chaque image et les informations communes à l'ensemble de la séquence.
+\hspace*{0.5cm}Ces régions sont transformées en représentations numériques appelées \textit{tokens visuels}.\vspace{0.01cm}
 
-On peut représenter cette étape de manière simplifiée par :
+\hspace*{0.5cm}Cette représentation permet au Transformer de manipuler simultanément le contenu de l'image et les relations entre les différentes vues.\space{0.5cm}
+
+\hspace*{1cm}À ces tokens visuels sont associés des \textit{camera tokens}. Ils servent à concentrer l'information nécessaire à l'estimation des paramètres de caméra.\vspace{0.1cm}
+
+\hspace*{0.5cm} Pour une séquence de $N$ images, le réseau construit ainsi une représentation combinant les informations propres à chaque image et les informations communes à l'ensemble de la séquence.
+
+\hspace*{1cm}On peut représenter cette étape de manière simplifiée par :
 \begin{equation}
     I_i \longrightarrow H_i = \{h_{i,1}, h_{i,2}, \ldots, h_{i,P}\},
 \end{equation}
 où $I_i$ désigne la $i$-ième image, $H_i$ sa représentation sous forme de tokens et $P$ le nombre de patches utilisés pour cette image.
 
+\vspace{1cm}
+
 \annexsection{Mécanisme d'attention alternée}
 
-Le cœur de VGGT repose sur l'alternance de deux mécanismes d'attention complémentaires.
+\hspace*{1cm}Le cœur de VGGT repose sur l'alternance de deux mécanismes d'attention complémentaires.
+
+\vspace{1cm}
 
 \annexsubsection{Attention au sein d'une image}
 
-L'attention de type \textit{frame-wise} traite les tokens appartenant à une même image. Elle permet au réseau de consolider les relations spatiales locales, les contours, les textures et les éléments de structure visibles dans chaque vue. Cette étape contribue à construire une représentation cohérente de la scène observée par une caméra donnée.
+\hspace*{1cm}L'attention de type \textit{frame-wise} traite les tokens appartenant à une même image.\\
+Elle permet au réseau de consolider les relations spatiales locales, les contours, les textures et les éléments de structure visibles dans chaque vue. \vspace{0.5cm}
+
+\hspace*{1cm}Cette étape contribue à construire une représentation cohérente de la scène observée par une caméra donnée.
+
+\newpage
 
 \annexsubsection{Attention globale entre les vues}
 
-L'attention globale met ensuite en relation les tokens provenant des différentes images. Le réseau peut ainsi comparer les observations, identifier les éléments communs et exploiter la parallaxe entre les vues. Cette information est essentielle pour estimer les relations géométriques entre les caméras et reconstruire une structure 3D cohérente.
+\hspace*{1cm}L'attention globale met ensuite en relation les tokens provenant des différentes images. Le réseau peut ainsi comparer les observations, identifier les éléments communs et exploiter la parallaxe entre les vues.\vspace{0.1cm}
 
-L'alternance de ces deux attentions peut être résumée par :
+\hspace*{0.5cm}Cette information est essentielle pour estimer les relations géométriques entre les caméras et reconstruire une structure 3D cohérente.\\
+
+\hspace*{1cm}L'alternance de ces deux attentions peut être résumée par :
 \begin{equation}
     H^{(l+1)} = \mathcal{A}_{\mathrm{global}}
     \left(\mathcal{A}_{\mathrm{frame}}(H^{(l)})\right),
 \end{equation}
 où $H^{(l)}$ désigne les représentations internes à la couche $l$, tandis que $\mathcal{A}_{\mathrm{frame}}$ et $\mathcal{A}_{\mathrm{global}}$ représentent respectivement l'attention intra-image et l'attention inter-images.
 
+\vspace{1cm}
+
 \annexsection{Têtes de prédiction et sorties géométriques}
 
-Après la fusion des informations par le Transformer, plusieurs têtes spécialisées produisent les sorties géométriques du modèle.
+\hspace*{1cm}Après la fusion des informations par le Transformer, plusieurs têtes spécialisées produisent les sorties géométriques du modèle.
+
+\vspace{1cm}
 
 \annexsubsection{Paramètres et poses des caméras}
 
-La \textit{camera head} exploite notamment les \textit{camera tokens} pour estimer les paramètres associés aux vues. Les paramètres intrinsèques décrivent les propriétés internes de la caméra, comme la focale et le centre principal. Les paramètres extrinsèques décrivent la position et l'orientation de la caméra dans un repère donné.
+\hspace*{1cm}La \textit{camera head} exploite notamment les \textit{camera tokens} pour estimer les paramètres associés aux vues. Les paramètres intrinsèques décrivent les propriétés internes de la caméra, comme la focale et le centre principal. Les paramètres extrinsèques décrivent la position et l'orientation de la caméra dans un repère donné.
 
-Une pose peut être représentée par une transformation rigide :
+\hspace*{1cm}Une pose peut être représentée par une transformation rigide :
 \begin{equation}
     \mathbf{T}_i =
     \begin{bmatrix}
@@ -1790,28 +1888,44 @@ Une pose peut être représentée par une transformation rigide :
         \mathbf{0}^{\mathsf{T}} & 1
     \end{bmatrix},
 \end{equation}
-où $\mathbf{R}_i \in SO(3)$ est la matrice de rotation et $\mathbf{t}_i \in \mathbb{R}^3$ le vecteur de translation de la caméra $i$. Dans la pratique, les poses prédites par VGGT sont utilisées pour extraire une trajectoire relative. Cette trajectoire doit ensuite être alignée sur une référence métrique, comme une trajectoire GPS ou une trajectoire obtenue par LiDAR-SLAM.
+où $\mathbf{R}_i \in SO(3)$ est la matrice de rotation et $\mathbf{t}_i \in \mathbb{R}^3$ le vecteur de translation de la caméra $i$. \vspace{0.3cm}
+
+\hspace*{0.5cm}Dans la pratique, les poses prédites par VGGT sont utilisées pour extraire une trajectoire relative. Cette trajectoire doit ensuite être alignée sur une référence métrique, comme une trajectoire GPS ou une trajectoire obtenue par LiDAR-SLAM.
+
+\newpage
 
 \annexsubsection{Cartes de profondeur}
 
-La tête dense du modèle produit une carte de profondeur pour chaque image. À chaque pixel est associée une estimation de sa distance par rapport à la caméra. Ces cartes permettent de représenter la structure de la scène sous une forme dense, contrairement au nuage de points clairsemé produit par les premières étapes d'un pipeline SfM classique.
+\hspace*{1cm}La tête dense du modèle produit une carte de profondeur pour chaque image.\\
+À chaque pixel est associée une estimation de sa distance par rapport à la caméra.\vspace{0.1cm}
 
-La profondeur prédite ne doit cependant pas être considérée automatiquement comme une mesure métrique parfaite. Selon les conditions d'inférence, elle peut être affectée par une ambiguïté d'échelle, des surfaces peu texturées, des occultations ou des erreurs de prédiction locales.
+\hspace*{0.5cm}Ces cartes permettent de représenter la structure de la scène sous une forme dense, contrairement au nuage de points clairsemé produit par les premières étapes d'un pipeline SfM classique.
+
+\hspace*{1cm}La profondeur prédite ne doit cependant pas être considérée automatiquement comme une mesure métrique parfaite. \vspace{0.1cm}
+
+\hspace*{0.5cm}Selon les conditions d'inférence, elle peut être affectée par une ambiguïté d'échelle, des surfaces peu texturées, des occultations ou des erreurs de prédiction locales.
+
+\vspace{1cm}
 
 \annexsubsection{Point maps}
 
-Une \textit{point map} associe à chaque pixel une position 3D estimée. Elle peut être vue comme une représentation dense de la scène dans laquelle les pixels ne sont plus seulement décrits par leur intensité ou leur couleur, mais aussi par des coordonnées spatiales.
+\hspace*{1cm}Une \textit{point map} associe à chaque pixel une position 3D estimée. Elle peut être vue comme une représentation dense de la scène dans laquelle les pixels ne sont plus seulement décrits par leur intensité ou leur couleur, mais aussi par des coordonnées spatiales.
 
-Cette sortie est particulièrement intéressante pour analyser la cohérence géométrique d'une reconstruction. Elle peut également servir à comparer les observations issues des différentes vues et à identifier les zones où la géométrie prédite est peu fiable.
+\hspace*{1cm}Cette sortie est particulièrement intéressante pour analyser la cohérence géométrique d'une reconstruction. Elle peut également servir à comparer les observations issues des différentes vues et à identifier les zones où la géométrie prédite est peu fiable.
+
+\vspace{1cm}
 
 \annexsubsection{Suivi de points entre les images}
 
-VGGT fournit également des informations de suivi de points 3D à travers les vues. Le principe consiste à retrouver, dans plusieurs images, les projections correspondant à un même élément de la scène. Ces correspondances contribuent à maintenir une cohérence multi-vues et à relier les représentations produites pour chaque image.
+\hspace*{1cm}VGGT fournit également des informations de suivi de points 3D à travers les vues. Le principe consiste à retrouver, dans plusieurs images, les projections correspondant à un même élément de la scène. Ces correspondances contribuent à maintenir une cohérence multi-vues et à relier les représentations produites pour chaque image.
+
+\newpage
 
 \annexsection{Déroulement d'une inférence}
 
-Dans l'application étudiée, le déroulement d'une inférence peut être décrit en plusieurs étapes :
-\begin{enumerate}
+\hspace*{1cm}Dans l'application étudiée, le déroulement d'une inférence peut être décrit en plusieurs étapes :\vspace{0.05cm}
+
+\begin{enumerate}[itemsep=0.5em]
     \item les images sont extraites de la vidéo ou du fichier de données ;
     \item les images sont triées et, si nécessaire, sous-échantillonnées afin de limiter la redondance ;
     \item un groupe d'images est chargé par le modèle, généralement sous la forme d'un bloc de taille limitée ;
@@ -1820,20 +1934,35 @@ Dans l'application étudiée, le déroulement d'une inférence peut être décri
     \item les sorties sont sauvegardées afin d'être analysées ou utilisées lors de la reconstruction de trajectoire.
 \end{enumerate}
 
-Le traitement par blocs est nécessaire lorsque la séquence complète est trop volumineuse pour être traitée en une seule fois. Dans le rapport, les sorties de chaque bloc sont ensuite alignées et concaténées. Cette opération introduit toutefois un risque de discontinuité entre deux blocs, car chaque inférence peut produire un repère relatif ou une échelle différente.
+\vspace{0.5cm}
+
+\hspace*{1cm}Le traitement par blocs est nécessaire lorsque la séquence complète est trop volumineuse pour être traitée en une seule fois.\vspace{0.5cm}
+
+\hspace*{0.5cm}Dans le rapport, les sorties de chaque bloc sont ensuite alignées et concaténées. \\
+Cette opération introduit toutefois un risque de discontinuité entre deux blocs, car chaque inférence peut produire un repère relatif ou une échelle différente.
+
+\newpage
 
 \annexsection{Intérêt du pré-traitement pour VGGT}
 
-Le fonctionnement de VGGT dépend fortement de la qualité du jeu d'images fourni. Des images trop proches dans le temps apportent une information redondante et augmentent le coût de calcul. À l'inverse, des images trop éloignées peuvent présenter un recouvrement insuffisant, ce qui complique l'établissement des relations géométriques.
+\hspace*{1cm}Le fonctionnement de VGGT dépend fortement de la qualité du jeu d'images fourni. Des images trop proches dans le temps apportent une information redondante et augmentent le coût de calcul. \\
+\hspace*{0.5cm}À l'inverse, des images trop éloignées peuvent présenter un recouvrement insuffisant, ce qui complique l'établissement des relations géométriques.\vspace{0.5cm}
 
-Le filtrage cinématique permet d'éliminer certaines images prises pendant des phases peu utiles, par exemple lorsque le véhicule est immobile ou lorsque le flou de bougé dégrade fortement la qualité visuelle. La synchronisation garantit que les observations utilisées pour une même étape correspondent à des instants comparables. Enfin, la sélection fondée sur le recouvrement visuel permet de rechercher un compromis entre redondance et continuité géométrique.
+\hspace*{1cm}Le filtrage cinématique permet d'éliminer certaines images prises pendant des phases peu utiles, par exemple lorsque le véhicule est immobile ou lorsque le flou de bougé dégrade fortement la qualité visuelle.\vspace{0.2cm} 
 
-Cette préparation ne modifie pas l'architecture de VGGT. Elle agit en amont, en contrôlant les données transmises au modèle afin de rendre l'inférence plus stable et plus exploitable dans un contexte de reconstruction de trajectoire.
+\hspace*{0.5cm}La synchronisation garantit que les observations utilisées pour une même étape correspondent à des instants comparables. \vspace{0.2cm}
+
+\hspace*{0.5cm}Enfin, la sélection fondée sur le recouvrement visuel permet de rechercher un compromis entre redondance et continuité géométrique.\vspace{0.5cm}
+
+\hspace*{1cm}Cette préparation ne modifie pas l'architecture de VGGT. Elle agit en amont, en contrôlant les données transmises au modèle afin de rendre l'inférence plus stable et plus exploitable dans un contexte de reconstruction de trajectoire.
+
+\newpage
 
 \annexsection{Limites dans le contexte de l'étude}
 
-Plusieurs limites doivent être prises en compte lors de l'interprétation des résultats :
-\begin{itemize}
+\hspace*{1cm}Plusieurs limites doivent être prises en compte lors de l'interprétation des résultats :\vspace{0.05cm}
+
+\begin{itemize}[label=\textbullet, itemsep=0.5em, leftmargin=2cm]
     \item les poses prédites à partir d'une caméra seule sont sujettes à une dérive cumulative lorsque les sorties sont concaténées sur une longue séquence ;
     \item l'échelle et l'orientation de la trajectoire doivent être recalées sur une référence externe pour permettre une comparaison métrique ;
     \item les changements rapides de direction, les zones peu texturées et les variations d'éclairage peuvent dégrader la qualité des sorties ;
@@ -1841,7 +1970,9 @@ Plusieurs limites doivent être prises en compte lors de l'interprétation des r
     \item le traitement par blocs limite la mémoire nécessaire, mais rend nécessaire une étape supplémentaire d'alignement entre les segments.
 \end{itemize}
 
-Ainsi, VGGT doit être considéré comme un estimateur géométrique puissant fournissant une reconstruction initiale, et non comme une solution complète de calibration métrique indépendante de toute référence. Dans le cadre de ce stage, son intérêt réside précisément dans la combinaison entre ses prédictions visuelles et un pipeline de préparation, d'alignement et de validation fondé sur les données du véhicule.
+\hspace*{1cm}Ainsi, VGGT doit être considéré comme un estimateur géométrique puissant fournissant une reconstruction initiale, et non comme une solution complète de calibration métrique indépendante de toute référence.\vspace{0.05cm}
+
+\hspace*{0.5cm}Dans le cadre de ce stage, son intérêt réside précisément dans la combinaison entre ses prédictions visuelles et un pipeline de préparation, d'alignement et de validation fondé sur les données du véhicule.
 
 % Principes de fonctionnement des systèmes embarqués
 
@@ -1849,43 +1980,57 @@ Ainsi, VGGT doit être considéré comme un estimateur géométrique puissant fo
 
 \annexsection{Modèle cinématique à quatre roues directrices (Four-Wheel Steering -- 4WS)}
 
-Contrairement aux véhicules automobiles classiques à deux roues directrices (système de type Ackermann), la plateforme de test utilisée dispose d'un système à quatre roues directrices (4WS -- \textit{Four-Wheel Steering}). Cette configuration mécanique offre une flexibilité accrue pour les manœuvres à basse vitesse (comme la circulation dans un rond-point), permettant de réduire considérablement le rayon de braquage en orientant les essieux avant et arrière en opposition, ou de se déplacer latéralement en orientant les roues dans le même sens (marche en crabe).
+\hspace*{1cm}Contrairement aux véhicules automobiles classiques à deux roues directrices (système de type Ackermann), la plateforme de test utilisée dispose d'un système à quatre roues directrices (4WS -- \textit{Four-Wheel Steering}). \vspace{0.1cm}
 
+\hspace*{0.5cm}Cette configuration mécanique offre une flexibilité accrue pour les manœuvres à basse vitesse (comme la circulation dans un rond-point), permettant de réduire considérablement le rayon de braquage en orientant les essieux avant et arrière en opposition, ou de se déplacer latéralement en orientant les roues dans le même sens (marche en crabe).\vspace{0.3cm}
 
-
-Dans l'environnement ROS 2, ces données de commande et d'état cinématique sont encapsulées dans le message normalisé suivant :
+\hspace*{1cm}Dans l'environnement ROS 2, ces données de commande et d'état cinématique sont encapsulées dans le message normalisé suivant :
 \begin{itemize}
     \item \textbf{Topic étudié :} \texttt{/four\_wheel\_steering\_trajectory} (ou le topic odométrique dédié)
     \item \textbf{Type de message :} \texttt{four\_wheel\_steering\_msgs/msg/FourWheelSteeringStamped}
 \end{itemize}
 
-Ce message structuré comprend une estampille temporelle (\textit{timestamp}) indispensable à la synchronisation effectuée dans nos scripts de traitement, ainsi qu'un sous-message de type \texttt{FourWheelSteering}. Ce dernier contient :
-\begin{itemize}
+\vspace{0.5cm}
+
+\hspace*{1cm}Ce message structuré comprend une estampille temporelle (\textit{timestamp}) indispensable à la synchronisation effectuée dans nos scripts de traitement, ainsi qu'un sous-message de type \texttt{FourWheelSteering}. \vspace{0.1cm}
+
+\hspace{0.5cm}Ce dernier contient :\vspace{0.05cm}
+
+\begin{itemize}[label=\textbullet, itemsep=0.5em]
     \item La vitesse linéaire globale du véhicule (\texttt{speed}) ;
     \item L'angle de braquage de l'essieu avant (\texttt{front\_steering\_angle}) ;
     \item L'angle de braquage de l'essieu arrière (\texttt{rear\_steering\_angle}).
 \end{itemize}
 
-L'exploitation conjointe de ces paramètres permet de reconstruire l'odométrie à partir du modèle cinématique du robot mobile, servant d'indicateur pour détecter l'état stationnaire (vitesse nulle) ou pour initialiser le calcul de trajectoire.
+\vspace{0.5cm}
 
+\hspace*{1cm}L'exploitation conjointe de ces paramètres permet de reconstruire l'odométrie à partir du modèle cinématique du robot mobile, servant d'indicateur pour détecter l'état stationnaire (vitesse nulle) ou pour initialiser le calcul de trajectoire.
+
+\newpage
 
 \annexsection{Positionnement et vérité terrain par GNSS / GPS}
 
-Afin d'évaluer la précision spatiale de l'auto-calibration générée par le modèle d'IA VGGT, les données de positionnement par satellite (GNSS) ont été extraites. Sur la plateforme d'expérimentation, ces informations géospatiales sont publiées à travers le système ROS 2 :
-\begin{itemize}
+\hspace*{1cm}Afin d'évaluer la précision spatiale de l'auto-calibration générée par le modèle d'IA VGGT, les données de positionnement par satellite (GNSS) ont été extraites.\vspace{0.1cm}
+
+\hspace*{0.5cm}Sur la plateforme d'expérimentation, ces informations géospatiales sont publiées à travers le système ROS 2 :\vspace{0.05cm}
+
+\begin{itemize}[label=\textbullet, itemsep=0.5em]
     \item \textbf{Topic étudié :} \texttt{/ez10\_gen1/gnss\_main/pose\_lpz}
     \item \textbf{Type de message :} \texttt{geometry\_msgs/msg/PoseWithCovarianceStamped}
 \end{itemize}
 
+\vspace{0.5cm}
 
+\hspace*{1cm}Le recours au format \texttt{PoseWithCovarianceStamped} est particulièrement rigoureux pour des applications de véhicule autonome car il fournit deux informations cruciales :\vspace{0.05cm}
 
-Le recours au format \texttt{PoseWithCovarianceStamped} est particulièrement rigoureux pour des applications de véhicule autonome car il fournit deux informations cruciales :
-\begin{enumerate}
+\begin{enumerate}[itemsep=0.5em]
     \item \textbf{La Pose (\texttt{geometry\_msgs/Pose}) :} Elle définit la position tridimensionnelle du repère du véhicule $(X, Y, Z)$ par rapport à une origine locale cartésienne (repère Lambert ou projection locale), ainsi que son orientation exprimée sous forme de quaternion $(x, y, z, w)$ pour éviter les singularités mathématiques des angles d'Euler.
     \item \textbf{La Matrice de Covariance :} Représentée sous la forme d'un tableau de 36 éléments flottants (matrice $6 \times 6$), elle quantifie mathématiquement l'incertitude et la variance de la mesure sur chaque axe de liberté (positions et rotations). En environnement urbain ou à proximité des bâtiments du campus, cette covariance permet d'écarter ou de pondérer les positions aberrantes dues au masquage des signaux satellites ou aux phénomènes de multi-trajets.
 \end{enumerate}
 
-Cette structure offre une base mathématique formelle pour bâtir la \textbf{vérité terrain} (\textit{Ground Truth}) lors de l'implémentation ultérieure du filtrage ou du SLAM.
+\vspace{0.5cm}
+
+\hspace*{1cm}Cette structure offre une base mathématique formelle pour bâtir la \textbf{vérité terrain} (\textit{Ground Truth}) lors de l'implémentation ultérieure du filtrage ou du SLAM.
 
 
 \end{document}

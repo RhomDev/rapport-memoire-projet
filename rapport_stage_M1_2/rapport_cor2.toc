@@ -36,11 +36,10 @@
 \contentsline {paragraph}{}{21}{paragraph*.3}%
 \contentsline {paragraph}{}{21}{paragraph*.4}%
 \contentsline {subsection}{\numberline {4.3.2}Traitement de la saturation}{23}{subsection.4.3.2}%
-\contentsline {paragraph}{}{23}{paragraph*.5}%
 \contentsline {subsection}{\numberline {4.3.3}Traitement du contraste}{23}{subsection.4.3.3}%
 \contentsline {subsection}{\numberline {4.3.4}Traitement du flou}{24}{subsection.4.3.4}%
+\contentsline {paragraph}{}{24}{paragraph*.5}%
 \contentsline {paragraph}{}{24}{paragraph*.6}%
-\contentsline {paragraph}{}{24}{paragraph*.7}%
 \contentsline {section}{\numberline {4.4}Génération d'images à partir du LiDAR 3D}{25}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}Développement d'un algorithme SLAM personnalisé}{25}{subsection.4.4.1}%
 \contentsline {subsection}{\numberline {4.4.2}Déploiement d'une architecture SLAM}{26}{subsection.4.4.2}%
@@ -58,9 +57,9 @@
 \contentsline {subsection}{\numberline {4.6.1}Filtrage cinématique (Arrêt du véhicule)}{34}{subsection.4.6.1}%
 \contentsline {subsection}{\numberline {4.6.2}Architecture d'extraction et traitement par blocs (\textit {Chunks})}{35}{subsection.4.6.2}%
 \contentsline {subsection}{\numberline {4.6.3}Algorithme de concaténation et reconstruction de trajectoire}{35}{subsection.4.6.3}%
-\contentsline {subsection}{\numberline {4.6.4}Stratégies de recalage face à la vérité terrain (GPS)}{36}{subsection.4.6.4}%
+\contentsline {subsection}{\numberline {4.6.4}Stratégie de recalage face à la vérité terrain (GPS)}{36}{subsection.4.6.4}%
 \contentsline {subsection}{\numberline {4.6.5}Suivi du filtrage intelligent par LoFTR}{37}{subsection.4.6.5}%
 \contentsline {section}{\numberline {4.7}Bilan}{38}{section.4.7}%
-\contentsline {chapter}{Conclusion}{42}{chapter*.8}%
-\contentsline {chapter}{Bibliographie}{44}{chapter*.9}%
-\contentsline {chapter}{Annexes}{46}{appendix*.10}%
+\contentsline {chapter}{Conclusion}{42}{chapter*.7}%
+\contentsline {chapter}{Bibliographie}{44}{chapter*.8}%
+\contentsline {chapter}{Annexes}{46}{appendix*.9}%
