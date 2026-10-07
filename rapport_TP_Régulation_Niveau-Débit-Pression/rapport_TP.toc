@@ -1,0 +1,26 @@
+\babel@toc {french}{}\relax 
+\contentsline {section}{Introduction}{1}{}%
+\contentsline {section}{Sommaire}{2}{}%
+\contentsline {part}{I\hspace {1em}Présentation du banc d’essai}{4}{}%
+\contentsline {section}{\numberline {1}Objectifs de la séance de travaux pratiques}{4}{}%
+\contentsline {section}{\numberline {2}Présentation du banc d’essai}{4}{}%
+\contentsline {section}{\numberline {3}Identification des capteurs}{6}{}%
+\contentsline {subsection}{\numberline {3.1}Capteur BCS00LM : commutateur digital}{6}{}%
+\contentsline {subsection}{\numberline {3.2}Capteur UGT582 : Détecteur à ultrasons}{6}{}%
+\contentsline {subsection}{\numberline {3.3}Capteur GR3000A00 : capteur de pression}{7}{}%
+\contentsline {subsection}{\numberline {3.4}Capteur M1000 : le débitmètre électromagnétique}{7}{}%
+\contentsline {section}{\numberline {4}Synthèse des capteurs}{8}{}%
+\contentsline {section}{\numberline {5}Récupération des mesures sur le variateur}{8}{}%
+\contentsline {part}{II\hspace {1em}Démarrage du variateur et acquisition des données}{9}{}%
+\contentsline {section}{\numberline {6}Communication avec le variateur}{9}{}%
+\contentsline {section}{\numberline {7}Acquisition des données}{10}{}%
+\contentsline {subsection}{\numberline {7.1}Capteur niveau : détecteur à ultrason UGT582}{12}{}%
+\contentsline {subsection}{\numberline {7.2}Capteur de pression : transducteur de pression relative -- GR3000A00}{12}{}%
+\contentsline {subsection}{\numberline {7.3}Capteur de débit : M1000}{13}{}%
+\contentsline {part}{III\hspace {1em}Analyse des résultats expérimentaux}{14}{}%
+\contentsline {section}{\numberline {8}Caractérisation des réponses indicielles (échelon de vitesse)}{14}{}%
+\contentsline {subsection}{\numberline {8.1}Évolution du débit}{14}{}%
+\contentsline {subsection}{\numberline {8.2}Évolution de la pression}{15}{}%
+\contentsline {subsection}{\numberline {8.3}Évolution du niveau}{16}{}%
+\contentsline {part}{IV\hspace {1em}Conclusion}{17}{}%
+\contentsline {section}{Références}{18}{}%
