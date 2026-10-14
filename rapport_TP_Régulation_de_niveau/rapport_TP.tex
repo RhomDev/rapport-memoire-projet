@@ -1,0 +1,130 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{tikz}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{titlesec}
+
+% --- Configuration de la mise en page ---
+\geometry{a4paper, margin=2cm}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.8em} % Légèrement augmenté pour aérer le texte
+\renewcommand{\contentsname}{Sommaire}
+
+% --- Configuration des légendes et listes ---
+\captionsetup[figure]{font=small, justification=centering, margin=1cm}
+\captionsetup[table]{font=small}
+\setlist[itemize]{leftmargin=*, itemsep=0.35em, topsep=0.35em}
+
+% --- Configuration des titres ---
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\part}[display]{\centering\normalfont\Huge\bfseries}{\Large\partname\ \thepart}{0.5em}{}
+
+\begin{document}
+
+% ==========================================
+% PAGE DE GARDE
+% ==========================================
+\begin{titlepage}
+    \noindent
+    \begin{minipage}{0.45\textwidth}
+        \begin{flushleft}
+            \includegraphics[width=4cm]{img_garde/logo_uca.png}
+        \end{flushleft}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \begin{flushright}
+            \includegraphics[width=7cm]{img_garde/logo_eupi.png}
+        \end{flushright}
+    \end{minipage}
+
+    \vspace{1.5cm}
+
+    \begin{center}
+        {\Large \textsc{UNIVERSITÉ CLERMONT AUVERGNE}}\\[0.2cm]
+        {\large Clermont-Ferrand}\\[0.5cm]
+
+        \rule{0.1\textwidth}{0.4pt}\\[0.5cm]
+
+        {\large École Universitaire de Physique et d'Ingénierie}\\[0.5cm]
+
+        \rule{0.1\textwidth}{0.4pt}\\[1.5cm]
+
+        {\LARGE \textsc{Compte Rendu de TP}}\\[0.5cm]
+        {\large 2\textsuperscript{e} année de Master}\\[0.5cm]
+        \rule{0.05\textwidth}{0.4pt}\\[0.5cm]
+        {\large Spécialité : Automatique et Robotique}\\[1.5cm]
+
+        {
+        \large \textbf{Romaric PRADEAU}\\
+        \large \textbf{Baptiste CHAZAL}\\
+        \large \textbf{Beraldo Welcome MOUSSOUNGOU}
+        }\\[1.5cm]
+
+        {\huge \textbf{TP Régulation Niveau}}\\[2cm]
+    \end{center}
+
+    \vfill
+
+    \begin{flushleft}
+        \large
+        \textbf{Date :} Septembre 2026\\[0.3cm]
+        \textbf{Matière :} Automatique\\[0.3cm]
+        \textbf{Enseignant :} PACOT FLAVIEN
+    \end{flushleft}
+\end{titlepage}
+
+\clearpage
+\pagenumbering{arabic}
+
+
+% ==========================================
+% INTRODUCTION
+% ==========================================
+\section*{Introduction}
+\addcontentsline{toc}{section}{Introduction}
+
+\vspace{2cm}
+
+\hspace*{0.5cm} La régulation automatique permet de contrôler le comportement d’un système afin de maintenir une grandeur physique autour d’une valeur souhaitée. Dans ce TP, l’étude porte sur la régulation du niveau d’une cuve, dont l’évolution dépend notamment du débit d’alimentation et du débit d’évacuation. L’analyse de ce système permet ainsi de mettre en évidence les principales caractéristiques d’un procédé à réguler et d’étudier son comportement dynamique.\\
+
+\hspace*{0.5cm} L’objectif de ce travail est dans un premier temps d’établir le modèle mathématique du système et de déterminer sa fonction de transfert entre le débit d’entrée et le niveau de la cuve. Le comportement du procédé sera ensuite étudié en boucle ouverte à l’aide de Simulink afin de confronter le modèle théorique aux résultats obtenus par simulation.\\
+
+\hspace*{0.5cm} Dans un second temps, un correcteur proportionnel sera utilisé en boucle fermée afin d’obtenir une précision imposée sur le niveau. Enfin, l’influence de plusieurs paramètres du procédé, tels que le débit maximal, le diamètre de la vanne, la section de la cuve ou encore sa constante de temps, sera analysée afin d’évaluer leur impact sur les performances de la régulation.
+
+\clearpage
+% ==============================================================================
+% BIBLIOGRAPHIE ET RÉFÉRENCES
+% ==============================================================================
+% ==========================================
+% BIBLIOGRAPHIE
+% ==========================================
+\addcontentsline{toc}{section}{Références}
+\begin{thebibliography}{9}
+
+\bibitem{Détecteur à ultrasons - UGT582 - ifm}
+\textbf{Détecteur à ultrasons - UGT582}, \textit{ifm electronic}.\\
+\url{https://www.ifm.com/fr/fr/product/UGT582}\\
+\small{Documentation technique officielle du constructeur. Cette source a permis d'extraire la portée du capteur (60 à 800 mm) ainsi que les caractéristiques de son signal de sortie analogique (4-20 mA) afin d'établir, par le calcul, la loi de conversion liant le courant mesuré au niveau d'eau réel dans la cuve.}
+
+\end{thebibliography}
+
+% ==============================================================================
+% TABLE DES ILLUSTRATIONS
+% ==============================================================================
+
+\listoffigures
+\cleardoublepage
+
+\end{document}
