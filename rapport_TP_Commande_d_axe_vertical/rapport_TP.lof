@@ -1,0 +1,17 @@
+\babel@toc {french}{}\relax 
+\contentsline {figure}{\numberline {1}{\ignorespaces Relevés globaux de la Manipulation 1 ($K_p = 33$, $J = 0$, Feedforward Off) : suivi et erreurs en vitesse et position}}{5}{figure.caption.2}%
+\contentsline {figure}{\numberline {2}{\ignorespaces 1\textsuperscript {re} montée}}{5}{figure.caption.3}%
+\contentsline {figure}{\numberline {3}{\ignorespaces 2\textsuperscript {e} montée}}{5}{figure.caption.3}%
+\contentsline {figure}{\numberline {4}{\ignorespaces 3\textsuperscript {e} montée}}{5}{figure.caption.3}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Agrandissement du suivi de position lors des trois montées consécutives (Manipulation 1)}}{5}{figure.caption.3}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Relevé temporel global (Manipulation 2)}}{6}{figure.caption.4}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Zoom sur le suivi de position}}{6}{figure.caption.4}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Relevés de la Manipulation 3 ($K_p = 100$, $J = J_{\text {charge}}$, Feedforward Off)}}{7}{figure.caption.5}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Relevés de la Manipulation 4 ($K_p = 100$, $J = 0$, Feedforward On)}}{8}{figure.caption.6}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Relevés de la Manipulation 5 ($K_p = 100$, $J = J_{\text {charge}}$, Feedforward On)}}{9}{figure.caption.7}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Relevé des paliers de couple moteur en régime permanent pour $\Omega = \pm 100\,\text {rad/s}$}}{12}{figure.caption.8}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Couple mesuré $C_m$ en fonction de la vitesse $\Omega $}}{13}{figure.caption.10}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Caractéristique de frottement $C_m - C_{\text {grav}} = f(\Omega )$}}{13}{figure.caption.10}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Évolution temporelle du couple d'accélération compensé $C_a(t)$}}{14}{figure.caption.11}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Extraction des paramètres inertiels matériels sous l'interface PME}}{15}{figure.caption.12}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Relevé expérimental du cycle aller-retour de $250\,\text {rad}$ à $100\,\text {rad/s}$ (mise en sécurité du variateur)}}{16}{figure.caption.13}%
